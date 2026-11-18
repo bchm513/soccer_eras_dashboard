@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eras of the Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>Eras of the Game</h1>
+      <p class="sub">Soccer's eras, defined by overlapping player peaks — and where the game's heart was at each moment.</p>
+    </div>
+    <div class="top-right">
+      <span id="sample-badge" class="badge" hidden>Sample data</span>
+      <label class="field">Era measure
+        <select id="metric">
+          <option value="goals_adj">Goals, era-adjusted</option>
+          <option value="goals_raw">Goals, raw</option>
+          <option value="ga_adj">Goals + assists, era-adjusted</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel map-panel" aria-label="Map of hubs">
+      <div class="panel-head">
+        <h2>Centres of gravity</h2>
+        <div class="map-tools">
+          <button class="chip" data-view="world">World</button>
+          <button class="chip" data-view="europe">Europe</button>
+        </div>
+      </div>
+      <div class="map-wrap"><svg id="map" role="img" aria-label="Map with hub circles that grow and shrink over time"></svg></div>
+      <div class="legend">
+        <span><i class="dot club"></i>Club hub (rolling 3 seasons)</span>
+        <span><i class="dot tour"></i>Tournament</span>
+        <span><i class="dot lead"></i>Heart of the game</span>
+      </div>
+    </section>
+
+    <aside class="panel desc-panel" aria-live="polite">
+      <div id="desc"></div>
+    </aside>
+
+    <section class="panel peaks-panel" aria-label="Career peaks">
+      <div class="panel-head">
+        <h2>Overlapping peaks</h2>
+        <span class="hint">Click a curve to jump to that player's peak</span>
+      </div>
+      <div class="peaks-wrap"><svg id="peaks" role="img" aria-label="Career curves for star players with shaded eras"></svg></div>
+    </section>
+  </main>
+
+  <footer class="controls">
+    <button id="play" class="play" aria-label="Play">▶</button>
+    <span id="clock" class="clock">—</span>
+    <input id="scrub" type="range" min="0" max="1" value="0" step="1" aria-label="Timeline">
+    <label class="field small">Speed
+      <select id="speed">
+        <option value="6">½×</option>
+        <option value="12" selected>1×</option>
+        <option value="24">2×</option>
+        <option value="48">4×</option>
+      </select>
+    </label>
+  </footer>
+
+  <div id="tip" class="tip" hidden></div>
+
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/topojson-client.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
