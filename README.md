@@ -62,7 +62,9 @@ Where two sources cover the same league-season, Transfermarkt wins. Players are 
 - **Internationals add to club stars but can't create one alone**, and small international samples are shrunk toward the average.
 - **Leagues without a scoring rate** (Hungary, Brazil, Argentina, Germany before 1963, Netherlands before 1956, Portugal and Scotland before 1994) are left out of era-adjusted scoring until their season goal totals are added to `league_environment.csv`.
 - **Goals + assists** only exists from 2012 (Transfermarkt).
-- **The star threshold (`FLAG_Z_ENV`, 0.75)** was set on stand-in data; check it against the first real run.
+- **Stars are measured against their own time.** Each player is compared with the top scorers within five seasons either side, across all leagues, leaving his own seasons out. Goals have become more concentrated among leading scorers, so an all-time comparison would make every modern striker look greater than every 1950s one.
+- **A star season needs club form.** International goals add a small boost (weight 0.2) but can't carry a season alone.
+- **Defaults were calibrated on the first real run** (30 stars; eras 1970–76, 1985–91, 1994–2005, 2009–19, 2021–25).
 - **Name linking is conservative**: two different players sharing a name are left unlinked rather than merged, and a player spelled differently across sources stays split. Check the top stars after a run.
 - **worldfootball.net blocks scripts** (HTTP 403), so it isn't used. Its scraper is kept in `scraper/worldfootball.py` for reference only.
 
@@ -120,7 +122,9 @@ dashboard/
 | eras.py | `SHRINK_GAMES` small-sample shrinkage (real data) | 6 |
 | eras.py | `REF_TOP` reference group per league-season (real data) | 3 |
 | eras.py | `FLAG_Z_ENV` star season threshold (real data) | 0.75 |
-| hotspots.py | `HUB_RADIUS_KM` how far cities chain into one hub | 250 |
+| eras.py | `ERA_WINDOW` compare with top scorers within ± this many seasons (real data) | 5 |
+| eras.py | `INTL_WEIGHT` international games vs club games (real data) | 0.2 |
+| hotspots.py | `HUB_DIAMETER_KM` max distance between any two cities in a hub | 250 |
 | hotspots.py | `ROLLING_SEASONS` club smoothing | 3 |
 | hotspots.py | `TOURNAMENT_CAP` size vs biggest club hub | WC 1.5×, Euro 1.1× |
 | hotspots.py | `FADE` post-tournament fade by month | .55, .25, .08 |

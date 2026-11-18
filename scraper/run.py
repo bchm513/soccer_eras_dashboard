@@ -59,6 +59,8 @@ def main(argv=None):
     if a.step == "dump":
         if not a.title:
             raise SystemExit('dump needs --title, e.g. --title "1975–76 Bundesliga"')
+        # Accept "1946-47" (or a dash PowerShell mangled into "?") for "1946–47"
+        a.title = re.sub(r"^(\d{4})\s*[-?\u2010-\u2015]\s*(\d{2,4})", r"\1–\2", a.title.strip())
         html = session().get(wiki.page_url(a.title))
         if not html:
             raise SystemExit(f"No page called '{a.title}'.")
@@ -86,7 +88,7 @@ def main(argv=None):
 
     if a.step in ("transfermarkt", "all"):
         print("Transfermarkt open data (2012 on)...")
-        transfermarkt.build(RAW, CACHE / "datasets", wiki.load_leagues(only, include_disabled=True))
+        transfermarkt.build(RAW, CACHE / "datasets", wiki.load_leagues(only))
 
     if a.step in ("assemble", "all"):
         print("Assembling player_seasons.csv...")

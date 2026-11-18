@@ -62,6 +62,24 @@ def test_wiki_titles():
         wiki.page_url("1955–56 La Liga").endswith("1955–56_La_Liga")
 
 
+def test_wiki_goal_group_lists():
+    rows = wiki.parse_scorers((FIX / "wiki_bundesliga_1975.html").read_text(encoding="utf-8"))
+    assert [(r["player"], r["goals"]) for r in rows] == [
+        ("Klaus Fischer", 29), ("Gerd Müller", 23), ("Allan Simonsen", 23), ("Bernd Hölzenbein", 22)]
+    by = {r["player"]: r for r in rows}
+    assert by["Klaus Fischer"]["team"] == "FC Schalke 04" and by["Klaus Fischer"]["method"] == "list"
+    assert by["Allan Simonsen"]["nationality"] == "Denmark"
+    assert by["Allan Simonsen"]["rank"] == 2 and by["Bernd Hölzenbein"]["rank"] == 4
+    assert by["Gerd Müller"]["player_id"] == "Gerd_Müller"
+
+
+def test_wiki_infobox_fallback():
+    rows = wiki.parse_scorers((FIX / "wiki_eredivisie_1990.html").read_text(encoding="utf-8"))
+    assert [(r["player"], r["team"], r["goals"], r["rank"]) for r in rows] == [
+        ("Romário", "PSV", 25, 1), ("Dennis Bergkamp", "Ajax", 25, 1)]
+    assert rows[0]["method"] == "infobox"
+
+
 def test_club_resolver(tmp_path):
     r = ClubResolver(tmp_path)
     assert r.resolve("Juventus", "ITA")[0] == "Turin"
@@ -79,6 +97,8 @@ if __name__ == "__main__":
     test_wiki_seriea_rowspan_ties()
     test_wiki_eng_equals_ties()
     test_wiki_titles()
+    test_wiki_goal_group_lists()
+    test_wiki_infobox_fallback()
     with tempfile.TemporaryDirectory() as d:
         test_club_resolver(Path(d))
     print("all scraper tests passed")

@@ -28,6 +28,50 @@ MIN_WEIGHT_ENV = {"club": 10, "international": 3}   # reference rows in environm
 SHRINK_GAMES = 6       # pseudo-games of average output added to every row in environment mode
 REF_TOP = 3            # environment mode: each league-season's top 3 scorers are the reference group
 FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above the average top-3 scorer
+ERA_WINDOW = 5         # environment mode: compare with top scorers within +/- this many seasons
+INTL_WEIGHT = 0.2      # environment mode: international games count this much vs club games
+
+
+def _window_z(df: pd.DataFrame, value: str) -> np.ndarray:
+    """z-score against reference rows from nearby seasons (+/- ERA_WINDOW), per competition type.
+    Players are compared with the top scorers of their own time, not of every era at once:
+    goals have become more concentrated among leading scorers, which would otherwise make
+    every modern striker look greater than every 1950s one."""
+    out = np.full(len(df), np.nan)
+    ref = df[df["is_ref"] & df[value].notna()]
+    for ct, rows in df.groupby("comp_type").groups.items():
+        r = ref[ref["comp_type"] == ct]
+        if r.empty:
+            continue
+        agg = r.groupby("season")[value].agg(n="count", s="sum", ss=lambda x: (x ** 2).sum())
+        seasons = np.arange(int(df["season"].min()), int(df["season"].max()) + 1)
+        agg = agg.reindex(seasons, fill_value=0)
+        win = agg.rolling(2 * ERA_WINDOW + 1, center=True, min_periods=1).sum()
+        idx = np.asarray(list(rows))
+        sub = df.loc[idx, ["player_id", "season", value]].copy()
+        sub["season"] = sub["season"].astype(int)
+        n = win["n"].reindex(sub["season"]).to_numpy(float)
+        s = win["s"].reindex(sub["season"]).to_numpy(float)
+        ss = win["ss"].reindex(sub["season"]).to_numpy(float)
+        # Leave the player's own seasons out of his reference group, so a dominant player
+        # isn't partly compared with himself (Di Stéfano was most of 1950s La Liga's top 3).
+        own = r.groupby(["player_id", "season"])[value].agg(n="count", s="sum", ss=lambda x: (x ** 2).sum())
+        if not own.empty:
+            own = own.reset_index()
+            own["season"] = own["season"].astype(int)
+            on, os_, oss = np.zeros(len(sub)), np.zeros(len(sub)), np.zeros(len(sub))
+            for k in range(-ERA_WINDOW, ERA_WINDOW + 1):
+                m = sub[["player_id", "season"]].assign(season=sub["season"] + k).merge(
+                    own, on=["player_id", "season"], how="left")
+                on += m["n"].fillna(0).to_numpy()
+                os_ += m["s"].fillna(0).to_numpy()
+                oss += m["ss"].fillna(0).to_numpy()
+            n, s, ss = n - on, s - os_, ss - oss
+        n = np.where(n > 1, n, np.nan)
+        mean = s / n
+        sd = np.sqrt(np.clip(ss / n - mean ** 2, 0, None))
+        out[df.index.get_indexer(idx)] = (sub[value].to_numpy(float) - mean) / np.where(sd > 0, sd, np.nan)
+    return out
 
 
 def _row_z(df: pd.DataFrame, value: str, by_season: bool) -> pd.Series:
@@ -78,9 +122,10 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
             prior = df[df["is_ref"]].groupby("comp_type")[col].mean()
             p = df["comp_type"].map(prior)
             df[col] = (df[col] * df["w"] + p * SHRINK_GAMES) / (df["w"] + SHRINK_GAMES)
-        df["z_goals_adj"] = _row_z(df, "g_adj", by_season=False)
-        df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)
-        df["z_ga_adj"] = _row_z(df, "ga_adj", by_season=False)
+        df = df.reset_index(drop=True)
+        df["z_goals_adj"] = _window_z(df, "g_adj")
+        df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)   # raw: no era adjustment at all
+        df["z_ga_adj"] = _window_z(df, "ga_adj")
     else:
         df["z_goals_adj"] = _row_z(df, "g_rate", by_season=True)
         df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)
@@ -88,7 +133,7 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
 
     # Weighted mean of row z-scores per player-season (club + international = overall output)
     keys = ["player_id", "season"]
-    df["apps"] = df["w"]
+    df["apps"] = df["w"] * np.where(env_mode & (df["comp_type"] == "international"), INTL_WEIGHT, 1.0)
     df = df.sort_values("goals", ascending=False)   # main club = where they scored most that season
     for m in METRICS:
         z = df[f"z_{m}"]
@@ -119,7 +164,7 @@ def fit_peak(years: np.ndarray, z: np.ndarray) -> dict:
     span = np.arange(years.min(), years.max() + 1)
     try:
         p0 = [max(z.max() - z.min(), 0.5), years[np.argmax(z)], 3.0, z.min()]
-        bounds = ([0, years.min() - 2, 1.0, -3], [12, years.max() + 2, 12, 3])
+        bounds = ([0, years.min(), 1.0, -3], [12, years.max(), 12, 3])   # peak inside the career
         (a, mu, s, b), _ = curve_fit(_gauss, years, z, p0=p0, bounds=bounds, maxfev=5000)
         curve = _gauss(span, a, mu, s, b)
         half = s * np.sqrt(2 * np.log(1 / PEAK_FRACTION))
@@ -142,9 +187,14 @@ def find_stars(ps: pd.DataFrame, metric: str, require_club: bool = False, flag_z
     for pid, g in ps.dropna(subset=[metric]).groupby("player_id"):
         if club_ids is not None and pid not in club_ids:
             continue
-        if (g[metric] >= (FLAG_Z if flag_z is None else flag_z)).sum() < MIN_FLAGGED:
+        flagged = g[metric] >= (FLAG_Z if flag_z is None else flag_z)
+        if club_ids is not None:
+            flagged &= g["league"].notna()      # a star season needs club form
+        if flagged.sum() < MIN_FLAGGED:
             continue
         g = g.sort_values("season")
+        if club_ids is not None:
+            g = g[g["league"].notna()]          # career curve from club seasons
         fit = fit_peak(g["season"].to_numpy(float), g[metric].to_numpy(float))
         fit.update({"player": g["player"].iloc[0],
                     "points": np.column_stack([g["season"], g[metric]])})

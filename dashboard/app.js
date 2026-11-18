@@ -135,7 +135,9 @@
   const PW = 1200, PH = 330, pm = { t: 26, r: 18, b: 28, l: 40 };
   const peaksSvg = d3.select("#peaks").attr("viewBox", `0 0 ${PW} ${PH}`);
   const x = d3.scaleLinear().domain([M.firstSeason - 0.5, M.lastSeason + 1]).range([pm.l, PW - pm.r]);
-  const yMax = d3.max(data.stars, s => d3.max(s.points, p => p[1]));
+  // Cap the axis near the top of the data so one extreme season doesn't squash every curve
+  const allY = data.stars.flatMap(s => s.points.map(p => p[1])).sort(d3.ascending);
+  const yMax = Math.max(M.flagZ + 1, d3.quantile(allY, 0.995) || 1);
   const y = d3.scaleLinear().domain([-1.5, Math.ceil(yMax + 0.5)]).range([PH - pm.b, pm.t]);
   const bandG = peaksSvg.append("g");
   const strengthG = peaksSvg.append("path").attr("class", "strength");
@@ -151,6 +153,7 @@
 
   const line = d3.line().x(d => x(d[0])).y(d => y(d[1])).curve(d3.curveMonotoneX);
   const starG = peaksSvg.append("g").selectAll("g").data(data.stars).join("g");
+  y.clamp(true);
   starG.selectAll(".pt").data(s => s.points).join("circle").attr("class", "pt")
     .attr("cx", d => x(d[0])).attr("cy", d => y(d[1])).attr("r", 2);
   starG.append("path").attr("class", "curve").attr("d", s => line(s.curve));
@@ -217,14 +220,18 @@
     if (state.selectedHub) {
       const h = hubById[state.selectedHub];
       const w = (map.hw.find(x => x.hub.id === h.id) || { w: 0 }).w;
-      const players = data.stars.filter(s => s.clubs.some(c => c[0] === season && c[2] === h.id));
+      // Top scorers at this hub this season (stars marked); older data files only have stars
+      const listed = (data.hubPlayers && data.hubPlayers[h.id] && data.hubPlayers[h.id][String(season)]) ||
+        data.stars.filter(s => s.clubs.some(c => c[0] === season && c[2] === h.id))
+          .map(s => [s.name, clubAt(s, season) || "", null, null, true]);
       html += `<div class="d-block"><button class="d-close" id="close-hub" aria-label="Close">×</button>
         <div class="d-label">Selected hub</div><div class="d-big">${h.name}</div>
         <div class="d-note">${h.cities.join(", ")}</div>
         <div class="d-note" style="margin-top:6px">${Math.round((100 * w) / total)}% of club weight this moment</div>
         <div class="bar"><i style="width:${(100 * w) / total}%"></i></div>
-        ${players.length ? `<ul class="d-list">${players.map(s => `<li><span>${s.name}</span><span class="where">${clubAt(s, season) || ""}</span></li>`).join("")}</ul>`
-          : `<div class="d-note" style="margin-top:6px">No star players here this season.</div>`}</div>`;
+        ${listed.length ? `<div class="d-label" style="margin-top:10px">Top scorers here, ${season}–${String((season + 1) % 100).padStart(2, "0")}</div>
+          <ul class="d-list">${listed.map(p => `<li><span>${p[4] ? "★ " : ""}${p[0]}</span><span class="where">${p[2] != null ? p[2] + " goals · " : ""}${p[1] || ""}</span></li>`).join("")}</ul>`
+          : `<div class="d-note" style="margin-top:6px">No standout scorers here this season.</div>`}</div>`;
     }
 
     if (tours.length) {

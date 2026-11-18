@@ -45,6 +45,11 @@ def _club_rows(raw: Path) -> pd.DataFrame:
     if not frames:
         raise SystemExit("No club scorer files in data/raw/. Run `python -m scraper.run scorers` first.")
     club = pd.concat(frames, ignore_index=True)
+    from .wikipedia import NOT_A_PLAYER
+    junk = club["player"].map(lambda v: isinstance(v, str) and bool(NOT_A_PLAYER.search(v)))
+    if junk.any():
+        print(f"  dropped {int(junk.sum())} summary rows ('Total:', '22 players', ...)")
+    club = club[~junk]
 
     # Link the same player across sources by name (only when the name is unambiguous)
     club["_k"] = club["player"].astype(str).map(norm)
@@ -66,6 +71,11 @@ def assemble(raw: Path, leagues: list[dict], geocode: bool = False, contact: str
     env = pd.read_csv(raw / "league_environment.csv")
     env_code = {lg["code"]: lg.get("env") for lg in leagues}
     club = _club_rows(raw)
+    enabled = {lg["code"] for lg in leagues if lg["enabled"]}
+    off = ~club["competition"].isin(enabled)
+    if off.any():
+        print(f"  left out {int(off.sum())} rows from leagues not enabled in leagues.json")
+    club = club[~off]
 
     club["env_comp"] = club["competition"].map(env_code)
     club = club.merge(env.rename(columns={"competition": "env_comp", "goals_per_team_match": "env_gpm"})[

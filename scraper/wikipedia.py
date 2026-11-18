@@ -23,6 +23,8 @@ BASE = "https://en.wikipedia.org/wiki/"
 CONFIG = Path(__file__).with_name("leagues.json")
 SCORER_HEADING = re.compile(r"scor|capocannoniere|pichichi|torj|goalgetter|golden boot", re.I)
 INT_RE = re.compile(r"\d+")
+# Summary rows that some pages put in scorer tables ("Total:", "22 players", "Own goals")
+NOT_A_PLAYER = re.compile(r"^\d+\s+players?$|:\s*$|^(?:total|games|average|own goals?|others?)\b", re.I)
 
 
 def load_leagues(only=None, include_disabled=False) -> list[dict]:
@@ -147,7 +149,7 @@ def _parse_tables(soup: BeautifulSoup) -> list[dict]:
             if all(c is not None and c.name == "th" for c in r):
                 continue   # repeated header rows
             name, pid, nat = _player(r[ip])
-            if not name:
+            if not name or NOT_A_PLAYER.search(name):
                 continue
             m = INT_RE.search(_text(r[ig]))
             if not m:
@@ -193,7 +195,7 @@ def _player_club(el: Tag) -> dict | None:
         name, pid = p.get_text(" ", strip=True), unquote(p["href"][6:].split("#")[0])
     else:
         name, pid = re.split(r"\s*\(", text)[0].strip(), ""
-    if not name or GOAL_LINE.match(name) or re.search(r"\d+\s+goals?", name, re.I):
+    if not name or GOAL_LINE.match(name) or re.search(r"\d+\s+goals?", name, re.I) or NOT_A_PLAYER.search(name):
         return None
     paren = re.search(r"\(([^()]*)\)", text[text.find(name) + len(name):] if name in text else text)
     club = paren.group(1).strip() if paren else (links[1].get_text(" ", strip=True) if len(links) > 1 else "")

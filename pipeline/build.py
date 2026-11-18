@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import sys
+import warnings
 from datetime import date
 from pathlib import Path
 
@@ -27,8 +28,26 @@ OUT = ROOT / "dashboard" / "data" / "eras.json"
 PRIMARY = "goals_adj"
 
 
+def _clean(o):
+    """Make data strict JSON: numpy -> Python, NaN/inf -> null (browsers reject NaN)."""
+    if isinstance(o, dict):
+        return {str(k): _clean(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_clean(v) for v in o]
+    if hasattr(o, "item") and not isinstance(o, (str, bytes)):
+        o = o.item()
+    if isinstance(o, float) and not np.isfinite(o):
+        return None
+    if isinstance(o, (str, int, float, bool)) or o is None:
+        return o
+    return str(o)
+
+
 def r2(a):
     return [[int(x), round(float(y), 2)] for x, y in a]
+
+
+warnings.filterwarnings("ignore", message="Covariance of the parameters could not be estimated")
 
 
 def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -> dict:
@@ -41,10 +60,20 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
 
     ps = E.player_season_scores(df)
     metrics = [m for m in E.METRICS if ps[m].notna().any()]
+    # A measure "covers" the seasons where club rows have it (international assists exist
+    # long before club assists do, which would make the agreement scores misleading)
+    coverage = {m: (int(ps.dropna(subset=[m])["season"].min()), last) for m in metrics}
+    if E.uses_environment(df) and "ga_adj" in coverage:
+        club_ast = df[(df["comp_type"] == "club") & pd.to_numeric(df["assists"], errors="coerce").notna()]
+        if club_ast.empty:
+            metrics.remove("ga_adj"); coverage.pop("ga_adj")
+        else:
+            start = int(club_ast["season"].min())
+            coverage["ga_adj"] = (start, last)
+            ps.loc[ps["season"] < start, "ga_adj"] = np.nan
     env_mode = E.uses_environment(df)
     flag_z = E.FLAG_Z_ENV if env_mode else E.FLAG_Z
     stars_by = {m: E.find_stars(ps, m, require_club=env_mode, flag_z=flag_z) for m in metrics}
-    coverage = {m: (int(ps.dropna(subset=[m])["season"].min()), last) for m in metrics}
     eras_by, series_by = {}, {}
     for m in metrics:
         lo = coverage[m][0]
@@ -54,7 +83,9 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
     start = f"{first}-08"
     n = H.month_index(start, f"{last + 1}-12") + 1
     stars = stars_by[PRIMARY]
-    hubs, star_rows = H.find_hubs(ps, stars, PRIMARY)
+    hub_min_z = H.HUB_MIN_Z["real" if env_mode else "sample"]
+    hubs, star_rows = H.find_hubs(ps, stars, PRIMARY, min_z=hub_min_z)
+    hub_detail = H.hub_players(star_rows, stars, PRIMARY)
     club = H.club_weights(star_rows, hubs, PRIMARY, first, last, start, n)
     tours = H.tournament_weights(TOURNAMENTS, club, start, n)
 
@@ -95,6 +126,7 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
         },
         "hubs": hubs,
         "clubWeights": {k: v.tolist() for k, v in club.items()},
+        "hubPlayers": hub_detail,
         "tournaments": tours,
         "stars": star_out,
         "altStars": alt,
@@ -105,7 +137,7 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
                                  {m: c for m, c in coverage.items() if eras_by[m]}),
     }
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(data, separators=(",", ":"), default=lambda o: o.item() if hasattr(o, "item") else str(o)), encoding="utf-8")
+    out.write_text(json.dumps(_clean(data), separators=(",", ":"), allow_nan=False), encoding="utf-8")
     return data
 
 

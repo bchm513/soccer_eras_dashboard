@@ -3,29 +3,55 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-from sklearn.cluster import DBSCAN
+from sklearn.cluster import AgglomerativeClustering
 
 EARTH_KM = 6371.0
-HUB_RADIUS_KM = 250      # cities within this chain together into one hub
+HUB_DIAMETER_KM = 250    # every city in a hub is within this distance of every other
 ROLLING_SEASONS = 3      # club baseline smoothing
+HUB_MIN_Z = {"real": 0.0, "sample": 1.0}   # map pool: club seasons at/above this z also feed hubs
 TOURNAMENT_CAP = {"World Cup": 1.5, "Euro": 1.1}   # x the largest club hub that month
 FADE = [0.55, 0.25, 0.08]  # months after a tournament ends
 LEAD_IN = 0.3            # month before it starts
 
 
-def find_hubs(ps: pd.DataFrame, stars: dict, metric: str) -> tuple[list, pd.DataFrame]:
-    """Cluster the cities where stars played; each cluster is a hub."""
-    rows = ps[ps["player_id"].isin(stars) & ps["lat"].notna()].copy()
+def _haversine_km(a: np.ndarray) -> np.ndarray:
+    lat, lon = np.radians(a[:, 0])[:, None], np.radians(a[:, 1])[:, None]
+    d = np.sin((lat - lat.T) / 2) ** 2 + np.cos(lat) * np.cos(lat.T) * np.sin((lon - lon.T) / 2) ** 2
+    return 2 * EARTH_KM * np.arcsin(np.sqrt(np.clip(d, 0, 1)))
+
+
+def _cluster(coords: np.ndarray) -> np.ndarray:
+    """Complete-linkage clustering: no chaining city to city across a country
+    (single-link joined Milan to Marseille via the Riviera clubs)."""
+    if len(coords) < 2:
+        return np.zeros(len(coords), dtype=int)
+    return AgglomerativeClustering(n_clusters=None, metric="precomputed", linkage="complete",
+                                   distance_threshold=HUB_DIAMETER_KM).fit_predict(_haversine_km(coords))
+
+
+def find_hubs(ps: pd.DataFrame, stars: dict, metric: str, min_z: float | None = None) -> tuple[list, pd.DataFrame]:
+    """Cluster the cities where strong scoring seasons happened; each cluster is a hub.
+
+    The pool is every star season plus, when min_z is set, every club season at or above
+    min_z. Stars alone light up only one or two cities in many years; the wider pool shows
+    everywhere goals were being scored at a high level, while eras stay star-defined."""
+    keep = ps["player_id"].isin(stars)
+    if min_z is not None:
+        keep |= ps[metric] >= min_z
+    rows = ps[keep & ps["lat"].notna()].copy()
     rows["w"] = rows[metric].clip(lower=0)
     cities = rows.groupby("city").agg(lat=("lat", "first"), lon=("lon", "first"), w=("w", "sum")).reset_index()
-    labels = DBSCAN(eps=HUB_RADIUS_KM / EARTH_KM, min_samples=1, metric="haversine").fit_predict(
-        np.radians(cities[["lat", "lon"]].to_numpy()))
+    labels = _cluster(cities[["lat", "lon"]].to_numpy())
     cities["hub"] = labels
     hubs = []
     for h, g in cities.groupby("hub"):
         g = g.sort_values("w", ascending=False)
         w = g["w"].clip(lower=1e-6)
-        hubs.append({"id": f"hub{h}", "name": "–".join(g["city"].head(2)),
+        # Second city in the name only if it carries at least a third of the leader's weight
+        top = g["city"].head(2).tolist()
+        if len(top) == 2 and g["w"].iloc[1] < g["w"].iloc[0] / 3:
+            top = top[:1]
+        hubs.append({"id": f"hub{h}", "name": "–".join(top),
                      "cities": g["city"].tolist(),
                      "lat": round(float(np.average(g["lat"], weights=w)), 3),
                      "lon": round(float(np.average(g["lon"], weights=w)), 3)})
@@ -74,4 +100,15 @@ def tournament_weights(tournaments: list, club: dict, start: str, n: int) -> lis
             series.append([f, round(float(cap * k * biggest[min(max(f, 0), n - 1)]), 2)])
         out.append({"id": f"t{i}", "type": kind, "year": year, "host": host, "city": city,
                     "lat": lat, "lon": lon, "startFrame": a, "endFrame": b, "weights": series})
+    return out
+
+
+def hub_players(rows: pd.DataFrame, stars: dict, metric: str, top: int = 4) -> dict:
+    """Top scorers per hub per season, for the dashboard's hub detail panel."""
+    out: dict = {}
+    r = rows.dropna(subset=["hub", metric]).sort_values(metric, ascending=False)
+    for (hub, season), g in r.groupby(["hub", "season"]):
+        out.setdefault(hub, {})[str(int(season))] = [
+            [str(x.player), x.city, int(x.goals), round(float(getattr(x, metric)), 2), x.player_id in stars]
+            for x in g.head(top).itertuples()]
     return out
