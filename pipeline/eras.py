@@ -24,28 +24,72 @@ SPLIT_RATIO = 0.7      # split a run where strength dips below 70% of the peaks 
 METRICS = ["goals_adj", "goals_raw", "ga_adj"]
 
 
+MIN_WEIGHT_ENV = {"club": 10, "international": 3}   # reference rows in environment mode
+SHRINK_GAMES = 6       # pseudo-games of average output added to every row in environment mode
+REF_TOP = 3            # environment mode: each league-season's top 3 scorers are the reference group
+FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above the average top-3 scorer
+
+
 def _row_z(df: pd.DataFrame, value: str, by_season: bool) -> pd.Series:
     keys = ["competition", "season"] if by_season else ["comp_type"]
-    ref = df[df["apps"] >= MIN_APPS]
+    if "is_ref" in df:
+        ref = df[df["is_ref"]]
+    else:
+        ref = df[df["w"] >= MIN_APPS]
     stats = ref.groupby(keys)[value].agg(["mean", "std"]).reset_index()
     m = df.merge(stats, on=keys, how="left")
     return ((m[value] - m["mean"]) / m["std"].replace(0, np.nan)).to_numpy()
 
 
+def uses_environment(df: pd.DataFrame) -> bool:
+    """Real scraped data has no appearances; it carries each league-season's scoring rate instead."""
+    return "env_gpm" in df and pd.to_numeric(df.get("apps"), errors="coerce").isna().mean() > 0.5
+
+
 def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
-    """One row per player-season with a z-score per metric (club + international combined)."""
+    """One row per player-season with a z-score per metric (club + international combined).
+
+    Two modes:
+      full-league data (sample): z-score within each competition-season, weights = apps
+      top-scorer data (real):    divide output by the league-season's goals per team match,
+                                 then z-score across all seasons; weights = team games
+    """
     df = df.copy()
-    df["apps"] = df["apps"].astype(float)
-    df["g_rate"] = df["goals"] / df["apps"].clip(lower=1)
+    apps = pd.to_numeric(df["apps"], errors="coerce")
+    env_mode = uses_environment(df)
+    df["w"] = apps.fillna(pd.to_numeric(df.get("team_games"), errors="coerce")) if env_mode else apps
+    df["g_rate"] = df["goals"] / df["w"].clip(lower=1)
     has_ast = pd.to_numeric(df["assists"], errors="coerce")
-    df["ga_rate"] = (df["goals"] + has_ast) / df["apps"].clip(lower=1)
+    df["ga_rate"] = (df["goals"] + has_ast) / df["w"].clip(lower=1)
 
-    df["z_goals_adj"] = _row_z(df, "g_rate", by_season=True)
-    df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)
-    df["z_ga_adj"] = _row_z(df, "ga_rate", by_season=True)
+    if env_mode:
+        env = pd.to_numeric(df["env_gpm"], errors="coerce")
+        df["min_w"] = df["comp_type"].map(MIN_WEIGHT_ENV).fillna(MIN_APPS)
+        # Same reference group in every era: the top REF_TOP scorers of each league-season
+        # (sources list 3 to 20+ scorers depending on era), plus all international rows.
+        rank = pd.to_numeric(df.get("comp_rank"), errors="coerce")
+        is_club = df["comp_type"] == "club"
+        df["is_ref"] = (df["w"] >= df["min_w"]) & (~is_club | rank.isna() | (rank <= REF_TOP))
+        df["g_adj"] = df["g_rate"] / env
+        df["ga_adj"] = df["ga_rate"] / env
+        # Shrink small samples (a handful of internationals) toward the typical rate for that
+        # competition type, so four goals in three games doesn't outrank a 30-goal league season.
+        for col in ("g_rate", "g_adj", "ga_adj"):
+            prior = df[df["is_ref"]].groupby("comp_type")[col].mean()
+            p = df["comp_type"].map(prior)
+            df[col] = (df[col] * df["w"] + p * SHRINK_GAMES) / (df["w"] + SHRINK_GAMES)
+        df["z_goals_adj"] = _row_z(df, "g_adj", by_season=False)
+        df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)
+        df["z_ga_adj"] = _row_z(df, "ga_adj", by_season=False)
+    else:
+        df["z_goals_adj"] = _row_z(df, "g_rate", by_season=True)
+        df["z_goals_raw"] = _row_z(df, "g_rate", by_season=False)
+        df["z_ga_adj"] = _row_z(df, "ga_rate", by_season=True)
 
-    # Apps-weighted mean of row z-scores per player-season (club + international = overall output)
+    # Weighted mean of row z-scores per player-season (club + international = overall output)
     keys = ["player_id", "season"]
+    df["apps"] = df["w"]
+    df = df.sort_values("goals", ascending=False)   # main club = where they scored most that season
     for m in METRICS:
         z = df[f"z_{m}"]
         df[f"wz_{m}"] = (z * df["apps"]).where(z.notna())
@@ -89,10 +133,16 @@ def fit_peak(years: np.ndarray, z: np.ndarray) -> dict:
                 "curve": np.column_stack([span, s.to_numpy()]), "fit": "smoothed"}
 
 
-def find_stars(ps: pd.DataFrame, metric: str) -> dict:
+def find_stars(ps: pd.DataFrame, metric: str, require_club: bool = False, flag_z: float | None = None) -> dict:
+    """Stars: players with >= MIN_FLAGGED seasons at or above FLAG_Z.
+    With require_club, a star needs club seasons; international goals then add to a club
+    player's seasons but can't make someone a star on their own."""
     stars = {}
+    club_ids = set(ps.loc[ps["league"].notna(), "player_id"]) if require_club else None
     for pid, g in ps.dropna(subset=[metric]).groupby("player_id"):
-        if (g[metric] >= FLAG_Z).sum() < MIN_FLAGGED:
+        if club_ids is not None and pid not in club_ids:
+            continue
+        if (g[metric] >= (FLAG_Z if flag_z is None else flag_z)).sum() < MIN_FLAGGED:
             continue
         g = g.sort_values("season")
         fit = fit_peak(g["season"].to_numpy(float), g[metric].to_numpy(float))

@@ -307,6 +307,13 @@
     scrub.value = Math.floor(f);
   }
 
+  // Measures the data can't support (e.g. assists in real data) are greyed out
+  document.querySelectorAll("#metric option").forEach(o => {
+    const ok = (data.eras[o.value] || []).length > 0;
+    o.disabled = !ok;
+    if (!ok) o.textContent += " (no data yet)";
+  });
+
   // Deep links: ?t=2026-07&view=europe&metric=goals_raw&hub=hub7
   const q = new URLSearchParams(location.search);
   if (q.get("metric") && data.eras[q.get("metric")]) {

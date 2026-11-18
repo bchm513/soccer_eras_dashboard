@@ -31,20 +31,22 @@ def r2(a):
     return [[int(x), round(float(y), 2)] for x, y in a]
 
 
-def main(force_sample: bool = False) -> dict:
-    is_sample = force_sample or not RAW.exists()
-    src = SAMPLE if is_sample else RAW
+def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -> dict:
+    is_sample = src is None and (force_sample or not RAW.exists())
+    src = src or (SAMPLE if is_sample else RAW)
     if is_sample:
         generate(SAMPLE)
     df = pd.read_csv(src)
     first, last = int(df["season"].min()), int(df["season"].max())
 
     ps = E.player_season_scores(df)
-    stars_by = {m: E.find_stars(ps, m) for m in E.METRICS}
-    years = range(first, last + 1)
-    coverage = {m: (int(ps.dropna(subset=[m])["season"].min()), last) for m in E.METRICS}
+    metrics = [m for m in E.METRICS if ps[m].notna().any()]
+    env_mode = E.uses_environment(df)
+    flag_z = E.FLAG_Z_ENV if env_mode else E.FLAG_Z
+    stars_by = {m: E.find_stars(ps, m, require_club=env_mode, flag_z=flag_z) for m in metrics}
+    coverage = {m: (int(ps.dropna(subset=[m])["season"].min()), last) for m in metrics}
     eras_by, series_by = {}, {}
-    for m in E.METRICS:
+    for m in metrics:
         lo = coverage[m][0]
         eras_by[m], series_by[m] = E.detect_eras(stars_by[m], range(lo, last + 1))
 
@@ -76,17 +78,20 @@ def main(force_sample: bool = False) -> dict:
 
     alt = {m: [{"id": pid, "name": s["player"], "peak": round(s["peak"], 2),
                 "window": [round(x, 2) for x in s["window"]]} for pid, s in stars_by[m].items()]
-           for m in E.METRICS if m != PRIMARY}
+           for m in metrics if m != PRIMARY}
 
     data = {
         "meta": {
-            "sample": is_sample, "source": str(src.relative_to(ROOT)), "built": date.today().isoformat(),
-            "primaryMetric": PRIMARY, "flagZ": E.FLAG_Z, "minFlagged": E.MIN_FLAGGED,
+            "sample": is_sample, "source": str(src.relative_to(ROOT)) if src.is_relative_to(ROOT) else str(src), "built": date.today().isoformat(),
+            "primaryMetric": PRIMARY, "flagZ": flag_z, "minFlagged": E.MIN_FLAGGED,
             "peakFraction": E.PEAK_FRACTION, "minOverlap": E.MIN_OVERLAP,
             "firstSeason": first, "lastSeason": last, "start": start, "frames": n,
             "coverage": coverage,
             "note": ("SAMPLE DATA: fictional players with simulated numbers. Cities and tournament "
-                     "hosts/dates are real.") if is_sample else "",
+                     "hosts/dates are real.") if is_sample else
+                    ("Club goals: league top scorers (worldfootball.net), weighted by team games since "
+                     "appearances aren't available. International goals: competitive matches with scorer "
+                     "records (martj42/international_results). League scoring rates: engsoccerdata."),
         },
         "hubs": hubs,
         "clubWeights": {k: v.tolist() for k, v in club.items()},
@@ -95,20 +100,24 @@ def main(force_sample: bool = False) -> dict:
         "altStars": alt,
         "eras": eras_by,
         "eraSeries": {m: [{k: v for k, v in row.items() if k != "players"} for row in series_by[m]]
-                      for m in E.METRICS},
-        "agreement": E.agreement(eras_by, coverage),
+                      for m in metrics},
+        "agreement": E.agreement({m: e for m, e in eras_by.items() if e},
+                                 {m: c for m, c in coverage.items() if eras_by[m]}),
     }
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(data, separators=(",", ":"), default=lambda o: o.item() if hasattr(o, "item") else str(o)))
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(data, separators=(",", ":"), default=lambda o: o.item() if hasattr(o, "item") else str(o)), encoding="utf-8")
     return data
 
 
 if __name__ == "__main__":
-    d = main(force_sample="--sample" in sys.argv)
+    args = sys.argv[1:]
+    src = Path(args[args.index("--input") + 1]).resolve() if "--input" in args else None
+    out = Path(args[args.index("--output") + 1]).resolve() if "--output" in args else OUT
+    d = main(force_sample="--sample" in args, src=src, out=out)
     print(f"{'SAMPLE' if d['meta']['sample'] else 'REAL'} data | stars: {len(d['stars'])} | hubs: {len(d['hubs'])} "
           f"| frames: {d['meta']['frames']} | tournaments: {len(d['tournaments'])}")
     for m, es in d["eras"].items():
         print(f"  {m}: " + ", ".join(f"{e['start']}-{e['end']}" for e in es))
     for a in d["agreement"]:
         print(f"  agreement {a['a']} vs {a['b']} ({a['from']}-{a['to']}): {a['jaccard']}")
-    print(f"  -> {OUT}")
+    print(f"  -> {out}")

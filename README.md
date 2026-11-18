@@ -2,12 +2,12 @@
 
 Defines soccer eras by **overlapping player peaks** (1946 → today) and shows them in an interactive D3 dashboard: a map of the game's shifting hubs, a panel of career peaks, and a description of each moment. See `PLAN.md` for the full method and roadmap.
 
-> **Currently running on SAMPLE data.** Players are fictional ("Player A1") with simulated numbers. Cities and World Cup / Euro hosts and dates are real. Drop real data into `data/raw/` and rebuild.
+> **The dashboard runs on SAMPLE data until you collect real data.** Sample players are fictional ("Player A1") with simulated numbers. Cities and World Cup / Euro hosts and dates are real. See **Getting real data** below.
 
 ## Run it
 
 ```bash
-pip install numpy pandas scipy scikit-learn
+pip install -r requirements.txt
 python pipeline/build.py          # uses data/raw/player_seasons.csv if present, else sample data
 cd dashboard && python -m http.server 8000
 # open http://localhost:8000
@@ -23,6 +23,49 @@ The dashboard needs to be served (not opened as a file) because it loads JSON. D
 - **Era measure**: switch between goals (era-adjusted), goals (raw) and goals + assists to see where the eras agree.
 - **World / Europe**: zoom presets; scroll to zoom, drag to pan.
 
+## Getting real data
+
+Run everything from the `soccer-eras` folder.
+
+```bash
+pip install -r requirements.txt
+export SOCCER_ERAS_CONTACT="you@example.com"   # or a GitHub URL; Windows: set SOCCER_ERAS_CONTACT=...
+python -m scraper.run probe          # ~1 min: checks Wikipedia page names for each league
+python -m scraper.run scorers        # ~10-15 min: Wikipedia top scorers, 1946 on; resumable
+python -m scraper.run transfermarkt  # one ~100 MB download: full league data, 2012 on
+python -m scraper.run assemble       # builds data/raw/player_seasons.csv
+python pipeline/build.py             # rebuilds the dashboard data from the real file
+```
+
+`env` (league + international scoring rates) has already been run; its files ship in `data/raw/`. Narrow a run with `--leagues ENG,ESP --from 1950 --to 1970`. Every page is cached in `data/cache/`, so a stopped run picks up where it left off.
+
+After `assemble`, open `data/raw/unresolved_clubs.csv`: those clubs have no map location. Add them to `data/raw/club_locations_manual.csv` (`team,city,lat,lon`) and re-run `assemble`, or use `--geocode` to look them up on OpenStreetMap.
+
+### Sources
+
+| What | Source | Access |
+|---|---|---|
+| League scoring rate and games per team, by season | [jalapic/engsoccerdata](https://github.com/jalapic/engsoccerdata): ENG, ESP, ITA, FRA 1946+, NED 1956+, GER 1963+, POR/SCO/BEL 1994+ | download |
+| International goals by player, international scoring rate | [martj42/international_results](https://github.com/martj42/international_results) | download |
+| Club top scorers, 1946–2011 | Wikipedia league-season pages (Rank / Player / Club / Goals tables), CC BY-SA | article pages, 1 request/s |
+| Club goals, assists, minutes, 2012–2025 | [Transfermarkt open dataset](https://github.com/dcaribou/transfermarkt-datasets) | download |
+| Club locations | `scraper/cities.csv` + your fixes + optional OpenStreetMap lookup | local |
+
+Where two sources cover the same league-season, Transfermarkt wins. Players are linked across sources by name, so a career that spans 2012 stays one player.
+
+### Known limitations
+
+- **Depth varies by era.** Older Wikipedia pages list about 3 scorers; modern ones 10 or more. To keep eras comparable, every league-season is measured against the same reference group: its top 3 scorers.
+- **No appearances before 2012.** Output is goals per *team* match for every source, so injury-hit seasons are under-counted.
+- **Sources disagree on small details** (e.g. one goal here or there in the 1950s). Wikipedia's figure is used before 2012.
+- **International goals cover competitive matches** (World Cups, continental tournaments, qualifiers); friendlies mostly lack scorer records. Puskás shows 4 of his 84. The scoring rate is measured over the same matches.
+- **Internationals add to club stars but can't create one alone**, and small international samples are shrunk toward the average.
+- **Leagues without a scoring rate** (Hungary, Brazil, Argentina, Germany before 1963, Netherlands before 1956, Portugal and Scotland before 1994) are left out of era-adjusted scoring until their season goal totals are added to `league_environment.csv`.
+- **Goals + assists** only exists from 2012 (Transfermarkt).
+- **The star threshold (`FLAG_Z_ENV`, 0.75)** was set on stand-in data; check it against the first real run.
+- **Name linking is conservative**: two different players sharing a name are left unlinked rather than merged, and a player spelled differently across sources stays split. Check the top stars after a run.
+- **worldfootball.net blocks scripts** (HTTP 403), so it isn't used. Its scraper is kept in `scraper/worldfootball.py` for reference only.
+
 ## Real data format
 
 `data/raw/player_seasons.csv`, one row per player × season × competition:
@@ -35,15 +78,26 @@ The dashboard needs to be served (not opened as a file) because it loads JSON. D
 | competition | league code (e.g. `ESP`, `ENG`) or `INT` for internationals |
 | comp_type | `club` or `international` |
 | club_city, lat, lon | club location (blank for international rows) |
-| apps, goals | appearances and goals |
+| apps, goals | appearances (blank for scraped data) and goals |
+| team_games, env_gpm | games per team and league goals per team match (environment mode) |
 | assists | blank where not recorded |
 | is_star_seed | optional, ignored by the pipeline |
 
-League baselines are computed from **all** rows in a competition-season, so include regular (non-star) players too, not just the stars.
+Two modes, picked automatically. **Full-league data** (with appearances): baselines come from all rows in a competition-season, so include regular players too. **Top-scorer data** (no appearances, with `env_gpm`): output is divided by the league-season scoring rate and compared across all seasons.
 
 ## Layout
 
 ```
+scraper/
+  run.py           command line: env | probe | scorers | transfermarkt | assemble | all
+  environment.py   league + international scoring rates from GitHub datasets
+  wikipedia.py     Wikipedia top-scorer tables; leagues.json holds page-name patterns
+  transfermarkt.py Transfermarkt open-data loader (2012 on)
+  worldfootball.py old scraper, unused (site blocks scripts)
+  http.py          polite client: robots.txt, rate limit, retries, disk cache
+  clubs.py         club -> city resolver; cities.csv gazetteer
+  assemble.py      joins everything into data/raw/player_seasons.csv
+tests/             parser and resolver tests (python tests/test_scraper.py)
 pipeline/
   build.py         runs everything -> dashboard/data/eras.json
   eras.py          era adjustment, career peak fits, overlapping-peak eras, metric agreement
@@ -63,6 +117,9 @@ dashboard/
 | eras.py | `PEAK_FRACTION` peak window cut-off | 0.7 |
 | eras.py | `MIN_OVERLAP` stars overlapping for an era | 2 |
 | eras.py | `SPLIT_RATIO` valley depth that splits eras | 0.7 |
+| eras.py | `SHRINK_GAMES` small-sample shrinkage (real data) | 6 |
+| eras.py | `REF_TOP` reference group per league-season (real data) | 3 |
+| eras.py | `FLAG_Z_ENV` star season threshold (real data) | 0.75 |
 | hotspots.py | `HUB_RADIUS_KM` how far cities chain into one hub | 250 |
 | hotspots.py | `ROLLING_SEASONS` club smoothing | 3 |
 | hotspots.py | `TOURNAMENT_CAP` size vs biggest club hub | WC 1.5×, Euro 1.1× |

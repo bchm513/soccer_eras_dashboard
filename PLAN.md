@@ -140,7 +140,8 @@ soccer-eras/
 | Phase | Work | Output |
 |---|---|---|
 | 0 ✅ | Plan, pipeline skeleton, dashboard on sample data | This repo |
-| 1 | Collect goals + appearances for top leagues 1946→ (RSSSF, worldfootball.net) and Transfermarkt for 2000s→ | `data/raw/player_seasons.csv` |
+| 1 🔧 | Collection built (`scraper/`): scoring rates from GitHub datasets (done, in `data/raw/`); club top scorers from Wikipedia 1946–2011 and Transfermarkt open data 2012–2025 (run locally; worldfootball.net blocks scripts); club → city resolver | `data/raw/player_seasons.csv` |
+| 1b | Fill gaps: scoring rates for Hungary/Brazil/Argentina and early Germany/Netherlands/Portugal/Scotland; check star threshold on real data | Wider coverage |
 | 2 | League scoring averages per season; swap sample data for real | Real eras, goals-only |
 | 3 | Add assists (1990s→) and shots (2000s→); multi-metric agreement report | Robustness check |
 | 4 | Audience layer: tournament TV + attendance; tournament weights | Impact-weighted map |

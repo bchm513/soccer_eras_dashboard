@@ -165,7 +165,7 @@ def generate(out_path: Path) -> int:
                          "", "", iapps, igoals, iassists, 1])
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    with out_path.open("w", newline="") as f:
+    with out_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["player_id", "player", "season", "competition", "comp_type", "club_city",
                     "lat", "lon", "apps", "goals", "assists", "is_star_seed"])
