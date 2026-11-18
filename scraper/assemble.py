@@ -19,10 +19,11 @@ from pathlib import Path
 import pandas as pd
 
 from .clubs import ClubResolver, norm
+from .wikipedia import NOT_A_PLAYER
 
 COLUMNS = ["player_id", "player", "season", "competition", "comp_type", "team", "nationality",
            "club_city", "lat", "lon", "loc_source", "apps", "minutes", "team_games", "env_gpm",
-           "goals", "penalties", "assists", "comp_rank", "league_elo", "source"]
+           "goals", "penalties", "assists", "ucl_goals", "comp_rank", "league_elo", "source"]
 SOURCES = [("scorers_transfermarkt.csv", "transfermarkt", ""),     # file, label, id prefix
            ("scorers_wikipedia.csv", "wikipedia", "wiki:"),
            ("scorers_worldfootball.csv", "worldfootball.net", "wf:")]
@@ -45,7 +46,6 @@ def _club_rows(raw: Path) -> pd.DataFrame:
     if not frames:
         raise SystemExit("No club scorer files in data/raw/. Run `python -m scraper.run scorers` first.")
     club = pd.concat(frames, ignore_index=True)
-    from .wikipedia import NOT_A_PLAYER
     junk = club["player"].map(lambda v: isinstance(v, str) and bool(NOT_A_PLAYER.search(v)))
     if junk.any():
         print(f"  dropped {int(junk.sum())} summary rows ('Total:', '22 players', ...)")
@@ -64,13 +64,49 @@ def _club_rows(raw: Path) -> pd.DataFrame:
             for i in ids:
                 canon[i] = best
     club["player_id"] = club["player_id"].map(lambda i: canon.get(i, i))
-    return club.drop(columns="_k")
+    return club.drop(columns="_k"), canon
+
+
+def _ucl_goals(raw: Path, club: pd.DataFrame, canon: dict) -> pd.DataFrame:
+    """European Cup / Champions League goals per (player_id, season), linked to club players.
+    Transfermarkt wins from 2012 (complete); Wikipedia's season top-scorer tables before that."""
+    frames = []
+    tm_p, wk_p = raw / "scorers_ucl_transfermarkt.csv", raw / "scorers_ucl_wikipedia.csv"
+    tm_first = None
+    if tm_p.exists():
+        tm = pd.read_csv(tm_p)
+        tm["player_id"] = tm["player_id"].astype(str)
+        tm_first = int(tm["season"].min())
+        frames.append(tm)
+    if wk_p.exists():
+        wk = pd.read_csv(wk_p)
+        wk["player_id"] = "wiki:" + wk["player_id"].astype(str)
+        if tm_first is not None:
+            wk = wk[wk["season"] < tm_first]
+        frames.append(wk)
+    if not frames:
+        return pd.DataFrame(columns=["player_id", "season", "ucl_goals"])
+    u = pd.concat(frames, ignore_index=True)
+    u = u[u["player"].map(lambda v: isinstance(v, str) and not NOT_A_PLAYER.search(v))]
+    # Same player ids as the league rows where possible, else match by (unambiguous) name
+    known = set(club["player_id"])
+    names = club.drop_duplicates("player_id")[["player_id", "player"]]
+    counts = names["player"].map(norm).value_counts()
+    by_name = {norm(p): pid for pid, p in names.itertuples(index=False) if counts.get(norm(p), 0) == 1}
+    def link(pid, name):
+        pid = canon.get(pid, pid)
+        return pid if pid in known else by_name.get(norm(name))
+    u["player_id"] = [link(p, n) for p, n in zip(u["player_id"], u["player"])]
+    matched = u["player_id"].notna()
+    print(f"  Champions League: {int(matched.sum())} of {len(u)} scorer-seasons linked to club players")
+    return (u[matched].groupby(["player_id", "season"])["goals"].sum()
+            .rename("ucl_goals").reset_index())
 
 
 def assemble(raw: Path, leagues: list[dict], geocode: bool = False, contact: str | None = None) -> pd.DataFrame:
     env = pd.read_csv(raw / "league_environment.csv")
     env_code = {lg["code"]: lg.get("env") for lg in leagues}
-    club = _club_rows(raw)
+    club, canon = _club_rows(raw)
     enabled = {lg["code"] for lg in leagues if lg["enabled"]}
     off = ~club["competition"].isin(enabled)
     if off.any():
@@ -81,6 +117,12 @@ def assemble(raw: Path, leagues: list[dict], geocode: bool = False, contact: str
     club = club.merge(env.rename(columns={"competition": "env_comp", "goals_per_team_match": "env_gpm"})[
         ["env_comp", "season", "env_gpm", "team_games"]], on=["env_comp", "season"], how="left")
     club["comp_rank"] = club.groupby(["competition", "season"])["goals"].rank(method="min", ascending=False)
+    # Champions League goals go on the player's main club row that season (most league goals)
+    ucl = _ucl_goals(raw, club, canon)
+    club = club.sort_values("goals", ascending=False)
+    first_row = ~club.duplicated(["player_id", "season"])
+    club = club.merge(ucl, on=["player_id", "season"], how="left")
+    club["ucl_goals"] = club["ucl_goals"].fillna(0).where(first_row.to_numpy(), 0).astype(int)
     ls = raw / "league_strength.csv"
     if ls.exists():
         strength = pd.read_csv(ls)[["competition", "season", "elo_mean"]].rename(columns={"elo_mean": "league_elo"})

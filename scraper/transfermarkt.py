@@ -35,8 +35,20 @@ def _load(table: str, cache: Path) -> pd.DataFrame:
 
 def build(raw: Path, cache: Path, leagues: list[dict], min_goals: int = 1) -> pd.DataFrame:
     comp_map = {lg["tm"]: lg["code"] for lg in leagues if lg.get("tm")}
-    app = _load("appearances", cache)
-    app = app[app["competition_id"].isin(comp_map)]
+    app_all = _load("appearances", cache)
+    out = _aggregate(app_all, comp_map, cache, min_goals)
+    out.to_csv(raw / "scorers_transfermarkt.csv", index=False)
+    print(f"  Transfermarkt leagues: {len(out)} player-seasons with goals, "
+          + ", ".join(f"{c} {s.season.min()}-{s.season.max()}" for c, s in out.groupby("competition")))
+    ucl = _aggregate(app_all, {"CL": "UCL"}, cache, min_goals)
+    if len(ucl):
+        ucl.to_csv(raw / "scorers_ucl_transfermarkt.csv", index=False)
+        print(f"  Transfermarkt Champions League: {len(ucl)} player-seasons, {ucl.season.min()}-{ucl.season.max()}")
+    return out
+
+
+def _aggregate(app: pd.DataFrame, comp_map: dict, cache: Path, min_goals: int) -> pd.DataFrame:
+    app = app[app["competition_id"].isin(comp_map)].copy()
     app["season"] = season_of(app["date"])
     g = (app.groupby(["player_id", "player_club_id", "competition_id", "season"])
          .agg(goals=("goals", "sum"), assists=("assists", "sum"),
@@ -54,13 +66,9 @@ def build(raw: Path, cache: Path, leagues: list[dict], min_goals: int = 1) -> pd
     out["competition"] = out["competition_id"].map(comp_map)
     out["player_id"] = "tm:" + out["player_id"].astype(str)
     out["team"] = out["team"].fillna("").map(_clean_club)
-    out = out[["player_id", "player", "nationality", "team", "competition", "season",
-               "goals", "assists", "minutes", "apps"]].sort_values(["competition", "season", "goals"],
-                                                                ascending=[True, True, False])
-    out.to_csv(raw / "scorers_transfermarkt.csv", index=False)
-    print(f"  Transfermarkt: {len(out)} player-seasons with goals, "
-          + ", ".join(f"{c} {s.season.min()}-{s.season.max()}" for c, s in out.groupby("competition")))
-    return out
+    return out[["player_id", "player", "nationality", "team", "competition", "season",
+                "goals", "assists", "minutes", "apps"]].sort_values(["competition", "season", "goals"],
+                                                                 ascending=[True, True, False])
 
 
 def _clean_club(name: str) -> str:

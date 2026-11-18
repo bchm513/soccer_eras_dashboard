@@ -101,6 +101,18 @@ def test_league_factor():
     assert abs(f[4] - 10 ** (E.LEAGUE_ELO_WEIGHT * -100 / 400)) < 1e-9
 
 
+def test_europe_finals():
+    from scraper import europe
+    rows = europe.parse_finals((FIX / "wiki_ucl_finals.html").read_text(encoding="utf-8"))
+    assert [(r["season"], r["winner"], r["runner_up"]) for r in rows] == [
+        (1955, "Real Madrid", "Reims"), (1957, "Real Madrid", "Milan"),
+        (1985, "Steaua București", "Barcelona"), (2016, "Real Madrid", "Juventus")]
+    assert rows[0]["winner_country"] == "Spain" and rows[0]["runner_up_country"] == "France"
+    r = ClubResolver(FIX)
+    assert r.resolve("Steaua București", europe.COUNTRY_CODE["romania"])[0] == "Bucharest"
+    assert r.resolve("Reims", europe.COUNTRY_CODE["france"])[0] == "Reims"
+
+
 def test_club_resolver(tmp_path):
     r = ClubResolver(tmp_path)
     assert r.resolve("Juventus", "ITA")[0] == "Turin"
@@ -122,6 +134,7 @@ if __name__ == "__main__":
     test_wiki_infobox_fallback()
     test_clubelo_snapshot()
     test_league_factor()
+    test_europe_finals()
     with tempfile.TemporaryDirectory() as d:
         test_club_resolver(Path(d))
     print("all scraper tests passed")

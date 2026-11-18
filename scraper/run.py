@@ -5,8 +5,9 @@
     python -m scraper.run scorers        # Wikipedia top scorers, 1946 on (~10-15 min at 1 page/s; resumable)
     python -m scraper.run transfermarkt  # Transfermarkt open data, 2012 on (one ~100 MB download)
     python -m scraper.run elo            # league strength from ClubElo, one snapshot per season (~2 min)
+    python -m scraper.run europe         # European Cup / Champions League: finals + top scorers (~2 min)
     python -m scraper.run assemble       # build data/raw/player_seasons.csv
-    python -m scraper.run all            # scorers -> transfermarkt -> elo -> assemble
+    python -m scraper.run all            # scorers -> transfermarkt -> elo -> europe -> assemble
     python -m scraper.run dump --title "1975–76 Bundesliga"   # save a page's HTML to share for debugging
 
 Options: --leagues ENG,ESP  --from 1946  --to 2025  --delay 1  --contact you@example.com  --geocode
@@ -21,7 +22,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import clubelo, environment, transfermarkt, wikipedia as wiki
+from . import clubelo, environment, europe, transfermarkt, wikipedia as wiki
 from .assemble import assemble
 from .http import PoliteSession
 
@@ -32,7 +33,7 @@ CACHE = ROOT / "data" / "cache"
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("step", choices=["env", "probe", "scorers", "transfermarkt", "elo", "assemble", "all", "dump"])
+    ap.add_argument("step", choices=["env", "probe", "scorers", "transfermarkt", "elo", "europe", "assemble", "all", "dump"])
     ap.add_argument("--leagues", help="comma-separated codes, e.g. ENG,ESP (default: enabled in leagues.json)")
     ap.add_argument("--from", dest="first", type=int, default=1946)
     ap.add_argument("--to", dest="last", type=int, default=2025)
@@ -95,6 +96,10 @@ def main(argv=None):
         print("ClubElo league strength (one snapshot per season)...")
         clubelo.build(RAW, session(), wiki.load_leagues(only), a.first, a.last)
         print(f"  -> {RAW / 'league_strength.csv'}")
+
+    if a.step in ("europe", "all"):
+        print("European Cup / Champions League (finals + season top scorers)...")
+        europe.build(RAW, session(), a.first, a.last)
 
     if a.step in ("assemble", "all"):
         print("Assembling player_seasons.csv...")

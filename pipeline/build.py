@@ -28,6 +28,26 @@ OUT = ROOT / "dashboard" / "data" / "eras.json"
 PRIMARY = "goals_adj"
 
 
+def load_finals(raw_dir: Path) -> pd.DataFrame | None:
+    """European Cup / Champions League finalists with their cities (data/raw/europe_finals.csv)."""
+    p = raw_dir / "europe_finals.csv"
+    if not p.exists():
+        return None
+    sys.path.insert(0, str(ROOT))
+    from scraper.clubs import ClubResolver
+    from scraper.europe import COUNTRY_CODE
+    f = pd.read_csv(p)
+    res = ClubResolver(raw_dir)
+    rows = []
+    for r in f.itertuples():
+        for kind, team, country in (("winner", r.winner, r.winner_country), ("runner_up", r.runner_up, r.runner_up_country)):
+            code = COUNTRY_CODE.get(str(country).strip().lower(), "")
+            city, lat, lon, _ = res.resolve(str(team), code)
+            if city:
+                rows.append({"season": int(r.season), "kind": kind, "team": team, "city": city, "lat": lat, "lon": lon})
+    return pd.DataFrame(rows) if rows else None
+
+
 def _clean(o):
     """Make data strict JSON: numpy -> Python, NaN/inf -> null (browsers reject NaN)."""
     if isinstance(o, dict):
@@ -84,9 +104,15 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
     n = H.month_index(start, f"{last + 1}-12") + 1
     stars = stars_by[PRIMARY]
     hub_min_z = H.HUB_MIN_Z["real" if env_mode else "sample"]
-    hubs, star_rows = H.find_hubs(ps, stars, PRIMARY, min_z=hub_min_z)
+    finals = load_finals(src.parent) if env_mode else None
+    hubs, star_rows = H.find_hubs(ps, stars, PRIMARY, min_z=hub_min_z,
+                                  extra_cities=None if finals is None else finals[["city", "lat", "lon"]])
     hub_detail = H.hub_players(star_rows, stars, PRIMARY)
-    club = H.club_weights(star_rows, hubs, PRIMARY, first, last, start, n)
+    titles = None
+    if finals is not None:
+        finals["hub"] = finals["city"].map(star_rows.attrs.get("city_to_hub", {}))
+        titles = finals[["season", "hub", "kind"]]
+    club = H.club_weights(star_rows, hubs, PRIMARY, first, last, start, n, titles=titles)
     tours = H.tournament_weights(TOURNAMENTS, club, start, n)
 
     # Era -> dominant hub
@@ -133,6 +159,9 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
         "hubs": hubs,
         "clubWeights": {k: v.tolist() for k, v in club.items()},
         "hubPlayers": hub_detail,
+        "europe": {} if finals is None else {
+            str(int(s)): {r.kind: [r.team, r.hub] for r in g.itertuples()}
+            for s, g in finals.groupby("season")},
         "tournaments": tours,
         "stars": star_out,
         "altStars": alt,

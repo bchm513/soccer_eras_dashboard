@@ -19,7 +19,8 @@ import pandas as pd
 
 from .http import Blocked, FetchFailed, PoliteSession
 
-API = "http://api.clubelo.com/{}"
+APIS = ["http://api.clubelo.com/{}", "https://api.clubelo.com/{}"]
+GIVE_UP_AFTER = 3   # consecutive failed seasons before stopping (the site is probably down)
 
 
 def parse_snapshot(text: str) -> pd.DataFrame:
@@ -46,19 +47,31 @@ def league_strength(snapshot: pd.DataFrame, country: str, teams: int | None) -> 
 def build(raw: Path, sess: PoliteSession, leagues: list[dict], first: int, last: int, log=print) -> pd.DataFrame:
     env = pd.read_csv(raw / "league_environment.csv") if (raw / "league_environment.csv").exists() else None
     teams = {} if env is None else {(r.competition, int(r.season)): int(r.teams) for r in env.itertuples()}
-    out = []
+    out, fails = [], 0
+    quick = PoliteSession(sess.cache_dir, delay=sess.delay, jitter=sess.jitter, max_retries=1)
+    quick.s.headers.update(sess.s.headers)
     for season in range(first, last + 1):
-        url = API.format(f"{season + 1}-01-15")          # mid-season snapshot
-        try:
-            text = sess.get(url)
-        except Blocked as e:
-            raise SystemExit(f"BLOCKED: {e}")
-        except FetchFailed as e:
-            log(f"  {season}: {e}; skipping (re-run later to retry)")
-            continue
+        text, err = None, None
+        for api in APIS:                                    # plain, then secure address
+            try:
+                text = quick.get(api.format(f"{season + 1}-01-15"))   # mid-season snapshot
+                if text:
+                    break
+            except Blocked as e:
+                raise SystemExit(f"BLOCKED: {e}")
+            except FetchFailed as e:
+                err = e
         if not text:
-            log(f"  {season}: no snapshot")
+            fails += 1
+            log(f"  {season}: {err or 'no snapshot'}")
+            if fails >= GIVE_UP_AFTER:
+                log(f"\nClubElo failed {fails} seasons in a row, so it's probably down right now. Stopping.\n"
+                    "Check http://api.clubelo.com/2017-01-15 in a browser: if it shows a table, the site is up\n"
+                    "and something on this network is interfering; if it errors, try again later.\n"
+                    "Seasons already fetched are saved and cached. Everything else works without this step.")
+                break
             continue
+        fails = 0
         snap = parse_snapshot(text)
         got = []
         for lg in leagues:
@@ -68,5 +81,10 @@ def build(raw: Path, sess: PoliteSession, leagues: list[dict], first: int, last:
                 got.append(f"{lg['code']} {r[0]:.0f}")
         log(f"  {season}: " + ", ".join(got))
     df = pd.DataFrame(out)
-    df.to_csv(raw / "league_strength.csv", index=False)
+    path = raw / "league_strength.csv"
+    if path.exists():                       # keep seasons fetched on earlier runs
+        old = pd.read_csv(path)
+        df = pd.concat([old, df]).drop_duplicates(["competition", "season"], keep="last") if len(old) else df
+    if len(df):
+        df.sort_values(["season", "competition"]).to_csv(path, index=False)
     return df

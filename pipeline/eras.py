@@ -31,6 +31,7 @@ FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above t
 ERA_WINDOW = 5         # environment mode: compare with top scorers within +/- this many seasons
 INTL_WEIGHT = 0.2      # environment mode: international games count this much vs club games
 LEAGUE_ELO_WEIGHT = 0.5   # how hard league strength bites: 0 = off; 1 = full Elo odds
+UCL_WEIGHT = 2.0       # each European Cup / Champions League goal counts as this many league goals
 LEAGUE_ELO_REF_TOP = 4    # strength is measured against the mean of that season's 4 strongest leagues
 
 
@@ -121,9 +122,13 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
     apps = pd.to_numeric(df["apps"], errors="coerce")
     env_mode = uses_environment(df)
     df["w"] = apps.fillna(pd.to_numeric(df.get("team_games"), errors="coerce")) if env_mode else apps
-    df["g_rate"] = df["goals"] / df["w"].clip(lower=1)
+    goals = df["goals"].astype(float)
+    if env_mode and "ucl_goals" in df:
+        # Big-moment goals: Champions League goals added on top of league goals, weighted up
+        goals = goals + UCL_WEIGHT * pd.to_numeric(df["ucl_goals"], errors="coerce").fillna(0)
+    df["g_rate"] = goals / df["w"].clip(lower=1)
     has_ast = pd.to_numeric(df["assists"], errors="coerce")
-    df["ga_rate"] = (df["goals"] + has_ast) / df["w"].clip(lower=1)
+    df["ga_rate"] = (goals + has_ast) / df["w"].clip(lower=1)
 
     if env_mode:
         env = pd.to_numeric(df["env_gpm"], errors="coerce")

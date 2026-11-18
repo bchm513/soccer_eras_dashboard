@@ -9,6 +9,7 @@ EARTH_KM = 6371.0
 HUB_DIAMETER_KM = 250    # every city in a hub is within this distance of every other
 ROLLING_SEASONS = 3      # club baseline smoothing
 HUB_MIN_Z = {"real": 0.0, "sample": 1.0}   # map pool: club seasons at/above this z also feed hubs
+TITLE_BONUS = {"winner": 1.0, "runner_up": 0.4}   # European final: x the season's biggest hub weight
 TOURNAMENT_CAP = {"World Cup": 1.5, "Euro": 1.1}   # x the largest club hub that month
 FADE = [0.55, 0.25, 0.08]  # months after a tournament ends
 LEAD_IN = 0.3            # month before it starts
@@ -29,7 +30,8 @@ def _cluster(coords: np.ndarray) -> np.ndarray:
                                    distance_threshold=HUB_DIAMETER_KM).fit_predict(_haversine_km(coords))
 
 
-def find_hubs(ps: pd.DataFrame, stars: dict, metric: str, min_z: float | None = None) -> tuple[list, pd.DataFrame]:
+def find_hubs(ps: pd.DataFrame, stars: dict, metric: str, min_z: float | None = None,
+              extra_cities: pd.DataFrame | None = None) -> tuple[list, pd.DataFrame]:
     """Cluster the cities where strong scoring seasons happened; each cluster is a hub.
 
     The pool is every star season plus, when min_z is set, every club season at or above
@@ -41,6 +43,10 @@ def find_hubs(ps: pd.DataFrame, stars: dict, metric: str, min_z: float | None = 
     rows = ps[keep & ps["lat"].notna()].copy()
     rows["w"] = rows[metric].clip(lower=0)
     cities = rows.groupby("city").agg(lat=("lat", "first"), lon=("lon", "first"), w=("w", "sum")).reset_index()
+    if extra_cities is not None and len(extra_cities):        # e.g. European finalists' cities
+        extra = extra_cities.drop_duplicates("city")
+        extra = extra[~extra["city"].isin(cities["city"])].assign(w=0.0)[["city", "lat", "lon", "w"]]
+        cities = pd.concat([cities, extra], ignore_index=True)
     labels = _cluster(cities[["lat", "lon"]].to_numpy())
     cities["hub"] = labels
     hubs = []
@@ -57,6 +63,7 @@ def find_hubs(ps: pd.DataFrame, stars: dict, metric: str, min_z: float | None = 
                      "lon": round(float(np.average(g["lon"], weights=w)), 3)})
     city_to_hub = {c: f"hub{h}" for c, h in zip(cities["city"], cities["hub"])}
     rows["hub"] = rows["city"].map(city_to_hub)
+    rows.attrs["city_to_hub"] = city_to_hub
     return hubs, rows
 
 
@@ -66,12 +73,24 @@ def month_index(start: str, ym: str) -> int:
     return (y - y0) * 12 + (m - m0)
 
 
-def club_weights(rows: pd.DataFrame, hubs: list, metric: str, first: int, last: int, start: str, n: int) -> dict:
-    """Hub weight per season (rolling mean), interpolated to months. A season runs Aug -> May."""
+def club_weights(rows: pd.DataFrame, hubs: list, metric: str, first: int, last: int, start: str, n: int,
+                 titles: pd.DataFrame | None = None) -> dict:
+    """Hub weight per season (rolling mean), interpolated to months. A season runs Aug -> May.
+
+    titles (season, hub, kind): European Cup / Champions League finalists. The winner's hub gets
+    TITLE_BONUS['winner'] x that season's biggest hub weight, the runner-up's a smaller share,
+    so a club's European dominance shows on the map even when its league scoring doesn't."""
     seasons = np.arange(first, last + 1)
     table = (rows.assign(w=rows[metric].clip(lower=0))
              .pivot_table(index="season", columns="hub", values="w", aggfunc="sum")
              .reindex(seasons).fillna(0))
+    if titles is not None and len(titles):
+        biggest = table.max(axis=1)
+        for t in titles.dropna(subset=["hub"]).itertuples():
+            if t.season in table.index:
+                if t.hub not in table.columns:
+                    table[t.hub] = 0.0
+                table.loc[t.season, t.hub] += TITLE_BONUS.get(t.kind, 0) * biggest.get(t.season, 0)
     table = table.rolling(ROLLING_SEASONS, center=True, min_periods=1).mean()
     season_mid = np.array([month_index(start, f"{s}-12") for s in seasons])  # weight anchored mid-season
     frames = np.arange(n)
