@@ -234,6 +234,13 @@
           : `<div class="d-note" style="margin-top:6px">No standout scorers here this season.</div>`}</div>`;
     }
 
+    const eu = data.europe && data.europe[String(season)];
+    if (eu && eu.winner) {
+      html += `<div class="d-block"><div class="d-label">European champions ${season}–${String((season + 1) % 100).padStart(2, "0")}</div>
+        <div class="d-big">🏆 ${eu.winner[0]}</div>
+        ${eu.runner_up ? `<div class="d-note">Beat ${eu.runner_up[0]} in the final</div>` : ""}</div>`;
+    }
+
     if (tours.length) {
       html += `<div class="d-block"><div class="d-label">Tournament under way</div>
         ${tours.map(t => `<div class="d-tour">${t.t.type} ${t.t.year} · ${t.t.host}</div>`).join("")}</div>`;
