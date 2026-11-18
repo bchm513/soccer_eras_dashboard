@@ -30,6 +30,8 @@ REF_TOP = 3            # environment mode: each league-season's top 3 scorers ar
 FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above the average top-3 scorer
 ERA_WINDOW = 5         # environment mode: compare with top scorers within +/- this many seasons
 INTL_WEIGHT = 0.2      # environment mode: international games count this much vs club games
+LEAGUE_ELO_WEIGHT = 0.5   # how hard league strength bites: 0 = off; 1 = full Elo odds
+LEAGUE_ELO_REF_TOP = 4    # strength is measured against the mean of that season's 4 strongest leagues
 
 
 def _window_z(df: pd.DataFrame, value: str) -> np.ndarray:
@@ -85,6 +87,23 @@ def _row_z(df: pd.DataFrame, value: str, by_season: bool) -> pd.Series:
     return ((m[value] - m["mean"]) / m["std"].replace(0, np.nan)).to_numpy()
 
 
+def league_factor(df: pd.DataFrame) -> pd.Series:
+    """Scale club output by league strength (ClubElo), relative to that season's strongest leagues.
+
+    factor = 10 ** (LEAGUE_ELO_WEIGHT * (league_elo - reference) / 400), capped at 1 so the top
+    leagues are never boosted. A league 100 Elo below the reference, at weight 0.5, keeps ~75%
+    of its output. Rows without a rating (internationals, unrated seasons) are left unchanged."""
+    if "league_elo" not in df or LEAGUE_ELO_WEIGHT == 0:
+        return pd.Series(1.0, index=df.index)
+    elo = pd.to_numeric(df["league_elo"], errors="coerce")
+    per = df.assign(elo=elo).dropna(subset=["elo"]).drop_duplicates(["competition", "season"])
+    if per.empty:
+        return pd.Series(1.0, index=df.index)
+    ref = per.groupby("season")["elo"].apply(lambda s: s.nlargest(LEAGUE_ELO_REF_TOP).mean())
+    gap = (elo - df["season"].map(ref)).clip(upper=0)
+    return (10 ** (LEAGUE_ELO_WEIGHT * gap / 400)).fillna(1.0)
+
+
 def uses_environment(df: pd.DataFrame) -> bool:
     """Real scraped data has no appearances; it carries each league-season's scoring rate instead."""
     return "env_gpm" in df and pd.to_numeric(df.get("apps"), errors="coerce").isna().mean() > 0.5
@@ -114,8 +133,8 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
         rank = pd.to_numeric(df.get("comp_rank"), errors="coerce")
         is_club = df["comp_type"] == "club"
         df["is_ref"] = (df["w"] >= df["min_w"]) & (~is_club | rank.isna() | (rank <= REF_TOP))
-        df["g_adj"] = df["g_rate"] / env
-        df["ga_adj"] = df["ga_rate"] / env
+        df["g_adj"] = df["g_rate"] / env * league_factor(df)
+        df["ga_adj"] = df["ga_rate"] / env * league_factor(df)
         # Shrink small samples (a handful of internationals) toward the typical rate for that
         # competition type, so four goals in three games doesn't outrank a 30-goal league season.
         for col in ("g_rate", "g_adj", "ga_adj"):

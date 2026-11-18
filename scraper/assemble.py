@@ -22,7 +22,7 @@ from .clubs import ClubResolver, norm
 
 COLUMNS = ["player_id", "player", "season", "competition", "comp_type", "team", "nationality",
            "club_city", "lat", "lon", "loc_source", "apps", "minutes", "team_games", "env_gpm",
-           "goals", "penalties", "assists", "comp_rank", "source"]
+           "goals", "penalties", "assists", "comp_rank", "league_elo", "source"]
 SOURCES = [("scorers_transfermarkt.csv", "transfermarkt", ""),     # file, label, id prefix
            ("scorers_wikipedia.csv", "wikipedia", "wiki:"),
            ("scorers_worldfootball.csv", "worldfootball.net", "wf:")]
@@ -81,6 +81,14 @@ def assemble(raw: Path, leagues: list[dict], geocode: bool = False, contact: str
     club = club.merge(env.rename(columns={"competition": "env_comp", "goals_per_team_match": "env_gpm"})[
         ["env_comp", "season", "env_gpm", "team_games"]], on=["env_comp", "season"], how="left")
     club["comp_rank"] = club.groupby(["competition", "season"])["goals"].rank(method="min", ascending=False)
+    ls = raw / "league_strength.csv"
+    if ls.exists():
+        strength = pd.read_csv(ls)[["competition", "season", "elo_mean"]].rename(columns={"elo_mean": "league_elo"})
+        club = club.merge(strength, on=["competition", "season"], how="left")
+        print(f"  league strength: {club['league_elo'].notna().mean():.0%} of club rows rated")
+    else:
+        club["league_elo"] = pd.NA
+        print("  league strength: none yet (run `python -m scraper.run elo` to weight leagues)")
 
     # Blank cells come through as NaN (pandas 3 keeps them missing); use empty text instead
     for c in ("team", "competition", "player", "nationality"):

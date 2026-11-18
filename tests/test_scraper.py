@@ -80,6 +80,27 @@ def test_wiki_infobox_fallback():
     assert rows[0]["method"] == "infobox"
 
 
+def test_clubelo_snapshot():
+    from scraper import clubelo
+    snap = clubelo.parse_snapshot((FIX / "clubelo_1990.csv").read_text(encoding="utf-8"))
+    elo, n = clubelo.league_strength(snap, "POR", teams=18)
+    assert n == 3 and round(elo, 1) == round((1850 + 1840 + 1600) / 3, 1)   # top division only
+    elo, n = clubelo.league_strength(snap, "POR", teams=2)
+    assert n == 2 and elo == 1845.0                                          # capped at league size
+    assert clubelo.league_strength(snap, "SCO", teams=12) is None
+
+
+def test_league_factor():
+    import pandas as pd
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    import eras as E
+    df = pd.DataFrame({"competition": ["ENG", "ESP", "ITA", "GER", "POR", "INT"], "season": [1990] * 6,
+                       "league_elo": [1850, 1850, 1850, 1850, 1750, None]})
+    f = E.league_factor(df).tolist()
+    assert f[:4] == [1.0] * 4 and f[5] == 1.0
+    assert abs(f[4] - 10 ** (E.LEAGUE_ELO_WEIGHT * -100 / 400)) < 1e-9
+
+
 def test_club_resolver(tmp_path):
     r = ClubResolver(tmp_path)
     assert r.resolve("Juventus", "ITA")[0] == "Turin"
@@ -99,6 +120,8 @@ if __name__ == "__main__":
     test_wiki_titles()
     test_wiki_goal_group_lists()
     test_wiki_infobox_fallback()
+    test_clubelo_snapshot()
+    test_league_factor()
     with tempfile.TemporaryDirectory() as d:
         test_club_resolver(Path(d))
     print("all scraper tests passed")

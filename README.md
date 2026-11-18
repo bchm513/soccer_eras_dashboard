@@ -33,6 +33,7 @@ export SOCCER_ERAS_CONTACT="you@example.com"   # or a GitHub URL; Windows: set S
 python -m scraper.run probe          # ~1 min: checks Wikipedia page names for each league
 python -m scraper.run scorers        # ~10-15 min: Wikipedia top scorers, 1946 on; resumable
 python -m scraper.run transfermarkt  # one ~100 MB download: full league data, 2012 on
+python -m scraper.run elo            # ~2 min: league strength from ClubElo, one snapshot per season
 python -m scraper.run assemble       # builds data/raw/player_seasons.csv
 python pipeline/build.py             # rebuilds the dashboard data from the real file
 ```
@@ -49,6 +50,7 @@ After `assemble`, open `data/raw/unresolved_clubs.csv`: those clubs have no map 
 | International goals by player, international scoring rate | [martj42/international_results](https://github.com/martj42/international_results) | download |
 | Club top scorers, 1946–2011 | Wikipedia league-season pages (Rank / Player / Club / Goals tables), CC BY-SA | article pages, 1 request/s |
 | Club goals, assists, minutes, 2012–2025 | [Transfermarkt open dataset](https://github.com/dcaribou/transfermarkt-datasets) | download |
+| League strength by season | [ClubElo](http://clubelo.com) ratings: mean Elo of each league's top-division clubs every January | API, 1 request/s |
 | Club locations | `scraper/cities.csv` + your fixes + optional OpenStreetMap lookup | local |
 
 Where two sources cover the same league-season, Transfermarkt wins. Players are linked across sources by name, so a career that spans 2012 stays one player.
@@ -61,6 +63,7 @@ Where two sources cover the same league-season, Transfermarkt wins. Players are 
 - **International goals cover competitive matches** (World Cups, continental tournaments, qualifiers); friendlies mostly lack scorer records. Puskás shows 4 of his 84. The scoring rate is measured over the same matches.
 - **Internationals add to club stars but can't create one alone**, and small international samples are shrunk toward the average.
 - **Leagues without a scoring rate** (Hungary, Brazil, Argentina, Germany before 1963, Netherlands before 1956, Portugal and Scotland before 1994) are left out of era-adjusted scoring until their season goal totals are added to `league_environment.csv`.
+- **League strength.** Club output is scaled by the league's ClubElo rating against that season's four strongest leagues (`LEAGUE_ELO_WEIGHT`, default 0.5: a league 100 Elo below keeps ~75% of its output; the strongest are never boosted). `build.py` prints stars per league so you can see the effect. Set the weight to 0 to switch it off.
 - **Goals + assists** only exists from 2012 (Transfermarkt).
 - **Stars are measured against their own time.** Each player is compared with the top scorers within five seasons either side, across all leagues, leaving his own seasons out. Goals have become more concentrated among leading scorers, so an all-time comparison would make every modern striker look greater than every 1950s one.
 - **A star season needs club form.** International goals add a small boost (weight 0.2) but can't carry a season alone.
@@ -95,6 +98,7 @@ scraper/
   environment.py   league + international scoring rates from GitHub datasets
   wikipedia.py     Wikipedia top-scorer tables; leagues.json holds page-name patterns
   transfermarkt.py Transfermarkt open-data loader (2012 on)
+  clubelo.py       league strength from ClubElo snapshots
   worldfootball.py old scraper, unused (site blocks scripts)
   http.py          polite client: robots.txt, rate limit, retries, disk cache
   clubs.py         club -> city resolver; cities.csv gazetteer
@@ -124,6 +128,7 @@ dashboard/
 | eras.py | `FLAG_Z_ENV` star season threshold (real data) | 0.75 |
 | eras.py | `ERA_WINDOW` compare with top scorers within ± this many seasons (real data) | 5 |
 | eras.py | `INTL_WEIGHT` international games vs club games (real data) | 0.2 |
+| eras.py | `LEAGUE_ELO_WEIGHT` league-strength penalty (0 = off, 1 = full Elo odds) | 0.5 |
 | hotspots.py | `HUB_DIAMETER_KM` max distance between any two cities in a hub | 250 |
 | hotspots.py | `ROLLING_SEASONS` club smoothing | 3 |
 | hotspots.py | `TOURNAMENT_CAP` size vs biggest club hub | WC 1.5×, Euro 1.1× |

@@ -95,6 +95,11 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
         if len(sub):
             e["hub"] = sub.assign(w=sub[PRIMARY].clip(lower=0)).groupby("hub")["w"].sum().idxmax()
 
+    league_at_peak = {}
+    for pid, s in stars.items():
+        r = ps[(ps["player_id"] == pid) & ps["league"].notna()]
+        if len(r):
+            league_at_peak[pid] = r.iloc[(r["season"] - s["peak"]).abs().argsort()[:1]]["league"].iloc[0]
     hub_by = star_rows.set_index(["player_id", "season"])["hub"].to_dict()
     city_by = star_rows.set_index(["player_id", "season"])["city"].to_dict()
     star_out = []
@@ -105,6 +110,7 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
             "window": [round(x, 2) for x in s["window"]], "height": round(s["height"], 2),
             "fit": s["fit"], "curve": r2(s["curve"]), "points": r2(s["points"]),
             "clubs": [[y, city_by.get((pid, y)), hub_by.get((pid, y))] for y in seasons],
+            "league": league_at_peak.get(pid),
         })
 
     alt = {m: [{"id": pid, "name": s["player"], "peak": round(s["peak"], 2),
@@ -150,6 +156,11 @@ if __name__ == "__main__":
           f"| frames: {d['meta']['frames']} | tournaments: {len(d['tournaments'])}")
     for m, es in d["eras"].items():
         print(f"  {m}: " + ", ".join(f"{e['start']}-{e['end']}" for e in es))
+    lg = {}
+    for s in d["stars"]:
+        lg[s.get("league") or "?"] = lg.get(s.get("league") or "?", 0) + 1
+    if "?" not in lg or len(lg) > 1:
+        print("  stars by league at peak: " + ", ".join(f"{k} {v}" for k, v in sorted(lg.items(), key=lambda x: -x[1])))
     for a in d["agreement"]:
         print(f"  agreement {a['a']} vs {a['b']} ({a['from']}-{a['to']}): {a['jaccard']}")
     print(f"  -> {out}")
