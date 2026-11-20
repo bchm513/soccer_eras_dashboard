@@ -113,6 +113,51 @@ def test_europe_finals():
     assert r.resolve("Reims", europe.COUNTRY_CODE["france"])[0] == "Reims"
 
 
+def test_wiki_standings():
+    st = wiki.parse_standings((FIX / "wiki_standings_1960.html").read_text(encoding="utf-8"))
+    assert st["teams"] == 6 and st["goals"] == 302 and st["matches"] == 78
+    assert abs(st["goals_per_team_match"] - 302 / 156) < 1e-3 and st["team_games"] == 26
+
+
+def test_wiki_leaders_list():
+    rows = wiki.parse_leaders((FIX / "wiki_leaders_list.html").read_text(encoding="utf-8"))
+    assert [(r["player"], r["team"], r["goals"]) for r in rows[:3]] == [
+        ("Alfredo Brown", "Alumni", 11), ("Tristán Gonzáles", "Estudiantes (BA)", 12), ("Carlos Lett", "Alumni", 12)]
+    assert rows[1]["team_title"] == "Estudiantes_de_Buenos_Aires" and rows[0]["nationality"] == "Argentina"
+    lg = {"format": "calendar", "formats": [[1985, "split"], [2014, "calendar"]]}
+    fmt = lambda y: wiki.season_format(lg, y)
+    seasons = [wiki.leaders_season(r["season_text"], fmt) for r in rows]
+    assert seasons == [1904, 1905, 1905, 1985, 1991, 1991]   # Clausura 1992 closes season 1991
+
+
+def test_season_formats():
+    lg = {"format": "calendar", "formats": [[2012, "split"]], "first": 1992, "gaps": [[1999, 2000]]}
+    assert wiki.season_label(1995, wiki.season_format(lg, 1995)) == "1995"
+    assert wiki.season_label(2015, wiki.season_format(lg, 2015)) == "2015–16"
+    assert not wiki.active(lg, 1999) and wiki.active(lg, 2001) and not wiki.active(lg, 1980)
+
+
+def test_libertadores_finals():
+    from scraper import continental as C
+    rows = C.parse_finals((FIX / "wiki_libertadores_finals.html").read_text(encoding="utf-8"), C.COMP_BY_CODE["LIB"])
+    assert [(r["season"], r["winner"], r["winner_country"], r["runner_up_country"], r["attendance"]) for r in rows] == [
+        (1960, "Peñarol", "Uruguay", "Paraguay", 44690), (1992, "São Paulo", "Brazil", "Argentina", 35000),
+        (2011, "Santos", "Brazil", "Uruguay", 65000)]
+
+
+def test_geonames_and_auto_locations(tmp_path):
+    from scraper import locate
+    gn = locate.GeoNames(FIX / "geonames")
+    assert gn.match_name("Rosario Central", "AR")[0] == "Rosario"
+    assert gn.match_name("Unión de Santa Fe", "AR") is None          # 'union' is a stop word
+    assert gn.match_name("Kashima Antlers", "JP")[0] == "Kashima"
+    assert gn.nearest(-12.1, -77.0, "PE") == "Lima" and gn.nearest(0, 0, "PE") is None
+    assert locate.page_coords('<span class="geo">40.453; -3.688</span>') == (40.453, -3.688)
+    (tmp_path / "club_locations_auto.csv").write_text("team,country,city,lat,lon,method\nKashima Antlers,JPN,Kashima,35.96,140.64,geonames\n", encoding="utf-8")
+    assert ClubResolver(tmp_path).resolve("Kashima Antlers", "JPN")[0] == "Kashima"
+    assert ClubResolver(tmp_path, use_auto=False).resolve("Kashima Antlers", "JPN")[3] == "unresolved"
+
+
 def test_club_resolver(tmp_path):
     r = ClubResolver(tmp_path)
     assert r.resolve("Juventus", "ITA")[0] == "Turin"
@@ -135,6 +180,12 @@ if __name__ == "__main__":
     test_clubelo_snapshot()
     test_league_factor()
     test_europe_finals()
+    test_wiki_standings()
+    test_wiki_leaders_list()
+    test_season_formats()
+    test_libertadores_finals()
     with tempfile.TemporaryDirectory() as d:
         test_club_resolver(Path(d))
+    with tempfile.TemporaryDirectory() as d:
+        test_geonames_and_auto_locations(Path(d))
     print("all scraper tests passed")

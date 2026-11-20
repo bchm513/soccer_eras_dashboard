@@ -1,0 +1,961 @@
+rank,player,player_id,nationality,team,all_teams,goals,penalties,method,competition,season,source_url
+1,Miloš Milutinović,Miloš Milutinović,Socialist Federal Republic of Yugoslavia,Partizan,Partizan,8,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+2,Léon Glovacki,Léon Glovacki,France,Reims,Reims,6,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+2,Péter Palotás,Péter Palotás,Hungary,Vörös Lobogó,Vörös Lobogó,6,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+4,René Bliard,René Bliard,France,Reims,Reims,5,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+4,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,5,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+4,Héctor Rial,Héctor Rial,Argentina,Real Madrid,Real Madrid,5,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+7,Mihály Lantos,Mihály Lantos,Hungary,Vörös Lobogó,Vörös Lobogó,4,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+7,Michel Leblond,Michel Leblond,France,Reims,Reims,4,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+7,Gunnar Nordahl,Gunnar Nordahl,Sweden,Milan,Milan,4,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Hippolyte Van den Bosch,Hippolyte Van den Bosch,Belgium,Anderlecht,Anderlecht,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Giorgio Dal Monte,Giorgio Dal Monte,Italy,Milan,Milan,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,John Eriksson,John Eriksson,Sweden,Djurgården,Djurgården,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Joseíto,Joseíto,Spain,Real Madrid,Real Madrid,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Alfred Körner,Alfred Körner,Austria,Rapid Wien,Rapid Wien,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Juan Alberto Schiaffino,Juan Alberto Schiaffino,Italy,Milan,Milan,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+10,Eddie Turnbull,Eddie Turnbull,Scotland,Hibernian,Hibernian,3,,table,UCL,1955,https://en.wikipedia.org/wiki/1955%E2%80%9356_European_Cup
+1,Dennis Viollet,Dennis Viollet,England,Manchester United,Manchester United,9,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+2,Tommy Taylor,Tommy Taylor,England,Manchester United,Manchester United,8,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+3,Alfredo Di Stéfano,Alfredo Di Stéfano,Royal Spanish Football Federation,Real Madrid,Real Madrid,7,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+4,Alfred Preissler,Alfred Preissler,West Germany,Borussia Dortmund,Borussia Dortmund,6,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+5,José Luis Artetxe,José Luis Artetxe,Spain,Athletic Bilbao,Athletic Bilbao,5,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+5,Jacques Foix,Jacques Foix,France,Nice,Nice,5,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+5,Bora Kostić,Bora Kostić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,5,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+8,Jacques Faivre,Jacques Faivre,France,Nice,Nice,4,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Marc Boreux,Marc Boreux,Luxembourg,Spora Luxembourg,Spora Luxembourg,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Ernst Happel,Ernst Happel,Austria,Rapid Wien,Rapid Wien,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Joseíto,Joseíto,Spain,Real Madrid,Real Madrid,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Alfred Kelbassa,Alfred Kelbassa,West Germany,Borussia Dortmund,Borussia Dortmund,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Enrique Mateos,Enrique Mateos,Spain,Real Madrid,Real Madrid,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Armando Merodio,Armando Merodio,Spain,Athletic Bilbao,Athletic Bilbao,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Panayot Panayotov,Panayot Panayotov,Bulgaria,CDNA Sofia,CDNA Sofia,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Ivan Kolev,Ivan Kolev,Bulgaria,CDNA Sofia,CDNA Sofia,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+9,Billy Whelan,Billy Whelan,Republic of Ireland,Manchester United,Manchester United,3,,table,UCL,1956,https://en.wikipedia.org/wiki/1956%E2%80%9357_European_Cup
+1,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,10,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+2,Bora Kostić,Bora Kostić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,9,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+3,Lajos Csordás,Lajos Csordás,Hungary,Vasas,Vasas,8,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+4,Dezső Bundzsák,Dezső Bundzsák,Hungary,Vasas,Vasas,6,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+4,Ernesto Grillo,Ernesto Grillo,Argentina,Milan,Milan,6,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+6,Gastone Bean,Gastone Bean,Italy,Milan,Milan,5,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+6,Juan Alberto Schiaffino,Juan Alberto Schiaffino,Italy,Milan,Milan,5,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+8,Jovan Cokić,Jovan Cokić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,4,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+8,Héctor Rial,Héctor Rial,Spain,Real Madrid,Real Madrid,4,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+8,Dennis Viollet,Dennis Viollet,England,Manchester United,Manchester United,4,,table,UCL,1957,https://en.wikipedia.org/wiki/1957%E2%80%9358_European_Cup
+1,Just Fontaine,Just Fontaine,France,Reims,Reims,10,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+2,Vavá,Vavá,Brazil,Atlético Madrid,Atlético Madrid,8,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+3,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,6,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+3,Joaquín Peiró,Joaquín Peiró,Spain,Atlético Madrid,Atlético Madrid,6,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+5,Enrique Collar,Enrique Collar,Spain,Atlético Madrid,Atlético Madrid,5,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+5,Josef Hamerl,Josef Hamerl,Austria,Wiener Sport-Club,Wiener Sport-Club,5,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+5,Roger Piantoni,Roger Piantoni,France,Reims,Reims,5,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+5,Klaus Zink,Klaus Zink,East Germany,Wismut Karl-Marx-Stadt,Wismut Karl-Marx-Stadt,5,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Ivson,Ivson,Brazil,Sporting CP,Sporting CP,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Jean Jadot,Jean Jadot,Belgium,Standard Liège,Standard Liège,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Bernhard Klodt,Bernhard Klodt,West Germany,Schalke 04,Schalke 04,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Eugen Meier,Eugen Meier,Switzerland,Young Boys,Young Boys,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Péter Palotás,Péter Palotás,Hungary,MTK,MTK,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Willy Tröger,Willy Tröger,East Germany,Wismut Karl-Marx-Stadt,Wismut Karl-Marx-Stadt,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+9,Ernst Wechselberger,Ernst Wechselberger,Switzerland,Young Boys,Young Boys,4,,table,UCL,1958,https://en.wikipedia.org/wiki/1958%E2%80%9359_European_Cup
+1,Ferenc Puskás,Ferenc Puskás,Hungary,Real Madrid,Real Madrid,12,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+2,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,8,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+3,László Kubala,László Kubala,Hungary,Barcelona,Barcelona,6,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+3,Owe Ohlsson,Owe Ohlsson,Sweden,IFK Göteborg,IFK Göteborg,6,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+5,Jacques Foix,Jacques Foix,France,Nice,Nice,5,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+5,Sándor Kocsis,Sándor Kocsis,Hungary,Barcelona,Barcelona,5,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+5,Erwin Stein,Erwin Stein,West Germany,Eintracht Frankfurt,Eintracht Frankfurt,5,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Sammy Baird,Sammy Baird,Scotland,Rangers,Rangers,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Joop Daniëls,Joop Daniëls,Netherlands,Sparta Rotterdam,Sparta Rotterdam,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Evaristo,Evaristo,Brazil,Barcelona,Barcelona,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Dieter Lindner,Dieter Lindner,West Germany,Eintracht Frankfurt,Eintracht Frankfurt,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Bobby Mason,Bobby Mason,England,Wolverhampton Wanderers,Wolverhampton Wanderers,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Ian McMillan,Ian McMillan,Scotland,Rangers,Rangers,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Erich Meier,Erich Meier,West Germany,Eintracht Frankfurt,Eintracht Frankfurt,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Victor Nurenberg,Victor Nurenberg,Luxembourg,Nice,Nice,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+8,Alfred Pfaff,Alfred Pfaff,West Germany,Eintracht Frankfurt,Eintracht Frankfurt,4,,table,UCL,1959,https://en.wikipedia.org/wiki/1959%E2%80%9360_European_Cup
+1,José Águas,José Águas,Portugal,Benfica,Benfica,11,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+2,José Augusto,José Augusto,Portugal,Benfica,Benfica,7,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+3,Evaristo,Evaristo,Brazil,Barcelona,Barcelona,6,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+4,Uwe Seeler,Uwe Seeler,West Germany,Hamburger SV,Hamburger SV,5,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+5,Klaus Stürmer,Klaus Stürmer,West Germany,Hamburger SV,Hamburger SV,4,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+5,Luis Suárez,Luis Suárez,Spain,Barcelona,Barcelona,4,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,John Amdisen,John Amdisen,Denmark,AGF,AGF,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Josef Bertalan,Josef Bertalan,Austria,Rapid Wien,Rapid Wien,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Robert Dienst,Robert Dienst,Austria,Rapid Wien,Rapid Wien,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Charly Dörfel,Charly Dörfel,West Germany,Hamburger SV,Hamburger SV,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Claude Dubaële,Claude Dubaële,France,Reims,Reims,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,János Göröcs,János Göröcs,Hungary,Újpesti Dózsa,Újpesti Dózsa,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,John Jensen,John Jensen,Denmark,AGF,AGF,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Jimmy Robson,Jimmy Robson,England,Burnley,Burnley,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Dominique Rustichelli,Dominique Rustichelli,France,Reims,Reims,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Santana,Santana,Portugal,Benfica,Benfica,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+7,Willy Schneider,Willy Schneider,Switzerland,Young Boys,Young Boys,3,,table,UCL,1960,https://en.wikipedia.org/wiki/1960%E2%80%9361_European_Cup
+1,Heinz Strehl,Heinz Strehl,West Germany,1. FC Nürnberg,1. FC Nürnberg,8,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+2,Ferenc Puskás,Ferenc Puskás,Hungary,Real Madrid,Real Madrid,7,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+2,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,7,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+2,Justo Tejada,Justo Tejada,Spain,Real Madrid,Real Madrid,7,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+5,José Águas,José Águas,Portugal,Benfica,Benfica,6,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+5,Roger Claessen,Roger Claessen,Belgium,Standard Liège,Standard Liège,6,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+5,Bent Løfqvist,Bent Løfqvist,Denmark,Boldklubben 1913,Boldklubben 1913,6,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+5,Bobby Smith,Bobby Smith,England,Tottenham Hotspur,Tottenham Hotspur,6,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+9,Eusébio,Eusébio,Portugal,Benfica,Benfica,5,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+9,Rudolf Kučera,Rudolf Kučera,Czechoslovakia,Dukla Prague,Dukla Prague,5,,table,UCL,1961,https://en.wikipedia.org/wiki/1961%E2%80%9362_European_Cup
+1,José Altafini,José Altafini,Italy,Milan,Milan,14,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+2,Ray Crawford,Ray Crawford,England,Ipswich Town,Ipswich Town,8,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+2,Alan Gilzean,Alan Gilzean,Scotland,Dundee,Dundee,8,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+4,Paolo Barison,Paolo Barison,Italy,Milan,Milan,6,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+4,Eusébio,Eusébio,Portugal,Benfica,Benfica,6,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+4,László Pál,László Pál,Hungary,Vasas,Vasas,6,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+7,Alan Cousin,Alan Cousin,Scotland,Dundee,Dundee,5,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+7,Piet Kruiver,Piet Kruiver,Netherlands,Feyenoord,Feyenoord,5,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+7,Metin Oktay,Metin Oktay,Turkey,Galatasaray,Galatasaray,5,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+10,Jozef Adamec,Jozef Adamec,Czechoslovakia,Dukla Prague,Dukla Prague,4,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+10,Horst Nemec,Horst Nemec,Austria,Austria Wien,Austria Wien,4,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+10,Ted Phillips,Ted Phillips,England,Ipswich Town,Ipswich Town,4,,table,UCL,1962,https://en.wikipedia.org/wiki/1962%E2%80%9363_European_Cup
+1,Vladica Kovačević,Vladica Kovačević,Socialist Federal Republic of Yugoslavia,Partizan,Partizan,7,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+1,Sandro Mazzola,Sandro Mazzola,Italy,Inter Milan,Inter Milan,7,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+1,Ferenc Puskás,Ferenc Puskás,Hungary,Real Madrid,Real Madrid,7,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+4,Franz Brungs,Franz Brungs,West Germany,Borussia Dortmund,Borussia Dortmund,6,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+4,Metin Oktay,Metin Oktay,Turkey,Galatasaray,Galatasaray,6,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+4,Reinhold Wosab,Reinhold Wosab,West Germany,Borussia Dortmund,Borussia Dortmund,6,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+7,Alfredo Di Stéfano,Alfredo Di Stéfano,Spain,Real Madrid,Real Madrid,5,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+7,Josef Jelínek,Josef Jelínek,Czechoslovakia,Dukla Prague,Dukla Prague,5,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+7,Pierre Kerkhoffs,Pierre Kerkhoffs,Netherlands,PSV Eindhoven,PSV Eindhoven,5,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+7,Rudolf Kučera,Rudolf Kučera,Czechoslovakia,Dukla Prague,Dukla Prague,5,,table,UCL,1963,https://en.wikipedia.org/wiki/1963%E2%80%9364_European_Cup
+1,José Torres,José Torres,Portugal,Benfica,Benfica,11,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+2,Eusébio,Eusébio,Portugal,Benfica,Benfica,9,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+3,Roger Hunt,Roger Hunt,England,Liverpool,Liverpool,7,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+3,Nikola Kotkov,Nikola Kotkov,Bulgaria,Lokomotiv Sofia,Lokomotiv Sofia,7,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+5,Amancio,Amancio,Spain,Real Madrid,Real Madrid,6,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+5,Jim Forrest,Jim Forrest,Scotland,Rangers,Rangers,6,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+5,Paco Gento,Paco Gento,Spain,Real Madrid,Real Madrid,6,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+8,Spiro Debarski,Spiro Debarski,Bulgaria,Lokomotiv Sofia,Lokomotiv Sofia,5,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+8,Ian St John,Ian St John,Scotland,Liverpool,Liverpool,5,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,Frans Geurtsen,Frans Geurtsen,Netherlands,DWS,DWS,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,Ramón Grosso,Ramón Grosso,Spain,Real Madrid,Real Madrid,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,László Keglovich,László Keglovich,Hungary,Győri Vasas ETO,Győri Vasas ETO,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,Bo Larsson,Bo Larsson,Sweden,Malmö FF,Malmö FF,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,Sandro Mazzola,Sandro Mazzola,Italy,Inter Milan,Inter Milan,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,László Povázsai,László Povázsai,Hungary,Győri Vasas ETO,Győri Vasas ETO,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+10,Mosje Temming,Mosje Temming,Netherlands,DWS,DWS,4,,table,UCL,1964,https://en.wikipedia.org/wiki/1964%E2%80%9365_European_Cup
+1,Flórián Albert,Flórián Albert,Hungary,Ferencváros,Ferencváros,7,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+1,Eusébio,Eusébio,Portugal,Benfica,Benfica,7,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+3,John Connelly,John Connelly,England,Manchester United,Manchester United,6,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+3,Mustafa Hasanagić,Mustafa Hasanagić,Socialist Federal Republic of Yugoslavia,Partizan,Partizan,6,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+5,Amancio,Amancio,Spain,Real Madrid,Real Madrid,5,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+5,Georgi Asparuhov,Georgi Asparuhov,Bulgaria,Levski Sofia,Levski Sofia,5,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+5,David Herd,David Herd,Scotland,Manchester United,Manchester United,5,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+5,Ivan Mráz,Ivan Mráz,Football Association of the Czech Republic,Sparta Prague,Sparta Prague,5,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+5,Ferenc Puskás,Ferenc Puskás,Hungary,Real Madrid,Real Madrid,5,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,José Augusto,José Augusto,Portugal,Benfica,Benfica,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,George Best,George Best,Northern Ireland,Manchester United,Manchester United,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,Andrej Kvašňák,Andrej Kvašňák,Czechoslovakia,Sparta Prague,Sparta Prague,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,Pirri,Pirri,Spain,Real Madrid,Real Madrid,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,Jacques Stockman,Jacques Stockman,Belgium,Anderlecht,Anderlecht,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+10,Paul Van Himst,Paul Van Himst,Belgium,Anderlecht,Anderlecht,4,,table,UCL,1965,https://en.wikipedia.org/wiki/1965%E2%80%9366_European_Cup
+1,Paul Van Himst,Paul Van Himst,Belgium,Anderlecht,Anderlecht,6,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+2,Stevie Chalmers,Stevie Chalmers,Scotland,Celtic,Celtic,5,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+2,Ernest Pohl,Ernest Pohl,Poland,Górnik Zabrze,Górnik Zabrze,5,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+2,Arthur Thomas,Arthur Thomas,Northern Ireland,Linfield,Linfield,5,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Luis Aragonés,Luis Aragonés,Spain,Atlético Madrid,Atlético Madrid,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Johan Devrindt,Johan Devrindt,Belgium,Anderlecht,Anderlecht,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Tommy Gemmell,Tommy Gemmell,Scotland,Celtic,Celtic,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Friedhelm Konietzka,Friedhelm Konietzka,West Germany,1860 Munich,1860 Munich,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Sandro Mazzola,Sandro Mazzola,Italy,Inter Milan,Inter Milan,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Ivan Mráz,Ivan Mráz,Czechoslovakia,Dukla Prague,Dukla Prague,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Lajos Puskás,Lajos Puskás,Hungary,Vasas,Vasas,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Phil Scott,Phil Scott,Northern Ireland,Linfield,Linfield,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+5,Silvester Takač,Silvester Takač,Socialist Federal Republic of Yugoslavia,Vojvodina,Vojvodina,4,,table,UCL,1966,https://en.wikipedia.org/wiki/1966%E2%80%9367_European_Cup
+1,Eusébio,Eusébio,Portugal,Benfica,Benfica,6,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+2,Francisco Gento,Francisco Gento,Spain,Real Madrid,Real Madrid,5,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+2,Václav Mašek,Václav Mašek,Czechoslovakia,Sparta Prague,Sparta Prague,5,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+2,Paul Van Himst,Paul Van Himst,Belgium,Anderlecht,Anderlecht,5,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+5,Amancio,Amancio,Spain,Real Madrid,Real Madrid,4,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+5,Hermann Gunnarsson,Hermann Gunnarsson,Iceland,Valur,Valur,4,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+5,Włodzimierz Lubański,Włodzimierz Lubański,Poland,Górnik Zabrze,Górnik Zabrze,4,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,Boško Antić,Boško Antić,Socialist Federal Republic of Yugoslavia,Sarajevo,Sarajevo,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,George Best,George Best,Northern Ireland,Manchester United,Manchester United,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,János Farkas,János Farkas,Hungary,Vasas,Vasas,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,István Korsós,István Korsós,Hungary,Vasas,Vasas,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,Ivan Mráz,Ivan Mráz,Czechoslovakia,Sparta Prague,Sparta Prague,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,Pirri,Pirri,Spain,Real Madrid,Real Madrid,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,János Radics,János Radics,Hungary,Vasas,Vasas,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+8,David Sadler,David Sadler,England,Manchester United,Manchester United,3,,table,UCL,1967,https://en.wikipedia.org/wiki/1967%E2%80%9368_European_Cup
+1,Denis Law,Denis Law,Scotland,Manchester United,Manchester United,9,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+2,Johan Cruyff,Johan Cruyff,Netherlands,Ajax,Ajax,6,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+2,Pierino Prati,Pierino Prati,Italy,Milan,Milan,6,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+4,Jozef Adamec,Jozef Adamec,Czechoslovakia,Spartak Trnava,Spartak Trnava,5,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+4,Ladislav Kuna,Ladislav Kuna,Czechoslovakia,Spartak Trnava,Spartak Trnava,5,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+4,José Augusto Torres,José Augusto Torres,Portugal,Benfica,Benfica,5,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+7,Gerard Bergholtz,Gerard Bergholtz,Netherlands,Anderlecht,Anderlecht,4,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+7,Inge Danielsson,Inge Danielsson,Sweden,Ajax,Ajax,4,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+7,Odd Iversen,Odd Iversen,Norway,Rosenborg,Rosenborg,4,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+7,Pirri,Pirri,Spain,Real Madrid,Real Madrid,4,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+7,Valér Švec,Valér Švec,Czechoslovakia,Spartak Trnava,Spartak Trnava,4,,table,UCL,1968,https://en.wikipedia.org/wiki/1968%E2%80%9369_European_Cup
+1,Mick Jones,Mick Jones,England,Leeds United,Leeds United,8,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+2,Ove Kindvall,Ove Kindvall,Sweden,Feyenoord,Feyenoord,7,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+3,Ruud Geels,Ruud Geels,Netherlands,Feyenoord,Feyenoord,6,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+4,Zoran Antonijević,Zoran Antonijević,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,5,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+4,Eusébio,Eusébio,Portugal,Benfica,Benfica,5,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+4,Stanislav Karasi,Stanislav Karasi,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,5,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+7,Jozef Adamec,Jozef Adamec,Czechoslovakia,Spartak Trnava,Spartak Trnava,4,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+7,Lucjan Brychczy,Lucjan Brychczy,Poland,Legia Warsaw,Legia Warsaw,4,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+7,Henri Depireux,Henri Depireux,Belgium,Standard Liège,Standard Liège,4,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+7,Johnny Giles,Johnny Giles,Republic of Ireland,Leeds United,Leeds United,4,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+7,Willem van Hanegem,Willem van Hanegem,Netherlands,Feyenoord,Feyenoord,4,,table,UCL,1969,https://en.wikipedia.org/wiki/1969%E2%80%9370_European_Cup
+1,Antonis Antoniadis,Antonis Antoniadis,Greece,Panathinaikos,Panathinaikos,10,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+2,Luis Aragonés,Luis Aragonés,Spain,Atlético Madrid,Atlético Madrid,6,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+2,Zoran Filipović,Zoran Filipović,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,6,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+2,Stevan Ostojić,Stevan Ostojić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,6,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+5,Herbert Laumen,Herbert Laumen,West Germany,Borussia Mönchengladbach,Borussia Mönchengladbach,5,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+5,Willie Wallace,Willie Wallace,Scotland,Celtic,Celtic,5,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,Peter Ducke,Peter Ducke,East Germany,Carl Zeiss Jena,Carl Zeiss Jena,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,Jimmy Johnstone,Jimmy Johnstone,Scotland,Celtic,Celtic,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,Piet Keizer,Piet Keizer,Netherlands,Ajax,Ajax,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,Horst Köppel,Horst Köppel,West Germany,Borussia Mönchengladbach,Borussia Mönchengladbach,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,João Lourenço,João Lourenço,Portugal,Sporting CP,Sporting CP,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+7,Joe Royle,Joe Royle,England,Everton,Everton,4,,table,UCL,1970,https://en.wikipedia.org/wiki/1970%E2%80%9371_European_Cup
+1,Johan Cruyff,Johan Cruyff,Netherlands,Ajax,Ajax,5,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+1,Antal Dunai,Antal Dunai,Hungary,Újpesti Dózsa,Újpesti Dózsa,5,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+1,Lou Macari,Lou Macari,Scotland,Celtic,Celtic,5,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+1,Silvester Takač,Silvester Takač,Socialist Federal Republic of Yugoslavia,Standard Liège,Standard Liège,5,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Ronnie Cocks,Ronnie Cocks,Malta,Sliema Wanderers,Sliema Wanderers,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Willem van Hanegem,Willem van Hanegem,Netherlands,Feyenoord,Feyenoord,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Rinus Israël,Rinus Israël,Netherlands,Feyenoord,Feyenoord,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Artur Jorge,Artur Jorge,Portugal,Benfica,Benfica,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Ray Kennedy,Ray Kennedy,England,Arsenal,Arsenal,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Kurt Müller,Kurt Müller,Switzerland,Grasshopper,Grasshopper,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+5,Lex Schoenmaker,Lex Schoenmaker,Netherlands,Feyenoord,Feyenoord,4,,table,UCL,1971,https://en.wikipedia.org/wiki/1971%E2%80%9372_European_Cup
+1,Gerd Müller,Gerd Müller,West Germany,Bayern Munich,Bayern Munich,11,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+2,Ferenc Bene,Ferenc Bene,Hungary,Újpesti Dózsa,Újpesti Dózsa,6,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+3,Włodzimierz Lubański,Włodzimierz Lubański,Poland,Górnik Zabrze,Górnik Zabrze,5,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+3,Santillana,Santillana,Spain,Real Madrid,Real Madrid,5,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+5,Nicolae Dobrin,Nicolae Dobrin,Romania,Argeș Pitești,Argeș Pitești,4,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+5,Kevin Hector,Kevin Hector,England,Derby County,Derby County,4,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+5,Rob Rensenbrink,Rob Rensenbrink,Netherlands,Anderlecht,Anderlecht,4,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+5,Jürgen Sparwasser,Jürgen Sparwasser,East Germany,Magdeburg,Magdeburg,4,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,José Altafini,José Altafini,Italy,Juventus,Juventus,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Arie Haan,Arie Haan,Netherlands,Ajax,Ajax,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Johan Cruyff,Johan Cruyff,Netherlands,Ajax,Ajax,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Lou Macari,Lou Macari,Scotland,Celtic,Celtic,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Anatoliy Puzach,Anatoliy Puzach,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Constantin Radu,Constantin Radu,Romania,Argeș Pitești,Argeș Pitești,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Franz Roth,Franz Roth,West Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+9,Edgar Schneider,Edgar Schneider,West Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1972,https://en.wikipedia.org/wiki/1972%E2%80%9373_European_Cup
+1,Gerd Müller,Gerd Müller,West Germany,Bayern Munich,Bayern Munich,8,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+2,Raoul Lambert,Raoul Lambert,Belgium,Club Brugge,Club Brugge,6,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+2,Conny Torstensson,Conny Torstensson,Sweden,Åtvidaberg,Åtvidaberg; Bayern Munich,6,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+4,Dudu Georgescu,Dudu Georgescu,Romania,Dinamo București,Dinamo București,5,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+4,Ottmar Hitzfeld,Ottmar Hitzfeld,West Germany,Basel,Basel,5,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+4,Uli Hoeneß,Uli Hoeneß,West Germany,Bayern Munich,Bayern Munich,5,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+7,Walter Balmer,Walter Balmer,Switzerland,Basel,Basel,4,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+7,Pierre Carteus,Pierre Carteus,Belgium,Club Brugge,Club Brugge,4,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+7,Radu Nunweiller,Radu Nunweiller,Romania,Dinamo București,Dinamo București,4,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,Tommy Callaghan,Tommy Callaghan,Scotland,Celtic,Celtic,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,John Deans,John Deans,Scotland,Celtic,Celtic,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,László Fazekas,László Fazekas,Hungary,Újpest,Újpest,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,Jimmy Johnstone,Jimmy Johnstone,Scotland,Celtic,Celtic,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,Dimitar Marashliev,Dimitar Marashliev,Bulgaria,CSKA Sofia,CSKA Sofia,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+10,Stanislav Martinkovič,Stanislav Martinkovič,Czechoslovakia,Spartak Trnava,Spartak Trnava,3,,table,UCL,1973,https://en.wikipedia.org/wiki/1973%E2%80%9374_European_Cup
+1,Eduard Markarov,Eduard Markarov,Soviet Union,Ararat Yerevan,Ararat Yerevan,5,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+1,Gerd Müller,Gerd Müller,West Germany,Bayern Munich,Bayern Munich,5,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Reine Almqvist,Reine Almqvist,Sweden,Åtvidaberg,Åtvidaberg,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Manuel Clares,Manuel Clares,Spain,Barcelona,Barcelona,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Allan Clarke,Allan Clarke,England,Leeds United,Leeds United,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Wilhelm Kreuz,Wilhelm Kreuz,Austria,Feyenoord,Feyenoord,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Peter Lorimer,Peter Lorimer,Scotland,Leeds United,Leeds United,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Carles Rexach,Carles Rexach,Spain,Barcelona,Barcelona,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+3,Lex Schoenmaker,Lex Schoenmaker,Netherlands,Feyenoord,Feyenoord,4,,table,UCL,1974,https://en.wikipedia.org/wiki/1974%E2%80%9375_European_Cup
+1,Jupp Heynckes,Jupp Heynckes,West Germany,Borussia Mönchengladbach,Borussia Mönchengladbach,6,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Harry Lubse,Harry Lubse,Netherlands,PSV Eindhoven,PSV Eindhoven,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Roberto Martínez,Roberto Martínez,Spain,Real Madrid,Real Madrid,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Gerd Müller,Gerd Müller,West Germany,Bayern Munich,Bayern Munich,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Nené,Nené,Portugal,Benfica,Benfica,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Santillana,Santillana,Spain,Real Madrid,Real Madrid,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+2,Slaviša Žungul,Slaviša Žungul,Socialist Federal Republic of Yugoslavia,Hajduk Split,Hajduk Split,5,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Charlie George,Charlie George,England,Derby County,Derby County,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Willy van der Kuijlen,Willy van der Kuijlen,Netherlands,PSV Eindhoven,PSV Eindhoven,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Jean-Michel Larqué,Jean-Michel Larqué,France,Saint-Étienne,Saint-Étienne,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Ludwig Schuster,Ludwig Schuster,West Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Allan Simonsen,Allan Simonsen,Denmark,Borussia Mönchengladbach,Borussia Mönchengladbach,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+8,Ivica Šurjak,Ivica Šurjak,Socialist Federal Republic of Yugoslavia,Hajduk Split,Hajduk Split,4,,table,UCL,1975,https://en.wikipedia.org/wiki/1975%E2%80%9376_European_Cup
+1,Franco Cucinotta,Franco Cucinotta,Italy,Zürich,Zürich,5,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+1,Gerd Müller,Gerd Müller,West Germany,Bayern Munich,Bayern Munich,5,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+3,Kevin Keegan,Kevin Keegan,England,Liverpool,Liverpool,4,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+3,René van de Kerkhof,René van de Kerkhof,Netherlands,PSV Eindhoven,PSV Eindhoven,4,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+3,Phil Neal,Phil Neal,England,Liverpool,Liverpool,4,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+3,Tibor Nyilasi,Tibor Nyilasi,Hungary,Ferencváros,Ferencváros,4,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+3,Conny Torstensson,Conny Torstensson,Sweden,Bayern Munich,Bayern Munich,4,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,Leonid Buryak,Leonid Buryak,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,Steve Heighway,Steve Heighway,Republic of Ireland,Liverpool,Liverpool,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,David Johnson,David Johnson,England,Liverpool,Liverpool,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,Hans-Jürgen Kreische,Hans-Jürgen Kreische,East Germany,Dynamo Dresden,Dynamo Dresden,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,Peter Risi,Peter Risi,Switzerland,Zürich,Zürich,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+8,Petro Slobodyan,Petro Slobodyan,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,3,,table,UCL,1976,https://en.wikipedia.org/wiki/1976%E2%80%9377_European_Cup
+1,Allan Simonsen,Allan Simonsen,Denmark,Borussia Mönchengladbach,Borussia Mönchengladbach,5,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+2,Jimmy Case,Jimmy Case,England,Liverpool,Liverpool,4,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+2,Joe Craig,Joe Craig,Scotland,Celtic,Celtic,4,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+2,Roger Davies,Roger Davies,England,Club Brugge,Club Brugge,4,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+2,Jupp Heynckes,Jupp Heynckes,West Germany,Borussia Mönchengladbach,Borussia Mönchengladbach,4,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+2,Pietro Paolo Virdis,Pietro Paolo Virdis,Italy,Juventus,Juventus,4,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Kenny Dalglish,Kenny Dalglish,Scotland,Liverpool,Liverpool,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Zoran Filipović,Zoran Filipović,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Ruud Geels,Ruud Geels,Netherlands,Ajax,Ajax,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Tschen La Ling,Tschen La Ling,Netherlands,Ajax,Ajax,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Kiril Milanov,Kiril Milanov,Bulgaria,Levski-Spartak,Levski-Spartak,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Pavel Panov,Pavel Panov,Bulgaria,Levski-Spartak,Levski-Spartak,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Marcial Pina,Marcial Pina,Spain,Atlético Madrid,Atlético Madrid,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,René Vandereycken,René Vandereycken,Belgium,Club Brugge,Club Brugge,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+7,Kurt Welzl,Kurt Welzl,Austria,Wacker,Wacker,3,,table,UCL,1977,https://en.wikipedia.org/wiki/1977%E2%80%9378_European_Cup
+1,Claudio Sulser,Claudio Sulser,Switzerland,Grasshopper,Grasshopper,11,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+2,Garry Birtles,Garry Birtles,England,Nottingham Forest,Nottingham Forest,6,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+3,Dieter Müller,Dieter Müller,Germany,Köln,Köln,5,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+3,Walter Schachner,Walter Schachner,Austria,Austria Wien,Austria Wien,5,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+5,Dušan Bajević,Dušan Bajević,Socialist Federal Republic of Yugoslavia,AEK Athens,AEK Athens,4,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+5,Kazimierz Kmiecik,Kazimierz Kmiecik,Poland,Wisła Kraków,Wisła Kraków,4,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+5,Willy van der Kuijlen,Willy van der Kuijlen,Netherlands,PSV Eindhoven,PSV Eindhoven,4,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Gerrie Deijkers,Gerrie Deijkers,Netherlands,PSV Eindhoven,PSV Eindhoven,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Roger van Gool,Roger van Gool,Belgium,Köln,Köln,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Juanito,Juanito,Spain,Real Madrid,Real Madrid,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Karel Kroupa,Karel Kroupa,Czechoslovakia,Zbrojovka Brno,Zbrojovka Brno,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Anders Ljungberg,Anders Ljungberg,Sweden,Malmö FF,Malmö FF,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Raimondo Ponte,Raimondo Ponte,Switzerland,Grasshopper,Grasshopper,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+8,Santillana,Santillana,Spain,Real Madrid,Real Madrid,3,,table,UCL,1978,https://en.wikipedia.org/wiki/1978%E2%80%9379_European_Cup
+1,Søren Lerby,Søren Lerby,Denmark,Ajax,Ajax,10,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+2,Ton Blanker,Ton Blanker,Netherlands,Ajax,Ajax,7,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+2,Horst Hrubesch,Horst Hrubesch,Germany,Hamburg,Hamburg,7,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+4,Sotiris Kaiafas,Sotiris Kaiafas,Cyprus,Omonia,Omonia,6,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+5,Frank Arnesen,Frank Arnesen,Denmark,Ajax,Ajax,4,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+5,Ruud Krol,Ruud Krol,Netherlands,Ajax,Ajax,4,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Carlos Bianchi,Carlos Bianchi,Argentina,Strasbourg,Strasbourg,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Ian Bowyer,Ian Bowyer,England,Nottingham Forest,Nottingham Forest,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Laurie Cunningham,Laurie Cunningham,England,Real Madrid,Real Madrid,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Manfred Kaltz,Manfred Kaltz,Germany,Hamburg,Hamburg,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Hartmut Pelka,Hartmut Pelka,East Germany,BFC Dynamo,BFC Dynamo,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Francis Piasecki,Francis Piasecki,France,Strasbourg,Strasbourg,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,John Robertson,John Robertson,Scotland,Nottingham Forest,Nottingham Forest,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Santillana,Santillana,Spain,Real Madrid,Real Madrid,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+7,Trevor Francis,Trevor Francis,England,Nottingham Forest,Nottingham Forest,3,,table,UCL,1979,https://en.wikipedia.org/wiki/1979%E2%80%9380_European_Cup
+1,Terry McDermott,Terry McDermott,England,Liverpool,Liverpool,6,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+1,Karl-Heinz Rummenigge,Karl-Heinz Rummenigge,Germany,Bayern Munich,Bayern Munich,6,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+1,Graeme Souness,Graeme Souness,Scotland,Liverpool,Liverpool,6,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+4,Tsvetan Yonchev,Tsvetan Yonchev,Bulgaria,CSKA Sofia,CSKA Sofia,5,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+5,Alessandro Altobelli,Alessandro Altobelli,Italy,Internazionale,Internazionale,4,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+5,Yuri Gavrilov,Yuri Gavrilov,Soviet Union,Spartak Moscow,Spartak Moscow,4,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+5,Dieter Hoeneß,Dieter Hoeneß,Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+8,Juanito,Juanito,Spain,Real Madrid,Real Madrid,3,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+8,Vagiz Khidiyatullin,Vagiz Khidiyatullin,Soviet Union,Spartak Moscow,Spartak Moscow,3,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+8,Srebrenko Repčić,Srebrenko Repčić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+8,Santillana,Santillana,Spain,Real Madrid,Real Madrid,3,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+8,Frank Arnesen,Frank Arnesen,Denmark,AFC Ajax,AFC Ajax,3,,table,UCL,1980,https://en.wikipedia.org/wiki/1980%E2%80%9381_European_Cup
+1,Dieter Hoeneß,Dieter Hoeneß,Germany,Bayern Munich,Bayern Munich,7,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+2,Karl-Heinz Rummenigge,Karl-Heinz Rummenigge,Germany,Bayern Munich,Bayern Munich,6,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+3,Paul Breitner,Paul Breitner,Germany,Bayern Munich,Bayern Munich,5,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+3,Willy Geurts,Willy Geurts,Belgium,Anderlecht,Anderlecht,5,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+5,Lubomír Knapp,Lubomír Knapp,Czechoslovakia,Baník Ostrava,Baník Ostrava,4,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+5,Tony Morley,Tony Morley,England,Aston Villa,Aston Villa,4,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+5,Dušan Savić,Dušan Savić,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,4,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Jurica Jerković,Jurica Jerković,Socialist Federal Republic of Yugoslavia,Zürich,Zürich,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Kees Kist,Kees Kist,Netherlands,AZ,AZ,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Verner Lička,Verner Lička,Czechoslovakia,Baník Ostrava,Baník Ostrava,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Juan Lozano,Juan Lozano,Spain,Anderlecht,Anderlecht,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Terry McDermott,Terry McDermott,England,Liverpool,Liverpool,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Vladimir Petrović,Vladimir Petrović,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Gary Shaw,Gary Shaw,England,Aston Villa,Aston Villa,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Peter Withe,Peter Withe,England,Aston Villa,Aston Villa,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+8,Tsvetan Yonchev,Tsvetan Yonchev,Bulgaria,CSKA Sofia,CSKA Sofia,3,,table,UCL,1981,https://en.wikipedia.org/wiki/1981%E2%80%9382_European_Cup
+1,Paolo Rossi,Paolo Rossi,Italy,Juventus,Juventus,6,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+2,Michel Platini,Michel Platini,France,Juventus,Juventus,5,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+2,Gary Shaw,Gary Shaw,England,Aston Villa,Aston Villa,5,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+4,Lars Bastrup,Lars Bastrup,Denmark,Hamburg,Hamburg,4,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+4,Hans Krankl,Hans Krankl,Austria,Rapid Vienna,Rapid Vienna,4,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+4,Mirosław Tłokiński,Mirosław Tłokiński,Poland,Widzew Łódź,Widzew Łódź,4,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+4,Pedro Uralde,Pedro Uralde,Spain,Real Sociedad,Real Sociedad,4,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,António Oliveira,António Oliveira,Portugal,Sporting CP,Sporting CP,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Marek Filipczak,Marek Filipczak,Poland,Widzew Łódź,Widzew Łódź,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Atik Ismail,Atik Ismail,Finland,HJK Helsinki,HJK Helsinki,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Christian Keglevits,Christian Keglevits,Austria,Rapid Vienna,Rapid Vienna,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Jesús María Satrústegui,Jesús María Satrústegui,Spain,Real Sociedad,Real Sociedad,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Krzysztof Surlit,Krzysztof Surlit,Poland,Widzew Łódź,Widzew Łódź,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Ronnie Whelan,Ronnie Whelan,Republic of Ireland,Liverpool,Liverpool,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+8,Gerald Willfurth,Gerald Willfurth,Austria,Rapid Vienna,Rapid Vienna,3,,table,UCL,1982,https://en.wikipedia.org/wiki/1982%E2%80%9383_European_Cup
+1,Viktor Sokol,Viktor Sokol,Soviet Union,Dinamo Minsk,Dinamo Minsk,6,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+2,Roberto Pruzzo,Roberto Pruzzo,Italy,Roma,Roma,5,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+2,Ian Rush,Ian Rush,Wales,Liverpool,Liverpool,5,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+4,Ralph Milne,Ralph Milne,Scotland,Dundee United,Dundee United,4,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Nikos Anastopoulos,Nikos Anastopoulos,Greece,Olympiacos,Olympiacos,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Ionel Augustin,Ionel Augustin,Romania,Dinamo București,Dinamo București,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Kenny Dalglish,Kenny Dalglish,Scotland,Liverpool,Liverpool,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Diamantino,Diamantino,Portugal,Benfica,Benfica,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Davie Dodds,Davie Dodds,Scotland,Dundee United,Dundee United,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Rainer Ernst,Rainer Ernst,East Germany,BFC Dynamo,BFC Dynamo,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Gheorghe Mulţescu,Gheorghe Mulţescu,Romania,Dinamo București,Dinamo București,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Antonín Panenka,Antonín Panenka,Czechoslovakia,Rapid Wien,Rapid Wien,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Gerard Plessers,Gerard Plessers,Belgium,Standard Liège,Standard Liège,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+5,Derek Stark,Derek Stark,Scotland,Dundee United,Dundee United,3,,table,UCL,1983,https://en.wikipedia.org/wiki/1983%E2%80%9384_European_Cup
+1,Torbjörn Nilsson,Torbjörn Nilsson,Sweden,IFK Göteborg,IFK Göteborg,7,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+1,Michel Platini,Michel Platini,France,Juventus,Juventus,7,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+3,Paolo Rossi,Paolo Rossi,Italy,Juventus,Juventus,5,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+3,Ian Rush,Ian Rush,Wales,Liverpool,Liverpool,5,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+3,John Wark,John Wark,Scotland,Liverpool,Liverpool,5,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Massimo Briaschi,Massimo Briaschi,Italy,Juventus,Juventus,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Jerry Carlsson,Jerry Carlsson,Sweden,IFK Göteborg,IFK Göteborg,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Stig Fredriksson,Stig Fredriksson,Sweden,IFK Göteborg,IFK Göteborg,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Rajko Janjanin,Rajko Janjanin,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Bernard Lacombe,Bernard Lacombe,France,Bordeaux,Bordeaux,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Hennadiy Lytovchenko,Hennadiy Lytovchenko,Soviet Union,Dnipro Dnipropetrovsk,Dnipro Dnipropetrovsk,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Dieter Müller,Dieter Müller,Germany,Bordeaux,Bordeaux,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Stefan Pettersson,Stefan Pettersson,Sweden,IFK Göteborg,IFK Göteborg,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Toni Polster,Toni Polster,Austria,Austria Vienna,Austria Vienna,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Zdeněk Procházka,Zdeněk Procházka,Czechoslovakia,Sparta Praha,Sparta Praha,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Herbert Prohaska,Herbert Prohaska,Austria,Austria Vienna,Austria Vienna,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Dimitris Saravakos,Dimitris Saravakos,Greece,Panathinaikos,Panathinaikos,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Andreas Thom,Andreas Thom,East Germany,BFC Dynamo,BFC Dynamo,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+6,Paul Walsh,Paul Walsh,England,Liverpool,Liverpool,3,,table,UCL,1984,https://en.wikipedia.org/wiki/1984%E2%80%9385_European_Cup
+1,Torbjörn Nilsson,Torbjörn Nilsson,Sweden,IFK Göteborg,IFK Göteborg,7,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+2,Lajos Détári,Lajos Détári,Hungary,Budapest Honvéd,Budapest Honvéd,5,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+2,Ismo Lius,Ismo Lius,Finland,Kuusysi,Kuusysi,5,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+2,Victor Pițurcă,Victor Pițurcă,Romania,Steaua București,Steaua București,5,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+2,Aldo Serena,Aldo Serena,Italy,Juventus,Juventus,5,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+6,Preben Elkjær,Preben Elkjær,Denmark,Hellas Verona,Hellas Verona,4,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+6,Andreas Andreou,Andreas Andreou,Cyprus,Omonia,Omonia,4,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+6,Toni Polster,Toni Polster,Austria,Austria Wien,Austria Wien,4,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Pichi Alonso,Pichi Alonso,Spain,Barcelona,Barcelona,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Per Frimann,Per Frimann,Denmark,Anderlecht,Anderlecht,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,John Hewitt,John Hewitt,Scotland,Aberdeen,Aberdeen,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Dieter Hoeneß,Dieter Hoeneß,Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Juary,Juary,Brazil,Porto,Porto,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Mats Magnusson,Mats Magnusson,Sweden,Servette,Servette,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Reinhold Mathy,Reinhold Mathy,Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Michel Platini,Michel Platini,France,Juventus,Juventus,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Roland Wohlfarth,Roland Wohlfarth,Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+9,Yuri Zheludkov,Yuri Zheludkov,Soviet Union,Zenit Leningrad,Zenit Leningrad,3,,table,UCL,1985,https://en.wikipedia.org/wiki/1985%E2%80%9386_European_Cup
+1,Borislav Cvetković,Borislav Cvetković,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,7,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+2,Oleg Blokhin,Oleg Blokhin,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,5,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+2,Emilio Butragueño,Emilio Butragueño,Spain,Real Madrid,Real Madrid,5,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+2,Fernando Gomes,Fernando Gomes,Portugal,Porto,Porto,5,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+2,Michael Laudrup,Michael Laudrup,Denmark,Juventus,Juventus,5,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+2,Vadym Yevtushenko,Vadym Yevtushenko,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,5,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+7,António André,António André,Portugal,Porto,Porto,4,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+7,Lothar Matthäus,Lothar Matthäus,West Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+7,Roland Wohlfarth,Roland Wohlfarth,West Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Celso,Celso,Brazil,Porto,Porto,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Mo Johnston,Mo Johnston,Scotland,Celtic,Celtic,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Rabah Madjer,Rabah Madjer,Algeria,Porto,Porto,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Mitar Mrkela,Mitar Mrkela,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Toni Polster,Toni Polster,Austria,Austria Wien,Austria Wien,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Hugo Sánchez,Hugo Sánchez,Mexico,Real Madrid,Real Madrid,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Jiří Šourek,Jiří Šourek,Czechoslovakia,Vítkovice,Vítkovice,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+10,Pavlo Yakovenko,Pavlo Yakovenko,Soviet Union,Dynamo Kyiv,Dynamo Kyiv,3,,table,UCL,1986,https://en.wikipedia.org/wiki/1986%E2%80%9387_European_Cup
+1,Petar Novák,Petar Novák,Czechoslovakia,Sparta Prague,Sparta Prague,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,René van der Gijp,René van der Gijp,Netherlands,Neuchâtel Xamax,Neuchâtel Xamax,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Rabah Madjer,Rabah Madjer,Algeria,Porto,Porto,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Ally McCoist,Ally McCoist,Scotland,Rangers,Rangers,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Rui Águas,Rui Águas,Portugal,Benfica,Benfica,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Gheorghe Hagi,Gheorghe Hagi,Romania,Steaua București,Steaua București,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Míchel,Míchel,Spain,Real Madrid,Real Madrid,4,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Jürgen Wegmann,Jürgen Wegmann,West Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Jean-Marc Ferreri,Jean-Marc Ferreri,France,Bordeaux,Bordeaux,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Ivan Hašek,Ivan Hašek,Czechoslovakia,Sparta Prague,Sparta Prague,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Zlatko Kranjčar,Zlatko Kranjčar,Socialist Federal Republic of Yugoslavia,Rapid Wien,Rapid Wien,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,António Sousa,António Sousa,Portugal,Porto,Porto,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Zoran Stojadinović,Zoran Stojadinović,Socialist Federal Republic of Yugoslavia,Rapid Wien,Rapid Wien,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Hugo Sánchez,Hugo Sánchez,Mexico,Real Madrid,Real Madrid,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Patrick Vervoort,Patrick Vervoort,Belgium,Anderlecht,Anderlecht,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Marius Lăcătuș,Marius Lăcătuș,Romania,Steaua București,Steaua București,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+8,Hans Gillhaus,Hans Gillhaus,Netherlands,PSV Eindhoven,PSV Eindhoven,3,,table,UCL,1987,https://en.wikipedia.org/wiki/1987%E2%80%9388_European_Cup
+1,Marco van Basten,Marco van Basten,Netherlands,Milan,Milan,10,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+2,Marius Lăcătuș,Marius Lăcătuș,Romania,Steaua București,Steaua București,7,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+3,Gheorghe Hagi,Gheorghe Hagi,Romania,Steaua București,Steaua București,6,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+4,Tanju Çolak,Tanju Çolak,Turkey,Galatasaray,Galatasaray,5,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+4,Hugo Sánchez,Hugo Sánchez,Mexico,Real Madrid,Real Madrid,5,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+6,Ilie Dumitrescu,Ilie Dumitrescu,Romania,Steaua București,Steaua București,4,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+6,Emilio Butragueño,Emilio Butragueño,Spain,Real Madrid,Real Madrid,4,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+6,Ruud Gullit,Ruud Gullit,Netherlands,Milan,Milan,4,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+9,Gabi Balint,Gabi Balint,Romania,Steaua București,Steaua București,3,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+9,Youssouf Falikou Fofana,Youssouf Falikou Fofana,Ivory Coast,Monaco,Monaco,3,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+9,Dragan Stojković,Dragan Stojković,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,3,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+9,Jan Urban,Jan Urban,Poland,Górnik Zabrze,Górnik Zabrze,3,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+9,Pietro Paolo Virdis,Pietro Paolo Virdis,Italy,Milan,Milan,3,,table,UCL,1988,https://en.wikipedia.org/wiki/1988%E2%80%9389_European_Cup
+1,Jean-Pierre Papin,Jean-Pierre Papin,France,Marseille,Marseille,6,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+1,Romário,Romário,Brazil,PSV Eindhoven,PSV Eindhoven,6,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+3,Mats Magnusson,Mats Magnusson,Sweden,Benfica,Benfica,4,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+3,Peter Pacult,Peter Pacult,Austria,Swarovski Tirol,Swarovski Tirol,4,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+3,Vata,Vata,Angola,Benfica,Benfica,4,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Michal Bílek,Michal Bílek,Czechoslovakia,Sparta Prague,Sparta Prague,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,John Bosman,John Bosman,Netherlands,KV Mechelen,KV Mechelen,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Juul Ellerman,Juul Ellerman,Netherlands,PSV Eindhoven,PSV Eindhoven,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Lima,Lima,Brazil,Benfica,Benfica,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Ricardo Gomes,Ricardo Gomes,Brazil,Benfica,Benfica,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Franck Sauzée,Franck Sauzée,France,Marseille,Marseille,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Eduard Son,Eduard Son,Soviet Union,Dnipro Dnipropetrovsk,Dnipro Dnipropetrovsk,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Hristo Stoitchkov,Hristo Stoitchkov,Bulgaria,CSKA Sofia,CSKA Sofia,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Marco van Basten,Marco van Basten,Netherlands,Milan,Milan,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+6,Christoph Westerthaler,Christoph Westerthaler,Austria,Swarovski Tirol,Swarovski Tirol,3,,table,UCL,1989,https://en.wikipedia.org/wiki/1989%E2%80%9390_European_Cup
+1,Peter Pacult,Peter Pacult,Austria,Swarovski Tirol,Swarovski Tirol,6,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+1,Jean-Pierre Papin,Jean-Pierre Papin,France,Olympique Marseille,Olympique Marseille,6,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Torsten Gütschow,Torsten Gütschow,Germany,Dynamo Dresden,Dynamo Dresden,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Mo Johnston,Mo Johnston,Scotland,Rangers,Rangers,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Sebastián Losada,Sebastián Losada,Spain,Real Madrid,Real Madrid,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Darko Pančev,Darko Pančev,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Hugo Sánchez,Hugo Sánchez,Mexico,Real Madrid,Real Madrid,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+3,Philippe Vercruysse,Philippe Vercruysse,France,Olympique Marseille,Olympique Marseille,5,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+9,Emilio Butragueño,Emilio Butragueño,Spain,Real Madrid,Real Madrid,4,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+9,Rabah Madjer,Rabah Madjer,Algeria,Porto,Porto,4,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+9,Stéphane Paille,Stéphane Paille,France,Porto,Porto,4,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+9,Robert Prosinečki,Robert Prosinečki,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,4,,table,UCL,1990,https://en.wikipedia.org/wiki/1990%E2%80%9391_European_Cup
+1,Sergei Yuran,Sergei Yuran,Commonwealth of Independent States,Benfica,Benfica,7,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+1,Jean-Pierre Papin,Jean-Pierre Papin,France,Marseille,Marseille,7,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+3,Luc Nilis,Luc Nilis,Belgium,Anderlecht,Anderlecht,6,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+3,Darko Pančev,Darko Pančev,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,6,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+3,Gianluca Vialli,Gianluca Vialli,Italy,Sampdoria,Sampdoria,6,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+6,Isaías,Isaías,Brazil,Benfica,Benfica,5,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Hristo Stoichkov,Hristo Stoichkov,Bulgaria,Barcelona,Barcelona,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,César Brito,César Brito,Portugal,Benfica,Benfica,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Marc Degryse,Marc Degryse,Belgium,Anderlecht,Anderlecht,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Attilio Lombardo,Attilio Lombardo,Italy,Sampdoria,Sampdoria,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Roberto Mancini,Roberto Mancini,Italy,Sampdoria,Sampdoria,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Siniša Mihajlović,Siniša Mihajlović,Socialist Federal Republic of Yugoslavia,Red Star Belgrade,Red Star Belgrade,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+7,Alan Smith,Alan Smith,England,Arsenal,Arsenal,4,,table,UCL,1991,https://en.wikipedia.org/wiki/1991%E2%80%9392_European_Cup
+1,Romário,Romário,Brazil,PSV Eindhoven,PSV Eindhoven,7,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+2,Marco van Basten,Marco van Basten,Netherlands,Milan,Milan,6,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+2,Franck Sauzée,Franck Sauzée,France,Marseille,Marseille,6,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+2,Alen Bokšić,Alen Bokšić,Croatia,Marseille,Marseille,6,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+5,Johnny Ekström,Johnny Ekström,Sweden,IFK Göteborg,IFK Göteborg,5,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+6,Marco Simone,Marco Simone,Italy,Milan,Milan,4,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+6,Gert Verheyen,Gert Verheyen,Belgium,Club Brugge,Club Brugge,4,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+6,Zé Carlos,Zé Carlos,Brazil,Porto,Porto,4,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+6,Emil Kostadinov,Emil Kostadinov,Bulgaria,Porto,Porto,4,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+6,Túlio,Túlio,Brazil,Sion,Sion,4,,table,UCL,1992,https://en.wikipedia.org/wiki/1992%E2%80%9393_European_Cup
+1,Ronald Koeman,Ronald Koeman,Netherlands,Barcelona,Barcelona,8,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+1,Wynton Rufer,Wynton Rufer,New Zealand,Werder Bremen,Werder Bremen,8,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+3,Luc Nilis,Luc Nilis,Belgium,Anderlecht,Anderlecht,7,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+3,Hristo Stoichkov,Hristo Stoichkov,Bulgaria,Barcelona,Barcelona,7,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+5,Bernd Hobsch,Bernd Hobsch,Germany,Werder Bremen,Werder Bremen,5,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+5,Valery Karpin,Valery Karpin,Russia,Spartak Moscow,Spartak Moscow,5,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Marco Bode,Marco Bode,Germany,Werder Bremen,Werder Bremen,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Jürgen Klinsmann,Jürgen Klinsmann,Germany,Monaco,Monaco,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Daniele Massaro,Daniele Massaro,Italy,Milan,Milan,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Viktor Onopko,Viktor Onopko,Russia,Spartak Moscow,Spartak Moscow,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Jean-Pierre Papin,Jean-Pierre Papin,France,Milan,Milan,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Nikolai Pisarev,Nikolai Pisarev,Russia,Spartak Moscow,Spartak Moscow,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Sergey Rodionov,Sergey Rodionov,Russia,Spartak Moscow,Spartak Moscow,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+7,Kubilay Türkyilmaz,Kubilay Türkyilmaz,Switzerland,Galatasaray,Galatasaray,4,,table,UCL,1993,https://en.wikipedia.org/wiki/1993%E2%80%9394_European_Cup
+1,George Weah,George Weah,Liberia,Paris Saint-Germain,Paris Saint-Germain,7,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+2,Jari Litmanen,Jari Litmanen,Finland,Ajax,Ajax,6,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+3,Magnus Erlingmark,Magnus Erlingmark,Sweden,IFK Göteborg,IFK Göteborg,4,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+3,Marco Simone,Marco Simone,Italy,Milan,Milan,4,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,José Mari Bakero,José Mari Bakero,Spain,Barcelona,Barcelona,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Romário,Romário,Brazil,Barcelona,Barcelona,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Hristo Stoichkov,Hristo Stoichkov,Bulgaria,Barcelona,Barcelona,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Claudio Caniggia,Claudio Caniggia,Argentina,Benfica,Benfica,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Christian Nerlinger,Christian Nerlinger,Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Mehmet Scholl,Mehmet Scholl,Germany,Bayern Munich,Bayern Munich,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+5,Viktor Leonenko,Viktor Leonenko,Ukraine,Dynamo Kyiv,Dynamo Kyiv,3,,table,UCL,1994,https://en.wikipedia.org/wiki/1994%E2%80%9395_UEFA_Champions_League
+1,Jari Litmanen,Jari Litmanen,Finland,Ajax,Ajax,9,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+2,Alessandro Del Piero,Alessandro Del Piero,Italy,Juventus,Juventus,6,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+2,Raúl,Raúl,Spain,Real Madrid,Real Madrid,6,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+2,Krzysztof Warzycha,Krzysztof Warzycha,Poland,Panathinaikos,Panathinaikos,6,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+5,Patrick Kluivert,Patrick Kluivert,Netherlands,Ajax,Ajax,5,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+5,Yuriy Nikiforov,Yuriy Nikiforov,Russia,Spartak Moscow,Spartak Moscow,5,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+5,Nicolas Ouédec,Nicolas Ouédec,France,Nantes,Nantes,5,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+5,Fabrizio Ravanelli,Fabrizio Ravanelli,Italy,Juventus,Juventus,5,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+9,Mike Newell,Mike Newell,England,Blackburn Rovers,Blackburn Rovers,4,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+9,Iván Zamorano,Iván Zamorano,Chile,Real Madrid,Real Madrid,4,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+11,Erik Bo Andersen,Erik Bo Andersen,Denmark,AaB,AaB,3,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+11,Karl Petter Løken,Karl Petter Løken,Norway,Rosenborg,Rosenborg,3,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+11,Reynald Pedros,Reynald Pedros,France,Nantes,Nantes,3,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+11,Sergei Yuran,Sergei Yuran,Russia,Spartak Moscow,Spartak Moscow,3,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+11,Japhet N'Doram,Japhet N'Doram,Chad,Nantes,Nantes,3,,table,UCL,1995,https://en.wikipedia.org/wiki/1995%E2%80%9396_UEFA_Champions_League
+1,Milinko Pantić,Milinko Pantić,Federal Republic of Yugoslavia,Atlético Madrid,Atlético Madrid,5,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Nicola Amoruso,Nicola Amoruso,Italy,Juventus,Juventus,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Artur,Artur,Brazil,Porto,Porto,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Alen Bokšić,Alen Bokšić,Croatia,Juventus,Juventus,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Alessandro Del Piero,Alessandro Del Piero,Italy,Juventus,Juventus,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Mário Jardel,Mário Jardel,Brazil,Porto,Porto,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Lars Ricken,Lars Ricken,Germany,Borussia Dortmund,Borussia Dortmund,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Karl-Heinz Riedle,Karl-Heinz Riedle,Germany,Borussia Dortmund,Borussia Dortmund,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Marco Simone,Marco Simone,Italy,Milan,Milan,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Christian Vieri,Christian Vieri,Italy,Juventus,Juventus,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+2,Diego Simeone,Diego Simeone,Argentina,Atlético Madrid,Atlético Madrid,4,,table,UCL,1996,https://en.wikipedia.org/wiki/1996%E2%80%9397_UEFA_Champions_League
+1,Alessandro Del Piero,Alessandro Del Piero,Italy,Juventus,Juventus,10,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+2,Thierry Henry,Thierry Henry,France,Monaco,Monaco,7,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+3,Filippo Inzaghi,Filippo Inzaghi,Italy,Juventus,Juventus,6,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+3,Serhiy Rebrov,Serhiy Rebrov,Ukraine,Dynamo Kyiv,Dynamo Kyiv,6,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+5,Andy Cole,Andy Cole,England,Manchester United,Manchester United,5,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+5,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Dynamo Kyiv,Dynamo Kyiv,5,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Stefan Beinlich,Stefan Beinlich,Germany,Bayer Leverkusen,Bayer Leverkusen,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Oktay Derelioğlu,Oktay Derelioğlu,Turkey,Beşiktaş,Beşiktaş,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Emerson,Emerson,Brazil,Bayer Leverkusen,Bayer Leverkusen,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Victor Ikpeba,Victor Ikpeba,Nigeria,Monaco,Monaco,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Carsten Jancker,Carsten Jancker,Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Fernando Morientes,Fernando Morientes,Spain,Real Madrid,Real Madrid,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Sigurd Rushfeldt,Sigurd Rushfeldt,Norway,Rosenborg,Rosenborg,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Davor Šuker,Davor Šuker,Croatia,Real Madrid,Real Madrid,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,David Trezeguet,David Trezeguet,France,Monaco,Monaco,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Stéphane Chapuisat,Stéphane Chapuisat,Switzerland,Borussia Dortmund,Borussia Dortmund,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Harald Brattbakk,Harald Brattbakk,Norway,Rosenborg,Rosenborg,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+7,Roar Strand,Roar Strand,Norway,Rosenborg,Rosenborg,4,,table,UCL,1997,https://en.wikipedia.org/wiki/1997%E2%80%9398_UEFA_Champions_League
+1,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Dynamo Kyiv,Dynamo Kyiv,8,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+1,Dwight Yorke,Dwight Yorke,Trinidad and Tobago,Manchester United,Manchester United,8,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+3,Zlatko Zahovič,Zlatko Zahovič,Slovenia,Porto,Porto,7,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+4,Filippo Inzaghi,Filippo Inzaghi,Italy,Juventus,Juventus,6,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+5,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,PSV Eindhoven,PSV Eindhoven,5,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+5,Nuno Gomes,Nuno Gomes,Portugal,Benfica,Benfica,5,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Sonny Anderson,Sonny Anderson,Brazil,Barcelona,Barcelona,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Mario Basler,Mario Basler,Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Andy Cole,Andy Cole,England,Manchester United,Manchester United,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Stefan Effenberg,Stefan Effenberg,Germany,Bayern Munich,Bayern Munich,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Ryan Giggs,Ryan Giggs,Wales,Manchester United,Manchester United,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Siniša Gogić,Siniša Gogić,Cyprus,Olympiacos,Olympiacos,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Serhiy Rebrov,Serhiy Rebrov,Ukraine,Dynamo Kyiv,Dynamo Kyiv,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Jürgen Rische,Jürgen Rische,Germany,1. FC Kaiserslautern,1. FC Kaiserslautern,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+7,Paul Scholes,Paul Scholes,England,Manchester United,Manchester United,4,,table,UCL,1998,https://en.wikipedia.org/wiki/1998%E2%80%9399_UEFA_Champions_League
+1,Mário Jardel,Mário Jardel,Brazil,Porto,Porto,10,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+1,Rivaldo,Rivaldo,Brazil,Barcelona,Barcelona,10,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+1,Raúl,Raúl,Spain,Real Madrid,Real Madrid,10,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+4,Simone Inzaghi,Simone Inzaghi,Italy,Lazio,Lazio,9,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+5,Serhiy Rebrov,Serhiy Rebrov,Ukraine,Dynamo Kyiv,Dynamo Kyiv,8,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+5,Tore André Flo,Tore André Flo,Norway,Chelsea,Chelsea,8,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+7,Paulo Sérgio,Paulo Sérgio,Brazil,Bayern Munich,Bayern Munich,7,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+7,Patrick Kluivert,Patrick Kluivert,Netherlands,Barcelona,Barcelona,7,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+9,Luis Enrique,Luis Enrique,Spain,Barcelona,Barcelona,6,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+9,Gabriel Batistuta,Gabriel Batistuta,Argentina,Fiorentina,Fiorentina,6,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+9,Roy Keane,Roy Keane,Republic of Ireland,Manchester United,Manchester United,6,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+9,Fernando Morientes,Fernando Morientes,Spain,Real Madrid,Real Madrid,6,,table,UCL,1999,https://en.wikipedia.org/wiki/1999%E2%80%932000_UEFA_Champions_League
+1,Raúl,Raúl,Spain,Real Madrid,Real Madrid,7,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Marco Simone,Marco Simone,Italy,Monaco,Monaco,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Rivaldo,Rivaldo,Brazil,Barcelona,Barcelona,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Giovane Élber,Giovane Élber,Brazil,Bayern Munich,Bayern Munich,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Paul Scholes,Paul Scholes,England,Manchester United,Manchester United,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Lee Bowyer,Lee Bowyer,England,Leeds United,Leeds United,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Iván Helguera,Iván Helguera,Spain,Real Madrid,Real Madrid,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+2,Mário Jardel,Mário Jardel,Brazil,Galatasaray,Galatasaray,6,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Filippo Inzaghi,Filippo Inzaghi,Italy,Juventus,Juventus,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Claudio López,Claudio López,Argentina,Lazio,Lazio,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Frode Johnsen,Frode Johnsen,Norway,Rosenborg,Rosenborg,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Christian,Christian,Brazil,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Walter Pandiani,Walter Pandiani,Uruguay,Deportivo La Coruña,Deportivo La Coruña,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Teddy Sheringham,Teddy Sheringham,England,Manchester United,Manchester United,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Nicolas Anelka,Nicolas Anelka,France,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Juan Sánchez,Juan Sánchez,Spain,Valencia,Valencia,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Tomasz Radzinski,Tomasz Radzinski,Canada,Anderlecht,Anderlecht,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Milan,Milan,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Luís Figo,Luís Figo,Portugal,Real Madrid,Real Madrid,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Mehmet Scholl,Mehmet Scholl,Germany,Bayern Munich,Bayern Munich,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+9,Alan Smith,Alan Smith,England,Leeds United,Leeds United,5,,table,UCL,2000,https://en.wikipedia.org/wiki/2000%E2%80%9301_UEFA_Champions_League
+1,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,Manchester United,Manchester United,10,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+2,David Trezeguet,David Trezeguet,France,Juventus,Juventus,8,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+3,Ole Gunnar Solskjær,Ole Gunnar Solskjær,Norway,Manchester United,Manchester United,7,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+3,Thierry Henry,Thierry Henry,France,Arsenal,Arsenal,7,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Giovane Élber,Giovane Élber,Brazil,Bayern Munich,Bayern Munich,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Diego Tristán,Diego Tristán,Spain,Deportivo La Coruña,Deportivo La Coruña,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Michalis Konstantinou,Michalis Konstantinou,Cyprus,Panathinaikos,Panathinaikos,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Raúl,Raúl,Spain,Real Madrid,Real Madrid,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Patrick Kluivert,Patrick Kluivert,Netherlands,Barcelona,Barcelona,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+5,Michael Ballack,Michael Ballack,Germany,Bayer Leverkusen,Bayer Leverkusen,6,,table,UCL,2001,https://en.wikipedia.org/wiki/2001%E2%80%9302_UEFA_Champions_League
+1,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,Manchester United,Manchester United,12,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+2,Filippo Inzaghi,Filippo Inzaghi,Italy,Milan,Milan,10,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+3,Roy Makaay,Roy Makaay,Netherlands,Deportivo La Coruña,Deportivo La Coruña,9,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+3,Hernán Crespo,Hernán Crespo,Argentina,Internazionale,Internazionale,9,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+3,Raúl,Raúl,Spain,Real Madrid,Real Madrid,9,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+6,Jan Koller,Jan Koller,Czech Republic,Borussia Dortmund,Borussia Dortmund,8,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+7,Javier Saviola,Javier Saviola,Argentina,Barcelona,Barcelona,7,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+7,Thierry Henry,Thierry Henry,France,Arsenal,Arsenal,7,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+9,Ronaldo,Ronaldo,Brazil,Real Madrid,Real Madrid,6,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+9,Alan Shearer,Alan Shearer,England,Newcastle United,Newcastle United,6,,table,UCL,2002,https://en.wikipedia.org/wiki/2002%E2%80%9303_UEFA_Champions_League
+1,Fernando Morientes,Fernando Morientes,Spain,Monaco,Monaco,9,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+2,Dado Pršo,Dado Pršo,Croatia,Monaco,Monaco,7,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+3,Roy Makaay,Roy Makaay,Netherlands,Bayern Munich,Bayern Munich,6,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+3,Walter Pandiani,Walter Pandiani,Uruguay,Deportivo La Coruña,Deportivo La Coruña,6,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+5,Didier Drogba,Didier Drogba,Ivory Coast,Marseille,Marseille,5,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+5,Hakan Şükür,Hakan Şükür,Turkey,Galatasaray,Galatasaray,5,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+5,Juninho,Juninho,Brazil,Lyon,Lyon,5,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+5,Thierry Henry,Thierry Henry,France,Arsenal,Arsenal,5,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,David Trezeguet,David Trezeguet,France,Juventus,Juventus,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Wesley Sonck,Wesley Sonck,Belgium,Ajax,Ajax,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,Manchester United,Manchester United,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Albert Luque,Albert Luque,Spain,Deportivo La Coruña,Deportivo La Coruña,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Benni McCarthy,Benni McCarthy,South Africa,Porto,Porto,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Ronaldo,Ronaldo,Brazil,Real Madrid,Real Madrid,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Milan,Milan,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Kaká,Kaká,Brazil,Milan,Milan,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Ludovic Giuly,Ludovic Giuly,France,Monaco,Monaco,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Robert Pires,Robert Pires,France,Arsenal,Arsenal,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+9,Frank Lampard,Frank Lampard,England,Chelsea,Chelsea,4,,table,UCL,2003,https://en.wikipedia.org/wiki/2003%E2%80%9304_UEFA_Champions_League
+1,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,Manchester United,Manchester United,8,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+2,Adriano,Adriano,Brazil,Internazionale,Internazionale,7,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+2,Roy Makaay,Roy Makaay,Netherlands,Bayern Munich,Bayern Munich,7,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+4,Sylvain Wiltord,Sylvain Wiltord,France,Lyon,Lyon,6,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+4,Hernán Crespo,Hernán Crespo,Argentina,Milan,Milan,6,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+4,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Milan,Milan,6,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Ivan Klasnić,Ivan Klasnić,Croatia,Werder Bremen,Werder Bremen,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Obafemi Martins,Obafemi Martins,Nigeria,Internazionale,Internazionale,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Tuncay,Tuncay,Turkey,Fenerbahçe,Fenerbahçe,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Didier Drogba,Didier Drogba,Ivory Coast,Chelsea,Chelsea,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Thierry Henry,Thierry Henry,France,Arsenal,Arsenal,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Michael Essien,Michael Essien,Ghana,Lyon,Lyon,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+7,Luis García,Luis García,Spain,Liverpool,Liverpool,5,,table,UCL,2004,https://en.wikipedia.org/wiki/2004%E2%80%9305_UEFA_Champions_League
+1,Andriy Shevchenko,Andriy Shevchenko,Ukraine,Milan,Milan,9,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+2,Ronaldinho,Ronaldinho,Brazil,Barcelona,Barcelona,7,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+3,David Trezeguet,David Trezeguet,France,Juventus,Juventus,6,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+3,Samuel Eto'o,Samuel Eto'o,Cameroon,Barcelona,Barcelona,6,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+5,Adriano,Adriano,Brazil,Internazionale,Internazionale,5,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+5,Johan Micoud,Johan Micoud,France,Werder Bremen,Werder Bremen,5,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+5,Thierry Henry,Thierry Henry,France,Arsenal,Arsenal,5,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+5,Kaká,Kaká,Brazil,Milan,Milan,5,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,Julio Cruz,Julio Cruz,Argentina,Internazionale,Internazionale,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,Filippo Inzaghi,Filippo Inzaghi,Italy,Milan,Milan,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,Vincenzo Iaquinta,Vincenzo Iaquinta,Italy,Udinese,Udinese,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,John Carew,John Carew,Norway,Lyon,Lyon,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,Peter Løvenkrands,Peter Løvenkrands,Denmark,Rangers,Rangers,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+9,Juninho,Juninho,Brazil,Lyon,Lyon,4,,table,UCL,2005,https://en.wikipedia.org/wiki/2005%E2%80%9306_UEFA_Champions_League
+1,Kaká,Kaká,Brazil,Milan,Milan,10,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+2,Peter Crouch,Peter Crouch,England,Liverpool,Liverpool,6,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+2,Ruud van Nistelrooy,Ruud van Nistelrooy,Netherlands,Real Madrid,Real Madrid,6,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+2,Fernando Morientes,Fernando Morientes,Spain,Valencia,Valencia,6,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+2,Didier Drogba,Didier Drogba,Ivory Coast,Chelsea,Chelsea,6,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+6,Raúl,Raúl,Spain,Real Madrid,Real Madrid,5,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Nicolae Dică,Nicolae Dică,Romania,F.C. Steaua București,F.C. Steaua București,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Louis Saha,Louis Saha,France,Manchester United,Manchester United,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Claudio Pizarro,Claudio Pizarro,Peru,Bayern Munich,Bayern Munich,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Filippo Inzaghi,Filippo Inzaghi,Italy,Milan,Milan,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,David Villa,David Villa,Spain,Valencia,Valencia,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Francesco Totti,Francesco Totti,Italy,Roma,Roma,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+7,Wayne Rooney,Wayne Rooney,England,Manchester United,Manchester United,4,,table,UCL,2006,https://en.wikipedia.org/wiki/2006%E2%80%9307_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Manchester United,Manchester United,8,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+2,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,6,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+2,Fernando Torres,Fernando Torres,Spain,Liverpool,Liverpool,6,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+2,Didier Drogba,Didier Drogba,Ivory Coast,Chelsea,Chelsea,6,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+2,Steven Gerrard,Steven Gerrard,England,Liverpool,Liverpool,6,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Ryan Babel,Ryan Babel,Netherlands,Liverpool,Liverpool,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Internazionale,Internazionale,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Frédéric Kanouté,Frédéric Kanouté,Mali,Sevilla,Sevilla,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Raúl,Raúl,Spain,Real Madrid,Real Madrid,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Deivid,Deivid,Brazil,Fenerbahçe,Fenerbahçe,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+6,Dirk Kuyt,Dirk Kuyt,Netherlands,Liverpool,Liverpool,5,,table,UCL,2007,https://en.wikipedia.org/wiki/2007%E2%80%9308_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,9,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+2,Steven Gerrard,Steven Gerrard,England,Liverpool,Liverpool,7,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+2,Miroslav Klose,Miroslav Klose,Germany,Bayern Munich,Bayern Munich,7,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+4,Lisandro López,Lisandro López,Argentina,Porto,Porto,6,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Emmanuel Adebayor,Emmanuel Adebayor,Togo,Arsenal,Arsenal,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Alessandro Del Piero,Alessandro Del Piero,Italy,Juventus,Juventus,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Didier Drogba,Didier Drogba,Ivory Coast,Chelsea,Chelsea,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Robin van Persie,Robin van Persie,Netherlands,Arsenal,Arsenal,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Thierry Henry,Thierry Henry,France,Barcelona,Barcelona,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+5,Karim Benzema,Karim Benzema,France,Lyon,Lyon,5,,table,UCL,2008,https://en.wikipedia.org/wiki/2008%E2%80%9309_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,8,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+2,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,7,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+2,Ivica Olić,Ivica Olić,Croatia,Bayern Munich,Bayern Munich,7,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+4,Diego Milito,Diego Milito,Argentina,Inter Milan,Inter Milan,6,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+5,Nicklas Bendtner,Nicklas Bendtner,Denmark,Arsenal,Arsenal,5,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+5,Wayne Rooney,Wayne Rooney,England,Manchester United,Manchester United,5,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+5,Marouane Chamakh,Marouane Chamakh,Morocco,Bordeaux,Bordeaux,5,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Michael Owen,Michael Owen,England,Manchester United,Manchester United,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Stevan Jovetić,Stevan Jovetić,Montenegro,Fiorentina,Fiorentina,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Edin Džeko,Edin Džeko,Bosnia and Herzegovina,VfL Wolfsburg,VfL Wolfsburg,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Cesc Fàbregas,Cesc Fàbregas,Spain,Arsenal,Arsenal,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Radamel Falcao,Radamel Falcao,Colombia,Porto,Porto,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Pedro,Pedro,Spain,Barcelona,Barcelona,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Arjen Robben,Arjen Robben,Netherlands,Bayern Munich,Bayern Munich,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Miralem Pjanić,Miralem Pjanić,Bosnia and Herzegovina,Lyon,Lyon,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Barcelona,Barcelona,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+8,Miloš Krasić,Miloš Krasić,Serbia,CSKA Moscow,CSKA Moscow,4,,table,UCL,2009,https://en.wikipedia.org/wiki/2009%E2%80%9310_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,12,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+2,Mario Gómez,Mario Gómez,Germany,Bayern Munich,Bayern Munich,8,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+2,Samuel Eto'o,Samuel Eto'o,Cameroon,Internazionale,Internazionale,8,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+4,Nicolas Anelka,Nicolas Anelka,France,Chelsea,Chelsea,7,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+5,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,6,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+5,Roberto Soldado,Roberto Soldado,Spain,Valencia,Valencia,6,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+5,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,6,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+8,Pedro,Pedro,Spain,Barcelona,Barcelona,5,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+8,Raúl,Raúl,Spain,Schalke 04,Schalke 04,5,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Eduardo,Eduardo,Croatia,Shakhtar Donetsk,Shakhtar Donetsk,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Marco Borriello,Marco Borriello,Italy,Roma,Roma,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Javier Hernández,Javier Hernández,Mexico,Manchester United,Manchester United,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Peter Crouch,Peter Crouch,England,Tottenham Hotspur,Tottenham Hotspur,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Milan,Milan,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Gareth Bale,Gareth Bale,Wales,Tottenham Hotspur,Tottenham Hotspur,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Luiz Adriano,Luiz Adriano,Brazil,Shakhtar Donetsk,Shakhtar Donetsk,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Wayne Rooney,Wayne Rooney,England,Manchester United,Manchester United,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,Jefferson Farfán,Jefferson Farfán,Peru,Schalke 04,Schalke 04,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+10,David Villa,David Villa,Spain,Barcelona,Barcelona,4,,table,UCL,2010,https://en.wikipedia.org/wiki/2010%E2%80%9311_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,14,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+2,Mario Gómez,Mario Gómez,Germany,Bayern Munich,Bayern Munich,12,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+3,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,10,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+4,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,7,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+5,Didier Drogba,Didier Drogba,Ivory Coast,Chelsea,Chelsea,6,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,José Callejón,José Callejón,Spain,Real Madrid,Real Madrid,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Roberto Soldado,Roberto Soldado,Spain,Valencia,Valencia,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Bafétimbi Gomis,Bafétimbi Gomis,France,Lyon,Lyon,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Alexander Frei,Alexander Frei,Switzerland,Basel,Basel,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Seydou Doumbia,Seydou Doumbia,Ivory Coast,CSKA Moscow,CSKA Moscow,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Roman Shirokov,Roman Shirokov,Russia,Zenit Saint Petersburg,Zenit Saint Petersburg,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Edinson Cavani,Edinson Cavani,Uruguay,Napoli,Napoli,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+6,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Milan,Milan,5,,table,UCL,2011,https://en.wikipedia.org/wiki/2011%E2%80%9312_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,12,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+2,Robert Lewandowski,Robert Lewandowski,Poland,Borussia Dortmund,Borussia Dortmund,10,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+3,Burak Yılmaz,Burak Yılmaz,Turkey,Galatasaray,Galatasaray,8,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+3,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,8,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+3,Thomas Müller,Thomas Müller,Germany,Bayern Munich,Bayern Munich,8,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+6,Oscar,Oscar,Brazil,Chelsea,Chelsea,5,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+6,Jonas,Jonas,Brazil,Valencia,Valencia,5,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+6,Alan,Alan,Brazil,Braga,Braga,5,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+6,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,5,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+6,Ezequiel Lavezzi,Ezequiel Lavezzi,Argentina,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2012,https://en.wikipedia.org/wiki/2012%E2%80%9313_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,17,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+2,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Paris Saint-Germain,Paris Saint-Germain,10,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+3,Diego Costa,Diego Costa,Spain,Atlético Madrid,Atlético Madrid,8,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+3,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,8,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+5,Sergio Agüero,Sergio Agüero,Argentina,Manchester City,Manchester City,6,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+5,Robert Lewandowski,Robert Lewandowski,Poland,Borussia Dortmund,Borussia Dortmund,6,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+5,Gareth Bale,Gareth Bale,Wales,Real Madrid,Real Madrid,6,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+8,Álvaro Negredo,Álvaro Negredo,Spain,Manchester City,Manchester City,5,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+8,Arturo Vidal,Arturo Vidal,Chile,Juventus,Juventus,5,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+8,Thomas Müller,Thomas Müller,Germany,Bayern Munich,Bayern Munich,5,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+8,Marco Reus,Marco Reus,Germany,Borussia Dortmund,Borussia Dortmund,5,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+8,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,5,,table,UCL,2013,https://en.wikipedia.org/wiki/2013%E2%80%9314_UEFA_Champions_League
+1,Neymar,Neymar,Brazil,Barcelona,Barcelona,10,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,10,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,10,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+4,Luiz Adriano,Luiz Adriano,Brazil,Shakhtar Donetsk,Shakhtar Donetsk,9,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+5,Jackson Martínez,Jackson Martínez,Colombia,Porto,Porto,7,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+5,Thomas Müller,Thomas Müller,Germany,Bayern Munich,Bayern Munich,7,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+5,Luis Suárez,Luis Suárez,Uruguay,Barcelona,Barcelona,7,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+5,Carlos Tevez,Carlos Tevez,Argentina,Juventus,Juventus,7,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+9,Sergio Agüero,Sergio Agüero,Argentina,Manchester City,Manchester City,6,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+9,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,6,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+9,Edinson Cavani,Edinson Cavani,Uruguay,Paris Saint-Germain,Paris Saint-Germain,6,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+9,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,6,,table,UCL,2014,https://en.wikipedia.org/wiki/2014%E2%80%9315_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,16,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+2,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,9,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+3,Luis Suárez,Luis Suárez,Uruguay,Barcelona,Barcelona,8,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+3,Thomas Müller,Thomas Müller,Germany,Bayern Munich,Bayern Munich,8,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+5,Antoine Griezmann,Antoine Griezmann,France,Atlético Madrid,Atlético Madrid,7,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+6,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,6,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+6,Artem Dzyuba,Artem Dzyuba,Russia,Zenit Saint Petersburg,Zenit Saint Petersburg,6,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+8,Olivier Giroud,Olivier Giroud,France,Arsenal,Arsenal,5,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+8,Javier Hernández,Javier Hernández,Mexico,Bayer Leverkusen,Bayer Leverkusen,5,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+8,Willian,Willian,Brazil,Chelsea,Chelsea,5,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+8,Zlatan Ibrahimović,Zlatan Ibrahimović,Sweden,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2015,https://en.wikipedia.org/wiki/2015%E2%80%9316_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,12,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+2,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,11,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+3,Edinson Cavani,Edinson Cavani,Uruguay,Paris Saint-Germain,Paris Saint-Germain,8,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+3,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,8,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+5,Pierre-Emerick Aubameyang,Pierre-Emerick Aubameyang,Gabon,Borussia Dortmund,Borussia Dortmund,7,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+6,Kylian Mbappé,Kylian Mbappé,France,Monaco,Monaco,6,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+6,Antoine Griezmann,Antoine Griezmann,France,Atlético Madrid,Atlético Madrid,6,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+8,Sergio Agüero,Sergio Agüero,Argentina,Manchester City,Manchester City,5,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+8,Dries Mertens,Dries Mertens,Belgium,Napoli,Napoli,5,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+8,Radamel Falcao,Radamel Falcao,Colombia,Monaco,Monaco,5,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+8,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,5,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+8,Gonzalo Higuaín,Gonzalo Higuaín,Argentina,Juventus,Juventus,5,,table,UCL,2016,https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League
+1,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Real Madrid,Real Madrid,15,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+2,Mohamed Salah,Mohamed Salah,Egypt,Liverpool,Liverpool,10,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+2,Sadio Mané,Sadio Mané,Senegal,Liverpool,Liverpool,10,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+2,Roberto Firmino,Roberto Firmino,Brazil,Liverpool,Liverpool,10,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+5,Wissam Ben Yedder,Wissam Ben Yedder,France,Sevilla,Sevilla,8,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+5,Edin Džeko,Edin Džeko,Bosnia and Herzegovina,Roma,Roma,8,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+7,Harry Kane,Harry Kane,England,Tottenham Hotspur,Tottenham Hotspur,7,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+7,Edinson Cavani,Edinson Cavani,Uruguay,Paris Saint-Germain,Paris Saint-Germain,7,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+9,Neymar,Neymar,Brazil,Paris Saint-Germain,Paris Saint-Germain,6,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+9,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,6,,table,UCL,2017,https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League
+1,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,12,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+2,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,8,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+3,Sergio Agüero,Sergio Agüero,Argentina,Manchester City,Manchester City,6,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+3,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Juventus,Juventus,6,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+3,Moussa Marega,Moussa Marega,Mali,Porto,Porto,6,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+3,Dušan Tadić,Dušan Tadić,Serbia,Ajax,Ajax,6,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Andrej Kramarić,Andrej Kramarić,Croatia,TSG Hoffenheim,TSG Hoffenheim,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Paulo Dybala,Paulo Dybala,Argentina,Juventus,Juventus,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Neymar,Neymar,Brazil,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Edin Džeko,Edin Džeko,Bosnia and Herzegovina,Roma,Roma,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Lucas Moura,Lucas Moura,Brazil,Tottenham Hotspur,Tottenham Hotspur,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Harry Kane,Harry Kane,England,Tottenham Hotspur,Tottenham Hotspur,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Raheem Sterling,Raheem Sterling,England,Manchester City,Manchester City,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+7,Mohamed Salah,Mohamed Salah,Egypt,Liverpool,Liverpool,5,,table,UCL,2018,https://en.wikipedia.org/wiki/2018%E2%80%9319_UEFA_Champions_League
+1,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,15,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+2,Erling Haaland,Erling Haaland,Norway,Red Bull Salzburg Borussia Dortmund,Red Bull Salzburg Borussia Dortmund,10,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+3,Serge Gnabry,Serge Gnabry,Germany,Bayern Munich,Bayern Munich,9,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+4,Harry Kane,Harry Kane,England,Tottenham Hotspur,Tottenham Hotspur,6,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+4,Dries Mertens,Dries Mertens,Belgium,Napoli,Napoli,6,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+4,Gabriel Jesus,Gabriel Jesus,Brazil,Manchester City,Manchester City,6,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+4,Memphis Depay,Memphis Depay,Netherlands,Lyon,Lyon,6,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+4,Raheem Sterling,Raheem Sterling,England,Manchester City,Manchester City,6,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Son Heung-min,Son Heung-min,South Korea,Tottenham Hotspur,Tottenham Hotspur,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Mauro Icardi,Mauro Icardi,Argentina,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Josip Iličić,Josip Iličić,Slovenia,Atalanta,Atalanta,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Lautaro Martínez,Lautaro Martínez,Argentina,Inter Milan,Inter Milan,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Luis Suárez,Luis Suárez,Uruguay,Barcelona,Barcelona,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+9,Kylian Mbappé,Kylian Mbappé,France,Paris Saint-Germain,Paris Saint-Germain,5,,table,UCL,2019,https://en.wikipedia.org/wiki/2019%E2%80%9320_UEFA_Champions_League
+1,Erling Haaland,Erling Haaland,Norway,Borussia Dortmund,Borussia Dortmund,10,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+2,Kylian Mbappé,Kylian Mbappé,France,Paris Saint-Germain,Paris Saint-Germain,8,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Olivier Giroud,Olivier Giroud,France,Chelsea,Chelsea,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Youssef En-Nesyri,Youssef En-Nesyri,Morocco,Sevilla,Sevilla,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Marcus Rashford,Marcus Rashford,England,Manchester United,Manchester United,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Álvaro Morata,Álvaro Morata,Spain,Juventus,Juventus,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Neymar,Neymar,Brazil,Paris Saint-Germain,Paris Saint-Germain,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Mohamed Salah,Mohamed Salah,Egypt,Liverpool,Liverpool,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+3,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,6,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+10,Ciro Immobile,Ciro Immobile,Italy,Lazio,Lazio,5,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+10,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,5,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+10,Lionel Messi,Lionel Messi,Argentina,Barcelona,Barcelona,5,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+10,Alassane Pléa,Alassane Pléa,France,Borussia Mönchengladbach,Borussia Mönchengladbach,5,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+10,Sérgio Oliveira,Sérgio Oliveira,Portugal,Porto,Porto,5,,table,UCL,2020,https://en.wikipedia.org/wiki/2020%E2%80%9321_UEFA_Champions_League
+1,Karim Benzema,Karim Benzema,France,Real Madrid,Real Madrid,15,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+2,Robert Lewandowski,Robert Lewandowski,Poland,Bayern Munich,Bayern Munich,13,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+3,Sébastien Haller,Sébastien Haller,Ivory Coast,Ajax,Ajax,11,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+4,Mohamed Salah,Mohamed Salah,Egypt,Liverpool,Liverpool,8,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+5,Christopher Nkunku,Christopher Nkunku,France,RB Leipzig,RB Leipzig,7,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+5,Riyad Mahrez,Riyad Mahrez,Algeria,Manchester City,Manchester City,7,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+7,Cristiano Ronaldo,Cristiano Ronaldo,Portugal,Manchester United,Manchester United,6,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+7,Darwin Núñez,Darwin Núñez,Uruguay,Benfica,Benfica,6,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+7,Kylian Mbappé,Kylian Mbappé,France,Paris Saint-Germain,Paris Saint-Germain,6,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+7,Leroy Sané,Leroy Sané,Germany,Bayern Munich,Bayern Munich,6,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+7,Arnaut Danjuma,Arnaut Danjuma,Netherlands,Villarreal,Villarreal,6,,table,UCL,2021,https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League
+1,Erling Haaland,Erling Haaland,Norway,Manchester City,Manchester City,12,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+2,Mohamed Salah,Mohamed Salah,Egypt,Liverpool,Liverpool,8,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+3,Kylian Mbappé,Kylian Mbappé,France,Paris Saint-Germain,Paris Saint-Germain,7,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+3,Vinícius Júnior,Vinícius Júnior,Brazil,Real Madrid,Real Madrid,7,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+5,João Mário,João Mário,Portugal,Benfica,Benfica,6,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Victor Osimhen,Victor Osimhen,Nigeria,Napoli,Napoli,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Robert Lewandowski,Robert Lewandowski,Poland,Barcelona,Barcelona,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Mehdi Taremi,Mehdi Taremi,Iran,Porto,Porto,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Rodrygo,Rodrygo,Brazil,Real Madrid,Real Madrid,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Rafa Silva,Rafa Silva,Portugal,Benfica,Benfica,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+6,Olivier Giroud,Olivier Giroud,France,Milan,Milan,5,,table,UCL,2022,https://en.wikipedia.org/wiki/2022%E2%80%9323_UEFA_Champions_League
+1,Harry Kane,Harry Kane,England,Bayern Munich,Bayern Munich,8,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+1,Kylian Mbappé,Kylian Mbappé,France,Paris Saint-Germain,Paris Saint-Germain,8,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+3,Erling Haaland,Erling Haaland,Norway,Manchester City,Manchester City,6,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+3,Antoine Griezmann,Antoine Griezmann,France,Atlético Madrid,Atlético Madrid,6,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+3,Vinícius Júnior,Vinícius Júnior,Brazil,Real Madrid,Real Madrid,6,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Joselu,Joselu,Spain,Real Madrid,Real Madrid,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Julián Álvarez,Julián Álvarez,Argentina,Manchester City,Manchester City,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Rasmus Højlund,Rasmus Højlund,Denmark,Manchester United,Manchester United,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Galeno,Galeno,Brazil,Porto,Porto,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Álvaro Morata,Álvaro Morata,Spain,Atlético Madrid,Atlético Madrid,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Phil Foden,Phil Foden,England,Manchester City,Manchester City,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+6,Rodrygo,Rodrygo,Brazil,Real Madrid,Real Madrid,5,,table,UCL,2023,https://en.wikipedia.org/wiki/2023%E2%80%9324_UEFA_Champions_League
+1,Serhou Guirassy,Serhou Guirassy,Guinea,Borussia Dortmund,Borussia Dortmund,13,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+1,Raphinha,Raphinha,Brazil,Barcelona,Barcelona,13,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+3,Robert Lewandowski,Robert Lewandowski,Poland,Barcelona,Barcelona,11,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+3,Harry Kane,Harry Kane,England,Bayern Munich,Bayern Munich,11,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+5,Lautaro Martínez,Lautaro Martínez,Argentina,Inter Milan,Inter Milan,9,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+6,Erling Haaland,Erling Haaland,Norway,Manchester City,Manchester City,8,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+6,Vinícius Júnior,Vinícius Júnior,Brazil,Real Madrid,Real Madrid,8,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+6,Ousmane Dembélé,Ousmane Dembélé,France,Paris Saint-Germain,Paris Saint-Germain,8,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+9,Jonathan David,Jonathan David,Canada,Lille,Lille,7,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+9,Julián Alvarez,Julián Alvarez,Argentina,Atlético Madrid,Atlético Madrid,7,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+9,Vangelis Pavlidis,Vangelis Pavlidis,Greece,Benfica,Benfica,7,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+9,Kylian Mbappé,Kylian Mbappé,France,Real Madrid,Real Madrid,7,,table,UCL,2024,https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League
+1,Kylian Mbappé,Kylian Mbappé,France,Real Madrid,Real Madrid,15,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+2,Harry Kane,Harry Kane,England,Bayern Munich,Bayern Munich,14,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+3,Anthony Gordon,Anthony Gordon,England,Newcastle United,Newcastle United,10,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+3,Khvicha Kvaratskhelia,Khvicha Kvaratskhelia,Georgia (country),Paris Saint-Germain,Paris Saint-Germain,10,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+3,Julián Alvarez,Julián Alvarez,Argentina,Atlético Madrid,Atlético Madrid,10,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+6,Erling Haaland,Erling Haaland,Norway,Manchester City,Manchester City,8,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+6,Ousmane Dembélé,Ousmane Dembélé,France,Paris Saint-Germain,Paris Saint-Germain,8,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+8,Victor Osimhen,Victor Osimhen,Nigeria,Galatasaray,Galatasaray,7,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+8,Luis Díaz,Luis Díaz,Colombia,Bayern Munich,Bayern Munich,7,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League
+10,Seven players,Seven players,,Seven players,Seven players,6,,table,UCL,2025,https://en.wikipedia.org/wiki/2025%E2%80%9326_UEFA_Champions_League

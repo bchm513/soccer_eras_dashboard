@@ -5,6 +5,7 @@
   --muted: #687083;
   --line: #ddd7ca;
   --land: #e6e0d2;
+  --land-none: #efebe2;
   --land-edge: #cfc7b6;
   --sea: #f4f1ea;
   --hub: #1f7a6d;
@@ -22,7 +23,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0e1218; --panel: #151b24; --ink: #e8eaee; --muted: #8b93a3; --line: #262f3c;
-    --land: #1d2530; --land-edge: #2b3543; --sea: #0e1218;
+    --land: #1d2530; --land-none: #131922; --land-edge: #2b3543; --sea: #0e1218;
     --hub: #4fc3ae; --hub-fill: rgba(79, 195, 174, .25);
     --tour: #f0a83a; --tour-fill: rgba(240, 168, 58, .16); --lead: #ff6b5e;
     --era: rgba(79, 195, 174, .08); --era-edge: rgba(79, 195, 174, .35);
@@ -32,7 +33,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #0e1218; --panel: #151b24; --ink: #e8eaee; --muted: #8b93a3; --line: #262f3c;
-  --land: #1d2530; --land-edge: #2b3543; --sea: #0e1218;
+  --land: #1d2530; --land-none: #131922; --land-edge: #2b3543; --sea: #0e1218;
   --hub: #4fc3ae; --hub-fill: rgba(79, 195, 174, .25);
   --tour: #f0a83a; --tour-fill: rgba(240, 168, 58, .16); --lead: #ff6b5e;
   --era: rgba(79, 195, 174, .08); --era-edge: rgba(79, 195, 174, .35);
@@ -70,7 +71,7 @@ select {
 .grid {
   display: grid; gap: 14px; padding: 0 24px;
   grid-template-columns: minmax(0, 2.2fr) minmax(280px, 1fr);
-  grid-template-areas: "map desc" "peaks peaks";
+  grid-template-areas: "map desc" "peaks peaks" "growth eras";
 }
 .panel {
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
@@ -79,6 +80,8 @@ select {
 .map-panel { grid-area: map; }
 .desc-panel { grid-area: desc; max-height: 640px; overflow: auto; }
 .peaks-panel { grid-area: peaks; }
+.growth-panel { grid-area: growth; }
+.eras-panel { grid-area: eras; }
 .panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
 .hint { color: var(--muted); font-size: 12px; }
 
@@ -91,7 +94,14 @@ select {
 }
 .chip:hover, .chip.on { border-color: var(--hub); color: var(--hub); }
 
-.country { fill: var(--land); stroke: var(--land-edge); stroke-width: .5; vector-effect: non-scaling-stroke; }
+.country { fill: var(--land); stroke: var(--land-edge); stroke-width: .5; vector-effect: non-scaling-stroke; transition: fill .4s; }
+.country.c-none { fill: var(--land-none); }
+.country.c-play { fill: url(#hatch); }
+.hatch-bg { fill: var(--land-none); }
+.hatch-line { stroke: var(--land); stroke-width: 1.6; }
+.sea { fill: var(--sea); }
+.map-date { font-family: Georgia, serif; font-size: 34px; fill: var(--ink); opacity: .85; pointer-events: none; }
+.map-sub { font-size: 13px; fill: var(--muted); pointer-events: none; }
 .graticule { fill: none; stroke: var(--line); stroke-width: .4; vector-effect: non-scaling-stroke; }
 .hub { fill: var(--hub-fill); stroke: var(--hub); stroke-width: 1.4; vector-effect: non-scaling-stroke; cursor: pointer; }
 .hub.selected { stroke-width: 2.6; }
@@ -100,7 +110,7 @@ select {
 .hub-label { font-size: 11px; fill: var(--ink); paint-order: stroke; stroke: var(--sea); stroke-width: 3px; pointer-events: none; font-weight: 600; }
 .tour-label { fill: var(--tour); }
 
-.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; color: var(--muted); font-size: 12px; }
+.legend { display: flex; gap: 6px 16px; flex-wrap: wrap; margin-top: 8px; color: var(--muted); font-size: 12px; }
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
 .dot.club { background: var(--hub-fill); border: 1.5px solid var(--hub); }
 .dot.tour { background: var(--tour-fill); border: 1.5px dashed var(--tour); }
@@ -163,4 +173,39 @@ select {
   .field.small { display: none; }
   .peaks-wrap { overflow-x: auto; }
   .peaks-wrap svg { min-width: 760px; }
+}
+
+/* Regions, export */
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.map-tools { flex-wrap: wrap; justify-content: flex-end; }
+#record.on { border-color: var(--lead); color: var(--lead); }
+.sw { display: inline-block; width: 14px; height: 10px; margin-right: 6px; vertical-align: -1px; border: 1px solid var(--land-edge); }
+.sw.league { background: var(--land); }
+.sw.none { background: var(--land-none); }
+.sw.play { background: repeating-linear-gradient(45deg, var(--land) 0 2px, var(--land-none) 2px 5px); }
+
+/* Growth sparklines */
+.spark { display: grid; grid-template-columns: 170px 1fr 64px; align-items: center; gap: 8px; margin: 4px 0; }
+.spark .name { font-size: 12px; color: var(--muted); }
+.spark .val { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+.spark svg { width: 100%; height: 42px; display: block; }
+.spark .area { fill: var(--hub-fill); }
+.spark .line { fill: none; stroke: var(--hub); stroke-width: 1.5; }
+.spark .ph { stroke: var(--lead); stroke-width: 1.2; }
+.growth-empty { color: var(--muted); font-size: 13px; }
+
+/* Era table */
+.table-wrap { overflow-x: auto; }
+#era-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+#era-table th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 4px 8px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+#era-table td { padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+#era-table td.num, #era-table th.num { text-align: right; }
+#era-table tbody tr { cursor: pointer; }
+#era-table tbody tr:hover { background: var(--era); }
+#era-table tbody tr.now { background: var(--era); box-shadow: inset 3px 0 0 var(--hub); }
+.mini-bar { display: inline-block; height: 6px; background: var(--hub); border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+
+@media (max-width: 860px) {
+  .grid { grid-template-areas: "map" "desc" "peaks" "growth" "eras"; }
+  .spark { grid-template-columns: 120px 1fr 54px; }
 }

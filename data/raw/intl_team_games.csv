@@ -1,0 +1,6434 @@
+season,team,team_games
+1946,Cuba,2
+1946,Mexico,2
+1946,United States,2
+1947,Argentina,7
+1947,Bolivia,6
+1947,Chile,7
+1947,Colombia,5
+1947,Ecuador,5
+1947,Paraguay,7
+1947,Peru,6
+1947,Uruguay,7
+1948,Bolivia,7
+1948,Brazil,8
+1948,Chile,7
+1948,Colombia,7
+1948,Ecuador,7
+1948,Luxembourg,1
+1948,Paraguay,8
+1948,Peru,7
+1948,Republic of Ireland,1
+1948,Sweden,1
+1948,Switzerland,1
+1948,Uruguay,7
+1949,Bolivia,1
+1949,Brazil,6
+1949,Chile,3
+1949,Cuba,4
+1949,England,6
+1949,Finland,2
+1949,France,3
+1949,Israel,2
+1949,Italy,2
+1949,Luxembourg,1
+1949,Mexico,7
+1949,Northern Ireland,2
+1949,Paraguay,2
+1949,Portugal,2
+1949,Republic of Ireland,3
+1949,Scotland,3
+1949,Spain,8
+1949,Sweden,6
+1949,Switzerland,4
+1949,Syria,1
+1949,Turkey,1
+1949,United States,7
+1949,Uruguay,4
+1949,Wales,2
+1949,Yugoslavia,8
+1952,Belgium,2
+1952,Bolivia,6
+1952,Brazil,7
+1952,Bulgaria,1
+1952,Chile,5
+1952,Czechoslovakia,1
+1952,Ecuador,5
+1952,Finland,1
+1952,Greece,1
+1952,Haiti,1
+1952,Mexico,1
+1952,Norway,1
+1952,Paraguay,6
+1952,Peru,5
+1952,Romania,2
+1952,Saarland,1
+1952,Sweden,1
+1952,Uruguay,6
+1952,Yugoslavia,1
+1953,Austria,6
+1953,Belgium,4
+1953,Brazil,7
+1953,Bulgaria,2
+1953,Chile,4
+1953,Czechoslovakia,4
+1953,Egypt,2
+1953,England,6
+1953,Finland,3
+1953,France,6
+1953,Germany,10
+1953,Greece,3
+1953,Haiti,3
+1953,Hungary,5
+1953,Israel,4
+1953,Italy,5
+1953,Japan,2
+1953,Luxembourg,4
+1953,Mexico,5
+1953,Northern Ireland,3
+1953,Norway,2
+1953,Paraguay,4
+1953,Portugal,1
+1953,Republic of Ireland,4
+1953,Romania,2
+1953,Saarland,2
+1953,Scotland,5
+1953,South Korea,4
+1953,Spain,3
+1953,Sweden,3
+1953,Switzerland,4
+1953,Turkey,6
+1953,United States,4
+1953,Uruguay,5
+1953,Wales,3
+1953,Yugoslavia,6
+1954,Argentina,5
+1954,Chile,5
+1954,Ecuador,5
+1954,Paraguay,5
+1954,Peru,5
+1954,Uruguay,5
+1955,Argentina,5
+1955,Brazil,3
+1955,Chile,5
+1955,Paraguay,4
+1955,Peru,5
+1955,Uruguay,4
+1956,Argentina,6
+1956,Austria,2
+1956,Belgium,2
+1956,Brazil,8
+1956,Bulgaria,2
+1956,Canada,4
+1956,Chile,6
+1956,China,2
+1956,Colombia,10
+1956,Costa Rica,3
+1956,Curaçao,2
+1956,Czechoslovakia,3
+1956,Denmark,3
+1956,Ecuador,6
+1956,Egypt,2
+1956,England,4
+1956,Ethiopia,1
+1956,Finland,2
+1956,France,2
+1956,German DR,2
+1956,Greece,1
+1956,Guatemala,3
+1956,Hong Kong,3
+1956,Hungary,2
+1956,Iceland,2
+1956,Indonesia,2
+1956,Israel,3
+1956,Italy,2
+1956,Luxembourg,2
+1956,Mexico,4
+1956,Netherlands,2
+1956,Northern Ireland,3
+1956,Norway,2
+1956,Paraguay,4
+1956,Peru,8
+1956,Poland,2
+1956,Portugal,3
+1956,Republic of Ireland,3
+1956,Romania,1
+1956,Russia,2
+1956,Scotland,3
+1956,South Korea,3
+1956,Spain,3
+1956,Sudan,3
+1956,Switzerland,2
+1956,Syria,2
+1956,United States,4
+1956,Uruguay,10
+1956,Vietnam Republic,3
+1956,Wales,3
+1957,Argentina,7
+1957,Austria,5
+1957,Belgium,1
+1957,Bolivia,4
+1957,Brazil,5
+1957,Bulgaria,2
+1957,Chile,4
+1957,Costa Rica,3
+1957,Curaçao,1
+1957,Czechoslovakia,5
+1957,Denmark,1
+1957,England,3
+1957,Finland,2
+1957,France,7
+1957,German DR,2
+1957,Germany,6
+1957,Greece,2
+1957,Hungary,6
+1957,Iceland,2
+1957,Israel,2
+1957,Italy,2
+1957,Luxembourg,2
+1957,Mexico,5
+1957,Netherlands,2
+1957,Northern Ireland,6
+1957,Norway,2
+1957,Paraguay,3
+1957,Poland,3
+1957,Portugal,1
+1957,Republic of Ireland,1
+1957,Romania,3
+1957,Russia,8
+1957,Scotland,4
+1957,Spain,1
+1957,Sweden,5
+1957,Switzerland,2
+1957,Wales,7
+1957,Yugoslavia,7
+1958,Argentina,6
+1958,Austria,1
+1958,Bolivia,5
+1958,Brazil,6
+1958,Bulgaria,1
+1958,Chile,6
+1958,Czechoslovakia,2
+1958,Egypt,2
+1958,Ethiopia,2
+1958,France,2
+1958,German DR,2
+1958,Greece,2
+1958,Hungary,1
+1958,Norway,1
+1958,Paraguay,6
+1958,Peru,5
+1958,Poland,1
+1958,Portugal,2
+1958,Republic of Ireland,2
+1958,Romania,2
+1958,Russia,1
+1958,Spain,1
+1958,Sudan,2
+1958,Turkey,2
+1958,Uruguay,6
+1958,Yugoslavia,1
+1959,Argentina,4
+1959,Austria,3
+1959,Brazil,4
+1959,Bulgaria,1
+1959,Czechoslovakia,6
+1959,Denmark,2
+1959,Ecuador,4
+1959,France,4
+1959,Hungary,1
+1959,Norway,1
+1959,Paraguay,4
+1959,Poland,1
+1959,Portugal,2
+1959,Romania,2
+1959,Russia,3
+1959,Spain,1
+1959,Uruguay,4
+1959,Yugoslavia,5
+1960,Argentina,2
+1960,Belgium,3
+1960,Bolivia,2
+1960,Bulgaria,2
+1960,Colombia,2
+1960,Costa Rica,9
+1960,Curaçao,4
+1960,Cyprus,2
+1960,Czechoslovakia,1
+1960,Ecuador,2
+1960,England,2
+1960,Ethiopia,2
+1960,Finland,2
+1960,France,2
+1960,German DR,2
+1960,Germany,3
+1960,Ghana,3
+1960,Greece,2
+1960,Guatemala,3
+1960,Honduras,4
+1960,Hungary,2
+1960,Israel,7
+1960,Japan,2
+1960,Luxembourg,2
+1960,Mexico,5
+1960,Morocco,4
+1960,Netherlands,2
+1960,Nigeria,2
+1960,Northern Ireland,3
+1960,Norway,2
+1960,Peru,2
+1960,Poland,2
+1960,Portugal,2
+1960,Republic of Ireland,2
+1960,Russia,2
+1960,Scotland,3
+1960,South Korea,5
+1960,Spain,2
+1960,Suriname,1
+1960,Sweden,2
+1960,Switzerland,3
+1960,Taiwan,3
+1960,Tunisia,3
+1960,Turkey,2
+1960,United States,2
+1960,Uruguay,2
+1960,Vietnam Republic,3
+1960,Wales,2
+1960,Yugoslavia,2
+1961,Argentina,2
+1961,Belgium,1
+1961,Brazil,5
+1961,Bulgaria,5
+1961,Chile,6
+1961,Colombia,3
+1961,Czechoslovakia,9
+1961,Denmark,1
+1961,Egypt,2
+1961,England,5
+1961,Ethiopia,2
+1961,Finland,2
+1961,France,3
+1961,German DR,1
+1961,Germany,4
+1961,Greece,2
+1961,Hungary,5
+1961,Israel,2
+1961,Italy,4
+1961,Luxembourg,2
+1961,Malta,1
+1961,Mexico,4
+1961,Morocco,2
+1961,Netherlands,1
+1961,Northern Ireland,1
+1961,Norway,3
+1961,Paraguay,1
+1961,Portugal,2
+1961,Republic of Ireland,2
+1961,Russia,6
+1961,Scotland,2
+1961,South Korea,2
+1961,Spain,5
+1961,Sweden,4
+1961,Switzerland,5
+1961,Tunisia,2
+1961,Turkey,2
+1961,Uganda,2
+1961,Uruguay,3
+1961,Yugoslavia,8
+1962,Albania,1
+1962,Argentina,6
+1962,Belgium,2
+1962,Bolivia,6
+1962,Brazil,6
+1962,Bulgaria,3
+1962,Colombia,6
+1962,Costa Rica,5
+1962,Curaçao,6
+1962,Czechoslovakia,2
+1962,Denmark,2
+1962,Ecuador,6
+1962,El Salvador,7
+1962,England,2
+1962,France,2
+1962,German DR,2
+1962,Guatemala,4
+1962,Honduras,7
+1962,Hungary,2
+1962,Iceland,2
+1962,Italy,2
+1962,Jamaica,3
+1962,Malta,1
+1962,Mexico,2
+1962,Netherlands,2
+1962,Nicaragua,4
+1962,Northern Ireland,3
+1962,Norway,1
+1962,Panama,4
+1962,Paraguay,6
+1962,Peru,6
+1962,Poland,2
+1962,Portugal,3
+1962,Republic of Ireland,2
+1962,Romania,2
+1962,Spain,3
+1962,Sweden,1
+1962,Switzerland,2
+1962,Turkey,2
+1962,Wales,2
+1962,Yugoslavia,2
+1963,Albania,2
+1963,Austria,1
+1963,Bulgaria,2
+1963,Denmark,6
+1963,Egypt,3
+1963,Ethiopia,3
+1963,France,4
+1963,German DR,2
+1963,Ghana,3
+1963,Hong Kong,3
+1963,Hungary,6
+1963,India,3
+1963,Israel,3
+1963,Italy,2
+1963,Luxembourg,5
+1963,Netherlands,3
+1963,Nigeria,2
+1963,Northern Ireland,1
+1963,Republic of Ireland,3
+1963,Russia,6
+1963,South Korea,3
+1963,Spain,5
+1963,Sudan,3
+1963,Sweden,3
+1963,Tunisia,2
+1963,Yugoslavia,1
+1964,Albania,4
+1964,Austria,2
+1964,Belgium,1
+1964,Bolivia,1
+1964,Bulgaria,1
+1964,Colombia,2
+1964,Costa Rica,11
+1964,Cuba,4
+1964,Curaçao,8
+1964,Cyprus,2
+1964,Czechoslovakia,2
+1964,Denmark,3
+1964,Ecuador,2
+1964,El Salvador,7
+1964,Finland,4
+1964,France,3
+1964,German DR,2
+1964,Germany,2
+1964,Greece,4
+1964,Guatemala,4
+1964,Haiti,5
+1964,Honduras,6
+1964,Hungary,2
+1964,Israel,2
+1964,Italy,2
+1964,Jamaica,7
+1964,Luxembourg,4
+1964,Mexico,12
+1964,Netherlands,2
+1964,Nicaragua,2
+1964,Northern Ireland,4
+1964,Norway,4
+1964,Paraguay,1
+1964,Peru,4
+1964,Poland,1
+1964,Portugal,4
+1964,Republic of Ireland,1
+1964,Romania,3
+1964,Russia,3
+1964,Scotland,3
+1964,Spain,1
+1964,Suriname,4
+1964,Sweden,2
+1964,Switzerland,4
+1964,Trinidad and Tobago,4
+1964,Turkey,3
+1964,United States,4
+1964,Uruguay,4
+1964,Venezuela,4
+1964,Wales,4
+1964,Yugoslavia,3
+1965,Albania,1
+1965,Argentina,6
+1965,Australia,2
+1965,Austria,2
+1965,Belgium,4
+1965,Bolivia,3
+1965,Brazil,3
+1965,Bulgaria,7
+1965,Chile,8
+1965,Colombia,2
+1965,Cyprus,2
+1965,Czechoslovakia,3
+1965,DR Congo,2
+1965,Denmark,3
+1965,Ecuador,3
+1965,England,5
+1965,Ethiopia,2
+1965,Finland,2
+1965,France,6
+1965,German DR,2
+1965,Germany,7
+1965,Ghana,3
+1965,Greece,2
+1965,Hungary,6
+1965,Israel,2
+1965,Italy,6
+1965,Ivory Coast,3
+1965,Luxembourg,2
+1965,Mexico,2
+1965,Netherlands,1
+1965,North Korea,6
+1965,Northern Ireland,1
+1965,Norway,2
+1965,Paraguay,2
+1965,Poland,4
+1965,Portugal,7
+1965,Republic of Ireland,2
+1965,Romania,3
+1965,Russia,9
+1965,Scotland,3
+1965,Senegal,2
+1965,Spain,5
+1965,Sweden,2
+1965,Switzerland,4
+1965,Tunisia,2
+1965,Turkey,3
+1965,Uruguay,2
+1965,Wales,2
+1965,Yugoslavia,3
+1966,Albania,2
+1966,Argentina,5
+1966,Austria,1
+1966,Belgium,3
+1966,Bolivia,4
+1966,Bulgaria,2
+1966,Chile,5
+1966,Colombia,1
+1966,Cyprus,3
+1966,Czechoslovakia,2
+1966,Denmark,4
+1966,Ecuador,2
+1966,England,3
+1966,Finland,2
+1966,France,3
+1966,German DR,2
+1966,Germany,2
+1966,Greece,3
+1966,Guatemala,4
+1966,Haiti,5
+1966,Honduras,4
+1966,Hungary,4
+1966,Italy,3
+1966,Luxembourg,3
+1966,Mexico,5
+1966,Netherlands,4
+1966,Nicaragua,5
+1966,Northern Ireland,2
+1966,Norway,2
+1966,Paraguay,7
+1966,Poland,3
+1966,Portugal,3
+1966,Republic of Ireland,4
+1966,Romania,6
+1966,Russia,2
+1966,Scotland,3
+1966,Spain,2
+1966,Sweden,3
+1966,Switzerland,2
+1966,Trinidad and Tobago,5
+1966,Turkey,4
+1966,Uruguay,5
+1966,Venezuela,5
+1966,Wales,2
+1966,Yugoslavia,2
+1967,Albania,1
+1967,Algeria,3
+1967,Austria,5
+1967,Belgium,4
+1967,Bulgaria,4
+1967,Congo,3
+1967,Cyprus,4
+1967,Czechoslovakia,3
+1967,DR Congo,5
+1967,Denmark,2
+1967,England,7
+1967,Ethiopia,5
+1967,Finland,4
+1967,France,5
+1967,German DR,4
+1967,Germany,1
+1967,Ghana,5
+1967,Greece,3
+1967,Hong Kong,4
+1967,Hungary,4
+1967,Iran,4
+1967,Israel,4
+1967,Italy,7
+1967,Ivory Coast,5
+1967,Luxembourg,2
+1967,Myanmar,4
+1967,Netherlands,2
+1967,Northern Ireland,3
+1967,Norway,3
+1967,Poland,2
+1967,Portugal,2
+1967,Republic of Ireland,1
+1967,Russia,7
+1967,Scotland,3
+1967,Senegal,3
+1967,Spain,4
+1967,Sweden,3
+1967,Switzerland,4
+1967,Taiwan,4
+1967,Uganda,3
+1967,Wales,3
+1967,Yugoslavia,7
+1968,Algeria,1
+1968,Argentina,1
+1968,Austria,4
+1968,Belgium,4
+1968,Bermuda,3
+1968,Bolivia,1
+1968,Bulgaria,3
+1968,Cameroon,2
+1968,Canada,3
+1968,Chile,1
+1968,Colombia,1
+1968,Costa Rica,4
+1968,Curaçao,4
+1968,Cyprus,5
+1968,Czechoslovakia,4
+1968,Denmark,4
+1968,Ecuador,3
+1968,El Salvador,7
+1968,Ethiopia,4
+1968,Finland,4
+1968,France,1
+1968,German DR,2
+1968,Germany,5
+1968,Ghana,2
+1968,Greece,4
+1968,Guatemala,3
+1968,Haiti,6
+1968,Honduras,7
+1968,Hungary,3
+1968,Italy,2
+1968,Jamaica,4
+1968,Libya,2
+1968,Luxembourg,4
+1968,Morocco,4
+1968,Netherlands,4
+1968,Nigeria,4
+1968,Northern Ireland,2
+1968,Norway,3
+1968,Poland,3
+1968,Portugal,4
+1968,Republic of Ireland,3
+1968,Romania,4
+1968,Scotland,4
+1968,Senegal,3
+1968,Spain,4
+1968,Sudan,4
+1968,Suriname,4
+1968,Sweden,2
+1968,Switzerland,4
+1968,Trinidad and Tobago,3
+1968,Tunisia,2
+1968,Turkey,2
+1968,United States,6
+1968,Uruguay,2
+1968,Venezuela,1
+1968,Wales,2
+1968,Yugoslavia,4
+1968,Zambia,2
+1969,Argentina,3
+1969,Australia,8
+1969,Austria,1
+1969,Belgium,4
+1969,Bolivia,3
+1969,Brazil,12
+1969,Bulgaria,6
+1969,Cameroon,3
+1969,Chile,2
+1969,Colombia,5
+1969,Costa Rica,5
+1969,Curaçao,5
+1969,Czechoslovakia,6
+1969,DR Congo,3
+1969,Denmark,2
+1969,Ecuador,1
+1969,Egypt,5
+1969,El Salvador,6
+1969,England,4
+1969,Ethiopia,3
+1969,Finland,1
+1969,France,3
+1969,German DR,2
+1969,Germany,7
+1969,Ghana,5
+1969,Greece,2
+1969,Guatemala,4
+1969,Guinea,3
+1969,Haiti,3
+1969,Hungary,4
+1969,Israel,6
+1969,Italy,6
+1969,Ivory Coast,5
+1969,Jamaica,4
+1969,Japan,4
+1969,Luxembourg,2
+1969,Mexico,7
+1969,Morocco,6
+1969,Netherlands,2
+1969,New Zealand,2
+1969,Nigeria,4
+1969,Northern Ireland,1
+1969,Norway,1
+1969,Paraguay,6
+1969,Peru,8
+1969,Poland,3
+1969,Portugal,2
+1969,Republic of Ireland,3
+1969,Romania,5
+1969,Russia,6
+1969,Scotland,2
+1969,South Korea,4
+1969,Spain,1
+1969,Sudan,8
+1969,Sweden,5
+1969,Switzerland,2
+1969,Trinidad and Tobago,4
+1969,Turkey,2
+1969,Uruguay,6
+1969,Venezuela,5
+1969,Wales,2
+1969,Yugoslavia,1
+1969,Zimbabwe,2
+1970,Albania,5
+1970,Austria,3
+1970,Belgium,4
+1970,Bulgaria,3
+1970,Cyprus,5
+1970,Czechoslovakia,4
+1970,Denmark,6
+1970,England,3
+1970,Finland,4
+1970,France,2
+1970,German DR,4
+1970,Germany,4
+1970,Greece,5
+1970,Hungary,3
+1970,Italy,3
+1970,Luxembourg,4
+1970,Malta,6
+1970,Netherlands,4
+1970,Northern Ireland,3
+1970,Norway,4
+1970,Poland,2
+1970,Portugal,4
+1970,Republic of Ireland,5
+1970,Romania,2
+1970,Russia,3
+1970,Scotland,4
+1970,Spain,3
+1970,Sweden,3
+1970,Switzerland,4
+1970,Turkey,3
+1970,Wales,2
+1970,Yugoslavia,4
+1971,Albania,2
+1971,Algeria,2
+1971,Austria,5
+1971,Belgium,7
+1971,Benin,2
+1971,Bulgaria,3
+1971,Cambodia,5
+1971,Cameroon,5
+1971,Congo,5
+1971,Costa Rica,4
+1971,Cuba,4
+1971,Cyprus,3
+1971,Czechoslovakia,2
+1971,DR Congo,6
+1971,England,4
+1971,Finland,3
+1971,France,4
+1971,German DR,1
+1971,Germany,4
+1971,Ghana,2
+1971,Greece,1
+1971,Guinea,2
+1971,Haiti,2
+1971,Honduras,5
+1971,Hungary,10
+1971,Iceland,2
+1971,Iran,5
+1971,Iraq,2
+1971,Italy,3
+1971,Kenya,5
+1971,Kuwait,3
+1971,Lesotho,1
+1971,Luxembourg,1
+1971,Mali,5
+1971,Malta,3
+1971,Mexico,4
+1971,Morocco,3
+1971,Netherlands,2
+1971,Northern Ireland,3
+1971,Norway,2
+1971,Poland,3
+1971,Portugal,4
+1971,Republic of Ireland,1
+1971,Romania,6
+1971,Russia,5
+1971,Scotland,2
+1971,South Korea,4
+1971,Spain,2
+1971,Sudan,5
+1971,Sweden,3
+1971,Switzerland,2
+1971,Thailand,5
+1971,Togo,4
+1971,Trinidad and Tobago,5
+1971,Turkey,3
+1971,Wales,3
+1971,Yugoslavia,1
+1971,Zambia,1
+1972,Albania,3
+1972,Australia,5
+1972,Austria,4
+1972,Belgium,1
+1972,Bulgaria,3
+1972,Cameroon,3
+1972,Chile,2
+1972,Colombia,3
+1972,Congo,2
+1972,Cyprus,3
+1972,Czechoslovakia,2
+1972,DR Congo,3
+1972,Denmark,4
+1972,Ecuador,4
+1972,Egypt,2
+1972,England,3
+1972,Ethiopia,3
+1972,Fiji,4
+1972,Finland,3
+1972,France,4
+1972,German DR,4
+1972,Ghana,1
+1972,Greece,3
+1972,Guinea,2
+1972,Hong Kong,4
+1972,Hungary,3
+1972,Iceland,1
+1972,Indonesia,6
+1972,Iran,5
+1972,Iraq,5
+1972,Israel,5
+1972,Italy,3
+1972,Ivory Coast,6
+1972,Japan,4
+1972,Kenya,2
+1972,Kuwait,5
+1972,Luxembourg,5
+1972,Malaysia,3
+1972,Malta,2
+1972,Mauritius,2
+1972,Morocco,5
+1972,Netherlands,1
+1972,New Caledonia,5
+1972,New Zealand,11
+1972,Nigeria,3
+1972,North Korea,4
+1972,Northern Ireland,4
+1972,Norway,3
+1972,Peru,2
+1972,Poland,2
+1972,Portugal,2
+1972,Republic of Ireland,4
+1972,Romania,4
+1972,Russia,4
+1972,Scotland,2
+1972,Senegal,1
+1972,Sierra Leone,2
+1972,South Korea,3
+1972,Spain,3
+1972,Sweden,3
+1972,Switzerland,1
+1972,Syria,6
+1972,Tahiti,5
+1972,Tanzania,2
+1972,Thailand,4
+1972,Tunisia,4
+1972,Turkey,3
+1972,Uruguay,3
+1972,Vanuatu,5
+1972,Vietnam Republic,3
+1972,Wales,3
+1972,Yugoslavia,2
+1972,Zambia,1
+1973,Albania,2
+1973,Argentina,10
+1973,Australia,6
+1973,Austria,1
+1973,Belgium,1
+1973,Bolivia,4
+1973,Brazil,5
+1973,Bulgaria,4
+1973,Chile,3
+1973,Congo,5
+1973,Curaçao,5
+1973,Cyprus,1
+1973,Czechoslovakia,2
+1973,DR Congo,14
+1973,Egypt,5
+1973,England,1
+1973,Finland,2
+1973,German DR,8
+1973,Germany,7
+1973,Ghana,2
+1973,Greece,1
+1973,Guatemala,4
+1973,Guinea,3
+1973,Haiti,8
+1973,Honduras,5
+1973,Iceland,3
+1973,Iran,2
+1973,Italy,4
+1973,Ivory Coast,3
+1973,Kenya,2
+1973,Luxembourg,1
+1973,Malta,1
+1973,Mauritius,3
+1973,Mexico,4
+1973,Morocco,3
+1973,Netherlands,9
+1973,Northern Ireland,1
+1973,Norway,3
+1973,Paraguay,4
+1973,Peru,1
+1973,Poland,9
+1973,Portugal,2
+1973,Romania,2
+1973,Scotland,4
+1973,South Korea,2
+1973,Spain,1
+1973,Sweden,6
+1973,Switzerland,3
+1973,Trinidad and Tobago,5
+1973,Turkey,1
+1973,Uganda,3
+1973,Uruguay,3
+1973,Wales,1
+1973,Yugoslavia,7
+1973,Zambia,12
+1974,Austria,2
+1974,Belgium,2
+1974,Bolivia,2
+1974,Brazil,1
+1974,Bulgaria,4
+1974,Chile,2
+1974,Colombia,3
+1974,Cyprus,4
+1974,Czechoslovakia,3
+1974,Denmark,2
+1974,Ecuador,2
+1974,England,3
+1974,Finland,4
+1974,France,2
+1974,German DR,3
+1974,Germany,3
+1974,Greece,5
+1974,Hungary,3
+1974,Iceland,3
+1974,Italy,2
+1974,Luxembourg,4
+1974,Malta,4
+1974,Netherlands,2
+1974,Northern Ireland,3
+1974,Norway,4
+1974,Paraguay,3
+1974,Peru,2
+1974,Poland,2
+1974,Portugal,2
+1974,Republic of Ireland,5
+1974,Romania,3
+1974,Russia,3
+1974,Scotland,3
+1974,Spain,4
+1974,Sweden,3
+1974,Switzerland,4
+1974,Turkey,4
+1974,Venezuela,1
+1974,Wales,5
+1974,Yugoslavia,4
+1975,Algeria,1
+1975,Argentina,4
+1975,Austria,3
+1975,Belgium,4
+1975,Bolivia,2
+1975,Brazil,5
+1975,Bulgaria,2
+1975,Burkina Faso,2
+1975,Chile,2
+1975,China,4
+1975,Colombia,6
+1975,Cyprus,3
+1975,Czechoslovakia,7
+1975,DR Congo,3
+1975,Denmark,4
+1975,Ecuador,2
+1975,Egypt,6
+1975,England,3
+1975,Ethiopia,3
+1975,Finland,2
+1975,France,2
+1975,German DR,2
+1975,Germany,7
+1975,Greece,1
+1975,Guinea,6
+1975,Hungary,2
+1975,Iceland,2
+1975,Iran,4
+1975,Iraq,4
+1975,Italy,1
+1975,Kuwait,4
+1975,Libya,1
+1975,Luxembourg,2
+1975,Malawi,2
+1975,Malaysia,2
+1975,Malta,2
+1975,Mauritania,2
+1975,Morocco,6
+1975,Netherlands,8
+1975,Niger,2
+1975,Nigeria,6
+1975,Northern Ireland,3
+1975,Norway,3
+1975,Paraguay,1
+1975,Peru,7
+1975,Poland,2
+1975,Portugal,3
+1975,Republic of Ireland,1
+1975,Romania,2
+1975,Russia,5
+1975,Scotland,3
+1975,Sierra Leone,2
+1975,Spain,4
+1975,Sudan,3
+1975,Sweden,4
+1975,Switzerland,2
+1975,Turkey,2
+1975,Uganda,3
+1975,Uruguay,2
+1975,Venezuela,3
+1975,Wales,3
+1975,Yemen DPR,2
+1975,Yugoslavia,6
+1975,Zambia,2
+1976,Algeria,2
+1976,Australia,5
+1976,Austria,3
+1976,Bahrain,4
+1976,Belgium,3
+1976,Bolivia,6
+1976,Brazil,5
+1976,Bulgaria,2
+1976,Burkina Faso,2
+1976,Cameroon,2
+1976,Chile,4
+1976,Colombia,3
+1976,Congo,4
+1976,Cyprus,4
+1976,Czechoslovakia,2
+1976,Denmark,3
+1976,Ecuador,4
+1976,Egypt,4
+1976,England,3
+1976,Ethiopia,2
+1976,Finland,4
+1976,France,3
+1976,German DR,2
+1976,Ghana,3
+1976,Greece,4
+1976,Guinea,7
+1976,Hong Kong,8
+1976,Hungary,4
+1976,Iceland,3
+1976,Indonesia,3
+1976,Iran,4
+1976,Israel,3
+1976,Italy,3
+1976,Ivory Coast,6
+1976,Japan,3
+1976,Kenya,1
+1976,Kuwait,4
+1976,Luxembourg,4
+1976,Malaysia,3
+1976,Malta,4
+1976,Morocco,2
+1976,Netherlands,3
+1976,New Zealand,4
+1976,Nigeria,3
+1976,Northern Ireland,3
+1976,Norway,1
+1976,Paraguay,4
+1976,Peru,6
+1976,Poland,4
+1976,Portugal,3
+1976,Qatar,4
+1976,Republic of Ireland,3
+1976,Romania,2
+1976,Russia,4
+1976,Saudi Arabia,4
+1976,Scotland,2
+1976,Senegal,2
+1976,Sierra Leone,1
+1976,Singapore,5
+1976,South Korea,3
+1976,Spain,2
+1976,Sweden,2
+1976,Switzerland,3
+1976,Syria,3
+1976,Taiwan,4
+1976,Thailand,4
+1976,Togo,4
+1976,Tunisia,6
+1976,Turkey,3
+1976,Uganda,2
+1976,Uruguay,4
+1976,Venezuela,4
+1976,Wales,2
+1976,Yugoslavia,2
+1976,Zambia,3
+1977,Argentina,6
+1977,Australia,6
+1977,Austria,9
+1977,Belgium,3
+1977,Bolivia,2
+1977,Brazil,5
+1977,Bulgaria,1
+1977,Burkina Faso,3
+1977,Canada,5
+1977,Congo,2
+1977,Cyprus,1
+1977,Czechoslovakia,2
+1977,Denmark,3
+1977,Egypt,4
+1977,El Salvador,5
+1977,England,2
+1977,Finland,2
+1977,France,4
+1977,German DR,4
+1977,Germany,3
+1977,Ghana,5
+1977,Greece,1
+1977,Guatemala,5
+1977,Haiti,5
+1977,Hong Kong,5
+1977,Hungary,5
+1977,Iceland,3
+1977,Iran,9
+1977,Italy,9
+1977,Kuwait,8
+1977,Luxembourg,2
+1977,Malta,2
+1977,Mexico,8
+1977,Morocco,3
+1977,Netherlands,9
+1977,Nigeria,6
+1977,Northern Ireland,3
+1977,Norway,2
+1977,Peru,5
+1977,Poland,7
+1977,Portugal,3
+1977,Republic of Ireland,1
+1977,Romania,2
+1977,Scotland,5
+1977,South Korea,5
+1977,Spain,4
+1977,Suriname,5
+1977,Sweden,4
+1977,Switzerland,1
+1977,Tunisia,8
+1977,Turkey,3
+1977,Uganda,5
+1977,Wales,2
+1977,Yugoslavia,2
+1977,Zambia,2
+1978,Argentina,1
+1978,Austria,4
+1978,Belgium,3
+1978,Bolivia,2
+1978,Brazil,1
+1978,Bulgaria,5
+1978,Cyprus,3
+1978,Czechoslovakia,3
+1978,Denmark,5
+1978,England,4
+1978,Finland,3
+1978,France,4
+1978,German DR,4
+1978,Germany,1
+1978,Greece,3
+1978,Hungary,4
+1978,Iceland,5
+1978,Luxembourg,4
+1978,Malta,3
+1978,Netherlands,5
+1978,Northern Ireland,5
+1978,Norway,5
+1978,Poland,4
+1978,Portugal,4
+1978,Republic of Ireland,3
+1978,Romania,4
+1978,Russia,4
+1978,Scotland,4
+1978,Spain,4
+1978,Sweden,3
+1978,Switzerland,6
+1978,Turkey,2
+1978,Wales,4
+1978,Yugoslavia,3
+1979,Algeria,6
+1979,Argentina,3
+1979,Australia,4
+1979,Austria,3
+1979,Belgium,7
+1979,Bolivia,2
+1979,Brazil,5
+1979,Bulgaria,4
+1979,Cameroon,2
+1979,Chile,7
+1979,Colombia,3
+1979,Cyprus,4
+1979,Czechoslovakia,7
+1979,DR Congo,2
+1979,Denmark,2
+1979,Ecuador,4
+1979,Egypt,5
+1979,England,7
+1979,Ethiopia,1
+1979,Fiji,4
+1979,Finland,3
+1979,France,2
+1979,Gambia,1
+1979,German DR,4
+1979,Germany,6
+1979,Ghana,2
+1979,Greece,3
+1979,Guinea,5
+1979,Hungary,1
+1979,Iceland,4
+1979,Israel,1
+1979,Italy,2
+1979,Ivory Coast,2
+1979,Kenya,2
+1979,Lesotho,2
+1979,Libya,1
+1979,Luxembourg,2
+1979,Malawi,2
+1979,Malta,2
+1979,Morocco,6
+1979,Mozambique,2
+1979,Netherlands,6
+1979,New Caledonia,4
+1979,New Zealand,3
+1979,Niger,1
+1979,Nigeria,6
+1979,Northern Ireland,2
+1979,Norway,3
+1979,Papua New Guinea,3
+1979,Paraguay,7
+1979,Peru,1
+1979,Poland,4
+1979,Portugal,4
+1979,Republic of Ireland,4
+1979,Romania,2
+1979,Russia,2
+1979,Scotland,4
+1979,Senegal,1
+1979,Sierra Leone,2
+1979,Solomon Islands,3
+1979,Somalia,1
+1979,Spain,4
+1979,Sweden,4
+1979,Switzerland,2
+1979,Tahiti,4
+1979,Tanzania,5
+1979,Tunisia,2
+1979,Turkey,3
+1979,Uruguay,3
+1979,Vanuatu,3
+1979,Venezuela,3
+1979,Wales,3
+1979,Yugoslavia,3
+1979,Zambia,1
+1980,Albania,5
+1980,Algeria,4
+1980,Australia,5
+1980,Austria,6
+1980,Bahrain,4
+1980,Bangladesh,4
+1980,Belgium,6
+1980,Bolivia,4
+1980,Brazil,4
+1980,Bulgaria,4
+1980,Cameroon,4
+1980,Chile,3
+1980,China,8
+1980,Colombia,1
+1980,Cyprus,6
+1980,Czechoslovakia,4
+1980,DR Congo,4
+1980,Denmark,6
+1980,Ecuador,3
+1980,Egypt,1
+1980,England,5
+1980,Fiji,3
+1980,Finland,5
+1980,France,4
+1980,German DR,2
+1980,Germany,4
+1980,Greece,5
+1980,Guinea,3
+1980,Hong Kong,3
+1980,Hungary,4
+1980,Iceland,4
+1980,Indonesia,5
+1980,Iran,5
+1980,Iraq,4
+1980,Israel,3
+1980,Italy,5
+1980,Japan,4
+1980,Kuwait,9
+1980,Liberia,1
+1980,Luxembourg,6
+1980,Macau,3
+1980,Madagascar,2
+1980,Malaysia,7
+1980,Malta,2
+1980,Morocco,3
+1980,Netherlands,5
+1980,New Zealand,6
+1980,Niger,4
+1980,Nigeria,4
+1980,North Korea,11
+1980,Northern Ireland,5
+1980,Norway,6
+1980,Paraguay,4
+1980,Peru,1
+1980,Poland,2
+1980,Portugal,4
+1980,Qatar,8
+1980,Republic of Ireland,5
+1980,Romania,4
+1980,Russia,2
+1980,Saudi Arabia,4
+1980,Scotland,4
+1980,Singapore,3
+1980,South Korea,9
+1980,Sudan,2
+1980,Sweden,4
+1980,Switzerland,5
+1980,Syria,7
+1980,Taiwan,5
+1980,Tanzania,2
+1980,Thailand,3
+1980,Togo,2
+1980,Turkey,5
+1980,United Arab Emirates,4
+1980,Venezuela,4
+1980,Wales,3
+1980,Yugoslavia,4
+1980,Zambia,2
+1980,Zimbabwe,2
+1981,Albania,3
+1981,Algeria,9
+1981,Argentina,5
+1981,Australia,2
+1981,Austria,6
+1981,Belgium,7
+1981,Brazil,5
+1981,Bulgaria,2
+1981,Cameroon,4
+1981,Canada,5
+1981,Chile,3
+1981,China,6
+1981,Colombia,3
+1981,Cuba,4
+1981,Cyprus,2
+1981,Czechoslovakia,7
+1981,Denmark,2
+1981,El Salvador,6
+1981,England,5
+1981,Ethiopia,2
+1981,Fiji,3
+1981,Finland,2
+1981,France,11
+1981,German DR,2
+1981,Germany,10
+1981,Ghana,4
+1981,Greece,3
+1981,Haiti,5
+1981,Honduras,6
+1981,Hungary,6
+1981,Iceland,4
+1981,Indonesia,2
+1981,Israel,2
+1981,Italy,9
+1981,Kuwait,9
+1981,Libya,4
+1981,Luxembourg,2
+1981,Malta,3
+1981,Mexico,4
+1981,Morocco,2
+1981,Netherlands,3
+1981,New Zealand,10
+1981,Nigeria,5
+1981,Northern Ireland,5
+1981,Norway,2
+1981,Peru,4
+1981,Poland,6
+1981,Portugal,3
+1981,Republic of Ireland,2
+1981,Romania,2
+1981,Russia,9
+1981,Saudi Arabia,6
+1981,Scotland,5
+1981,Spain,4
+1981,Sweden,2
+1981,Switzerland,2
+1981,Tunisia,3
+1981,Turkey,3
+1981,Uruguay,3
+1981,Wales,3
+1981,Yugoslavia,6
+1981,Zambia,5
+1982,Albania,6
+1982,Austria,4
+1982,Belgium,4
+1982,Bulgaria,3
+1982,Cyprus,5
+1982,Czechoslovakia,5
+1982,Denmark,4
+1982,England,4
+1982,Finland,5
+1982,German DR,3
+1982,Germany,3
+1982,Greece,4
+1982,Hungary,5
+1982,Iceland,5
+1982,Italy,4
+1982,Luxembourg,5
+1982,Malta,4
+1982,Netherlands,4
+1982,Northern Ireland,4
+1982,Norway,3
+1982,Poland,4
+1982,Portugal,3
+1982,Republic of Ireland,5
+1982,Romania,4
+1982,Russia,4
+1982,Scotland,4
+1982,Spain,6
+1982,Sweden,6
+1982,Switzerland,3
+1982,Turkey,5
+1982,Wales,3
+1982,Yugoslavia,3
+1983,Albania,1
+1983,Algeria,3
+1983,Angola,2
+1983,Argentina,3
+1983,Austria,4
+1983,Belgium,5
+1983,Bolivia,4
+1983,Brazil,6
+1983,Bulgaria,3
+1983,Cameroon,4
+1983,Chile,3
+1983,Colombia,4
+1983,Cyprus,3
+1983,Czechoslovakia,3
+1983,Denmark,8
+1983,Ecuador,4
+1983,Egypt,4
+1983,England,3
+1983,Finland,2
+1983,France,5
+1983,German DR,2
+1983,Germany,6
+1983,Ghana,3
+1983,Greece,3
+1983,Hungary,3
+1983,Iceland,2
+1983,Italy,3
+1983,Ivory Coast,3
+1983,Luxembourg,3
+1983,Malawi,5
+1983,Malta,4
+1983,Mauritius,2
+1983,Morocco,2
+1983,Netherlands,4
+1983,Nigeria,4
+1983,Northern Ireland,4
+1983,Norway,2
+1983,Paraguay,1
+1983,Peru,6
+1983,Poland,2
+1983,Portugal,6
+1983,Republic of Ireland,3
+1983,Romania,5
+1983,Russia,2
+1983,Scotland,2
+1983,Senegal,2
+1983,Sierra Leone,2
+1983,Spain,7
+1983,Sweden,3
+1983,Switzerland,2
+1983,Togo,2
+1983,Turkey,3
+1983,Uganda,1
+1983,Uruguay,8
+1983,Venezuela,3
+1983,Wales,2
+1983,Yugoslavia,6
+1983,Zambia,1
+1984,Albania,5
+1984,Algeria,3
+1984,Angola,1
+1984,Argentina,6
+1984,Austria,5
+1984,Bahrain,2
+1984,Bangladesh,6
+1984,Belgium,4
+1984,Benin,2
+1984,Bolivia,4
+1984,Brazil,4
+1984,Brunei,6
+1984,Bulgaria,5
+1984,Cameroon,2
+1984,Canada,4
+1984,Chile,4
+1984,China,11
+1984,Colombia,5
+1984,Costa Rica,4
+1984,Cyprus,5
+1984,Czechoslovakia,4
+1984,Denmark,4
+1984,Ecuador,4
+1984,Egypt,5
+1984,El Salvador,3
+1984,England,4
+1984,Ethiopia,2
+1984,Finland,5
+1984,France,4
+1984,Gambia,2
+1984,German DR,5
+1984,Germany,5
+1984,Ghana,2
+1984,Greece,4
+1984,Guatemala,4
+1984,Guinea,2
+1984,Haiti,4
+1984,Honduras,3
+1984,Hong Kong,5
+1984,Hungary,6
+1984,Iceland,5
+1984,India,8
+1984,Indonesia,8
+1984,Iran,5
+1984,Iraq,4
+1984,Ivory Coast,3
+1984,Japan,3
+1984,Jordan,4
+1984,Kenya,4
+1984,Kuwait,8
+1984,Liberia,2
+1984,Libya,2
+1984,Luxembourg,6
+1984,Macau,6
+1984,Madagascar,2
+1984,Malawi,1
+1984,Malaysia,3
+1984,Malta,4
+1984,Morocco,2
+1984,Nepal,3
+1984,Netherlands,6
+1984,Nigeria,6
+1984,North Korea,3
+1984,Northern Ireland,4
+1984,Norway,4
+1984,Paraguay,4
+1984,Peru,5
+1984,Poland,5
+1984,Portugal,5
+1984,Qatar,8
+1984,Republic of Ireland,4
+1984,Romania,3
+1984,Russia,5
+1984,Saudi Arabia,7
+1984,Scotland,5
+1984,Singapore,8
+1984,South Korea,9
+1984,Spain,5
+1984,Sudan,2
+1984,Suriname,4
+1984,Sweden,4
+1984,Switzerland,5
+1984,Syria,7
+1984,Tanzania,1
+1984,Thailand,5
+1984,Trinidad and Tobago,4
+1984,Tunisia,6
+1984,Turkey,4
+1984,Uganda,1
+1984,United Arab Emirates,5
+1984,United States,4
+1984,Uruguay,4
+1984,Venezuela,6
+1984,Wales,5
+1984,Yemen,4
+1984,Yemen DPR,2
+1984,Yugoslavia,4
+1984,Zambia,5
+1984,Zimbabwe,2
+1985,Albania,1
+1985,Algeria,6
+1985,Argentina,7
+1985,Australia,6
+1985,Bahrain,2
+1985,Belgium,9
+1985,Brazil,5
+1985,Bulgaria,6
+1985,Cameroon,4
+1985,Canada,6
+1985,Chile,4
+1985,Colombia,2
+1985,Costa Rica,3
+1985,Czechoslovakia,3
+1985,Denmark,7
+1985,Egypt,4
+1985,England,6
+1985,Finland,2
+1985,France,11
+1985,German DR,3
+1985,Germany,9
+1985,Greece,1
+1985,Honduras,4
+1985,Hong Kong,2
+1985,Hungary,3
+1985,Iceland,1
+1985,Iraq,6
+1985,Israel,6
+1985,Italy,4
+1985,Ivory Coast,5
+1985,Japan,4
+1985,Libya,2
+1985,Luxembourg,2
+1985,Malta,2
+1985,Mexico,4
+1985,Morocco,8
+1985,Mozambique,3
+1985,Netherlands,2
+1985,New Zealand,5
+1985,Northern Ireland,4
+1985,Norway,3
+1985,Paraguay,8
+1985,Peru,2
+1985,Poland,3
+1985,Portugal,6
+1985,Republic of Ireland,2
+1985,Romania,4
+1985,Russia,7
+1985,Scotland,4
+1985,Senegal,3
+1985,South Korea,5
+1985,Spain,6
+1985,Sweden,3
+1985,Switzerland,1
+1985,Syria,3
+1985,Taiwan,6
+1985,Tunisia,2
+1985,Turkey,3
+1985,United Arab Emirates,2
+1985,Uruguay,4
+1985,Wales,1
+1985,Yugoslavia,2
+1985,Zambia,2
+1986,Albania,4
+1986,Argentina,4
+1986,Austria,4
+1986,Belgium,4
+1986,Bolivia,1
+1986,Brazil,2
+1986,Bulgaria,4
+1986,Chile,4
+1986,Colombia,4
+1986,Cyprus,4
+1986,Czechoslovakia,3
+1986,Denmark,3
+1986,Ecuador,2
+1986,England,3
+1986,Finland,5
+1986,France,3
+1986,German DR,3
+1986,Greece,6
+1986,Hungary,5
+1986,Iceland,4
+1986,Italy,5
+1986,Luxembourg,5
+1986,Malta,6
+1986,Netherlands,4
+1986,Northern Ireland,3
+1986,Norway,3
+1986,Paraguay,1
+1986,Peru,2
+1986,Poland,3
+1986,Portugal,4
+1986,Republic of Ireland,4
+1986,Romania,4
+1986,Russia,5
+1986,Scotland,3
+1986,Spain,4
+1986,Sweden,6
+1986,Switzerland,5
+1986,Turkey,1
+1986,Uruguay,2
+1986,Venezuela,2
+1986,Wales,3
+1986,Yugoslavia,3
+1987,Albania,2
+1987,Algeria,5
+1987,Austria,1
+1987,Belgium,3
+1987,Bulgaria,3
+1987,Burkina Faso,2
+1987,Cameroon,4
+1987,Cyprus,4
+1987,Czechoslovakia,2
+1987,DR Congo,3
+1987,Denmark,5
+1987,Egypt,2
+1987,England,5
+1987,Finland,1
+1987,France,3
+1987,German DR,3
+1987,Germany,4
+1987,Greece,2
+1987,Hungary,3
+1987,Iceland,3
+1987,Italy,6
+1987,Ivory Coast,2
+1987,Kenya,2
+1987,Libya,2
+1987,Luxembourg,2
+1987,Malawi,2
+1987,Malta,3
+1987,Morocco,4
+1987,Netherlands,9
+1987,Nigeria,4
+1987,Northern Ireland,3
+1987,Norway,4
+1987,Poland,3
+1987,Portugal,3
+1987,Republic of Ireland,5
+1987,Romania,1
+1987,Russia,8
+1987,Scotland,2
+1987,Spain,5
+1987,Sweden,2
+1987,Switzerland,1
+1987,Turkey,3
+1987,Uganda,2
+1987,Wales,3
+1987,Yugoslavia,3
+1988,Albania,4
+1988,Algeria,2
+1988,Angola,5
+1988,Argentina,4
+1988,Australia,6
+1988,Austria,3
+1988,Bahrain,3
+1988,Bangladesh,6
+1988,Belgium,4
+1988,Bolivia,2
+1988,Brazil,6
+1988,Bulgaria,4
+1988,Cameroon,4
+1988,Chile,4
+1988,China,11
+1988,Colombia,3
+1988,Costa Rica,8
+1988,Cyprus,6
+1988,Czechoslovakia,4
+1988,DR Congo,3
+1988,Denmark,4
+1988,Ecuador,2
+1988,Egypt,3
+1988,El Salvador,3
+1988,England,3
+1988,Fiji,2
+1988,Finland,3
+1988,France,4
+1988,Gabon,4
+1988,German DR,5
+1988,Germany,2
+1988,Ghana,1
+1988,Greece,3
+1988,Guatemala,3
+1988,Guinea,2
+1988,Hong Kong,4
+1988,Hungary,4
+1988,Iceland,4
+1988,Indonesia,4
+1988,Iran,10
+1988,Iraq,6
+1988,Israel,4
+1988,Ivory Coast,1
+1988,Japan,6
+1988,Jordan,6
+1988,Kenya,2
+1988,Kuwait,6
+1988,Liberia,4
+1988,Libya,1
+1988,Luxembourg,5
+1988,Malawi,4
+1988,Malaysia,6
+1988,Malta,6
+1988,Morocco,3
+1988,Nepal,6
+1988,Netherlands,3
+1988,New Zealand,6
+1988,Nigeria,4
+1988,North Korea,5
+1988,Northern Ireland,4
+1988,Norway,5
+1988,Oman,5
+1988,Pakistan,4
+1988,Paraguay,6
+1988,Peru,3
+1988,Poland,3
+1988,Portugal,3
+1988,Qatar,9
+1988,Republic of Ireland,4
+1988,Romania,3
+1988,Russia,5
+1988,Saudi Arabia,7
+1988,Scotland,5
+1988,Singapore,6
+1988,South Korea,11
+1988,Spain,6
+1988,Sudan,1
+1988,Sweden,2
+1988,Switzerland,4
+1988,Syria,7
+1988,Taiwan,2
+1988,Thailand,6
+1988,Trinidad and Tobago,4
+1988,Tunisia,6
+1988,Turkey,5
+1988,United Arab Emirates,8
+1988,United States,4
+1988,Uruguay,7
+1988,Venezuela,5
+1988,Wales,2
+1988,Yemen,4
+1988,Yugoslavia,4
+1988,Zambia,4
+1988,Zimbabwe,2
+1989,Albania,3
+1989,Algeria,7
+1989,Angola,2
+1989,Argentina,6
+1989,Austria,6
+1989,Belgium,7
+1989,Bolivia,4
+1989,Brazil,7
+1989,Bulgaria,2
+1989,Cameroon,12
+1989,Chile,4
+1989,China,5
+1989,Colombia,8
+1989,Costa Rica,4
+1989,Cyprus,2
+1989,Czechoslovakia,7
+1989,DR Congo,2
+1989,Denmark,2
+1989,Ecuador,3
+1989,Egypt,8
+1989,El Salvador,1
+1989,England,6
+1989,Finland,3
+1989,France,3
+1989,Gabon,2
+1989,German DR,3
+1989,Germany,9
+1989,Greece,2
+1989,Guatemala,2
+1989,Hungary,3
+1989,Iceland,4
+1989,Israel,1
+1989,Italy,7
+1989,Ivory Coast,5
+1989,Kenya,4
+1989,Liberia,1
+1989,Luxembourg,3
+1989,Malawi,1
+1989,Malta,1
+1989,Morocco,1
+1989,Netherlands,5
+1989,Nigeria,7
+1989,North Korea,4
+1989,Northern Ireland,2
+1989,Norway,3
+1989,Paraguay,4
+1989,Peru,4
+1989,Poland,2
+1989,Portugal,4
+1989,Qatar,4
+1989,Republic of Ireland,5
+1989,Romania,5
+1989,Russia,5
+1989,Saudi Arabia,4
+1989,Scotland,6
+1989,Senegal,3
+1989,South Korea,7
+1989,Spain,5
+1989,Sweden,5
+1989,Switzerland,4
+1989,Trinidad and Tobago,3
+1989,Tunisia,3
+1989,Turkey,3
+1989,United Arab Emirates,6
+1989,United States,5
+1989,Uruguay,7
+1989,Venezuela,3
+1989,Wales,3
+1989,Yugoslavia,7
+1989,Zambia,6
+1989,Zimbabwe,1
+1990,Albania,5
+1990,Argentina,6
+1990,Austria,4
+1990,Belgium,4
+1990,Bolivia,3
+1990,Brazil,7
+1990,Bulgaria,6
+1990,Canada,3
+1990,Chile,6
+1990,Colombia,6
+1990,Costa Rica,5
+1990,Cyprus,6
+1990,Czechoslovakia,5
+1990,Denmark,5
+1990,Ecuador,4
+1990,England,4
+1990,Faroe Islands,5
+1990,Finland,4
+1990,France,5
+1990,Germany,3
+1990,Greece,3
+1990,Guatemala,3
+1990,Honduras,4
+1990,Hungary,5
+1990,Iceland,5
+1990,Italy,4
+1990,Jamaica,3
+1990,Luxembourg,3
+1990,Malta,7
+1990,Mexico,5
+1990,Netherlands,6
+1990,Northern Ireland,4
+1990,Norway,4
+1990,Paraguay,4
+1990,Peru,4
+1990,Poland,3
+1990,Portugal,4
+1990,Republic of Ireland,3
+1990,Romania,4
+1990,Russia,3
+1990,San Marino,6
+1990,Scotland,5
+1990,Spain,4
+1990,Switzerland,5
+1990,Trinidad and Tobago,3
+1990,Turkey,4
+1990,United States,4
+1990,Uruguay,4
+1990,Venezuela,4
+1990,Wales,4
+1990,Yugoslavia,6
+1991,Albania,4
+1991,Algeria,2
+1991,Antigua and Barbuda,4
+1991,Austria,3
+1991,Barbados,2
+1991,Belgium,4
+1991,Bermuda,4
+1991,Bulgaria,3
+1991,Cameroon,4
+1991,Congo,2
+1991,Curaçao,2
+1991,Cyprus,4
+1991,Czechoslovakia,3
+1991,DR Congo,3
+1991,Denmark,7
+1991,Dominican Republic,2
+1991,Egypt,2
+1991,El Salvador,2
+1991,England,3
+1991,Estonia,4
+1991,Faroe Islands,6
+1991,Fiji,1
+1991,Finland,4
+1991,France,5
+1991,Germany,8
+1991,Ghana,4
+1991,Greece,6
+1991,Guatemala,1
+1991,Guyana,2
+1991,Haiti,2
+1991,Honduras,1
+1991,Hungary,2
+1991,Iceland,4
+1991,Italy,2
+1991,Ivory Coast,2
+1991,Jamaica,3
+1991,Kenya,2
+1991,Latvia,4
+1991,Lithuania,6
+1991,Luxembourg,3
+1991,Malta,1
+1991,Morocco,2
+1991,Netherlands,5
+1991,New Zealand,3
+1991,Nicaragua,2
+1991,Nigeria,5
+1991,Northern Ireland,4
+1991,Norway,2
+1991,Poland,2
+1991,Portugal,3
+1991,Puerto Rico,4
+1991,Republic of Ireland,3
+1991,Romania,5
+1991,Russia,5
+1991,Saint Lucia,2
+1991,Saint Vincent and the Grenadines,2
+1991,San Marino,2
+1991,Scotland,6
+1991,Senegal,3
+1991,Solomon Islands,1
+1991,Spain,4
+1991,Suriname,2
+1991,Sweden,4
+1991,Switzerland,2
+1991,Tahiti,1
+1991,Trinidad and Tobago,3
+1991,Turkey,2
+1991,Vanuatu,2
+1991,Wales,3
+1991,Yugoslavia,2
+1991,Zambia,3
+1992,Albania,6
+1992,Algeria,6
+1992,Angola,4
+1992,Argentina,8
+1992,Australia,7
+1992,Austria,6
+1992,Bahrain,5
+1992,Bangladesh,8
+1992,Belgium,6
+1992,Benin,6
+1992,Bermuda,5
+1992,Bolivia,4
+1992,Botswana,3
+1992,Brazil,4
+1992,Bulgaria,6
+1992,Burundi,3
+1992,Cameroon,5
+1992,Canada,15
+1992,Chile,3
+1992,China,12
+1992,Colombia,5
+1992,Congo,4
+1992,Costa Rica,13
+1992,Cyprus,6
+1992,Czechoslovakia,7
+1992,DR Congo,3
+1992,Denmark,6
+1992,Ecuador,6
+1992,Egypt,4
+1992,El Salvador,12
+1992,England,7
+1992,Estonia,7
+1992,Eswatini,2
+1992,Ethiopia,5
+1992,Faroe Islands,6
+1992,Fiji,2
+1992,Finland,4
+1992,France,6
+1992,Gabon,4
+1992,Ghana,4
+1992,Greece,4
+1992,Guinea,5
+1992,Honduras,15
+1992,Hong Kong,8
+1992,Hungary,4
+1992,Iceland,5
+1992,India,8
+1992,Indonesia,8
+1992,Iran,7
+1992,Iraq,8
+1992,Israel,6
+1992,Italy,6
+1992,Ivory Coast,7
+1992,Jamaica,12
+1992,Japan,12
+1992,Jordan,8
+1992,Kenya,2
+1992,Kuwait,5
+1992,Latvia,9
+1992,Lebanon,6
+1992,Liberia,1
+1992,Lithuania,8
+1992,Luxembourg,5
+1992,Macau,6
+1992,Madagascar,4
+1992,Malaysia,6
+1992,Malta,8
+1992,Martinique,3
+1992,Mexico,22
+1992,Morocco,8
+1992,Mozambique,4
+1992,Namibia,5
+1992,Netherlands,6
+1992,New Zealand,2
+1992,Niger,3
+1992,Nigeria,5
+1992,North Korea,11
+1992,Northern Ireland,7
+1992,Norway,6
+1992,Oman,4
+1992,Pakistan,8
+1992,Panama,5
+1992,Paraguay,4
+1992,Peru,3
+1992,Poland,5
+1992,Portugal,5
+1992,Qatar,11
+1992,Republic of Ireland,6
+1992,Romania,5
+1992,Russia,6
+1992,Saint Vincent and the Grenadines,7
+1992,San Marino,7
+1992,Saudi Arabia,12
+1992,Scotland,5
+1992,Senegal,6
+1992,Singapore,8
+1992,Solomon Islands,3
+1992,South Africa,3
+1992,South Korea,7
+1992,Spain,5
+1992,Sri Lanka,8
+1992,Suriname,1
+1992,Sweden,6
+1992,Switzerland,7
+1992,Syria,5
+1992,Tahiti,3
+1992,Taiwan,6
+1992,Tanzania,3
+1992,Thailand,10
+1992,Togo,5
+1992,Trinidad and Tobago,1
+1992,Tunisia,4
+1992,Turkey,7
+1992,United Arab Emirates,11
+1992,United States,10
+1992,Uruguay,5
+1992,Vanuatu,2
+1992,Venezuela,5
+1992,Vietnam,8
+1992,Wales,6
+1992,Yemen,8
+1992,Zambia,7
+1992,Zimbabwe,7
+1993,Albania,2
+1993,Algeria,1
+1993,Argentina,11
+1993,Australia,3
+1993,Austria,4
+1993,Belgium,5
+1993,Bolivia,8
+1993,Brazil,12
+1993,Bulgaria,10
+1993,Cameroon,4
+1993,Canada,1
+1993,Colombia,8
+1993,Cyprus,2
+1993,Czechoslovakia,2
+1993,DR Congo,3
+1993,Denmark,4
+1993,Ecuador,6
+1993,Egypt,2
+1993,England,3
+1993,Estonia,6
+1993,Faroe Islands,1
+1993,Finland,4
+1993,France,4
+1993,Gabon,2
+1993,Germany,5
+1993,Ghana,3
+1993,Greece,5
+1993,Guinea,3
+1993,Hungary,2
+1993,Iceland,1
+1993,Iran,5
+1993,Iraq,5
+1993,Israel,3
+1993,Italy,9
+1993,Ivory Coast,6
+1993,Japan,4
+1993,Latvia,3
+1993,Liechtenstein,1
+1993,Lithuania,4
+1993,Luxembourg,3
+1993,Mali,5
+1993,Malta,1
+1993,Mexico,4
+1993,Morocco,4
+1993,Netherlands,8
+1993,Nigeria,10
+1993,North Korea,5
+1993,Northern Ireland,4
+1993,Norway,5
+1993,Paraguay,4
+1993,Peru,6
+1993,Poland,5
+1993,Portugal,4
+1993,Republic of Ireland,6
+1993,Romania,8
+1993,Russia,5
+1993,San Marino,2
+1993,Saudi Arabia,8
+1993,Scotland,3
+1993,Senegal,4
+1993,Sierra Leone,1
+1993,South Korea,7
+1993,Spain,8
+1993,Sweden,11
+1993,Switzerland,7
+1993,Tunisia,2
+1993,Turkey,2
+1993,United States,4
+1993,Uruguay,6
+1993,Venezuela,6
+1993,Wales,3
+1993,Zambia,6
+1993,Zimbabwe,2
+1994,Albania,7
+1994,Argentina,6
+1994,Armenia,5
+1994,Austria,6
+1994,Azerbaijan,6
+1994,Belarus,6
+1994,Belgium,7
+1994,Bolivia,4
+1994,Brazil,6
+1994,Bulgaria,6
+1994,Chile,3
+1994,Colombia,6
+1994,Croatia,6
+1994,Cyprus,6
+1994,Czech Republic,4
+1994,Denmark,9
+1994,Ecuador,3
+1994,Estonia,9
+1994,Faroe Islands,7
+1994,Finland,7
+1994,France,2
+1994,Georgia,7
+1994,Germany,6
+1994,Greece,6
+1994,Hungary,5
+1994,Iceland,5
+1994,Israel,6
+1994,Italy,6
+1994,Japan,2
+1994,Latvia,9
+1994,Liechtenstein,5
+1994,Lithuania,7
+1994,Luxembourg,7
+1994,Malta,6
+1994,Mexico,6
+1994,Moldova,7
+1994,Netherlands,6
+1994,Nigeria,2
+1994,North Macedonia,7
+1994,Northern Ireland,6
+1994,Norway,7
+1994,Paraguay,4
+1994,Peru,3
+1994,Poland,5
+1994,Portugal,6
+1994,Republic of Ireland,6
+1994,Romania,6
+1994,Russia,5
+1994,San Marino,7
+1994,Saudi Arabia,2
+1994,Scotland,6
+1994,Slovakia,5
+1994,Slovenia,6
+1994,Spain,7
+1994,Sweden,6
+1994,Switzerland,5
+1994,Turkey,5
+1994,Ukraine,6
+1994,United States,5
+1994,Uruguay,6
+1994,Venezuela,3
+1994,Wales,7
+1995,Albania,3
+1995,Algeria,5
+1995,Angola,5
+1995,Antigua and Barbuda,2
+1995,Argentina,2
+1995,Armenia,4
+1995,Aruba,2
+1995,Australia,1
+1995,Austria,4
+1995,Azerbaijan,4
+1995,Barbados,4
+1995,Belarus,4
+1995,Belgium,3
+1995,Belize,2
+1995,Bolivia,2
+1995,Brazil,4
+1995,Bulgaria,7
+1995,Burkina Faso,4
+1995,Burundi,2
+1995,Cameroon,3
+1995,Canada,2
+1995,Cayman Islands,2
+1995,Chile,2
+1995,Colombia,3
+1995,Congo,2
+1995,Croatia,7
+1995,Cuba,4
+1995,Curaçao,1
+1995,Cyprus,3
+1995,Czech Republic,9
+1995,DR Congo,5
+1995,Denmark,7
+1995,Dominica,4
+1995,Dominican Republic,5
+1995,Ecuador,3
+1995,Egypt,4
+1995,El Salvador,2
+1995,England,4
+1995,Estonia,5
+1995,Eswatini,2
+1995,Faroe Islands,4
+1995,Finland,3
+1995,France,7
+1995,Gabon,5
+1995,Gambia,2
+1995,Georgia,3
+1995,Germany,9
+1995,Ghana,7
+1995,Greece,5
+1995,Grenada,4
+1995,Guatemala,6
+1995,Guinea,2
+1995,Guinea-Bissau,2
+1995,Guyana,2
+1995,Haiti,4
+1995,Honduras,2
+1995,Hungary,3
+1995,Iceland,3
+1995,Israel,3
+1995,Italy,6
+1995,Ivory Coast,5
+1995,Jamaica,4
+1995,Kenya,2
+1995,Latvia,5
+1995,Liberia,4
+1995,Liechtenstein,4
+1995,Lithuania,6
+1995,Luxembourg,2
+1995,Madagascar,2
+1995,Malawi,2
+1995,Malta,4
+1995,Mauritania,1
+1995,Mauritius,2
+1995,Mexico,4
+1995,Moldova,3
+1995,Mozambique,5
+1995,Namibia,2
+1995,Netherlands,6
+1995,New Zealand,1
+1995,Nicaragua,2
+1995,North Macedonia,5
+1995,Northern Ireland,3
+1995,Norway,4
+1995,Panama,2
+1995,Paraguay,2
+1995,Peru,2
+1995,Poland,2
+1995,Portugal,8
+1995,Puerto Rico,2
+1995,Republic of Ireland,4
+1995,Romania,5
+1995,Russia,7
+1995,Rwanda,2
+1995,Saint Kitts and Nevis,3
+1995,Saint Lucia,2
+1995,Saint Vincent and the Grenadines,5
+1995,San Marino,4
+1995,Scotland,5
+1995,Senegal,2
+1995,Serbia,2
+1995,Sierra Leone,5
+1995,Slovakia,4
+1995,Slovenia,4
+1995,Solomon Islands,2
+1995,South Africa,8
+1995,Spain,6
+1995,Sudan,2
+1995,Suriname,2
+1995,Sweden,2
+1995,Switzerland,5
+1995,Tahiti,2
+1995,Tanzania,1
+1995,Togo,2
+1995,Trinidad and Tobago,4
+1995,Tunisia,8
+1995,Turkey,5
+1995,Uganda,2
+1995,Ukraine,3
+1995,United States,4
+1995,Uruguay,3
+1995,Venezuela,3
+1995,Wales,4
+1995,Zambia,7
+1995,Zimbabwe,2
+1996,Albania,6
+1996,Angola,3
+1996,Argentina,12
+1996,Armenia,4
+1996,Australia,8
+1996,Austria,5
+1996,Azerbaijan,4
+1996,Bahrain,4
+1996,Bangladesh,6
+1996,Belarus,5
+1996,Belgium,6
+1996,Bolivia,14
+1996,Bosnia and Herzegovina,5
+1996,Brazil,6
+1996,Bulgaria,5
+1996,Burkina Faso,5
+1996,Cambodia,6
+1996,Cameroon,4
+1996,Canada,8
+1996,Chile,13
+1996,China,9
+1996,Colombia,14
+1996,Congo,5
+1996,Cook Islands,2
+1996,Costa Rica,13
+1996,Croatia,5
+1996,Cuba,6
+1996,Cyprus,6
+1996,Czech Republic,4
+1996,DR Congo,5
+1996,Denmark,5
+1996,Ecuador,13
+1996,Egypt,4
+1996,El Salvador,10
+1996,England,6
+1996,Estonia,8
+1996,Faroe Islands,6
+1996,Fiji,4
+1996,Finland,5
+1996,Gabon,4
+1996,Georgia,5
+1996,Germany,4
+1996,Ghana,5
+1996,Greece,5
+1996,Guatemala,6
+1996,Guinea,5
+1996,Honduras,5
+1996,Hong Kong,4
+1996,Hungary,5
+1996,Iceland,3
+1996,India,3
+1996,Indonesia,8
+1996,Iran,11
+1996,Iraq,8
+1996,Israel,7
+1996,Italy,5
+1996,Jamaica,8
+1996,Japan,10
+1996,Jordan,3
+1996,Kazakhstan,4
+1996,Kenya,5
+1996,Kuwait,10
+1996,Kyrgyzstan,5
+1996,Latvia,9
+1996,Lebanon,4
+1996,Liberia,4
+1996,Liechtenstein,6
+1996,Lithuania,7
+1996,Luxembourg,6
+1996,Macau,6
+1996,Malaysia,4
+1996,Maldives,6
+1996,Malta,7
+1996,Mexico,16
+1996,Moldova,5
+1996,Morocco,5
+1996,Namibia,4
+1996,Nepal,6
+1996,Netherlands,6
+1996,New Zealand,6
+1996,Nigeria,5
+1996,North Macedonia,5
+1996,Northern Ireland,5
+1996,Norway,4
+1996,Oman,6
+1996,Pakistan,4
+1996,Panama,5
+1996,Papua New Guinea,6
+1996,Paraguay,13
+1996,Peru,14
+1996,Philippines,3
+1996,Poland,5
+1996,Portugal,4
+1996,Qatar,3
+1996,Republic of Ireland,5
+1996,Romania,6
+1996,Russia,6
+1996,Saint Vincent and the Grenadines,6
+1996,Samoa,2
+1996,San Marino,6
+1996,Saudi Arabia,9
+1996,Scotland,6
+1996,Serbia,6
+1996,Sierra Leone,4
+1996,Singapore,4
+1996,Slovakia,6
+1996,Slovenia,4
+1996,Solomon Islands,8
+1996,South Africa,4
+1996,South Korea,7
+1996,Spain,7
+1996,Sri Lanka,3
+1996,Sweden,5
+1996,Switzerland,4
+1996,Syria,8
+1996,Tahiti,6
+1996,Taiwan,5
+1996,Tajikistan,5
+1996,Thailand,6
+1996,Togo,5
+1996,Tonga,4
+1996,Trinidad and Tobago,6
+1996,Tunisia,4
+1996,Turkey,4
+1996,Turkmenistan,6
+1996,Ukraine,7
+1996,United Arab Emirates,8
+1996,United States,10
+1996,Uruguay,11
+1996,Uzbekistan,8
+1996,Vanuatu,2
+1996,Venezuela,13
+1996,Vietnam,6
+1996,Wales,4
+1996,Yemen,4
+1996,Zambia,4
+1996,Zimbabwe,4
+1997,Albania,4
+1997,Algeria,3
+1997,Angola,3
+1997,Argentina,7
+1997,Armenia,4
+1997,Australia,6
+1997,Austria,7
+1997,Azerbaijan,3
+1997,Belarus,4
+1997,Belgium,6
+1997,Bolivia,4
+1997,Bosnia and Herzegovina,3
+1997,Brazil,15
+1997,Bulgaria,5
+1997,Burkina Faso,7
+1997,Cameroon,8
+1997,Canada,5
+1997,Chile,8
+1997,China,8
+1997,Colombia,6
+1997,Congo,1
+1997,Costa Rica,6
+1997,Croatia,12
+1997,Cuba,2
+1997,Cyprus,2
+1997,Czech Republic,10
+1997,DR Congo,7
+1997,Denmark,7
+1997,Ecuador,3
+1997,Egypt,6
+1997,El Salvador,6
+1997,England,5
+1997,Estonia,5
+1997,Faroe Islands,4
+1997,Finland,3
+1997,France,6
+1997,Gabon,1
+1997,Georgia,2
+1997,Germany,9
+1997,Ghana,4
+1997,Greece,1
+1997,Guatemala,2
+1997,Guinea,4
+1997,Honduras,2
+1997,Hungary,5
+1997,Iceland,4
+1997,Iran,13
+1997,Israel,1
+1997,Italy,6
+1997,Ivory Coast,3
+1997,Jamaica,11
+1997,Japan,11
+1997,Kazakhstan,8
+1997,Kenya,1
+1997,Kuwait,7
+1997,Latvia,5
+1997,Liberia,1
+1997,Liechtenstein,3
+1997,Lithuania,4
+1997,Luxembourg,2
+1997,Malta,2
+1997,Mexico,14
+1997,Moldova,3
+1997,Morocco,8
+1997,Mozambique,3
+1997,Namibia,4
+1997,Netherlands,7
+1997,Nigeria,5
+1997,North Macedonia,3
+1997,Northern Ireland,3
+1997,Norway,7
+1997,Paraguay,6
+1997,Peru,4
+1997,Poland,2
+1997,Portugal,3
+1997,Qatar,8
+1997,Republic of Ireland,5
+1997,Romania,8
+1997,Russia,4
+1997,San Marino,1
+1997,Saudi Arabia,14
+1997,Scotland,5
+1997,Serbia,8
+1997,Sierra Leone,1
+1997,Slovakia,4
+1997,Slovenia,3
+1997,South Africa,12
+1997,South Korea,11
+1997,Spain,4
+1997,Sweden,4
+1997,Switzerland,4
+1997,Togo,4
+1997,Trinidad and Tobago,2
+1997,Tunisia,8
+1997,Turkey,2
+1997,Ukraine,4
+1997,United Arab Emirates,9
+1997,United States,11
+1997,Uruguay,8
+1997,Uzbekistan,8
+1997,Venezuela,3
+1997,Wales,2
+1997,Yemen,1
+1997,Zambia,4
+1997,Zimbabwe,1
+1998,Albania,4
+1998,Andorra,7
+1998,Argentina,4
+1998,Armenia,5
+1998,Australia,4
+1998,Austria,6
+1998,Azerbaijan,7
+1998,Belarus,4
+1998,Bolivia,4
+1998,Bosnia and Herzegovina,6
+1998,Brazil,9
+1998,Bulgaria,5
+1998,Chile,6
+1998,Colombia,4
+1998,Cook Islands,2
+1998,Croatia,4
+1998,Cyprus,5
+1998,Czech Republic,7
+1998,Denmark,5
+1998,Ecuador,3
+1998,Egypt,3
+1998,England,4
+1998,Estonia,6
+1998,Faroe Islands,5
+1998,Fiji,4
+1998,Finland,5
+1998,France,6
+1998,Georgia,7
+1998,Germany,8
+1998,Greece,5
+1998,Hungary,6
+1998,Iceland,6
+1998,Israel,5
+1998,Italy,5
+1998,Japan,3
+1998,Latvia,5
+1998,Liechtenstein,7
+1998,Lithuania,5
+1998,Luxembourg,5
+1998,Malta,6
+1998,Mexico,9
+1998,Moldova,5
+1998,New Zealand,7
+1998,North Macedonia,5
+1998,Northern Ireland,4
+1998,Norway,7
+1998,Paraguay,3
+1998,Peru,4
+1998,Poland,6
+1998,Portugal,7
+1998,Republic of Ireland,4
+1998,Romania,6
+1998,Russia,7
+1998,San Marino,7
+1998,Saudi Arabia,2
+1998,Scotland,5
+1998,Serbia,3
+1998,Slovakia,5
+1998,Slovenia,6
+1998,Spain,5
+1998,Sweden,4
+1998,Switzerland,4
+1998,Tahiti,4
+1998,Turkey,5
+1998,Ukraine,5
+1998,United States,3
+1998,Uruguay,6
+1998,Vanuatu,2
+1998,Venezuela,3
+1998,Wales,6
+1999,Albania,4
+1999,Algeria,6
+1999,Andorra,3
+1999,Angola,4
+1999,Anguilla,2
+1999,Antigua and Barbuda,5
+1999,Argentina,6
+1999,Armenia,3
+1999,Aruba,4
+1999,Australia,4
+1999,Austria,2
+1999,Azerbaijan,3
+1999,Bahamas,4
+1999,Barbados,8
+1999,Belarus,2
+1999,Belgium,3
+1999,Belize,3
+1999,Benin,2
+1999,Bermuda,3
+1999,Bolivia,5
+1999,Bosnia and Herzegovina,4
+1999,Botswana,2
+1999,Brazil,7
+1999,British Virgin Islands,2
+1999,Bulgaria,2
+1999,Burkina Faso,6
+1999,Cameroon,10
+1999,Canada,6
+1999,Cape Verde,1
+1999,Cayman Islands,1
+1999,Central African Republic,2
+1999,Chad,1
+1999,Chile,6
+1999,Colombia,9
+1999,Congo,5
+1999,Cook Islands,2
+1999,Costa Rica,5
+1999,Croatia,3
+1999,Cuba,5
+1999,Curaçao,2
+1999,Cyprus,3
+1999,Czech Republic,6
+1999,DR Congo,5
+1999,Denmark,7
+1999,Djibouti,2
+1999,Dominica,2
+1999,Dominican Republic,4
+1999,Ecuador,5
+1999,Egypt,6
+1999,El Salvador,6
+1999,England,6
+1999,Equatorial Guinea,2
+1999,Eritrea,1
+1999,Estonia,2
+1999,Eswatini,2
+1999,Ethiopia,2
+1999,Faroe Islands,3
+1999,Finland,2
+1999,France,8
+1999,Gabon,4
+1999,Gambia,2
+1999,Georgia,3
+1999,Germany,5
+1999,Ghana,7
+1999,Greece,3
+1999,Grenada,2
+1999,Guatemala,9
+1999,Guinea,2
+1999,Guinea-Bissau,1
+1999,Haiti,10
+1999,Honduras,11
+1999,Hungary,2
+1999,Iceland,3
+1999,Israel,5
+1999,Italy,6
+1999,Ivory Coast,6
+1999,Jamaica,4
+1999,Kenya,1
+1999,Latvia,4
+1999,Lesotho,2
+1999,Liberia,3
+1999,Libya,3
+1999,Liechtenstein,2
+1999,Lithuania,4
+1999,Luxembourg,3
+1999,Madagascar,4
+1999,Malawi,2
+1999,Mali,2
+1999,Malta,2
+1999,Mauritania,2
+1999,Mauritius,2
+1999,Mexico,7
+1999,Moldova,1
+1999,Montserrat,2
+1999,Morocco,5
+1999,Mozambique,2
+1999,Namibia,2
+1999,Netherlands,4
+1999,New Zealand,4
+1999,Nicaragua,4
+1999,Nigeria,8
+1999,North Macedonia,3
+1999,Northern Ireland,3
+1999,Norway,5
+1999,Panama,5
+1999,Paraguay,5
+1999,Peru,9
+1999,Poland,1
+1999,Portugal,8
+1999,Puerto Rico,2
+1999,Republic of Ireland,5
+1999,Romania,7
+1999,Russia,3
+1999,Rwanda,2
+1999,Saint Kitts and Nevis,4
+1999,Saint Lucia,2
+1999,Saint Vincent and the Grenadines,8
+1999,San Marino,1
+1999,Saudi Arabia,2
+1999,Scotland,5
+1999,Senegal,7
+1999,Serbia,8
+1999,Seychelles,2
+1999,Sierra Leone,4
+1999,Slovakia,3
+1999,Slovenia,8
+1999,Solomon Islands,4
+1999,Somalia,2
+1999,South Africa,9
+1999,South Korea,1
+1999,Spain,7
+1999,Sudan,3
+1999,Suriname,3
+1999,Sweden,5
+1999,Switzerland,3
+1999,São Tomé and Príncipe,2
+1999,Tahiti,2
+1999,Tanzania,2
+1999,Togo,5
+1999,Trinidad and Tobago,12
+1999,Tunisia,9
+1999,Turkey,6
+1999,Turks and Caicos Islands,2
+1999,Uganda,2
+1999,Ukraine,4
+1999,United States,7
+1999,United States Virgin Islands,2
+1999,Uruguay,5
+1999,Vanuatu,4
+1999,Venezuela,6
+1999,Wales,2
+1999,Zambia,7
+1999,Zimbabwe,3
+2000,Albania,6
+2000,Algeria,6
+2000,American Samoa,4
+2000,Andorra,8
+2000,Angola,6
+2000,Argentina,7
+2000,Armenia,5
+2000,Australia,11
+2000,Austria,5
+2000,Azerbaijan,6
+2000,Bahrain,6
+2000,Bangladesh,5
+2000,Barbados,4
+2000,Belarus,5
+2000,Belgium,5
+2000,Bolivia,9
+2000,Bosnia and Herzegovina,5
+2000,Brazil,14
+2000,Brunei,6
+2000,Bulgaria,7
+2000,Burkina Faso,5
+2000,Cambodia,6
+2000,Cameroon,9
+2000,Canada,5
+2000,Chile,11
+2000,China,11
+2000,Colombia,13
+2000,Congo,7
+2000,Cook Islands,4
+2000,Costa Rica,14
+2000,Croatia,4
+2000,Cyprus,7
+2000,Czech Republic,5
+2000,DR Congo,6
+2000,Denmark,6
+2000,Ecuador,10
+2000,Egypt,6
+2000,El Salvador,4
+2000,England,4
+2000,Estonia,9
+2000,Faroe Islands,6
+2000,Fiji,4
+2000,Finland,4
+2000,France,5
+2000,Georgia,5
+2000,Germany,6
+2000,Ghana,6
+2000,Greece,6
+2000,Guam,2
+2000,Guatemala,5
+2000,Honduras,16
+2000,Hong Kong,6
+2000,Hungary,5
+2000,Iceland,7
+2000,India,6
+2000,Indonesia,8
+2000,Iran,6
+2000,Iraq,10
+2000,Israel,6
+2000,Italy,6
+2000,Ivory Coast,7
+2000,Jamaica,9
+2000,Japan,10
+2000,Jordan,6
+2000,Kazakhstan,6
+2000,Kuwait,8
+2000,Kyrgyzstan,6
+2000,Laos,6
+2000,Latvia,9
+2000,Lebanon,9
+2000,Liberia,6
+2000,Libya,7
+2000,Liechtenstein,6
+2000,Lithuania,8
+2000,Luxembourg,7
+2000,Macau,6
+2000,Madagascar,6
+2000,Malawi,5
+2000,Malaysia,5
+2000,Maldives,6
+2000,Malta,6
+2000,Mexico,17
+2000,Moldova,5
+2000,Mongolia,6
+2000,Morocco,4
+2000,Namibia,7
+2000,Nepal,6
+2000,Netherlands,7
+2000,New Zealand,6
+2000,Nigeria,5
+2000,North Macedonia,6
+2000,Northern Ireland,7
+2000,Norway,5
+2000,Oman,6
+2000,Pakistan,6
+2000,Palestine,6
+2000,Panama,4
+2000,Paraguay,9
+2000,Peru,11
+2000,Philippines,6
+2000,Poland,6
+2000,Portugal,7
+2000,Qatar,8
+2000,Republic of Ireland,8
+2000,Romania,6
+2000,Russia,7
+2000,Saint Vincent and the Grenadines,4
+2000,Samoa,4
+2000,San Marino,7
+2000,Saudi Arabia,11
+2000,Scotland,5
+2000,Senegal,5
+2000,Serbia,6
+2000,Sierra Leone,6
+2000,Singapore,6
+2000,Slovakia,6
+2000,Slovenia,7
+2000,Solomon Islands,4
+2000,South Africa,5
+2000,South Korea,9
+2000,Spain,6
+2000,Sri Lanka,6
+2000,Sudan,7
+2000,Sweden,6
+2000,Switzerland,7
+2000,Syria,6
+2000,Tahiti,4
+2000,Taiwan,6
+2000,Tajikistan,2
+2000,Thailand,9
+2000,Togo,7
+2000,Tonga,4
+2000,Trinidad and Tobago,10
+2000,Tunisia,6
+2000,Turkey,7
+2000,Turkmenistan,6
+2000,Ukraine,5
+2000,United Arab Emirates,6
+2000,United States,8
+2000,Uruguay,12
+2000,Uzbekistan,9
+2000,Vanuatu,4
+2000,Venezuela,10
+2000,Vietnam,5
+2000,Wales,6
+2000,Yemen,6
+2000,Zambia,6
+2000,Zimbabwe,5
+2001,Albania,2
+2001,Algeria,3
+2001,Andorra,2
+2001,Argentina,8
+2001,Armenia,2
+2001,Australia,7
+2001,Austria,5
+2001,Azerbaijan,3
+2001,Bahrain,7
+2001,Belarus,3
+2001,Belgium,8
+2001,Bolivia,5
+2001,Bosnia and Herzegovina,2
+2001,Brazil,12
+2001,Bulgaria,3
+2001,Burkina Faso,2
+2001,Cameroon,8
+2001,Canada,4
+2001,Chile,4
+2001,China,11
+2001,Colombia,4
+2001,Costa Rica,11
+2001,Croatia,5
+2001,Cuba,1
+2001,Cyprus,3
+2001,Czech Republic,5
+2001,DR Congo,3
+2001,Denmark,7
+2001,Ecuador,8
+2001,Egypt,4
+2001,El Salvador,3
+2001,England,7
+2001,Estonia,3
+2001,Faroe Islands,4
+2001,Fiji,3
+2001,Finland,2
+2001,France,2
+2001,Georgia,3
+2001,Germany,10
+2001,Ghana,2
+2001,Greece,2
+2001,Guatemala,2
+2001,Haiti,3
+2001,Honduras,4
+2001,Hungary,3
+2001,Iceland,3
+2001,Iran,10
+2001,Iraq,8
+2001,Israel,1
+2001,Italy,5
+2001,Ivory Coast,2
+2001,Jamaica,4
+2001,Japan,4
+2001,Latvia,1
+2001,Liberia,3
+2001,Liechtenstein,2
+2001,Lithuania,1
+2001,Luxembourg,3
+2001,Mali,5
+2001,Malta,3
+2001,Martinique,3
+2001,Mexico,9
+2001,Moldova,3
+2001,Morocco,2
+2001,Netherlands,3
+2001,New Caledonia,3
+2001,New Zealand,5
+2001,Nigeria,7
+2001,North Macedonia,3
+2001,Northern Ireland,3
+2001,Norway,3
+2001,Oman,7
+2001,Papua New Guinea,2
+2001,Paraguay,9
+2001,Peru,5
+2001,Poland,6
+2001,Portugal,6
+2001,Qatar,7
+2001,Republic of Ireland,8
+2001,Romania,4
+2001,Russia,6
+2001,San Marino,1
+2001,Saudi Arabia,11
+2001,Scotland,2
+2001,Senegal,9
+2001,Serbia,4
+2001,Slovakia,3
+2001,Slovenia,8
+2001,Solomon Islands,2
+2001,South Africa,5
+2001,South Korea,9
+2001,Spain,6
+2001,Sweden,7
+2001,Switzerland,3
+2001,Tahiti,5
+2001,Thailand,7
+2001,Togo,1
+2001,Trinidad and Tobago,5
+2001,Tunisia,4
+2001,Turkey,12
+2001,Ukraine,5
+2001,United Arab Emirates,10
+2001,United States,12
+2001,Uruguay,9
+2001,Uzbekistan,8
+2001,Vanuatu,5
+2001,Venezuela,5
+2001,Wales,2
+2001,Zambia,2
+2002,Albania,5
+2002,Andorra,6
+2002,Armenia,5
+2002,Austria,6
+2002,Azerbaijan,6
+2002,Belarus,6
+2002,Belgium,6
+2002,Bosnia and Herzegovina,5
+2002,Brazil,8
+2002,Bulgaria,4
+2002,Cameroon,4
+2002,Canada,2
+2002,Colombia,8
+2002,Costa Rica,5
+2002,Croatia,4
+2002,Cuba,3
+2002,Cyprus,6
+2002,Czech Republic,5
+2002,Denmark,6
+2002,El Salvador,3
+2002,England,5
+2002,Estonia,5
+2002,Faroe Islands,5
+2002,Finland,6
+2002,France,10
+2002,Georgia,4
+2002,Germany,5
+2002,Greece,6
+2002,Guatemala,2
+2002,Honduras,1
+2002,Hungary,5
+2002,Iceland,5
+2002,Israel,4
+2002,Italy,5
+2002,Jamaica,3
+2002,Japan,3
+2002,Latvia,5
+2002,Liechtenstein,5
+2002,Lithuania,8
+2002,Luxembourg,5
+2002,Malta,7
+2002,Martinique,2
+2002,Mexico,4
+2002,Moldova,6
+2002,Netherlands,5
+2002,New Zealand,3
+2002,North Macedonia,6
+2002,Northern Ireland,3
+2002,Norway,6
+2002,Poland,4
+2002,Republic of Ireland,5
+2002,Romania,6
+2002,Russia,5
+2002,San Marino,7
+2002,Scotland,5
+2002,Serbia,5
+2002,Slovakia,6
+2002,Slovenia,4
+2002,Spain,5
+2002,Sweden,4
+2002,Switzerland,5
+2002,Turkey,11
+2002,Ukraine,5
+2002,United States,7
+2002,Wales,4
+2003,Afghanistan,2
+2003,Albania,2
+2003,Algeria,8
+2003,American Samoa,4
+2003,Andorra,2
+2003,Angola,4
+2003,Anguilla,1
+2003,Antigua and Barbuda,2
+2003,Argentina,12
+2003,Armenia,3
+2003,Aruba,2
+2003,Australia,5
+2003,Austria,2
+2003,Azerbaijan,2
+2003,Bahamas,2
+2003,Bahrain,6
+2003,Bangladesh,2
+2003,Barbados,2
+2003,Belarus,2
+2003,Belgium,2
+2003,Belize,2
+2003,Benin,8
+2003,Bermuda,4
+2003,Bolivia,10
+2003,Bosnia and Herzegovina,3
+2003,Botswana,4
+2003,Brazil,12
+2003,British Virgin Islands,2
+2003,Bulgaria,6
+2003,Burkina Faso,5
+2003,Burundi,1
+2003,Cameroon,5
+2003,Canada,2
+2003,Cape Verde,5
+2003,Cayman Islands,2
+2003,Chad,2
+2003,Chile,10
+2003,China,7
+2003,Colombia,13
+2003,Congo,5
+2003,Cook Islands,4
+2003,Costa Rica,6
+2003,Croatia,7
+2003,Cuba,4
+2003,Curaçao,4
+2003,Cyprus,2
+2003,Czech Republic,8
+2003,DR Congo,6
+2003,Denmark,5
+2003,Dominica,4
+2003,Dominican Republic,3
+2003,Ecuador,9
+2003,Egypt,5
+2003,El Salvador,2
+2003,England,6
+2003,Equatorial Guinea,2
+2003,Eritrea,1
+2003,Estonia,2
+2003,Eswatini,2
+2003,Ethiopia,1
+2003,Faroe Islands,3
+2003,Fiji,8
+2003,Finland,2
+2003,France,7
+2003,Gabon,4
+2003,Gambia,2
+2003,Georgia,3
+2003,Germany,4
+2003,Ghana,5
+2003,Greece,8
+2003,Grenada,4
+2003,Guatemala,2
+2003,Guinea,8
+2003,Guinea-Bissau,2
+2003,Guyana,2
+2003,Haiti,4
+2003,Honduras,2
+2003,Hong Kong,3
+2003,Hungary,2
+2003,Iceland,2
+2003,India,3
+2003,Indonesia,6
+2003,Iran,6
+2003,Iraq,7
+2003,Israel,3
+2003,Italy,5
+2003,Ivory Coast,3
+2003,Jamaica,2
+2003,Japan,6
+2003,Jordan,5
+2003,Kenya,4
+2003,Kuwait,6
+2003,Kyrgyzstan,5
+2003,Laos,4
+2003,Latvia,7
+2003,Lebanon,3
+2003,Lesotho,1
+2003,Liberia,4
+2003,Libya,4
+2003,Liechtenstein,3
+2003,Lithuania,2
+2003,Luxembourg,3
+2003,Macau,2
+2003,Madagascar,2
+2003,Malawi,4
+2003,Malaysia,3
+2003,Maldives,4
+2003,Mali,11
+2003,Malta,1
+2003,Mauritania,2
+2003,Mauritius,2
+2003,Mexico,6
+2003,Moldova,2
+2003,Mongolia,2
+2003,Montserrat,2
+2003,Morocco,8
+2003,Mozambique,2
+2003,Namibia,2
+2003,Netherlands,9
+2003,New Caledonia,3
+2003,New Zealand,5
+2003,Nicaragua,2
+2003,Niger,2
+2003,Nigeria,9
+2003,North Korea,2
+2003,North Macedonia,2
+2003,Northern Ireland,2
+2003,Norway,4
+2003,Oman,6
+2003,Pakistan,2
+2003,Palestine,3
+2003,Panama,2
+2003,Papua New Guinea,4
+2003,Paraguay,9
+2003,Peru,9
+2003,Poland,3
+2003,Portugal,6
+2003,Qatar,6
+2003,Republic of Ireland,2
+2003,Romania,2
+2003,Russia,7
+2003,Rwanda,8
+2003,Saint Kitts and Nevis,4
+2003,Saint Lucia,4
+2003,Saint Vincent and the Grenadines,2
+2003,Samoa,4
+2003,San Marino,1
+2003,Saudi Arabia,6
+2003,Scotland,5
+2003,Senegal,6
+2003,Serbia,3
+2003,Seychelles,2
+2003,Sierra Leone,2
+2003,Singapore,3
+2003,Slovakia,2
+2003,Slovenia,5
+2003,Solomon Islands,9
+2003,Somalia,2
+2003,South Africa,6
+2003,South Korea,5
+2003,Spain,7
+2003,Sri Lanka,4
+2003,Sudan,4
+2003,Suriname,4
+2003,Sweden,6
+2003,Switzerland,4
+2003,Syria,3
+2003,São Tomé and Príncipe,2
+2003,Tahiti,7
+2003,Taiwan,5
+2003,Tajikistan,4
+2003,Tanzania,1
+2003,Thailand,6
+2003,Togo,4
+2003,Tonga,4
+2003,Trinidad and Tobago,2
+2003,Tunisia,8
+2003,Turkey,3
+2003,Turkmenistan,8
+2003,Turks and Caicos Islands,2
+2003,Uganda,5
+2003,Ukraine,1
+2003,United Arab Emirates,4
+2003,United States,2
+2003,United States Virgin Islands,2
+2003,Uruguay,13
+2003,Uzbekistan,7
+2003,Vanuatu,9
+2003,Venezuela,9
+2003,Vietnam,3
+2003,Wales,5
+2003,Yemen,3
+2003,Zambia,5
+2003,Zimbabwe,8
+2004,Albania,9
+2004,Algeria,5
+2004,Andorra,7
+2004,Angola,5
+2004,Argentina,12
+2004,Armenia,9
+2004,Australia,5
+2004,Austria,6
+2004,Azerbaijan,6
+2004,Bahrain,9
+2004,Belarus,5
+2004,Belgium,5
+2004,Benin,4
+2004,Bolivia,7
+2004,Bosnia and Herzegovina,5
+2004,Botswana,5
+2004,Brazil,12
+2004,Bulgaria,6
+2004,Burkina Faso,5
+2004,Cameroon,5
+2004,Canada,9
+2004,Cape Verde,5
+2004,Chile,6
+2004,China,5
+2004,Colombia,10
+2004,Congo,4
+2004,Costa Rica,12
+2004,Croatia,6
+2004,Cuba,3
+2004,Cyprus,6
+2004,Czech Republic,8
+2004,DR Congo,4
+2004,Denmark,8
+2004,Ecuador,8
+2004,Egypt,5
+2004,El Salvador,5
+2004,England,6
+2004,Estonia,9
+2004,Faroe Islands,6
+2004,Finland,7
+2004,France,3
+2004,Gabon,5
+2004,Georgia,7
+2004,Germany,5
+2004,Ghana,4
+2004,Greece,9
+2004,Guatemala,13
+2004,Guinea,6
+2004,Honduras,10
+2004,Hong Kong,3
+2004,Hungary,6
+2004,Iceland,6
+2004,India,2
+2004,Indonesia,3
+2004,Iran,9
+2004,Iraq,3
+2004,Israel,6
+2004,Italy,5
+2004,Ivory Coast,4
+2004,Jamaica,9
+2004,Japan,13
+2004,Jordan,3
+2004,Kazakhstan,7
+2004,Kenya,6
+2004,Kuwait,7
+2004,Kyrgyzstan,3
+2004,Laos,3
+2004,Latvia,9
+2004,Lebanon,2
+2004,Liberia,5
+2004,Libya,4
+2004,Liechtenstein,8
+2004,Lithuania,6
+2004,Luxembourg,8
+2004,Malawi,5
+2004,Malaysia,3
+2004,Maldives,3
+2004,Mali,5
+2004,Malta,6
+2004,Mexico,19
+2004,Moldova,5
+2004,Morocco,5
+2004,Netherlands,8
+2004,Nigeria,5
+2004,North Korea,8
+2004,North Macedonia,8
+2004,Northern Ireland,5
+2004,Norway,4
+2004,Oman,2
+2004,Palestine,3
+2004,Panama,15
+2004,Paraguay,8
+2004,Peru,7
+2004,Poland,7
+2004,Portugal,8
+2004,Qatar,3
+2004,Republic of Ireland,6
+2004,Romania,9
+2004,Russia,7
+2004,Rwanda,5
+2004,Saint Kitts and Nevis,6
+2004,Saint Vincent and the Grenadines,6
+2004,San Marino,7
+2004,Saudi Arabia,7
+2004,Scotland,4
+2004,Senegal,4
+2004,Serbia,3
+2004,Singapore,3
+2004,Slovakia,8
+2004,Slovenia,5
+2004,Solomon Islands,2
+2004,South Africa,9
+2004,South Korea,8
+2004,Spain,5
+2004,Sri Lanka,3
+2004,Sudan,4
+2004,Sweden,6
+2004,Switzerland,5
+2004,Syria,3
+2004,Taiwan,3
+2004,Tajikistan,3
+2004,Thailand,3
+2004,Togo,5
+2004,Trinidad and Tobago,13
+2004,Tunisia,8
+2004,Turkey,7
+2004,Turkmenistan,3
+2004,Uganda,5
+2004,Ukraine,9
+2004,United Arab Emirates,3
+2004,United States,15
+2004,Uruguay,6
+2004,Uzbekistan,8
+2004,Venezuela,7
+2004,Vietnam,2
+2004,Wales,6
+2004,Yemen,3
+2004,Zambia,5
+2004,Zimbabwe,5
+2005,Albania,3
+2005,Algeria,1
+2005,Andorra,3
+2005,Angola,6
+2005,Argentina,7
+2005,Armenia,3
+2005,Australia,8
+2005,Austria,3
+2005,Azerbaijan,2
+2005,Bahrain,4
+2005,Belarus,4
+2005,Belgium,4
+2005,Benin,3
+2005,Bolivia,3
+2005,Bosnia and Herzegovina,4
+2005,Botswana,2
+2005,Brazil,8
+2005,Bulgaria,4
+2005,Burkina Faso,2
+2005,Cameroon,6
+2005,Cape Verde,2
+2005,Chile,2
+2005,Colombia,3
+2005,Congo,2
+2005,Costa Rica,8
+2005,Croatia,5
+2005,Cyprus,4
+2005,Czech Republic,9
+2005,DR Congo,5
+2005,Denmark,4
+2005,Ecuador,5
+2005,Egypt,6
+2005,England,8
+2005,Estonia,3
+2005,Faroe Islands,4
+2005,Finland,4
+2005,France,10
+2005,Gabon,1
+2005,Georgia,4
+2005,Germany,7
+2005,Ghana,9
+2005,Greece,3
+2005,Guatemala,4
+2005,Guinea,6
+2005,Hungary,3
+2005,Iceland,3
+2005,Iran,4
+2005,Israel,3
+2005,Italy,11
+2005,Ivory Coast,10
+2005,Japan,3
+2005,Kazakhstan,4
+2005,Kenya,3
+2005,Kuwait,1
+2005,Latvia,4
+2005,Liberia,2
+2005,Libya,3
+2005,Liechtenstein,3
+2005,Lithuania,4
+2005,Luxembourg,4
+2005,Malawi,2
+2005,Mali,2
+2005,Malta,3
+2005,Mexico,8
+2005,Moldova,4
+2005,Morocco,3
+2005,Netherlands,6
+2005,Nigeria,8
+2005,North Korea,1
+2005,North Macedonia,2
+2005,Northern Ireland,4
+2005,Norway,6
+2005,Panama,5
+2005,Paraguay,6
+2005,Peru,3
+2005,Poland,6
+2005,Portugal,9
+2005,Republic of Ireland,2
+2005,Romania,3
+2005,Russia,3
+2005,Rwanda,2
+2005,San Marino,3
+2005,Saudi Arabia,4
+2005,Scotland,4
+2005,Senegal,8
+2005,Serbia,7
+2005,Slovakia,4
+2005,Slovenia,4
+2005,Solomon Islands,2
+2005,South Africa,5
+2005,South Korea,4
+2005,Spain,9
+2005,Sudan,2
+2005,Sweden,7
+2005,Switzerland,7
+2005,Togo,8
+2005,Trinidad and Tobago,9
+2005,Tunisia,10
+2005,Turkey,5
+2005,Uganda,2
+2005,Ukraine,7
+2005,United States,7
+2005,Uruguay,4
+2005,Uzbekistan,2
+2005,Venezuela,3
+2005,Wales,4
+2005,Zambia,5
+2005,Zimbabwe,5
+2006,Albania,5
+2006,Andorra,7
+2006,Argentina,6
+2006,Armenia,6
+2006,Australia,4
+2006,Azerbaijan,8
+2006,Bahrain,3
+2006,Belarus,7
+2006,Belgium,7
+2006,Bolivia,3
+2006,Bosnia and Herzegovina,7
+2006,Brazil,6
+2006,Bulgaria,6
+2006,Canada,5
+2006,Chile,3
+2006,China,3
+2006,Colombia,3
+2006,Costa Rica,4
+2006,Croatia,5
+2006,Cuba,3
+2006,Cyprus,6
+2006,Czech Republic,6
+2006,Denmark,4
+2006,Ecuador,3
+2006,El Salvador,3
+2006,England,5
+2006,Estonia,7
+2006,Faroe Islands,8
+2006,Finland,7
+2006,France,7
+2006,Georgia,8
+2006,Germany,7
+2006,Greece,7
+2006,Guadeloupe,5
+2006,Guatemala,4
+2006,Haiti,3
+2006,Honduras,4
+2006,Hungary,7
+2006,Iceland,7
+2006,Indonesia,3
+2006,Iran,3
+2006,Iraq,4
+2006,Israel,7
+2006,Italy,7
+2006,Japan,5
+2006,Kazakhstan,7
+2006,Latvia,6
+2006,Liechtenstein,7
+2006,Lithuania,7
+2006,Luxembourg,7
+2006,Malaysia,3
+2006,Malta,7
+2006,Mexico,11
+2006,Moldova,7
+2006,Netherlands,5
+2006,North Macedonia,6
+2006,Northern Ireland,5
+2006,Norway,7
+2006,Oman,2
+2006,Panama,4
+2006,Paraguay,4
+2006,Peru,4
+2006,Poland,9
+2006,Portugal,7
+2006,Qatar,3
+2006,Republic of Ireland,7
+2006,Romania,6
+2006,Russia,5
+2006,San Marino,6
+2006,Saudi Arabia,6
+2006,Scotland,7
+2006,Serbia,7
+2006,Slovakia,7
+2006,Slovenia,6
+2006,South Korea,3
+2006,Spain,7
+2006,Sweden,6
+2006,Thailand,3
+2006,Trinidad and Tobago,3
+2006,Turkey,6
+2006,Ukraine,6
+2006,United Arab Emirates,3
+2006,United States,9
+2006,Uruguay,5
+2006,Uzbekistan,4
+2006,Venezuela,3
+2006,Vietnam,4
+2006,Wales,5
+2007,Afghanistan,2
+2007,Albania,4
+2007,Algeria,4
+2007,Andorra,5
+2007,Angola,6
+2007,Anguilla,2
+2007,Antigua and Barbuda,4
+2007,Argentina,5
+2007,Armenia,4
+2007,Aruba,2
+2007,Australia,5
+2007,Austria,3
+2007,Azerbaijan,4
+2007,Bahamas,4
+2007,Bahrain,7
+2007,Bangladesh,2
+2007,Barbados,4
+2007,Belarus,5
+2007,Belgium,5
+2007,Belize,4
+2007,Benin,7
+2007,Bermuda,4
+2007,Bolivia,5
+2007,Bosnia and Herzegovina,5
+2007,Botswana,3
+2007,Brazil,4
+2007,British Virgin Islands,2
+2007,Bulgaria,5
+2007,Burkina Faso,4
+2007,Burundi,4
+2007,Cambodia,2
+2007,Cameroon,9
+2007,Canada,2
+2007,Cape Verde,4
+2007,Cayman Islands,2
+2007,Chad,3
+2007,Chile,6
+2007,China,6
+2007,Colombia,3
+2007,Comoros,2
+2007,Congo,4
+2007,Costa Rica,2
+2007,Croatia,9
+2007,Cuba,2
+2007,Curaçao,3
+2007,Cyprus,6
+2007,Czech Republic,8
+2007,DR Congo,4
+2007,Denmark,5
+2007,Djibouti,5
+2007,Dominica,2
+2007,Dominican Republic,1
+2007,Ecuador,5
+2007,Egypt,10
+2007,El Salvador,4
+2007,England,5
+2007,Equatorial Guinea,4
+2007,Estonia,7
+2007,Eswatini,2
+2007,Faroe Islands,4
+2007,Fiji,3
+2007,Finland,2
+2007,France,6
+2007,Gabon,4
+2007,Gambia,3
+2007,Georgia,4
+2007,Germany,9
+2007,Ghana,10
+2007,Greece,8
+2007,Grenada,3
+2007,Guatemala,2
+2007,Guinea,7
+2007,Guinea-Bissau,1
+2007,Guyana,2
+2007,Haiti,1
+2007,Honduras,2
+2007,Hong Kong,3
+2007,Hungary,5
+2007,Iceland,5
+2007,India,2
+2007,Indonesia,2
+2007,Iran,4
+2007,Iraq,7
+2007,Israel,4
+2007,Italy,7
+2007,Ivory Coast,9
+2007,Jamaica,2
+2007,Japan,6
+2007,Jordan,8
+2007,Kazakhstan,6
+2007,Kenya,3
+2007,Kuwait,6
+2007,Kyrgyzstan,2
+2007,Latvia,8
+2007,Lebanon,8
+2007,Lesotho,4
+2007,Liberia,4
+2007,Libya,4
+2007,Liechtenstein,5
+2007,Lithuania,7
+2007,Luxembourg,5
+2007,Macau,2
+2007,Madagascar,4
+2007,Malawi,4
+2007,Malaysia,1
+2007,Maldives,2
+2007,Mali,6
+2007,Malta,5
+2007,Mauritania,2
+2007,Mauritius,4
+2007,Mexico,2
+2007,Moldova,5
+2007,Mongolia,2
+2007,Montserrat,1
+2007,Morocco,6
+2007,Mozambique,4
+2007,Myanmar,2
+2007,Namibia,7
+2007,Nepal,2
+2007,Netherlands,10
+2007,New Caledonia,4
+2007,New Zealand,3
+2007,Nicaragua,2
+2007,Niger,4
+2007,Nigeria,7
+2007,North Korea,5
+2007,North Macedonia,5
+2007,Northern Ireland,6
+2007,Norway,5
+2007,Oman,8
+2007,Pakistan,1
+2007,Palestine,1
+2007,Panama,2
+2007,Paraguay,5
+2007,Peru,5
+2007,Poland,7
+2007,Portugal,10
+2007,Puerto Rico,3
+2007,Qatar,7
+2007,Republic of Ireland,4
+2007,Romania,7
+2007,Russia,10
+2007,Rwanda,3
+2007,Saint Kitts and Nevis,2
+2007,Saint Lucia,4
+2007,Saint Vincent and the Grenadines,2
+2007,San Marino,6
+2007,Saudi Arabia,5
+2007,Scotland,5
+2007,Senegal,6
+2007,Serbia,5
+2007,Seychelles,4
+2007,Sierra Leone,4
+2007,Singapore,7
+2007,Slovakia,5
+2007,Slovenia,4
+2007,Somalia,1
+2007,South Africa,6
+2007,South Korea,4
+2007,Spain,10
+2007,Sri Lanka,2
+2007,Sudan,6
+2007,Suriname,3
+2007,Sweden,7
+2007,Switzerland,3
+2007,Syria,9
+2007,Taiwan,2
+2007,Tajikistan,4
+2007,Tanzania,3
+2007,Thailand,10
+2007,Timor-Leste,2
+2007,Togo,2
+2007,Trinidad and Tobago,2
+2007,Tunisia,7
+2007,Turkey,11
+2007,Turkmenistan,8
+2007,Turks and Caicos Islands,2
+2007,Uganda,3
+2007,Ukraine,6
+2007,United Arab Emirates,7
+2007,United States,2
+2007,United States Virgin Islands,1
+2007,Uruguay,6
+2007,Uzbekistan,7
+2007,Vanuatu,4
+2007,Venezuela,6
+2007,Vietnam,2
+2007,Wales,5
+2007,Yemen,4
+2007,Zambia,5
+2007,Zimbabwe,2
+2008,Albania,5
+2008,Algeria,3
+2008,Andorra,7
+2008,Angola,2
+2008,Argentina,8
+2008,Armenia,6
+2008,Australia,6
+2008,Austria,6
+2008,Azerbaijan,4
+2008,Bahrain,8
+2008,Belarus,5
+2008,Belgium,6
+2008,Benin,5
+2008,Bolivia,7
+2008,Bosnia and Herzegovina,6
+2008,Botswana,2
+2008,Brazil,11
+2008,Bulgaria,4
+2008,Burkina Faso,4
+2008,Burundi,2
+2008,Cameroon,3
+2008,Canada,10
+2008,Cape Verde,2
+2008,Chad,3
+2008,Chile,7
+2008,Colombia,7
+2008,Congo,2
+2008,Costa Rica,16
+2008,Croatia,5
+2008,Cuba,6
+2008,Cyprus,6
+2008,Czech Republic,4
+2008,DR Congo,2
+2008,Denmark,5
+2008,Djibouti,2
+2008,Ecuador,7
+2008,Egypt,8
+2008,El Salvador,13
+2008,England,7
+2008,Equatorial Guinea,2
+2008,Estonia,5
+2008,Eswatini,1
+2008,Faroe Islands,5
+2008,Fiji,3
+2008,Finland,6
+2008,France,5
+2008,Gabon,4
+2008,Gambia,2
+2008,Georgia,5
+2008,Germany,6
+2008,Ghana,5
+2008,Greece,6
+2008,Grenada,3
+2008,Guadeloupe,4
+2008,Guatemala,5
+2008,Guinea,4
+2008,Haiti,9
+2008,Honduras,16
+2008,Hungary,5
+2008,Iceland,7
+2008,Iran,7
+2008,Iraq,1
+2008,Israel,6
+2008,Italy,8
+2008,Ivory Coast,5
+2008,Jamaica,9
+2008,Japan,7
+2008,Kazakhstan,7
+2008,Kenya,5
+2008,Latvia,6
+2008,Lesotho,2
+2008,Liberia,1
+2008,Libya,2
+2008,Liechtenstein,5
+2008,Lithuania,7
+2008,Luxembourg,5
+2008,Madagascar,2
+2008,Malawi,5
+2008,Mali,5
+2008,Malta,7
+2008,Mauritania,2
+2008,Mauritius,2
+2008,Mexico,17
+2008,Moldova,5
+2008,Montenegro,4
+2008,Morocco,2
+2008,Mozambique,4
+2008,Namibia,2
+2008,Netherlands,7
+2008,New Caledonia,2
+2008,New Zealand,5
+2008,Nicaragua,3
+2008,Niger,2
+2008,Nigeria,3
+2008,North Korea,6
+2008,North Macedonia,5
+2008,Northern Ireland,6
+2008,Norway,3
+2008,Panama,4
+2008,Paraguay,8
+2008,Peru,8
+2008,Poland,6
+2008,Portugal,3
+2008,Qatar,7
+2008,Republic of Ireland,6
+2008,Romania,6
+2008,Russia,6
+2008,Rwanda,3
+2008,San Marino,7
+2008,Saudi Arabia,6
+2008,Scotland,4
+2008,Senegal,2
+2008,Serbia,7
+2008,Seychelles,2
+2008,Sierra Leone,2
+2008,Slovakia,6
+2008,Slovenia,5
+2008,South Africa,6
+2008,South Korea,7
+2008,Spain,11
+2008,Sudan,6
+2008,Suriname,6
+2008,Sweden,3
+2008,Switzerland,6
+2008,Tanzania,2
+2008,Togo,4
+2008,Trinidad and Tobago,10
+2008,Tunisia,3
+2008,Turkey,5
+2008,Uganda,2
+2008,Ukraine,5
+2008,United Arab Emirates,8
+2008,United States,22
+2008,Uruguay,6
+2008,Uzbekistan,8
+2008,Vanuatu,2
+2008,Venezuela,8
+2008,Wales,7
+2008,Zambia,4
+2008,Zimbabwe,1
+2009,Albania,2
+2009,Algeria,11
+2009,Andorra,3
+2009,Angola,3
+2009,Argentina,9
+2009,Armenia,4
+2009,Australia,3
+2009,Austria,4
+2009,Azerbaijan,5
+2009,Bahrain,2
+2009,Belarus,4
+2009,Belgium,4
+2009,Benin,6
+2009,Bolivia,4
+2009,Bosnia and Herzegovina,6
+2009,Brazil,7
+2009,Bulgaria,4
+2009,Burkina Faso,4
+2009,Cameroon,11
+2009,Chile,8
+2009,Colombia,4
+2009,Costa Rica,7
+2009,Croatia,4
+2009,Cyprus,4
+2009,Czech Republic,3
+2009,Denmark,7
+2009,Ecuador,4
+2009,Egypt,10
+2009,El Salvador,5
+2009,England,6
+2009,Estonia,5
+2009,Faroe Islands,5
+2009,Finland,4
+2009,France,9
+2009,Gabon,6
+2009,Georgia,3
+2009,Germany,11
+2009,Ghana,13
+2009,Greece,8
+2009,Guinea,3
+2009,Honduras,7
+2009,Hungary,4
+2009,Iceland,1
+2009,Israel,3
+2009,Italy,7
+2009,Ivory Coast,7
+2009,Japan,3
+2009,Kazakhstan,3
+2009,Kenya,3
+2009,Latvia,4
+2009,Liechtenstein,4
+2009,Lithuania,4
+2009,Luxembourg,3
+2009,Malawi,6
+2009,Mali,6
+2009,Malta,2
+2009,Mexico,9
+2009,Moldova,3
+2009,Montenegro,3
+2009,Morocco,3
+2009,Mozambique,6
+2009,Netherlands,8
+2009,New Zealand,3
+2009,Nigeria,11
+2009,North Korea,3
+2009,North Macedonia,2
+2009,Northern Ireland,2
+2009,Norway,3
+2009,Paraguay,7
+2009,Peru,4
+2009,Poland,4
+2009,Portugal,8
+2009,Republic of Ireland,4
+2009,Romania,4
+2009,Russia,6
+2009,Rwanda,2
+2009,San Marino,3
+2009,Saudi Arabia,1
+2009,Scotland,3
+2009,Serbia,6
+2009,Slovakia,8
+2009,Slovenia,9
+2009,South Africa,3
+2009,South Korea,4
+2009,Spain,11
+2009,Sudan,3
+2009,Sweden,4
+2009,Switzerland,5
+2009,Togo,3
+2009,Trinidad and Tobago,5
+2009,Tunisia,5
+2009,Turkey,4
+2009,Ukraine,4
+2009,United States,9
+2009,Uruguay,12
+2009,Venezuela,3
+2009,Wales,3
+2009,Zambia,5
+2010,Afghanistan,2
+2010,Albania,6
+2010,Andorra,6
+2010,Anguilla,2
+2010,Argentina,3
+2010,Armenia,5
+2010,Aruba,2
+2010,Australia,6
+2010,Austria,6
+2010,Azerbaijan,6
+2010,Bahamas,2
+2010,Bahrain,3
+2010,Bangladesh,3
+2010,Belarus,5
+2010,Belgium,7
+2010,Belize,2
+2010,Bolivia,3
+2010,Bosnia and Herzegovina,6
+2010,Brazil,2
+2010,British Virgin Islands,2
+2010,Bulgaria,4
+2010,Cambodia,2
+2010,Canada,3
+2010,Chile,4
+2010,China,5
+2010,Colombia,3
+2010,Costa Rica,7
+2010,Croatia,5
+2010,Cuba,3
+2010,Cyprus,3
+2010,Czech Republic,5
+2010,Denmark,5
+2010,Dominican Republic,2
+2010,Ecuador,2
+2010,El Salvador,4
+2010,England,4
+2010,Estonia,7
+2010,Faroe Islands,7
+2010,Finland,6
+2010,France,6
+2010,Georgia,6
+2010,Germany,7
+2010,Greece,5
+2010,Grenada,3
+2010,Guadeloupe,3
+2010,Guatemala,3
+2010,Honduras,4
+2010,Hong Kong,2
+2010,Hungary,7
+2010,Iceland,4
+2010,India,5
+2010,Indonesia,2
+2010,Iran,6
+2010,Iraq,5
+2010,Israel,6
+2010,Italy,4
+2010,Jamaica,4
+2010,Japan,6
+2010,Jordan,6
+2010,Kazakhstan,6
+2010,Kuwait,5
+2010,Kyrgyzstan,2
+2010,Laos,4
+2010,Latvia,6
+2010,Lebanon,2
+2010,Liechtenstein,5
+2010,Lithuania,4
+2010,Luxembourg,6
+2010,Macau,2
+2010,Malaysia,4
+2010,Maldives,2
+2010,Malta,6
+2010,Mexico,9
+2010,Moldova,6
+2010,Mongolia,2
+2010,Montenegro,4
+2010,Montserrat,2
+2010,Myanmar,4
+2010,Nepal,4
+2010,Netherlands,6
+2010,North Korea,2
+2010,North Macedonia,6
+2010,Northern Ireland,3
+2010,Norway,5
+2010,Oman,2
+2010,Pakistan,1
+2010,Palestine,4
+2010,Panama,5
+2010,Paraguay,3
+2010,Peru,6
+2010,Philippines,4
+2010,Portugal,5
+2010,Qatar,6
+2010,Republic of Ireland,6
+2010,Romania,5
+2010,Russia,5
+2010,Saint Lucia,2
+2010,San Marino,7
+2010,Saudi Arabia,5
+2010,Scotland,3
+2010,Serbia,5
+2010,Singapore,2
+2010,Slovakia,6
+2010,Slovenia,6
+2010,South Korea,6
+2010,Spain,5
+2010,Sri Lanka,2
+2010,Sweden,6
+2010,Switzerland,4
+2010,Syria,3
+2010,Taiwan,2
+2010,Thailand,2
+2010,Timor-Leste,2
+2010,Turkey,6
+2010,Turkmenistan,2
+2010,Turks and Caicos Islands,2
+2010,United Arab Emirates,4
+2010,United States,6
+2010,United States Virgin Islands,2
+2010,Uruguay,6
+2010,Uzbekistan,8
+2010,Venezuela,4
+2010,Vietnam,4
+2010,Wales,4
+2010,Yemen,1
+2011,Albania,4
+2011,Algeria,2
+2011,American Samoa,3
+2011,Andorra,4
+2011,Angola,4
+2011,Antigua and Barbuda,7
+2011,Argentina,5
+2011,Armenia,4
+2011,Australia,7
+2011,Austria,2
+2011,Azerbaijan,4
+2011,Bahrain,4
+2011,Barbados,6
+2011,Belarus,3
+2011,Belgium,3
+2011,Belize,6
+2011,Benin,2
+2011,Bermuda,6
+2011,Bolivia,6
+2011,Bosnia and Herzegovina,5
+2011,Botswana,5
+2011,Bulgaria,3
+2011,Burkina Faso,4
+2011,Burundi,2
+2011,Cameroon,2
+2011,Canada,5
+2011,Cape Verde,2
+2011,Cayman Islands,6
+2011,Central African Republic,2
+2011,Chad,2
+2011,Chile,6
+2011,China,6
+2011,Colombia,5
+2011,Comoros,2
+2011,Congo,3
+2011,Cook Islands,3
+2011,Costa Rica,2
+2011,Croatia,8
+2011,Cuba,2
+2011,Curaçao,6
+2011,Cyprus,4
+2011,Czech Republic,9
+2011,DR Congo,4
+2011,Denmark,6
+2011,Djibouti,2
+2011,Dominica,4
+2011,Dominican Republic,6
+2011,Ecuador,5
+2011,Egypt,2
+2011,El Salvador,8
+2011,England,6
+2011,Equatorial Guinea,8
+2011,Eritrea,2
+2011,Estonia,7
+2011,Eswatini,2
+2011,Ethiopia,3
+2011,Faroe Islands,3
+2011,Fiji,2
+2011,Finland,5
+2011,France,7
+2011,Gabon,5
+2011,Gambia,2
+2011,Georgia,3
+2011,Germany,8
+2011,Ghana,8
+2011,Greece,8
+2011,Grenada,6
+2011,Guatemala,8
+2011,Guinea,5
+2011,Guinea-Bissau,2
+2011,Guyana,8
+2011,Haiti,6
+2011,Honduras,1
+2011,Hungary,2
+2011,Iceland,3
+2011,Indonesia,6
+2011,Iran,7
+2011,Iraq,8
+2011,Israel,3
+2011,Italy,9
+2011,Ivory Coast,7
+2011,Jamaica,1
+2011,Japan,9
+2011,Jordan,8
+2011,Kazakhstan,3
+2011,Kenya,3
+2011,Kuwait,6
+2011,Latvia,6
+2011,Lebanon,9
+2011,Lesotho,3
+2011,Liberia,1
+2011,Libya,5
+2011,Liechtenstein,2
+2011,Lithuania,4
+2011,Luxembourg,3
+2011,Madagascar,2
+2011,Malawi,1
+2011,Mali,8
+2011,Malta,4
+2011,Mexico,2
+2011,Moldova,4
+2011,Montenegro,5
+2011,Morocco,5
+2011,Mozambique,3
+2011,Namibia,4
+2011,Netherlands,7
+2011,New Caledonia,5
+2011,New Zealand,5
+2011,Nicaragua,4
+2011,Niger,4
+2011,Nigeria,2
+2011,North Korea,6
+2011,North Macedonia,4
+2011,Northern Ireland,5
+2011,Norway,3
+2011,Oman,6
+2011,Panama,6
+2011,Papua New Guinea,3
+2011,Paraguay,5
+2011,Peru,5
+2011,Poland,3
+2011,Portugal,8
+2011,Puerto Rico,4
+2011,Qatar,6
+2011,Republic of Ireland,7
+2011,Romania,3
+2011,Russia,6
+2011,Rwanda,4
+2011,Saint Kitts and Nevis,4
+2011,Saint Lucia,6
+2011,Saint Vincent and the Grenadines,6
+2011,Samoa,6
+2011,San Marino,3
+2011,Saudi Arabia,3
+2011,Scotland,4
+2011,Senegal,5
+2011,Serbia,4
+2011,Seychelles,2
+2011,Sierra Leone,2
+2011,Singapore,6
+2011,Slovakia,3
+2011,Slovenia,3
+2011,Solomon Islands,4
+2011,Somalia,1
+2011,South Africa,2
+2011,South Korea,8
+2011,Spain,8
+2011,Sudan,4
+2011,Suriname,6
+2011,Sweden,7
+2011,Switzerland,3
+2011,São Tomé and Príncipe,2
+2011,Tahiti,5
+2011,Tajikistan,6
+2011,Tanzania,4
+2011,Thailand,5
+2011,Togo,4
+2011,Tonga,3
+2011,Trinidad and Tobago,6
+2011,Tunisia,6
+2011,Turkey,4
+2011,Uganda,2
+2011,Ukraine,3
+2011,United Arab Emirates,6
+2011,United States,2
+2011,United States Virgin Islands,6
+2011,Uruguay,5
+2011,Uzbekistan,8
+2011,Vanuatu,3
+2011,Venezuela,6
+2011,Wales,4
+2011,Zambia,6
+2011,Zimbabwe,1
+2012,Albania,6
+2012,Algeria,6
+2012,Andorra,6
+2012,Angola,5
+2012,Antigua and Barbuda,4
+2012,Argentina,7
+2012,Armenia,6
+2012,Australia,6
+2012,Austria,5
+2012,Azerbaijan,6
+2012,Belarus,6
+2012,Belgium,7
+2012,Belize,3
+2012,Benin,3
+2012,Bolivia,7
+2012,Bosnia and Herzegovina,5
+2012,Botswana,2
+2012,Brazil,5
+2012,Bulgaria,5
+2012,Burkina Faso,8
+2012,Cameroon,1
+2012,Canada,6
+2012,Cape Verde,4
+2012,Central African Republic,3
+2012,Chile,7
+2012,Colombia,6
+2012,Congo,2
+2012,Costa Rica,13
+2012,Croatia,7
+2012,Cuba,8
+2012,Cyprus,5
+2012,Czech Republic,3
+2012,DR Congo,2
+2012,Denmark,5
+2012,Ecuador,7
+2012,Egypt,3
+2012,El Salvador,8
+2012,England,6
+2012,Equatorial Guinea,1
+2012,Estonia,6
+2012,Ethiopia,5
+2012,Faroe Islands,6
+2012,Finland,5
+2012,France,5
+2012,Gabon,2
+2012,Gambia,3
+2012,Georgia,5
+2012,Germany,6
+2012,Ghana,9
+2012,Greece,5
+2012,Guatemala,4
+2012,Guinea,2
+2012,Guyana,4
+2012,Haiti,3
+2012,Honduras,14
+2012,Hungary,6
+2012,Iceland,6
+2012,Iran,6
+2012,Iraq,6
+2012,Israel,6
+2012,Italy,9
+2012,Ivory Coast,7
+2012,Jamaica,9
+2012,Japan,8
+2012,Jordan,6
+2012,Kazakhstan,5
+2012,Kenya,3
+2012,Latvia,6
+2012,Lebanon,5
+2012,Lesotho,3
+2012,Liberia,3
+2012,Libya,1
+2012,Liechtenstein,6
+2012,Lithuania,6
+2012,Luxembourg,5
+2012,Malawi,2
+2012,Mali,9
+2012,Malta,6
+2012,Martinique,3
+2012,Mexico,14
+2012,Moldova,6
+2012,Montenegro,7
+2012,Morocco,5
+2012,Mozambique,2
+2012,Namibia,2
+2012,Netherlands,6
+2012,New Caledonia,6
+2012,New Zealand,6
+2012,Niger,5
+2012,Nigeria,12
+2012,North Macedonia,6
+2012,Northern Ireland,5
+2012,Norway,6
+2012,Oman,5
+2012,Panama,13
+2012,Paraguay,7
+2012,Peru,7
+2012,Poland,6
+2012,Portugal,7
+2012,Qatar,5
+2012,Republic of Ireland,5
+2012,Romania,6
+2012,Russia,5
+2012,Rwanda,3
+2012,San Marino,6
+2012,Scotland,6
+2012,Senegal,3
+2012,Serbia,6
+2012,Sierra Leone,3
+2012,Slovakia,6
+2012,Slovenia,6
+2012,Solomon Islands,6
+2012,South Africa,6
+2012,South Korea,6
+2012,Spain,9
+2012,Sudan,3
+2012,Sweden,5
+2012,Switzerland,5
+2012,Tahiti,9
+2012,Tanzania,3
+2012,Togo,6
+2012,Trinidad and Tobago,4
+2012,Tunisia,6
+2012,Turkey,6
+2012,Uganda,3
+2012,Ukraine,5
+2012,United States,15
+2012,Uruguay,12
+2012,Uzbekistan,6
+2012,Venezuela,7
+2012,Wales,6
+2012,Zambia,5
+2012,Zimbabwe,3
+2013,Albania,3
+2013,Algeria,7
+2013,Andorra,4
+2013,Angola,1
+2013,Argentina,9
+2013,Armenia,4
+2013,Australia,3
+2013,Austria,4
+2013,Azerbaijan,3
+2013,Belarus,2
+2013,Belgium,8
+2013,Benin,1
+2013,Bolivia,3
+2013,Bosnia and Herzegovina,7
+2013,Botswana,1
+2013,Brazil,6
+2013,Bulgaria,4
+2013,Burkina Faso,3
+2013,Cameroon,5
+2013,Central African Republic,1
+2013,Chile,7
+2013,Colombia,9
+2013,Congo,1
+2013,Costa Rica,7
+2013,Croatia,7
+2013,Cyprus,3
+2013,Czech Republic,4
+2013,DR Congo,1
+2013,Denmark,4
+2013,Ecuador,6
+2013,Egypt,3
+2013,England,5
+2013,Equatorial Guinea,1
+2013,Estonia,5
+2013,Ethiopia,3
+2013,Faroe Islands,4
+2013,Finland,5
+2013,France,8
+2013,Gabon,1
+2013,Gambia,1
+2013,Georgia,2
+2013,Germany,11
+2013,Ghana,6
+2013,Greece,9
+2013,Guinea,1
+2013,Honduras,7
+2013,Hungary,4
+2013,Iceland,5
+2013,Iran,2
+2013,Israel,4
+2013,Italy,7
+2013,Ivory Coast,6
+2013,Jamaica,3
+2013,Japan,2
+2013,Jordan,3
+2013,Kazakhstan,4
+2013,Kenya,1
+2013,Latvia,5
+2013,Lesotho,1
+2013,Liberia,1
+2013,Libya,1
+2013,Liechtenstein,4
+2013,Lithuania,6
+2013,Luxembourg,4
+2013,Malawi,1
+2013,Mali,1
+2013,Malta,4
+2013,Mexico,9
+2013,Moldova,3
+2013,Montenegro,3
+2013,Morocco,1
+2013,Mozambique,1
+2013,Namibia,1
+2013,Netherlands,9
+2013,New Zealand,2
+2013,Niger,1
+2013,Nigeria,6
+2013,North Macedonia,4
+2013,Northern Ireland,5
+2013,Norway,4
+2013,Panama,3
+2013,Paraguay,4
+2013,Peru,4
+2013,Poland,4
+2013,Portugal,8
+2013,Republic of Ireland,4
+2013,Romania,6
+2013,Russia,8
+2013,Rwanda,1
+2013,San Marino,4
+2013,Scotland,3
+2013,Senegal,3
+2013,Serbia,3
+2013,Sierra Leone,1
+2013,Slovakia,4
+2013,Slovenia,4
+2013,South Africa,1
+2013,South Korea,3
+2013,Spain,6
+2013,Sudan,1
+2013,Sweden,6
+2013,Switzerland,8
+2013,Tanzania,1
+2013,Togo,1
+2013,Tunisia,1
+2013,Turkey,4
+2013,Uganda,1
+2013,Ukraine,5
+2013,United States,8
+2013,Uruguay,9
+2013,Uzbekistan,2
+2013,Venezuela,3
+2013,Wales,4
+2013,Zambia,1
+2013,Zimbabwe,1
+2014,Afghanistan,2
+2014,Albania,3
+2014,Algeria,4
+2014,Andorra,6
+2014,Anguilla,2
+2014,Antigua and Barbuda,2
+2014,Argentina,4
+2014,Armenia,5
+2014,Aruba,1
+2014,Australia,7
+2014,Austria,6
+2014,Azerbaijan,5
+2014,Bahamas,2
+2014,Bahrain,4
+2014,Bangladesh,2
+2014,Barbados,3
+2014,Belarus,6
+2014,Belgium,5
+2014,Belize,3
+2014,Bermuda,3
+2014,Bhutan,4
+2014,Bolivia,3
+2014,Bosnia and Herzegovina,5
+2014,Brazil,4
+2014,British Virgin Islands,1
+2014,Brunei,2
+2014,Bulgaria,6
+2014,Burkina Faso,2
+2014,Cambodia,4
+2014,Cameroon,3
+2014,Canada,3
+2014,Cape Verde,1
+2014,Cayman Islands,1
+2014,Chile,5
+2014,China,5
+2014,Colombia,2
+2014,Congo,4
+2014,Costa Rica,3
+2014,Croatia,6
+2014,Cuba,5
+2014,Curaçao,3
+2014,Cyprus,6
+2014,Czech Republic,6
+2014,DR Congo,4
+2014,Denmark,5
+2014,Dominica,3
+2014,Dominican Republic,2
+2014,Ecuador,3
+2014,El Salvador,4
+2014,England,6
+2014,Equatorial Guinea,4
+2014,Estonia,5
+2014,Faroe Islands,6
+2014,Finland,6
+2014,Gabon,3
+2014,Georgia,6
+2014,Germany,6
+2014,Ghana,5
+2014,Gibraltar,6
+2014,Greece,5
+2014,Grenada,2
+2014,Guam,2
+2014,Guatemala,3
+2014,Guinea,4
+2014,Guyana,2
+2014,Haiti,4
+2014,Honduras,3
+2014,Hong Kong,2
+2014,Hungary,5
+2014,Iceland,6
+2014,India,3
+2014,Iran,5
+2014,Iraq,6
+2014,Israel,6
+2014,Italy,6
+2014,Ivory Coast,5
+2014,Jamaica,9
+2014,Japan,4
+2014,Jordan,4
+2014,Kazakhstan,5
+2014,Kuwait,4
+2014,Kyrgyzstan,2
+2014,Laos,2
+2014,Latvia,5
+2014,Lebanon,2
+2014,Liechtenstein,5
+2014,Lithuania,6
+2014,Luxembourg,6
+2014,Macau,2
+2014,Malaysia,1
+2014,Maldives,2
+2014,Mali,3
+2014,Malta,6
+2014,Mexico,7
+2014,Moldova,6
+2014,Montenegro,4
+2014,Montserrat,2
+2014,Myanmar,2
+2014,Nepal,1
+2014,Netherlands,6
+2014,Nicaragua,4
+2014,North Korea,4
+2014,North Macedonia,6
+2014,Northern Ireland,5
+2014,Norway,5
+2014,Oman,4
+2014,Pakistan,1
+2014,Palestine,5
+2014,Panama,6
+2014,Paraguay,6
+2014,Peru,5
+2014,Philippines,2
+2014,Poland,6
+2014,Portugal,5
+2014,Puerto Rico,2
+2014,Qatar,4
+2014,Republic of Ireland,6
+2014,Romania,5
+2014,Russia,5
+2014,Saint Kitts and Nevis,4
+2014,Saint Lucia,2
+2014,Saint Vincent and the Grenadines,2
+2014,San Marino,5
+2014,Saudi Arabia,4
+2014,Scotland,6
+2014,Senegal,3
+2014,Serbia,4
+2014,Singapore,1
+2014,Slovakia,6
+2014,Slovenia,6
+2014,South Africa,3
+2014,South Korea,7
+2014,Spain,6
+2014,Sri Lanka,2
+2014,Suriname,2
+2014,Sweden,6
+2014,Switzerland,6
+2014,Syria,1
+2014,Taiwan,3
+2014,Tajikistan,2
+2014,Thailand,2
+2014,Trinidad and Tobago,4
+2014,Tunisia,4
+2014,Turkey,6
+2014,Turkmenistan,2
+2014,Turks and Caicos Islands,2
+2014,Ukraine,6
+2014,United Arab Emirates,6
+2014,United States,6
+2014,United States Virgin Islands,2
+2014,Uruguay,4
+2014,Uzbekistan,5
+2014,Venezuela,3
+2014,Vietnam,1
+2014,Wales,4
+2014,Yemen,2
+2014,Zambia,2
+2015,Afghanistan,6
+2015,Albania,6
+2015,Algeria,2
+2015,American Samoa,3
+2015,Andorra,4
+2015,Angola,2
+2015,Antigua and Barbuda,2
+2015,Argentina,10
+2015,Armenia,2
+2015,Aruba,2
+2015,Australia,7
+2015,Austria,6
+2015,Azerbaijan,3
+2015,Bahrain,7
+2015,Bangladesh,6
+2015,Belarus,3
+2015,Belgium,9
+2015,Belize,2
+2015,Benin,2
+2015,Bhutan,6
+2015,Bolivia,9
+2015,Bosnia and Herzegovina,6
+2015,Botswana,4
+2015,Brazil,8
+2015,Bulgaria,4
+2015,Burkina Faso,2
+2015,Burundi,3
+2015,Cambodia,6
+2015,Cameroon,1
+2015,Canada,5
+2015,Cape Verde,2
+2015,Central African Republic,2
+2015,Chad,4
+2015,Chile,11
+2015,China,5
+2015,Colombia,11
+2015,Comoros,2
+2015,Congo,2
+2015,Cook Islands,3
+2015,Costa Rica,6
+2015,Croatia,7
+2015,Cuba,1
+2015,Curaçao,2
+2015,Cyprus,4
+2015,Czech Republic,7
+2015,DR Congo,1
+2015,Denmark,3
+2015,Djibouti,2
+2015,Ecuador,9
+2015,Egypt,2
+2015,El Salvador,5
+2015,England,7
+2015,Equatorial Guinea,2
+2015,Eritrea,2
+2015,Estonia,5
+2015,Eswatini,3
+2015,Ethiopia,4
+2015,Faroe Islands,4
+2015,Fiji,3
+2015,Finland,4
+2015,France,6
+2015,Gabon,2
+2015,Gambia,2
+2015,Georgia,4
+2015,Germany,9
+2015,Ghana,1
+2015,Gibraltar,4
+2015,Greece,3
+2015,Grenada,2
+2015,Guam,5
+2015,Guatemala,6
+2015,Guinea,2
+2015,Guinea-Bissau,2
+2015,Haiti,9
+2015,Honduras,4
+2015,Hong Kong,4
+2015,Hungary,9
+2015,Iceland,8
+2015,India,6
+2015,Iran,7
+2015,Iraq,6
+2015,Israel,3
+2015,Italy,9
+2015,Ivory Coast,2
+2015,Jamaica,9
+2015,Japan,7
+2015,Jordan,6
+2015,Kazakhstan,3
+2015,Kenya,3
+2015,Kuwait,3
+2015,Kyrgyzstan,5
+2015,Laos,5
+2015,Latvia,5
+2015,Lebanon,5
+2015,Lesotho,1
+2015,Liberia,4
+2015,Libya,2
+2015,Liechtenstein,4
+2015,Lithuania,6
+2015,Luxembourg,4
+2015,Madagascar,4
+2015,Malawi,2
+2015,Malaysia,4
+2015,Maldives,6
+2015,Mali,2
+2015,Malta,4
+2015,Mauritania,4
+2015,Mauritius,1
+2015,Mexico,8
+2015,Moldova,4
+2015,Montenegro,4
+2015,Morocco,2
+2015,Mozambique,2
+2015,Myanmar,5
+2015,Namibia,4
+2015,Netherlands,4
+2015,New Caledonia,4
+2015,New Zealand,4
+2015,Nicaragua,2
+2015,Niger,3
+2015,Nigeria,1
+2015,North Korea,5
+2015,North Macedonia,3
+2015,Northern Ireland,8
+2015,Norway,6
+2015,Oman,6
+2015,Palestine,3
+2015,Panama,7
+2015,Papua New Guinea,4
+2015,Paraguay,7
+2015,Peru,9
+2015,Philippines,5
+2015,Poland,8
+2015,Portugal,9
+2015,Qatar,7
+2015,Republic of Ireland,10
+2015,Romania,5
+2015,Russia,7
+2015,Rwanda,2
+2015,Saint Vincent and the Grenadines,6
+2015,Samoa,6
+2015,San Marino,4
+2015,Saudi Arabia,5
+2015,Scotland,4
+2015,Senegal,2
+2015,Serbia,3
+2015,Seychelles,2
+2015,Sierra Leone,2
+2015,Singapore,6
+2015,Slovakia,6
+2015,Slovenia,6
+2015,Solomon Islands,4
+2015,Somalia,2
+2015,South Africa,2
+2015,South Korea,6
+2015,South Sudan,2
+2015,Spain,8
+2015,Sudan,2
+2015,Sweden,9
+2015,Switzerland,7
+2015,Syria,7
+2015,São Tomé and Príncipe,2
+2015,Tahiti,3
+2015,Taiwan,5
+2015,Tajikistan,6
+2015,Tanzania,4
+2015,Thailand,4
+2015,Timor-Leste,4
+2015,Togo,2
+2015,Tonga,3
+2015,Trinidad and Tobago,4
+2015,Tunisia,2
+2015,Turkey,7
+2015,Turkmenistan,6
+2015,Uganda,2
+2015,Ukraine,8
+2015,United Arab Emirates,6
+2015,United States,9
+2015,Uruguay,9
+2015,Uzbekistan,7
+2015,Vanuatu,3
+2015,Venezuela,10
+2015,Vietnam,5
+2015,Wales,9
+2015,Yemen,6
+2015,Zambia,2
+2016,Albania,6
+2016,Algeria,5
+2016,Andorra,5
+2016,Argentina,8
+2016,Armenia,6
+2016,Australia,11
+2016,Austria,6
+2016,Azerbaijan,5
+2016,Belarus,5
+2016,Belgium,6
+2016,Bolivia,6
+2016,Bosnia and Herzegovina,5
+2016,Brazil,8
+2016,Bulgaria,6
+2016,Burkina Faso,8
+2016,Cameroon,9
+2016,Canada,5
+2016,Cape Verde,2
+2016,Chile,10
+2016,China,6
+2016,Colombia,7
+2016,Congo,2
+2016,Costa Rica,12
+2016,Croatia,6
+2016,Curaçao,3
+2016,Cyprus,5
+2016,Czech Republic,4
+2016,DR Congo,6
+2016,Denmark,5
+2016,Ecuador,8
+2016,Egypt,7
+2016,El Salvador,6
+2016,England,5
+2016,Estonia,5
+2016,Faroe Islands,4
+2016,Fiji,4
+2016,Finland,6
+2016,France,5
+2016,French Guiana,2
+2016,Gabon,2
+2016,Georgia,6
+2016,Germany,11
+2016,Ghana,7
+2016,Gibraltar,6
+2016,Greece,5
+2016,Guatemala,2
+2016,Guinea,2
+2016,Guinea-Bissau,3
+2016,Haiti,2
+2016,Honduras,9
+2016,Hungary,5
+2016,Iceland,6
+2016,Iran,6
+2016,Iraq,8
+2016,Israel,6
+2016,Italy,6
+2016,Ivory Coast,3
+2016,Jamaica,7
+2016,Japan,8
+2016,Kazakhstan,5
+2016,Kosovo,6
+2016,Latvia,6
+2016,Libya,2
+2016,Liechtenstein,6
+2016,Lithuania,6
+2016,Luxembourg,6
+2016,Mali,3
+2016,Malta,6
+2016,Martinique,3
+2016,Mexico,15
+2016,Moldova,6
+2016,Montenegro,6
+2016,Morocco,4
+2016,Netherlands,6
+2016,New Caledonia,3
+2016,New Zealand,6
+2016,Nicaragua,3
+2016,Nigeria,2
+2016,North Macedonia,6
+2016,Northern Ireland,5
+2016,Norway,6
+2016,Panama,10
+2016,Papua New Guinea,4
+2016,Paraguay,8
+2016,Peru,7
+2016,Poland,6
+2016,Portugal,10
+2016,Qatar,7
+2016,Republic of Ireland,5
+2016,Romania,4
+2016,Russia,3
+2016,Saint Vincent and the Grenadines,2
+2016,San Marino,6
+2016,Saudi Arabia,8
+2016,Scotland,6
+2016,Senegal,4
+2016,Serbia,6
+2016,Slovakia,6
+2016,Slovenia,5
+2016,Solomon Islands,3
+2016,South Africa,1
+2016,South Korea,7
+2016,Spain,6
+2016,Sweden,6
+2016,Switzerland,6
+2016,Syria,6
+2016,Tahiti,3
+2016,Thailand,8
+2016,Togo,2
+2016,Trinidad and Tobago,8
+2016,Tunisia,6
+2016,Turkey,6
+2016,Uganda,4
+2016,Ukraine,6
+2016,United Arab Emirates,8
+2016,United States,14
+2016,Uruguay,8
+2016,Uzbekistan,8
+2016,Venezuela,8
+2016,Wales,5
+2016,Zambia,2
+2016,Zimbabwe,3
+2017,Albania,4
+2017,Algeria,3
+2017,Andorra,4
+2017,Argentina,6
+2017,Armenia,4
+2017,Australia,8
+2017,Austria,4
+2017,Azerbaijan,4
+2017,Belarus,4
+2017,Belgium,11
+2017,Bolivia,3
+2017,Bosnia and Herzegovina,4
+2017,Brazil,8
+2017,Bulgaria,4
+2017,Burkina Faso,3
+2017,Cameroon,4
+2017,Cape Verde,4
+2017,Chile,4
+2017,China,2
+2017,Colombia,7
+2017,Congo,4
+2017,Costa Rica,7
+2017,Croatia,12
+2017,Cyprus,4
+2017,Czech Republic,4
+2017,DR Congo,4
+2017,Denmark,8
+2017,Ecuador,4
+2017,Egypt,7
+2017,England,11
+2017,Estonia,5
+2017,Faroe Islands,3
+2017,Finland,4
+2017,France,9
+2017,Gabon,3
+2017,Georgia,4
+2017,Germany,7
+2017,Ghana,3
+2017,Gibraltar,4
+2017,Greece,4
+2017,Guinea,4
+2017,Honduras,5
+2017,Hungary,4
+2017,Iceland,7
+2017,Iran,4
+2017,Iraq,2
+2017,Israel,4
+2017,Italy,5
+2017,Ivory Coast,3
+2017,Japan,6
+2017,Kazakhstan,4
+2017,Kosovo,4
+2017,Latvia,5
+2017,Libya,3
+2017,Liechtenstein,4
+2017,Lithuania,6
+2017,Luxembourg,3
+2017,Mali,1
+2017,Malta,4
+2017,Mexico,8
+2017,Moldova,4
+2017,Montenegro,4
+2017,Morocco,6
+2017,Netherlands,4
+2017,New Zealand,3
+2017,Nigeria,6
+2017,North Macedonia,4
+2017,Northern Ireland,5
+2017,Norway,4
+2017,Panama,7
+2017,Paraguay,4
+2017,Peru,7
+2017,Poland,7
+2017,Portugal,8
+2017,Qatar,2
+2017,Republic of Ireland,5
+2017,Romania,4
+2017,Russia,5
+2017,San Marino,4
+2017,Saudi Arabia,5
+2017,Scotland,4
+2017,Senegal,7
+2017,Serbia,7
+2017,Slovakia,4
+2017,Slovenia,4
+2017,Solomon Islands,2
+2017,South Africa,5
+2017,South Korea,3
+2017,Spain,8
+2017,Sweden,10
+2017,Switzerland,9
+2017,Syria,4
+2017,Thailand,2
+2017,Trinidad and Tobago,4
+2017,Tunisia,6
+2017,Turkey,4
+2017,Uganda,3
+2017,Ukraine,4
+2017,United Arab Emirates,2
+2017,United States,4
+2017,Uruguay,7
+2017,Uzbekistan,1
+2017,Venezuela,2
+2017,Wales,4
+2017,Zambia,4
+2018,Albania,8
+2018,Algeria,7
+2018,Andorra,8
+2018,Angola,2
+2018,Argentina,6
+2018,Armenia,10
+2018,Australia,4
+2018,Austria,7
+2018,Azerbaijan,8
+2018,Bahrain,4
+2018,Bangladesh,1
+2018,Belarus,8
+2018,Belgium,8
+2018,Benin,3
+2018,Bermuda,3
+2018,Bhutan,2
+2018,Bolivia,3
+2018,Bosnia and Herzegovina,7
+2018,Brazil,4
+2018,Brunei,2
+2018,Bulgaria,10
+2018,Burundi,3
+2018,Cambodia,2
+2018,Cameroon,2
+2018,Canada,4
+2018,Chile,5
+2018,China,5
+2018,Colombia,3
+2018,Costa Rica,4
+2018,Croatia,6
+2018,Cuba,3
+2018,Curaçao,4
+2018,Cyprus,10
+2018,Czech Republic,7
+2018,DR Congo,4
+2018,Denmark,5
+2018,Ecuador,3
+2018,Egypt,4
+2018,El Salvador,2
+2018,England,6
+2018,Estonia,9
+2018,Faroe Islands,10
+2018,Finland,10
+2018,France,7
+2018,Georgia,10
+2018,Germany,6
+2018,Ghana,3
+2018,Gibraltar,9
+2018,Greece,10
+2018,Guam,2
+2018,Guinea,4
+2018,Guinea-Bissau,2
+2018,Guyana,3
+2018,Haiti,5
+2018,Honduras,3
+2018,Hungary,10
+2018,Iceland,8
+2018,India,3
+2018,Iran,5
+2018,Iraq,3
+2018,Israel,8
+2018,Italy,7
+2018,Ivory Coast,5
+2018,Jamaica,4
+2018,Japan,10
+2018,Jordan,3
+2018,Kazakhstan,10
+2018,Kenya,3
+2018,Kosovo,8
+2018,Kyrgyzstan,4
+2018,Laos,1
+2018,Latvia,8
+2018,Lebanon,3
+2018,Liechtenstein,10
+2018,Lithuania,9
+2018,Luxembourg,10
+2018,Macau,1
+2018,Madagascar,5
+2018,Malaysia,2
+2018,Mali,4
+2018,Malta,10
+2018,Martinique,3
+2018,Mauritania,1
+2018,Mexico,6
+2018,Moldova,8
+2018,Mongolia,2
+2018,Montenegro,9
+2018,Morocco,4
+2018,Namibia,3
+2018,Netherlands,8
+2018,Nicaragua,3
+2018,Nigeria,7
+2018,North Korea,3
+2018,North Macedonia,10
+2018,Northern Ireland,8
+2018,Norway,10
+2018,Oman,4
+2018,Pakistan,2
+2018,Palestine,1
+2018,Panama,4
+2018,Paraguay,3
+2018,Peru,4
+2018,Philippines,3
+2018,Poland,8
+2018,Portugal,6
+2018,Qatar,10
+2018,Republic of Ireland,6
+2018,Romania,8
+2018,Russia,7
+2018,San Marino,10
+2018,Saudi Arabia,4
+2018,Scotland,8
+2018,Senegal,7
+2018,Serbia,8
+2018,Slovakia,7
+2018,Slovenia,10
+2018,South Africa,5
+2018,South Korea,5
+2018,Spain,8
+2018,Sri Lanka,1
+2018,Sweden,7
+2018,Switzerland,7
+2018,Syria,2
+2018,Tanzania,3
+2018,Thailand,4
+2018,Timor-Leste,2
+2018,Trinidad and Tobago,3
+2018,Tunisia,6
+2018,Turkey,8
+2018,Turkmenistan,3
+2018,Uganda,4
+2018,Ukraine,7
+2018,United Arab Emirates,6
+2018,United States,6
+2018,Uruguay,3
+2018,Uzbekistan,3
+2018,Venezuela,2
+2018,Vietnam,5
+2018,Wales,7
+2018,Yemen,3
+2018,Zimbabwe,3
+2019,Afghanistan,5
+2019,Albania,6
+2019,Andorra,6
+2019,Angola,2
+2019,Armenia,6
+2019,Australia,4
+2019,Austria,5
+2019,Azerbaijan,5
+2019,Bahrain,3
+2019,Bangladesh,4
+2019,Belarus,3
+2019,Belgium,6
+2019,Bosnia and Herzegovina,6
+2019,Botswana,1
+2019,Bulgaria,3
+2019,Burundi,2
+2019,Cambodia,5
+2019,Chad,1
+2019,China,3
+2019,Comoros,2
+2019,Croatia,5
+2019,Cyprus,6
+2019,Czech Republic,5
+2019,Denmark,4
+2019,Djibouti,1
+2019,England,6
+2019,Equatorial Guinea,2
+2019,Eritrea,2
+2019,Estonia,4
+2019,Eswatini,1
+2019,Ethiopia,1
+2019,Faroe Islands,6
+2019,Finland,6
+2019,France,6
+2019,Gambia,2
+2019,Georgia,2
+2019,Germany,5
+2019,Gibraltar,5
+2019,Greece,6
+2019,Guam,5
+2019,Guinea-Bissau,2
+2019,Hong Kong,4
+2019,Hungary,4
+2019,Iceland,5
+2019,India,4
+2019,Indonesia,5
+2019,Iran,4
+2019,Iraq,4
+2019,Israel,6
+2019,Italy,6
+2019,Japan,4
+2019,Jordan,4
+2019,Kazakhstan,6
+2019,Kosovo,5
+2019,Kuwait,4
+2019,Kyrgyzstan,5
+2019,Latvia,6
+2019,Lebanon,3
+2019,Lesotho,1
+2019,Liberia,2
+2019,Liechtenstein,6
+2019,Lithuania,5
+2019,Luxembourg,4
+2019,Malawi,1
+2019,Malaysia,5
+2019,Maldives,5
+2019,Malta,6
+2019,Mauritius,2
+2019,Moldova,6
+2019,Mongolia,5
+2019,Montenegro,3
+2019,Mozambique,2
+2019,Myanmar,5
+2019,Namibia,2
+2019,Nepal,5
+2019,Netherlands,5
+2019,North Korea,3
+2019,North Macedonia,6
+2019,Northern Ireland,3
+2019,Norway,6
+2019,Oman,5
+2019,Palestine,4
+2019,Philippines,4
+2019,Poland,5
+2019,Portugal,6
+2019,Qatar,4
+2019,Republic of Ireland,3
+2019,Romania,6
+2019,Russia,6
+2019,Rwanda,2
+2019,San Marino,6
+2019,Saudi Arabia,3
+2019,Scotland,6
+2019,Serbia,5
+2019,Seychelles,2
+2019,Sierra Leone,2
+2019,Singapore,5
+2019,Slovakia,5
+2019,Slovenia,6
+2019,Somalia,2
+2019,South Korea,2
+2019,South Sudan,2
+2019,Spain,6
+2019,Sri Lanka,5
+2019,Sudan,1
+2019,Sweden,6
+2019,Switzerland,6
+2019,Syria,5
+2019,São Tomé and Príncipe,2
+2019,Taiwan,5
+2019,Tajikistan,5
+2019,Tanzania,2
+2019,Thailand,3
+2019,Togo,2
+2019,Turkey,5
+2019,Turkmenistan,5
+2019,Ukraine,4
+2019,United Arab Emirates,4
+2019,Uzbekistan,5
+2019,Vietnam,3
+2019,Wales,5
+2019,Yemen,5
+2019,Zimbabwe,2
+2020,Afghanistan,3
+2020,Albania,7
+2020,Andorra,7
+2020,Anguilla,4
+2020,Antigua and Barbuda,4
+2020,Argentina,13
+2020,Armenia,9
+2020,Aruba,4
+2020,Australia,4
+2020,Austria,13
+2020,Azerbaijan,5
+2020,Bahamas,3
+2020,Bahrain,3
+2020,Bangladesh,4
+2020,Barbados,4
+2020,Belarus,9
+2020,Belgium,14
+2020,Belize,3
+2020,Bermuda,4
+2020,Bolivia,10
+2020,Bosnia and Herzegovina,8
+2020,Brazil,13
+2020,British Virgin Islands,4
+2020,Bulgaria,8
+2020,Cambodia,3
+2020,Canada,11
+2020,Cayman Islands,4
+2020,Chile,11
+2020,China,4
+2020,Colombia,11
+2020,Costa Rica,4
+2020,Croatia,13
+2020,Cuba,4
+2020,Curaçao,4
+2020,Cyprus,7
+2020,Czech Republic,14
+2020,Denmark,14
+2020,Dominica,4
+2020,Dominican Republic,4
+2020,Ecuador,11
+2020,El Salvador,10
+2020,England,14
+2020,Estonia,9
+2020,Faroe Islands,9
+2020,Finland,11
+2020,France,12
+2020,Georgia,10
+2020,Germany,13
+2020,Gibraltar,6
+2020,Greece,5
+2020,Grenada,7
+2020,Guadeloupe,3
+2020,Guam,3
+2020,Guatemala,6
+2020,Guyana,4
+2020,Haiti,8
+2020,Honduras,4
+2020,Hong Kong,3
+2020,Hungary,13
+2020,Iceland,11
+2020,India,3
+2020,Indonesia,3
+2020,Iran,4
+2020,Iraq,3
+2020,Israel,9
+2020,Italy,15
+2020,Jamaica,4
+2020,Japan,4
+2020,Jordan,2
+2020,Kazakhstan,7
+2020,Kosovo,8
+2020,Kuwait,2
+2020,Kyrgyzstan,3
+2020,Latvia,10
+2020,Lebanon,3
+2020,Liechtenstein,6
+2020,Lithuania,9
+2020,Luxembourg,7
+2020,Malaysia,3
+2020,Maldives,3
+2020,Malta,8
+2020,Martinique,3
+2020,Mexico,4
+2020,Moldova,9
+2020,Mongolia,3
+2020,Montenegro,8
+2020,Montserrat,4
+2020,Myanmar,3
+2020,Nepal,3
+2020,Netherlands,12
+2020,Nicaragua,3
+2020,North Macedonia,14
+2020,Northern Ireland,9
+2020,Norway,9
+2020,Oman,3
+2020,Palestine,3
+2020,Panama,8
+2020,Paraguay,10
+2020,Peru,13
+2020,Philippines,3
+2020,Poland,11
+2020,Portugal,12
+2020,Puerto Rico,4
+2020,Qatar,8
+2020,Republic of Ireland,6
+2020,Romania,9
+2020,Russia,11
+2020,Saint Kitts and Nevis,6
+2020,Saint Vincent and the Grenadines,4
+2020,San Marino,5
+2020,Saudi Arabia,4
+2020,Scotland,12
+2020,Serbia,10
+2020,Singapore,3
+2020,Slovakia,12
+2020,Slovenia,7
+2020,South Korea,3
+2020,Spain,14
+2020,Sri Lanka,2
+2020,Suriname,7
+2020,Sweden,11
+2020,Switzerland,12
+2020,Syria,3
+2020,Taiwan,3
+2020,Tajikistan,3
+2020,Thailand,3
+2020,Trinidad and Tobago,5
+2020,Turkey,11
+2020,Turkmenistan,2
+2020,Turks and Caicos Islands,3
+2020,Ukraine,13
+2020,United Arab Emirates,4
+2020,United States,5
+2020,United States Virgin Islands,4
+2020,Uruguay,8
+2020,Uzbekistan,3
+2020,Venezuela,8
+2020,Vietnam,3
+2020,Wales,11
+2020,Yemen,3
+2021,Albania,9
+2021,Algeria,10
+2021,Andorra,10
+2021,Angola,6
+2021,Argentina,10
+2021,Armenia,10
+2021,Australia,10
+2021,Austria,12
+2021,Azerbaijan,9
+2021,Belarus,9
+2021,Belgium,11
+2021,Benin,6
+2021,Bolivia,12
+2021,Bosnia and Herzegovina,10
+2021,Brazil,9
+2021,Bulgaria,8
+2021,Burkina Faso,13
+2021,Cameroon,14
+2021,Canada,13
+2021,Cape Verde,10
+2021,Central African Republic,6
+2021,Chile,11
+2021,China,10
+2021,Colombia,8
+2021,Comoros,4
+2021,Congo,6
+2021,Cook Islands,1
+2021,Costa Rica,12
+2021,Croatia,10
+2021,Cyprus,11
+2021,Czech Republic,10
+2021,DR Congo,8
+2021,Denmark,11
+2021,Djibouti,6
+2021,Ecuador,10
+2021,Egypt,12
+2021,El Salvador,12
+2021,England,10
+2021,Equatorial Guinea,10
+2021,Estonia,8
+2021,Ethiopia,9
+2021,Faroe Islands,11
+2021,Fiji,3
+2021,Finland,10
+2021,France,11
+2021,Gabon,10
+2021,Gambia,5
+2021,Georgia,8
+2021,Germany,11
+2021,Ghana,10
+2021,Gibraltar,11
+2021,Greece,10
+2021,Guinea,8
+2021,Guinea-Bissau,6
+2021,Honduras,12
+2021,Hungary,11
+2021,Iceland,9
+2021,Iran,10
+2021,Iraq,8
+2021,Israel,10
+2021,Italy,10
+2021,Ivory Coast,8
+2021,Jamaica,13
+2021,Japan,10
+2021,Kazakhstan,12
+2021,Kenya,5
+2021,Kosovo,10
+2021,Latvia,9
+2021,Lebanon,8
+2021,Liberia,6
+2021,Libya,6
+2021,Liechtenstein,11
+2021,Lithuania,10
+2021,Luxembourg,10
+2021,Madagascar,6
+2021,Malawi,9
+2021,Mali,9
+2021,Malta,10
+2021,Mauritania,8
+2021,Mexico,13
+2021,Moldova,12
+2021,Montenegro,10
+2021,Morocco,13
+2021,Mozambique,5
+2021,Namibia,6
+2021,Netherlands,11
+2021,New Caledonia,3
+2021,New Zealand,6
+2021,Niger,6
+2021,Nigeria,11
+2021,North Macedonia,11
+2021,Northern Ireland,7
+2021,Norway,9
+2021,Oman,10
+2021,Panama,13
+2021,Papua New Guinea,4
+2021,Paraguay,10
+2021,Peru,12
+2021,Poland,12
+2021,Portugal,10
+2021,Republic of Ireland,9
+2021,Romania,9
+2021,Russia,6
+2021,Rwanda,6
+2021,San Marino,10
+2021,Saudi Arabia,9
+2021,Scotland,11
+2021,Senegal,12
+2021,Serbia,9
+2021,Sierra Leone,2
+2021,Slovakia,11
+2021,Slovenia,10
+2021,Solomon Islands,4
+2021,South Africa,5
+2021,South Korea,9
+2021,Spain,11
+2021,Sudan,7
+2021,Sweden,12
+2021,Switzerland,8
+2021,Syria,10
+2021,Tahiti,2
+2021,Tanzania,6
+2021,Togo,6
+2021,Tunisia,11
+2021,Turkey,12
+2021,Uganda,4
+2021,Ukraine,10
+2021,United Arab Emirates,10
+2021,United States,13
+2021,Uruguay,11
+2021,Venezuela,12
+2021,Vietnam,10
+2021,Wales,11
+2021,Zambia,6
+2021,Zimbabwe,8
+2022,Albania,5
+2022,Andorra,6
+2022,Argentina,7
+2022,Armenia,5
+2022,Australia,4
+2022,Austria,6
+2022,Azerbaijan,5
+2022,Belarus,6
+2022,Belgium,7
+2022,Bosnia and Herzegovina,6
+2022,Brazil,5
+2022,Bulgaria,6
+2022,Cameroon,3
+2022,Canada,6
+2022,Costa Rica,6
+2022,Croatia,10
+2022,Cuba,3
+2022,Cyprus,5
+2022,Czech Republic,4
+2022,Denmark,8
+2022,Ecuador,3
+2022,El Salvador,2
+2022,England,10
+2022,Estonia,7
+2022,Faroe Islands,5
+2022,Finland,6
+2022,France,13
+2022,Georgia,5
+2022,Germany,5
+2022,Ghana,3
+2022,Gibraltar,6
+2022,Greece,5
+2022,Guadeloupe,3
+2022,Guatemala,3
+2022,Haiti,3
+2022,Honduras,3
+2022,Hungary,4
+2022,Iceland,6
+2022,Iran,3
+2022,Israel,5
+2022,Italy,6
+2022,Jamaica,5
+2022,Japan,4
+2022,Kazakhstan,6
+2022,Kosovo,5
+2022,Latvia,7
+2022,Liechtenstein,6
+2022,Lithuania,6
+2022,Luxembourg,5
+2022,Malta,5
+2022,Martinique,3
+2022,Mexico,8
+2022,Moldova,5
+2022,Montenegro,4
+2022,Morocco,5
+2022,Netherlands,11
+2022,North Macedonia,5
+2022,Northern Ireland,6
+2022,Norway,6
+2022,Panama,6
+2022,Poland,8
+2022,Portugal,11
+2022,Qatar,7
+2022,Republic of Ireland,5
+2022,Romania,5
+2022,Saint Kitts and Nevis,3
+2022,San Marino,5
+2022,Saudi Arabia,3
+2022,Scotland,6
+2022,Senegal,4
+2022,Serbia,8
+2022,Slovakia,5
+2022,Slovenia,6
+2022,South Korea,3
+2022,Spain,8
+2022,Sweden,5
+2022,Switzerland,10
+2022,Trinidad and Tobago,3
+2022,Tunisia,2
+2022,Turkey,6
+2022,Ukraine,5
+2022,United States,8
+2022,Uruguay,2
+2022,Wales,9
+2023,Afghanistan,6
+2023,Albania,7
+2023,Algeria,7
+2023,Andorra,5
+2023,Angola,7
+2023,Anguilla,3
+2023,Antigua and Barbuda,2
+2023,Argentina,12
+2023,Armenia,5
+2023,Aruba,2
+2023,Australia,11
+2023,Austria,8
+2023,Azerbaijan,5
+2023,Bahamas,2
+2023,Bahrain,9
+2023,Bangladesh,8
+2023,Barbados,2
+2023,Belarus,4
+2023,Belgium,8
+2023,Belize,2
+2023,Benin,3
+2023,Bermuda,2
+2023,Bhutan,2
+2023,Bolivia,9
+2023,Bosnia and Herzegovina,7
+2023,Botswana,4
+2023,Brazil,8
+2023,British Virgin Islands,3
+2023,Brunei,2
+2023,Bulgaria,4
+2023,Burkina Faso,8
+2023,Burundi,4
+2023,Cambodia,1
+2023,Cameroon,8
+2023,Canada,6
+2023,Cape Verde,7
+2023,Cayman Islands,1
+2023,Central African Republic,4
+2023,Chad,4
+2023,Chile,5
+2023,China,7
+2023,Colombia,10
+2023,Comoros,4
+2023,Congo,2
+2023,Costa Rica,5
+2023,Croatia,9
+2023,Cuba,1
+2023,Curaçao,2
+2023,Cyprus,5
+2023,Czech Republic,8
+2023,DR Congo,9
+2023,Denmark,9
+2023,Djibouti,4
+2023,Dominica,2
+2023,Dominican Republic,2
+2023,Ecuador,7
+2023,Egypt,8
+2023,El Salvador,1
+2023,England,10
+2023,Equatorial Guinea,6
+2023,Estonia,8
+2023,Eswatini,4
+2023,Ethiopia,2
+2023,Faroe Islands,6
+2023,Fiji,5
+2023,Finland,7
+2023,France,8
+2023,Gabon,4
+2023,Gambia,7
+2023,Georgia,10
+2023,Germany,5
+2023,Ghana,7
+2023,Gibraltar,6
+2023,Greece,6
+2023,Grenada,2
+2023,Guam,2
+2023,Guatemala,2
+2023,Guinea,9
+2023,Guinea-Bissau,6
+2023,Guyana,2
+2023,Haiti,2
+2023,Honduras,3
+2023,Hong Kong,10
+2023,Hungary,8
+2023,Iceland,8
+2023,India,7
+2023,Indonesia,12
+2023,Iran,11
+2023,Iraq,10
+2023,Israel,7
+2023,Italy,9
+2023,Ivory Coast,10
+2023,Jamaica,5
+2023,Japan,10
+2023,Jordan,13
+2023,Kazakhstan,7
+2023,Kenya,3
+2023,Kosovo,6
+2023,Kuwait,5
+2023,Kyrgyzstan,9
+2023,Laos,2
+2023,Latvia,7
+2023,Lebanon,6
+2023,Lesotho,3
+2023,Liberia,3
+2023,Libya,4
+2023,Liechtenstein,6
+2023,Lithuania,9
+2023,Luxembourg,7
+2023,Macau,1
+2023,Madagascar,3
+2023,Malawi,4
+2023,Malaysia,9
+2023,Maldives,2
+2023,Mali,7
+2023,Malta,4
+2023,Mauritania,7
+2023,Mauritius,3
+2023,Mexico,2
+2023,Moldova,4
+2023,Mongolia,2
+2023,Montenegro,5
+2023,Montserrat,2
+2023,Morocco,7
+2023,Mozambique,7
+2023,Myanmar,7
+2023,Namibia,5
+2023,Nepal,8
+2023,Netherlands,11
+2023,New Zealand,4
+2023,Nicaragua,2
+2023,Niger,2
+2023,Nigeria,11
+2023,North Korea,5
+2023,North Macedonia,5
+2023,Northern Ireland,6
+2023,Norway,4
+2023,Oman,8
+2023,Pakistan,7
+2023,Palestine,8
+2023,Panama,6
+2023,Papua New Guinea,3
+2023,Paraguay,7
+2023,Peru,7
+2023,Philippines,6
+2023,Poland,9
+2023,Portugal,9
+2023,Puerto Rico,1
+2023,Qatar,12
+2023,Republic of Ireland,5
+2023,Romania,9
+2023,Rwanda,3
+2023,Saint Kitts and Nevis,2
+2023,Saint Lucia,2
+2023,Saint Vincent and the Grenadines,2
+2023,Samoa,3
+2023,San Marino,6
+2023,Saudi Arabia,9
+2023,Scotland,7
+2023,Senegal,7
+2023,Serbia,7
+2023,Seychelles,4
+2023,Sierra Leone,3
+2023,Singapore,8
+2023,Slovakia,10
+2023,Slovenia,8
+2023,Solomon Islands,2
+2023,Somalia,4
+2023,South Africa,8
+2023,South Korea,12
+2023,South Sudan,3
+2023,Spain,13
+2023,Sri Lanka,2
+2023,Sudan,4
+2023,Suriname,2
+2023,Sweden,5
+2023,Switzerland,11
+2023,Syria,9
+2023,São Tomé and Príncipe,4
+2023,Tahiti,5
+2023,Taiwan,8
+2023,Tajikistan,10
+2023,Tanzania,5
+2023,Thailand,8
+2023,Timor-Leste,2
+2023,Togo,3
+2023,Trinidad and Tobago,3
+2023,Tunisia,5
+2023,Turkey,9
+2023,Turkmenistan,5
+2023,Turks and Caicos Islands,1
+2023,Uganda,4
+2023,Ukraine,8
+2023,United Arab Emirates,10
+2023,United States,3
+2023,United States Virgin Islands,1
+2023,Uruguay,11
+2023,Uzbekistan,9
+2023,Vanuatu,4
+2023,Venezuela,9
+2023,Vietnam,9
+2023,Wales,5
+2023,Yemen,7
+2023,Zambia,7
+2023,Zimbabwe,3
+2024,Albania,8
+2024,Algeria,2
+2024,American Samoa,1
+2024,Andorra,7
+2024,Angola,2
+2024,Anguilla,2
+2024,Antigua and Barbuda,2
+2024,Argentina,10
+2024,Armenia,8
+2024,Aruba,2
+2024,Australia,8
+2024,Austria,10
+2024,Azerbaijan,5
+2024,Bahamas,2
+2024,Bahrain,9
+2024,Barbados,2
+2024,Belarus,4
+2024,Belgium,10
+2024,Belize,2
+2024,Benin,2
+2024,Bermuda,2
+2024,Bolivia,9
+2024,Bosnia and Herzegovina,8
+2024,Botswana,2
+2024,Brazil,9
+2024,British Virgin Islands,2
+2024,Bulgaria,6
+2024,Burkina Faso,2
+2024,Burundi,2
+2024,Cameroon,1
+2024,Canada,4
+2024,Cape Verde,2
+2024,Cayman Islands,2
+2024,Central African Republic,1
+2024,Chad,2
+2024,Chile,8
+2024,China,10
+2024,Colombia,9
+2024,Comoros,2
+2024,Cook Islands,1
+2024,Costa Rica,5
+2024,Croatia,10
+2024,Cuba,2
+2024,Curaçao,4
+2024,Cyprus,9
+2024,Czech Republic,9
+2024,DR Congo,2
+2024,Denmark,7
+2024,Djibouti,2
+2024,Dominica,2
+2024,Dominican Republic,4
+2024,Ecuador,5
+2024,Egypt,2
+2024,El Salvador,4
+2024,England,9
+2024,Equatorial Guinea,2
+2024,Estonia,9
+2024,Eswatini,1
+2024,Ethiopia,2
+2024,Faroe Islands,9
+2024,Fiji,4
+2024,Finland,10
+2024,France,9
+2024,Gabon,2
+2024,Gambia,2
+2024,Georgia,8
+2024,Germany,10
+2024,Ghana,2
+2024,Gibraltar,7
+2024,Greece,8
+2024,Grenada,2
+2024,Guadeloupe,3
+2024,Guatemala,7
+2024,Guinea,1
+2024,Guinea-Bissau,2
+2024,Guyana,2
+2024,Haiti,5
+2024,Honduras,7
+2024,Hungary,7
+2024,Iceland,8
+2024,Indonesia,9
+2024,Iran,9
+2024,Iraq,8
+2024,Israel,8
+2024,Italy,10
+2024,Ivory Coast,2
+2024,Jamaica,5
+2024,Japan,9
+2024,Jordan,9
+2024,Kazakhstan,8
+2024,Kenya,2
+2024,Kosovo,7
+2024,Kuwait,9
+2024,Kyrgyzstan,10
+2024,Latvia,9
+2024,Lesotho,1
+2024,Liberia,2
+2024,Libya,2
+2024,Liechtenstein,6
+2024,Lithuania,8
+2024,Luxembourg,5
+2024,Madagascar,2
+2024,Malawi,2
+2024,Mali,1
+2024,Malta,6
+2024,Mauritania,2
+2024,Mauritius,2
+2024,Mexico,5
+2024,Moldova,7
+2024,Montenegro,9
+2024,Montserrat,2
+2024,Morocco,2
+2024,Mozambique,2
+2024,Namibia,2
+2024,Netherlands,10
+2024,New Caledonia,5
+2024,New Zealand,5
+2024,Nicaragua,2
+2024,Niger,1
+2024,Nigeria,2
+2024,North Korea,10
+2024,North Macedonia,10
+2024,Northern Ireland,5
+2024,Norway,9
+2024,Oman,10
+2024,Palestine,9
+2024,Panama,6
+2024,Papua New Guinea,3
+2024,Paraguay,8
+2024,Peru,7
+2024,Poland,9
+2024,Portugal,9
+2024,Puerto Rico,2
+2024,Qatar,10
+2024,Republic of Ireland,8
+2024,Romania,9
+2024,Rwanda,2
+2024,Saint Kitts and Nevis,2
+2024,Saint Lucia,2
+2024,Saint Vincent and the Grenadines,2
+2024,Samoa,5
+2024,San Marino,8
+2024,Saudi Arabia,11
+2024,Scotland,7
+2024,Senegal,1
+2024,Serbia,7
+2024,Seychelles,2
+2024,Sierra Leone,2
+2024,Slovakia,7
+2024,Slovenia,7
+2024,Solomon Islands,3
+2024,Somalia,1
+2024,South Africa,1
+2024,South Korea,9
+2024,South Sudan,2
+2024,Spain,9
+2024,Sudan,1
+2024,Suriname,4
+2024,Sweden,6
+2024,Switzerland,6
+2024,São Tomé and Príncipe,2
+2024,Tahiti,4
+2024,Tanzania,1
+2024,Togo,2
+2024,Tonga,2
+2024,Trinidad and Tobago,5
+2024,Tunisia,2
+2024,Turkey,6
+2024,Uganda,2
+2024,Ukraine,8
+2024,United Arab Emirates,9
+2024,United States,6
+2024,Uruguay,6
+2024,Uzbekistan,8
+2024,Vanuatu,3
+2024,Venezuela,9
+2024,Wales,8
+2024,Zimbabwe,2
+2025,Albania,5
+2025,Algeria,12
+2025,Andorra,4
+2025,Angola,5
+2025,Argentina,10
+2025,Armenia,6
+2025,Australia,3
+2025,Austria,10
+2025,Azerbaijan,6
+2025,Belarus,5
+2025,Belgium,10
+2025,Benin,8
+2025,Bermuda,6
+2025,Bolivia,4
+2025,Bosnia and Herzegovina,11
+2025,Botswana,7
+2025,Brazil,7
+2025,Bulgaria,6
+2025,Burkina Faso,7
+2025,Burundi,4
+2025,Cameroon,9
+2025,Canada,5
+2025,Cape Verde,6
+2025,Central African Republic,4
+2025,Chad,4
+2025,Chile,1
+2025,Colombia,5
+2025,Comoros,5
+2025,Congo,3
+2025,Costa Rica,4
+2025,Croatia,9
+2025,Curaçao,6
+2025,Cyprus,5
+2025,Czech Republic,8
+2025,DR Congo,15
+2025,Denmark,7
+2025,Djibouti,4
+2025,Ecuador,4
+2025,Egypt,13
+2025,El Salvador,6
+2025,England,12
+2025,Equatorial Guinea,6
+2025,Estonia,6
+2025,Eswatini,4
+2025,Ethiopia,4
+2025,Faroe Islands,7
+2025,Finland,4
+2025,France,14
+2025,Gabon,7
+2025,Gambia,4
+2025,Georgia,6
+2025,Germany,10
+2025,Ghana,7
+2025,Gibraltar,4
+2025,Greece,5
+2025,Guatemala,6
+2025,Guinea,3
+2025,Guinea-Bissau,4
+2025,Haiti,8
+2025,Honduras,3
+2025,Hungary,6
+2025,Iceland,6
+2025,Indonesia,2
+2025,Iran,2
+2025,Iraq,7
+2025,Israel,5
+2025,Italy,8
+2025,Ivory Coast,12
+2025,Jamaica,7
+2025,Japan,4
+2025,Jordan,3
+2025,Kazakhstan,5
+2025,Kenya,4
+2025,Kosovo,7
+2025,Latvia,7
+2025,Lesotho,4
+2025,Liberia,4
+2025,Libya,3
+2025,Liechtenstein,5
+2025,Lithuania,7
+2025,Luxembourg,6
+2025,Madagascar,4
+2025,Malawi,3
+2025,Mali,8
+2025,Malta,4
+2025,Mauritania,2
+2025,Mauritius,3
+2025,Mexico,5
+2025,Moldova,5
+2025,Montenegro,5
+2025,Morocco,14
+2025,Mozambique,8
+2025,Namibia,4
+2025,Netherlands,10
+2025,New Caledonia,1
+2025,New Zealand,3
+2025,Nicaragua,6
+2025,Niger,4
+2025,Nigeria,11
+2025,North Macedonia,4
+2025,Northern Ireland,7
+2025,Norway,10
+2025,Oman,1
+2025,Panama,8
+2025,Paraguay,5
+2025,Peru,2
+2025,Poland,7
+2025,Portugal,10
+2025,Qatar,4
+2025,Republic of Ireland,7
+2025,Romania,5
+2025,Rwanda,4
+2025,San Marino,4
+2025,Saudi Arabia,3
+2025,Scotland,8
+2025,Senegal,14
+2025,Serbia,6
+2025,Seychelles,4
+2025,Sierra Leone,4
+2025,Slovakia,7
+2025,Slovenia,4
+2025,Somalia,4
+2025,South Africa,11
+2025,South Korea,3
+2025,South Sudan,2
+2025,Spain,13
+2025,Sudan,7
+2025,Suriname,6
+2025,Sweden,12
+2025,Switzerland,10
+2025,São Tomé and Príncipe,4
+2025,Tanzania,7
+2025,Togo,3
+2025,Trinidad and Tobago,5
+2025,Tunisia,11
+2025,Turkey,11
+2025,Uganda,7
+2025,Ukraine,7
+2025,United Arab Emirates,4
+2025,United States,5
+2025,Uruguay,4
+2025,Uzbekistan,3
+2025,Venezuela,2
+2025,Wales,5
+2025,Zambia,5
+2025,Zimbabwe,6

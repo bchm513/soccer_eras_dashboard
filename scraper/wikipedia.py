@@ -15,6 +15,7 @@ import re
 from pathlib import Path
 from urllib.parse import quote, unquote
 
+import numpy as np
 from bs4 import BeautifulSoup, Tag
 
 from .http import Blocked, FetchFailed, PoliteSession, RobotsDisallowed
@@ -35,11 +36,25 @@ def load_leagues(only=None, include_disabled=False) -> list[dict]:
     return [lg for lg in leagues if lg["enabled"] or include_disabled]
 
 
+def season_format(lg: dict, season: int) -> str:
+    """A league's season format can change over time: 'formats': [[1946, "calendar"], [2012, "split"]]."""
+    fmt = lg.get("format", "split")
+    for start, f in lg.get("formats", []):
+        if season >= start:
+            fmt = f
+    return fmt
+
+
 def season_label(season: int, fmt: str) -> str:
     if fmt == "calendar":
         return str(season)
     nxt = season + 1
     return f"{season}–{nxt}" if nxt % 100 == 0 else f"{season}–{nxt % 100:02d}"   # 1999–2000, 1955–56
+
+
+def active(lg: dict, season: int) -> bool:
+    return lg.get("first", 1946) <= season <= lg.get("last", 9999) and not any(
+        a <= season <= b for a, b in lg.get("gaps", []))
 
 
 def page_url(title: str) -> str:
@@ -109,6 +124,19 @@ def _player(cell: Tag) -> tuple[str, str, str]:
     return name, "", nat
 
 
+def _links(cell: Tag | None) -> list[Tag]:
+    """Article links in a cell, leaving out flag icons, files and references."""
+    if cell is None:
+        return []
+    return [a for a in cell.find_all("a", href=True)
+            if a["href"].startswith("/wiki/") and not a.find_parent(class_="flagicon")
+            and ":" not in a["href"][6:] and a.get_text(strip=True) and not a.find_parent("sup")]
+
+
+def _title(a: Tag | None) -> str:
+    return unquote(a["href"][6:].split("#")[0]) if a is not None else ""
+
+
 def _header_index(header: list[str], *names: str) -> int | None:
     for i, h in enumerate(header):
         if any(h == n or h.startswith(n) for n in names):
@@ -159,8 +187,10 @@ def _parse_tables(soup: BeautifulSoup) -> list[dict]:
             rank = int(rk.group()) if rk else rank   # "=" / blank / merged -> same rank as above
             club_txt = _text(r[ic])
             clubs = [c.strip() for c in re.split(r",|/|\s→\s|\s->\s", club_txt) if c.strip()]
+            club_links = _links(r[ic])
             rows.append({"rank": rank, "player": name, "player_id": pid or name, "nationality": nat,
                          "team": clubs[0] if clubs else club_txt, "all_teams": "; ".join(clubs),
+                         "team_title": _title(club_links[0]) if club_links else "",
                          "goals": goals, "penalties": None, "method": "table"})
         if rows:
             return rows
@@ -201,8 +231,10 @@ def _player_club(el: Tag) -> dict | None:
     club = paren.group(1).strip() if paren else (links[1].get_text(" ", strip=True) if len(links) > 1 else "")
     club = re.sub(r"\s*\d+\s+goals?.*$", "", club, flags=re.I)
     clubs = [c.strip() for c in re.split(r",|/|\s→\s|\s->\s|\s&\s", club) if c.strip()]
+    club_link = links[1] if len(links) > 1 else None
     return {"player": name, "player_id": pid or name, "nationality": nat,
-            "team": clubs[0] if clubs else "", "all_teams": "; ".join(clubs)}
+            "team": clubs[0] if clubs else "", "all_teams": "; ".join(clubs),
+            "team_title": _title(club_link)}
 
 
 def _parse_goal_groups(soup: BeautifulSoup) -> list[dict]:
@@ -274,11 +306,127 @@ def parse_scorers(html: str) -> list[dict]:
 
 # ---------- scraping ----------
 
-def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=print) -> list[dict]:
-    out, templates = [], list(lg["wiki"])
-    for season in range(max(first, lg["first"]), last + 1):
-        label = season_label(season, lg["format"])
-        rows, url = None, None
+# ---------- league tables -> scoring environment ----------
+
+def _num(cell) -> int | None:
+    m = re.search(r"-?\d+", _text(cell).replace("−", "-"))
+    return int(m.group()) if m else None
+
+
+def parse_standings(html: str) -> dict | None:
+    """Goals per team-match from the season's league table (Pld / GF / GA columns).
+
+    Uses the largest table whose goals for and against balance (a proper league table, not a
+    results matrix or a group with outside games). Returns teams, matches, goals, rate, games."""
+    soup = BeautifulSoup(html, "lxml") if isinstance(html, str) else html
+    best = None
+    for table in soup.find_all("table"):
+        if "wikitable" not in (table.get("class") or []):
+            continue
+        grid = _grid(table)
+        if len(grid) < 5:
+            continue
+        header = [_text(c).lower().replace(".", "") for c in grid[0]]
+        ip = next((i for i, h in enumerate(header) if h in ("pld", "p", "gp", "mp", "pj", "played", "games")), None)
+        igf = next((i for i, h in enumerate(header) if h in ("gf", "f", "goals for", "gs")), None)
+        iga = next((i for i, h in enumerate(header) if h in ("ga", "a", "goals against", "gc")), None)
+        if None in (ip, igf, iga):
+            continue
+        pld = gf = ga = n = 0
+        games = []
+        for r in grid[1:]:
+            if len(r) <= max(ip, igf, iga) or r[ip] is r[igf]:
+                continue
+            p, f, g = _num(r[ip]), _num(r[igf]), _num(r[iga])
+            if p is None or f is None or g is None or p <= 0 or p > 80:
+                continue
+            pld, gf, ga, n = pld + p, gf + f, ga + g, n + 1
+            games.append(p)
+        if n < 4 or gf == 0 or abs(gf - ga) > 0.1 * gf:
+            continue
+        if best is None or n > best["teams"]:
+            best = {"teams": n, "matches": pld // 2, "goals": gf, "goals_per_team_match": round(gf / pld, 4),
+                    "team_games": round(float(np.median(games)), 1)}
+    return best
+
+
+# ---------- "List of ... top scorers" pages (one leader per season) ----------
+
+STAGE_LATE = re.compile(r"\b(cl|clausura|fi|final|tr|transición|2nd|second)\b", re.I)
+
+
+def leaders_season(text: str, fmt_of_year) -> int | None:
+    """'1955–56' -> 1955; '1991 Ap' -> 1991; '1992 Cl' -> 1991 (Clausura closes the season)."""
+    m = re.match(r"\s*(\d{4})", text)
+    if not m:
+        return None
+    year = int(m.group(1))
+    if re.match(r"\s*\d{4}\s*[–-]\s*\d{2,4}", text):
+        return year
+    if STAGE_LATE.search(text) and fmt_of_year(year - 1) != "calendar":
+        return year - 1
+    return year
+
+
+def parse_leaders(html: str) -> list[dict]:
+    """Season | Player | Club | Goals tables; ties listed in one cell are paired up in order."""
+    soup = BeautifulSoup(html, "lxml")
+    out = []
+    for table in soup.find_all("table"):
+        if "wikitable" not in (table.get("class") or []):
+            continue
+        grid = _grid(table)
+        if len(grid) < 5:
+            continue
+        header = [_text(c).lower() for c in grid[0]]
+        i_s = _header_index(header, "season", "year", "edition")
+        i_p = _header_index(header, "player", "top scorer", "topscorer", "scorer", "name")
+        i_c = _header_index(header, "club", "team")
+        i_g = _header_index(header, "goals", "gls")
+        if None in (i_s, i_p, i_g):
+            continue
+        for r in grid[1:]:
+            if len(r) <= max(i_s, i_p, i_g) or r[i_s] is r[i_p]:
+                continue
+            season_txt = _text(r[i_s])
+            if not re.match(r"\s*\d{4}", season_txt):
+                continue
+            players = _links(r[i_p])
+            clubs = _links(r[i_c]) if i_c is not None and i_c < len(r) else []
+            goals = [int(x) for x in re.findall(r"\d+", _text(r[i_g]))]
+            if not goals:
+                continue
+            flags = [f.find("a").get("title") if f.find("a") else "" for f in r[i_p].select(".flagicon")]
+            if not players:
+                players_txt = [_text(r[i_p])]
+                ids = players_txt
+            else:
+                players_txt = [a.get_text(" ", strip=True) for a in players]
+                ids = [_title(a) for a in players]
+            for k, (name, pid) in enumerate(zip(players_txt, ids)):
+                club = clubs[k] if k < len(clubs) else (clubs[-1] if clubs else None)
+                out.append({"season_text": season_txt, "player": name, "player_id": pid or name,
+                            "nationality": flags[k] if k < len(flags) else "",
+                            "team": club.get_text(" ", strip=True) if club is not None else
+                            (_text(r[i_c]) if i_c is not None and i_c < len(r) else ""),
+                            "team_title": _title(club), "goals": goals[k] if k < len(goals) else goals[0],
+                            "penalties": None, "rank": 1, "method": "leaders"})
+        if out:
+            return out
+    return out
+
+
+# ---------- scraping ----------
+
+def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=print) -> tuple[list[dict], list[dict]]:
+    """Season pages for top scorers and the league table; leader-list page fills empty seasons."""
+    out, env, templates = [], [], list(lg["wiki"])
+    covered = set()
+    for season in range(max(first, lg.get("first", first)), min(last, lg.get("last", last)) + 1):
+        if not active(lg, season):
+            continue
+        label = season_label(season, season_format(lg, season))
+        rows, url, html_ok = None, None, None
         for tpl in templates:
             url = page_url(tpl.format(s=label))
             try:
@@ -287,19 +435,45 @@ def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=prin
                 log(f"  {lg['code']} {season}: {e}")
                 html = None
             if html:
+                html_ok = html
                 rows = parse_scorers(html)
                 if rows:
                     templates.remove(tpl)
                     templates.insert(0, tpl)   # page naming usually persists for years
                     break
+        if html_ok:
+            st = parse_standings(html_ok)
+            if st:
+                env.append({"competition": lg["code"], "season": season, **st, "source": "wikipedia"})
         if not rows:
-            log(f"  {lg['code']} {season}: no top-scorer table found")
+            log(f"  {lg['code']} {season}: no top-scorer table on the season page")
             continue
+        covered.add(season)
         for r in rows:
             r.update({"competition": lg["code"], "season": season, "source_url": url})
         out.extend(rows)
         log(f"  {lg['code']} {season}: {len(rows)} scorers (top: {rows[0]['player']} {rows[0]['goals']})")
-    return out
+
+    # Leader lists fill seasons the season pages couldn't (e.g. England before 1960)
+    for title in lg.get("leaders", []):
+        url = page_url(title)
+        try:
+            html = sess.get(url)
+        except (RobotsDisallowed, FetchFailed):
+            html = None
+        if not html:
+            continue
+        added = 0
+        for r in parse_leaders(html):
+            s = leaders_season(r.pop("season_text"), lambda y: season_format(lg, y))
+            if s is None or s in covered or not (first <= s <= last) or not active(lg, s):
+                continue
+            out.append({**r, "competition": lg["code"], "season": s, "source_url": url})
+            added += 1
+        if added:
+            log(f"  {lg['code']}: {added} leader rows from '{title}' for seasons without a scorer table")
+            break
+    return out, env
 
 
 def probe(sess: PoliteSession, leagues: list[dict], log=print) -> bool:
@@ -314,10 +488,10 @@ def probe(sess: PoliteSession, leagues: list[dict], log=print) -> bool:
             "interfering with Python's connections (VPN, firewall, antivirus).")
         return False
     for lg in leagues:
-        for season in sorted({lg["first"], 1960, 1975, 1990, 2005}):
-            if season < lg["first"]:
+        for season in sorted({lg.get("first", 1946), 1960, 1975, 1990, 2005, 2020}):
+            if not active(lg, season):
                 continue
-            label = season_label(season, lg["format"])
+            label = season_label(season, season_format(lg, season))
             found = "—"
             for tpl in lg["wiki"]:
                 try:
@@ -328,9 +502,20 @@ def probe(sess: PoliteSession, leagues: list[dict], log=print) -> bool:
                     rows = parse_scorers(html)
                     n = len(rows)
                     how = rows[0]["method"] if rows else ""
-                    found = (f"{n} scorers ({how}) via '{tpl.format(s=label)}'" if n
-                             else f"page found, no scorers: '{tpl.format(s=label)}'")
+                    st = parse_standings(html)
+                    tab = f" | league table: {st['teams']} teams" if st else " | no league table"
+                    found = (f"{n} scorers ({how}) via '{tpl.format(s=label)}'{tab}" if n
+                             else f"page found, no scorers: '{tpl.format(s=label)}'{tab}")
                     if n:
                         break
             log(f"{lg['code']} {season}: {found}")
+        for title in lg.get("leaders", []):
+            try:
+                html = sess.get(page_url(title))
+            except (FetchFailed, RobotsDisallowed):
+                html = None
+            n = len(parse_leaders(html)) if html else 0
+            log(f"{lg['code']} leader list '{title}': " + (f"{n} rows" if n else "not found / no table"))
+            if n:
+                break
     return True

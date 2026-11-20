@@ -10,7 +10,8 @@ HUB_DIAMETER_KM = 250    # every city in a hub is within this distance of every 
 ROLLING_SEASONS = 3      # club baseline smoothing
 HUB_MIN_Z = {"real": 0.0, "sample": 1.0}   # map pool: club seasons at/above this z also feed hubs
 TITLE_BONUS = {"winner": 1.0, "runner_up": 0.4}   # European final: x the season's biggest hub weight
-TOURNAMENT_CAP = {"World Cup": 1.5, "Euro": 1.1}   # x the largest club hub that month
+TOURNAMENT_CAP = {"World Cup": 1.5, "Euro": 1.1, "Copa América": 1.0, "AFCON": 0.7, "Asian Cup": 0.7,
+                  "Gold Cup": 0.6, "Confederations Cup": 0.5}   # x the largest club hub that month
 FADE = [0.55, 0.25, 0.08]  # months after a tournament ends
 LEAD_IN = 0.3            # month before it starts
 
@@ -90,7 +91,9 @@ def club_weights(rows: pd.DataFrame, hubs: list, metric: str, first: int, last: 
             if t.season in table.index:
                 if t.hub not in table.columns:
                     table[t.hub] = 0.0
-                table.loc[t.season, t.hub] += TITLE_BONUS.get(t.kind, 0) * biggest.get(t.season, 0)
+                w = getattr(t, "weight", None)
+                w = TITLE_BONUS.get(t.kind, 0) if w is None or pd.isna(w) else w
+                table.loc[t.season, t.hub] += w * biggest.get(t.season, 0)
     table = table.rolling(ROLLING_SEASONS, center=True, min_periods=1).mean()
     season_mid = np.array([month_index(start, f"{s}-12") for s in seasons])  # weight anchored mid-season
     frames = np.arange(n)
@@ -105,7 +108,7 @@ def tournament_weights(tournaments: list, club: dict, start: str, n: int) -> lis
         a, b = month_index(start, s), month_index(start, e)
         if b < 0 or a >= n:
             continue
-        cap = TOURNAMENT_CAP.get(kind, 1.0)
+        cap = TOURNAMENT_CAP.get(kind, 0.6)
         series = []
         for f in range(a - 1, b + len(FADE) + 1):
             if not 0 <= f < n:

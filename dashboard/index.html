@@ -29,15 +29,19 @@
       <div class="panel-head">
         <h2>Centres of gravity</h2>
         <div class="map-tools">
-          <button class="chip" data-view="world">World</button>
-          <button class="chip" data-view="europe">Europe</button>
+          <div id="regions" class="chips" role="group" aria-label="Region"></div>
+          <button class="chip" id="export-png" title="Download the map as an image">PNG</button>
+          <button class="chip" id="record" title="Record the map as a video clip while it plays">● Record</button>
         </div>
       </div>
       <div class="map-wrap"><svg id="map" role="img" aria-label="Map with hub circles that grow and shrink over time"></svg></div>
       <div class="legend">
-        <span><i class="dot club"></i>Club hub (rolling 3 seasons)</span>
+        <span><i class="dot club"></i>Club hub</span>
         <span><i class="dot tour"></i>Tournament</span>
         <span><i class="dot lead"></i>Heart of the game</span>
+        <span class="legend-land"><i class="sw league"></i>League data</span>
+        <span class="legend-land"><i class="sw play"></i>Playing, no league data</span>
+        <span class="legend-land"><i class="sw none"></i>Not yet playing internationals</span>
       </div>
     </section>
 
@@ -47,10 +51,20 @@
 
     <section class="panel peaks-panel" aria-label="Career peaks">
       <div class="panel-head">
-        <h2>Overlapping peaks</h2>
+        <h2 id="peaks-title">Overlapping peaks</h2>
         <span class="hint">Click a curve to jump to that player's peak</span>
       </div>
       <div class="peaks-wrap"><svg id="peaks" role="img" aria-label="Career curves for star players with shaded eras"></svg></div>
+    </section>
+
+    <section class="panel growth-panel" aria-label="Growth of the game">
+      <div class="panel-head"><h2>Growth of the game</h2><span class="hint" id="growth-hint"></span></div>
+      <div id="growth"></div>
+    </section>
+
+    <section class="panel eras-panel" aria-label="Era comparison">
+      <div class="panel-head"><h2 id="eras-title">Comparing eras</h2><span class="hint">Click a row to jump there</span></div>
+      <div class="table-wrap"><table id="era-table"></table></div>
     </section>
   </main>
 

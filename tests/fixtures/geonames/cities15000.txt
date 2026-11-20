@@ -1,0 +1,5 @@
+1	Lima	Lima		-12.04318	-77.02824	P	PPLC	PE		15				7737002				
+2	San Miguel de Tucumán	San Miguel de Tucuman		-26.82414	-65.2226	P	PPLA	AR		24				781023				
+3	Rosario	Rosario		-32.94682	-60.63932	P	PPLA2	AR		21				1173533				
+4	Union	Union		-30.0	-60.0	P	PPL	AR						20000				
+5	Kashima	Kashima		35.96	140.64	P	PPL	JP						66000				

@@ -137,19 +137,24 @@ soccer-eras/
 
 ## 6. Roadmap
 
-| Phase | Work | Output |
+| Phase | Work | Status |
 |---|---|---|
-| 0 ✅ | Plan, pipeline skeleton, dashboard on sample data | This repo |
-| 1 🔧 | Collection built (`scraper/`): scoring rates from GitHub datasets (done, in `data/raw/`); club top scorers from Wikipedia 1946–2011 and Transfermarkt open data 2012–2025 (run locally; worldfootball.net blocks scripts); club → city resolver | `data/raw/player_seasons.csv` |
-| 1b | Fill gaps: scoring rates for Hungary/Brazil/Argentina and early Germany/Netherlands/Portugal/Scotland; check star threshold on real data | Wider coverage |
-| 2 | League scoring averages per season; swap sample data for real | Real eras, goals-only |
-| 3 | Add assists (1990s→) and shots (2000s→); multi-metric agreement report | Robustness check |
-| 4 | Audience layer: tournament TV + attendance; tournament weights | Impact-weighted map |
-| 5 | Impact metrics (players, leagues, archives); era comparison | Era length / impact table |
-| 6 | Match-level weighting for big games | Finer map |
-| 7 | Polish, host as a website, export short clips for posting | Public site + clips |
+| 0 | Plan, pipeline, dashboard on sample data | ✅ |
+| 1 | Real data: Wikipedia top scorers 1946–2011, Transfermarkt 2012–2025, scoring rates (engsoccerdata + Wikipedia league tables), club locations | ✅ built; run locally |
+| 2 | Era adjustment against each player's own time, top-3 reference group, club form required for stars | ✅ |
+| 3 | Multi-metric agreement (raw vs era-adjusted vs goals + assists from 2012) | ✅ |
+| 4 | League strength: ClubElo (Europe) + national-team Elo with talent-exodus correction (world) | ✅ built; ClubElo optional |
+| 5 | Big moments: continental cup goals ×2, World Cup ×3, continental championships ×2; continental titles on the map scaled by strength | ✅ |
+| 6 | Eras split at hand-overs between groups of stars | ✅ |
+| 7 | World expansion: 34 leagues on six continents, five continental cups, 156 tournaments, regional stars and eras | ✅ built; page names for non-European leagues need a `probe` run |
+| 8 | Growth of the game: countries fade in at first international, no-data shading, growth panel | ✅ |
+| 9 | Impact: era comparison table (length, stars, leagues, nations active, tournaments, final crowds) + manual series hook for TV audiences | ✅ (TV data must be added by hand) |
+| 10 | Postable: PNG export and video clip recording of the map, deep links | ✅ |
+| 11 | Match-level weighting for individual big games | To do |
+| 12 | Knockout-round weighting at tournaments (needs stage data) | To do |
+| 13 | Host as a public website | To do |
 
----
+First real run (8 European leagues, World Cup and continental championship goals): eras 1948–52, 1956–65, 1968–71, 1983–90, 1991–99, 2001–06, 2007–11, 2012–25.
 
 ## 7. Open questions
 

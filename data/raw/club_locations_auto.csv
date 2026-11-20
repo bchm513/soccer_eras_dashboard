@@ -1,0 +1,662 @@
+team,country,city,lat,lon,method
+Wimbledon,ENG,Wimbledon,51.422,-0.208,geonames
+Watford,ENG,Watford,51.655,-0.396,geonames
+Sabadell,ESP,Sabadell,41.543,2.109,geonames
+Pontevedra,ESP,Pontevedra,42.431,-8.644,geonames
+Cádiz,ESP,Cadiz,36.527,-6.289,geonames
+Albacete,ESP,Albacete,38.994,-1.856,geonames
+Mérida,ESP,Mérida,38.918,-6.343,geonames
+Almería,ESP,Almería,36.838,-2.46,geonames
+Getafe,ESP,Getafe,40.306,-3.733,geonames
+Eibar,ESP,Eibar,43.185,-2.472,geonames
+Girona,ESP,Girona,41.983,2.825,geonames
+Huesca,ESP,Huesca,42.136,-0.409,geonames
+Livorno,ITA,Livorno,43.544,10.326,geonames
+Modena,ITA,Modena,44.648,10.925,geonames
+Como,ITA,Como,45.808,9.083,geonames
+Legnano,ITA,Legnano,45.598,8.915,geonames
+Lecco,ITA,Lecco,45.856,9.397,geonames
+Messina,ITA,Messina,38.194,15.553,geonames
+Foggia,ITA,Foggia,41.458,15.552,geonames
+Varese,ITA,Varese,45.821,8.825,geonames
+Cesena,ITA,Cesena,44.139,12.243,geonames
+Perugia,ITA,Perugia,43.112,12.389,geonames
+Catanzaro,ITA,Catanzaro,38.882,16.601,geonames
+Avellino,ITA,Avellino,40.915,14.791,geonames
+Piacenza,ITA,Piacenza,45.052,9.693,geonames
+Siena,ITA,Siena,43.318,11.331,geonames
+Crotone,ITA,Crotone,39.081,17.128,geonames
+Borussia Neunkirchen,GER,Neunkirchen,49.344,7.18,geonames
+Alemannia Aachen,GER,Aachen,50.777,6.083,geonames
+Rot-Weiß Oberhausen,GER,Oberhausen,51.478,6.862,geonames
+Rot-Weiss Essen,GER,Essen,51.457,7.012,geonames
+Kickers Offenbach,GER,Offenbach,50.101,8.766,geonames
+Rot-Weiß Essen,GER,Essen,51.457,7.012,geonames
+SV Darmstadt 98,GER,Darmstadt,49.872,8.65,geonames
+SV Waldhof Mannheim,GER,Mannheim,49.489,8.467,geonames
+SG Wattenscheid 09,GER,Wattenscheid,51.481,7.143,geonames
+Hansa Rostock,GER,Rostock,54.089,12.14,geonames
+FC Hansa Rostock,GER,Rostock,54.089,12.14,geonames
+Energie Cottbus,GER,Cottbus,51.758,14.329,geonames
+Darmstadt 98,GER,Darmstadt,49.872,8.65,geonames
+Sète,FRA,Sète,43.403,3.693,geonames
+Roubaix-Tourcoing,FRA,Tourcoing,50.724,3.161,geonames
+Le Havre,FRA,Le Havre,49.493,0.108,geonames
+Troyes,FRA,Troyes,48.301,4.085,geonames
+Alès,FRA,Alès,44.125,4.081,geonames
+Angers,FRA,Angers,47.472,-0.552,geonames
+Valenciennes,FRA,Valenciennes,50.359,3.525,geonames
+Ajaccio,FRA,Ajaccio,41.919,8.738,geonames
+Aix-en-Provence,FRA,Aix-en-Provence,43.528,5.45,geonames
+Bastia,FRA,Bastia,42.702,9.451,geonames
+Rouen,FRA,Rouen,49.443,1.099,geonames
+Troyes AF,FRA,Troyes,48.301,4.085,geonames
+Laval,FRA,Laval,48.072,-0.77,geonames
+Brest,FRA,Brest,48.39,-4.486,geonames
+Tours,FRA,Tours,47.395,0.704,geonames
+Toulon,FRA,Toulon,43.124,5.928,geonames
+Cannes,FRA,Cannes,43.551,7.013,geonames
+Caen,FRA,Caen,49.186,-0.359,geonames
+Martigues,FRA,Martigues,43.407,5.055,geonames
+Lorient,FRA,Lorient,47.748,-3.372,geonames
+Le Mans,FRA,Le Mans,48.002,0.203,geonames
+RKC Waalwijk,NED,Waalwijk,51.682,5.071,geonames
+NAC Breda,NED,Breda,51.587,4.776,geonames
+RKC Waalwijk Roda JC,NED,Waalwijk,51.682,5.071,geonames
+PEC Zwolle,NED,Zwolle,52.513,6.094,geonames
+Heracles Almelo,NED,Almelo,52.357,6.662,geonames
+VVV-Venlo,NED,Venlo,51.37,6.168,geonames
+Fortuna Sittard,NED,Sittard,50.998,5.869,geonames
+Fabril Barreiro,POR,Barreiro,38.663,-9.072,geonames
+União de Tomar,POR,Tomar,39.602,-8.409,geonames
+Montijo,POR,Montijo,38.707,-8.974,geonames
+Amora,POR,Amora,38.63,-9.116,geonames
+União de Leiria,POR,Leiria,39.744,-8.807,geonames
+Estoril,POR,Estoril,38.706,-9.398,geonames
+Chaves,POR,Chaves,41.74,-7.469,geonames
+Leiria,POR,Leiria,39.744,-8.807,geonames
+Felgueiras,POR,Felgueiras,41.368,-8.194,geonames
+Arouca,POR,Arouca,40.931,-8.245,geonames
+Dunfermline Athletic,SCO,Dunfermline,56.072,-3.459,geonames
+St Johnstone,SCO,Johnstone,55.829,-4.516,geonames
+Livingston,SCO,Livingston,55.903,-3.523,geonames
+Inverness CT,SCO,Inverness,57.479,-4.224,geonames
+Falkirk,SCO,Falkirk,56.002,-3.785,geonames
+Hamilton Academical,SCO,Hamilton,55.767,-4.033,geonames
+Inverness Caledonian Thistle,SCO,Inverness,57.479,-4.224,geonames
+Seraing,BEL,Seraing,50.584,5.501,geonames
+KSV Waregem,BEL,Waregem,50.889,3.428,geonames
+Lokeren,BEL,Lokeren,51.104,3.993,geonames
+Beveren,BEL,Beveren,51.212,4.256,geonames
+Charleroi,BEL,Charleroi,50.411,4.444,geonames
+Waregem,BEL,Waregem,50.889,3.428,geonames
+K.S.C. Lokeren Oost-Vlaanderen,BEL,Lokeren,51.104,3.993,geonames
+KV Mechelen,BEL,Mechelen,51.026,4.478,geonames
+K.S.V. Waregem,BEL,Waregem,50.889,3.428,geonames
+K.V. Kortrijk,BEL,Kortrijk,50.828,3.265,geonames
+K.S.K. Beveren,BEL,Beveren,51.212,4.256,geonames
+Mechelen,BEL,Mechelen,51.026,4.478,geonames
+Germinal Ekeren,BEL,Ekeren,51.281,4.418,geonames
+Kortrijk,BEL,Kortrijk,50.828,3.265,geonames
+Eendracht Aalst,BEL,Aalst,50.936,4.035,geonames
+Harelbeke,BEL,Harelbeke,50.853,3.309,geonames
+Racing Genk,BEL,Genk,50.965,5.501,geonames
+Genk,BEL,Genk,50.965,5.501,geonames
+Mouscron,BEL,Mouscron,50.745,3.206,geonames
+Westerlo,BEL,Westerlo,51.09,4.915,geonames
+Mons,BEL,Mons,50.454,3.952,geonames
+Sint-Truiden,BEL,Sint-Truiden,50.817,5.186,geonames
+Roeselare,BEL,Roeselare,50.947,3.123,geonames
+Zulte Waregem,BEL,Waregem,50.889,3.428,geonames
+YR KV Mechelen,BEL,Mechelen,51.026,4.478,geonames
+Lokeren (9) and Germinal Beerschot (2),BEL,Lokeren,51.104,3.993,geonames
+OH Leuven,BEL,Leuven,50.88,4.701,geonames
+Waasland-Beveren,BEL,Beveren,51.212,4.256,geonames
+Mouscron-Péruwelz,BEL,Mouscron,50.745,3.206,geonames
+Eupen,BEL,Eupen,50.628,6.036,geonames
+KV Kortrijk,BEL,Kortrijk,50.828,3.265,geonames
+Sporting Charleroi,BEL,Charleroi,50.411,4.444,geonames
+RAAL La Louvière,BEL,La Louvière,50.487,4.188,geonames
+Berchem Sport,BEL,Berchem,51.19,4.433,geonames
+KRC Mechelen,BEL,Mechelen,51.026,4.478,geonames
+Çanakkale Dardanelspor,TUR,Çanakkale,40.156,26.413,geonames
+Kayseri Erciyesspor,TUR,Kayseri,38.732,35.485,geonames
+İstanbul B.B.,TUR,Istanbul,41.014,28.95,geonames
+İstanbul BB,TUR,Istanbul,41.014,28.95,geonames
+Mersin İdmanyurdu,TUR,Mersin,36.812,34.639,geonames
+Akhisar Belediyespor,TUR,Akhisar,38.919,27.84,geonames
+İstanbul Başakşehir,TUR,Başakşehir,41.106,28.791,geonames
+Başakşehir,TUR,Başakşehir,41.106,28.791,geonames
+Gaziantep,TUR,Gaziantep,37.059,37.383,geonames
+Adana Demirspor,TUR,Adana,36.986,35.325,geonames
+Fatih Karagümrük,TUR,Fatih,41.023,28.941,geonames
+Ankara Demirspor,TUR,Ankara,39.92,32.854,geonames
+Doxa Drama,GRE,Dráma,41.153,24.147,geonames
+Trikala,GRE,Tríkala,39.555,21.768,geonames
+Vyzas Megara,GRE,Mégara,37.995,23.343,geonames
+Korinthos,GRE,Kórinthos,37.94,22.951,geonames
+Xanthi,GRE,Xánthi,41.135,24.888,geonames
+Skoda Xanthi,GRE,Xánthi,41.135,24.888,geonames
+Kavala,GRE,Kavála,40.94,24.407,geonames
+Chalkidona,GRE,Chalkidóna,40.732,22.6,geonames
+Kallithea,GRE,Kallithéa,37.95,23.7,geonames
+Lamia,GRE,Lamía,38.899,22.433,geonames
+Volos,GRE,Volos,39.369,22.948,geonames
+A.E. Kifisia,GRE,Kifisiá,38.074,23.811,geonames
+Torpedo Moscow,URS,Moscow,55.752,37.618,geonames
+Dynamo Moscow,URS,Moscow,55.752,37.618,geonames
+CDKA Moscow,URS,Moscow,55.752,37.618,geonames
+Spartak Moscow,URS,Moscow,55.752,37.618,geonames
+Krylia Sovetov Kuybyshev,URS,Kuybyshev,55.448,78.319,geonames
+Lokomotiv Moscow,URS,Moscow,55.752,37.618,geonames
+VVS Moscow,URS,Moscow,55.752,37.618,geonames
+CDSA Moscow,URS,Moscow,55.752,37.618,geonames
+Zenit Kuybyshev,URS,Kuybyshev,55.448,78.319,geonames
+CSK MO Moscow,URS,Moscow,55.752,37.618,geonames
+SKVO Rostov-on-Don,URS,Rostov-on-Don,47.22,39.708,geonames
+Dinamo Moscow,URS,Moscow,55.752,37.618,geonames
+SKA Rostov-on-Don,URS,Rostov-on-Don,47.22,39.708,geonames
+CSKA Moscow,URS,Moscow,55.752,37.618,geonames
+Shakhtyor Donetsk,URS,Donetsk,48.337,39.952,geonames
+Shakhtar Donetsk,URS,Donetsk,48.337,39.952,geonames
+Spartak Vladikavkaz,URS,Vladikavkaz,43.041,44.67,geonames
+Dynamo Moscow,RUS,Moscow,55.752,37.618,geonames
+Spartak Moscow,RUS,Moscow,55.752,37.618,geonames
+Spartak Vladikavkaz,RUS,Vladikavkaz,43.041,44.67,geonames
+Lokomotiv Moscow,RUS,Moscow,55.752,37.618,geonames
+Torpedo-Luzhniki,RUS,Luzhniki,55.716,37.554,geonames
+Krasnodar,RUS,Krasnodar,45.045,38.982,geonames
+Terek,RUS,Terek,43.483,44.138,geonames
+Tosno Dynamo,RUS,Tosno,59.54,30.878,geonames
+CSKA Moscow,RUS,Moscow,55.752,37.618,geonames
+Rubin Kazan Zenit St. Petersburg,RUS,Kazan,55.789,49.122,geonames
+Arsenal Tula,RUS,Tula,54.196,37.618,geonames
+Orenburg,RUS,Orenburg,51.767,55.099,geonames
+Zenit Saint Petersburg,RUS,Saint Petersburg,59.939,30.314,geonames
+Krylia Sovetov Samara Spartak Moscow,RUS,Moscow,55.752,37.618,geonames
+Ural Yekaterinburg,RUS,Yekaterinburg,56.857,60.615,geonames
+Rubin Kazan,RUS,Kazan,55.789,49.122,geonames
+Sochi,RUS,Sochi,43.597,39.725,geonames
+Akhmat Grozny,RUS,Grozny,43.312,45.689,geonames
+Lokomotiv Moscow Dynamo Moscow,RUS,Moscow,55.752,37.618,geonames
+Krylia Sovetov Samara Zenit Saint Petersburg,RUS,Saint Petersburg,59.939,30.314,geonames
+Khimki,RUS,Khimki,55.9,37.428,geonames
+Krylia Sovetov Samara,RUS,Samara,53.208,50.136,geonames
+Orenburg Krylia Sovetov Samara,RUS,Orenburg,51.767,55.099,geonames
+Krylia Sovetov Samara Lokomotiv Moscow,RUS,Moscow,55.752,37.618,geonames
+Fakel Voronezh,RUS,Voronezh,51.668,39.192,geonames
+Spartak Subotica,YUG,Subotica,46.1,19.667,geonames
+Napredak Kruševac,YUG,Kruševac,43.58,21.334,geonames
+Zemun,YUG,Zemun,44.846,20.401,geonames
+Kispest AC,HUN,Kispest,47.452,19.14,geonames
+FC Tatabánya,HUN,Tatabánya,47.592,18.381,geonames
+Tatabánya Bányász,HUN,Tatabánya,47.592,18.381,geonames
+FC Sopron,HUN,Sopron,47.685,16.59,geonames
+Siófok FC,HUN,Siófok,46.904,18.058,geonames
+Előre FC Békéscsaba,HUN,Békéscsaba,46.683,21.1,geonames
+Lombard FC Pápa,HUN,Pápa,47.33,17.467,geonames
+MFC Sopron,HUN,Sopron,47.685,16.59,geonames
+Tatabánya FC,HUN,Tatabánya,47.592,18.381,geonames
+Kaposvár,HUN,Kaposvár,46.367,17.8,geonames
+Zalaegerszeg,HUN,Zalaegerszeg,46.837,16.844,geonames
+Debrecen,HUN,Debrecen,47.532,21.624,geonames
+Kecskemét,HUN,Kecskemét,46.906,19.691,geonames
+Győr,HUN,Győr,47.683,17.635,geonames
+Paks,HUN,Paks,46.622,18.856,geonames
+Nyíregyháza,HUN,Nyíregyháza,47.955,21.717,geonames
+Pápa,HUN,Pápa,47.33,17.467,geonames
+Pécs,HUN,Pécs,46.076,18.228,geonames
+Diósgyőr,HUN,Diósgyőr,48.1,20.683,geonames
+Paks (7) Pécs (3),HUN,Pécs,46.076,18.228,geonames
+Eger,HUN,Eger,47.903,20.373,geonames
+Győr (2) Haladás (6),HUN,Győr,47.683,17.635,geonames
+Mezőkövesd,HUN,Mezőkövesd,47.817,20.583,geonames
+Kisvárda,HUN,Kisvárda,48.217,22.083,geonames
+Budafok,HUN,Budafok,47.424,19.036,geonames
+Diósgyőr (8),HUN,Diósgyőr,48.1,20.683,geonames
+SK Sturm Graz,AUT,Graz,47.067,15.442,geonames
+VÖEST Linz,AUT,Linz,48.306,14.286,geonames
+First Vienna FC,AUT,Vienna,48.208,16.372,geonames
+FC Wacker Innsbruck,AUT,Innsbruck,47.263,11.395,geonames
+Austria Salzburg,AUT,Salzburg,47.799,13.044,geonames
+Tirol Innsbruck,AUT,Innsbruck,47.263,11.395,geonames
+Vorwärts Steyr,AUT,Steyr,48.043,14.421,geonames
+Sturm Graz,AUT,Graz,47.067,15.442,geonames
+FC Linz,AUT,Linz,48.306,14.286,geonames
+LASK Linz,AUT,Linz,48.306,14.286,geonames
+Austria Lustenau,AUT,Lustenau,47.426,9.659,geonames
+SW Bregenz,AUT,Bregenz,47.503,9.747,geonames
+Admira Wacker Mödling,AUT,Mödling,48.086,16.289,geonames
+Red Bull Salzburg,AUT,Salzburg,47.799,13.044,geonames
+Rapid Vienna,AUT,Vienna,48.208,16.372,geonames
+Austria Vienna,AUT,Vienna,48.208,16.372,geonames
+SC Wiener Neustadt,AUT,Wiener Neustadt,47.805,16.232,geonames
+Wiener Neustadt,AUT,Wiener Neustadt,47.805,16.232,geonames
+Wacker Innsbruck,AUT,Innsbruck,47.263,11.395,geonames
+Salzburg,AUT,Salzburg,47.799,13.044,geonames
+Blau-Weiß Linz,AUT,Linz,48.306,14.286,geonames
+Örebro SK,SWE,Örebro,59.274,15.207,geonames
+Kalmar FF,SWE,Kalmar,56.662,16.362,geonames
+GIF Sundsvall,SWE,Sundsvall,62.391,17.306,geonames
+Västra Frölunda IF,SWE,Västra Frölunda,57.647,11.929,geonames
+Västra Frölunda,SWE,Västra Frölunda,57.647,11.929,geonames
+Umeå FC,SWE,Umeå,63.828,20.26,geonames
+Landskrona BoIS,SWE,Landskrona,55.871,12.83,geonames
+Örebro,SWE,Örebro,59.274,15.207,geonames
+Helsingborg,SWE,Helsingborg,56.047,12.694,geonames
+Halmstad,SWE,Halmstad,56.674,12.857,geonames
+Kalmar,SWE,Kalmar,56.662,16.362,geonames
+AFC Eskilstuna,SWE,Eskilstuna,59.367,16.508,geonames
+Santa Cruz,BRA,Santa Cruz,-6.229,-36.023,geonames
+Goiás,BRA,Goiás,-15.934,-50.14,geonames
+Criciúma,BRA,Criciúma,-28.677,-49.37,geonames
+Vitória,BRA,Vitória,-20.319,-40.338,geonames
+Gama,BRA,Gama,-16.025,-48.071,geonames
+Fortaleza,BRA,Fortaleza,-3.717,-38.543,geonames
+Cuiabá,BRA,Cuiabá,-15.596,-56.097,geonames
+Mirassol,BRA,Mirassol,-20.819,-49.521,geonames
+Lanús,ARG,Lanús,-34.708,-58.391,geonames
+Unión de Santa Fe,ARG,Santa Fe,-31.649,-60.709,geonames
+Belgrano,ARG,Belgrano,-34.563,-58.458,geonames
+Belgrano (C),ARG,Belgrano,-34.563,-58.458,geonames
+Colón,ARG,Colón,-32.223,-58.144,geonames
+Banfield,ARG,Banfield,-34.746,-58.394,geonames
+Tiro Federal,ARG,Federal,-30.956,-58.78,geonames
+Gimnasia (La Plata),ARG,La Plata,-34.921,-57.954,geonames
+Tigre,ARG,Tigre,-34.426,-58.58,geonames
+San Martín (SJ),ARG,San Martín,-33.083,-68.473,geonames
+Atlético de Rafaela,ARG,Rafaela,-31.253,-61.491,geonames
+Quilmes,ARG,Quilmes,-34.721,-58.255,geonames
+Central Córdoba (SdE),ARG,Córdoba,-31.406,-64.189,geonames
+Barracas Central,ARG,Barracas,-34.65,-58.383,geonames
+Argentinos Juniors Quilmes,ARG,Quilmes,-34.721,-58.255,geonames
+Rocha,URU,Rocha,-34.48,-54.331,geonames
+Montevideo Wanderers,URU,Montevideo,-34.903,-56.188,geonames
+Progreso,URU,Progreso,-34.667,-56.218,geonames
+Deportivo Maldonado,URU,Maldonado,-34.898,-54.95,geonames
+Montevideo City Torque,URU,Montevideo,-34.903,-56.188,geonames
+Tacuarembó,URU,Tacuarembó,-31.719,-55.979,geonames
+Deportes Antofagasta,CHI,Antofagasta,-23.651,-70.398,geonames
+Santiago Wanderers,CHI,Santiago,-33.457,-70.648,geonames
+Provincial Osorno,CHI,Osorno,-40.574,-73.133,geonames
+Deportes Concepción,CHI,Concepción,-36.827,-73.05,geonames
+Deportes Puerto Montt,CHI,Puerto Montt,-41.469,-72.942,geonames
+Coquimbo Unido,CHI,Coquimbo,-29.953,-71.339,geonames
+Deportes Temuco,CHI,Temuco,-38.736,-72.597,geonames
+Deportes Iquique,CHI,Iquique,-20.213,-70.15,geonames
+Santiago Morning,CHI,Santiago,-33.457,-70.648,geonames
+Universidad de Concepción,CHI,Concepción,-36.827,-73.05,geonames
+Unión San Felipe,CHI,San Felipe,-32.75,-70.726,geonames
+Unión La Calera,CHI,La Calera,-32.787,-71.198,geonames
+Curicó Unido,CHI,Curicó,-34.983,-71.239,geonames
+Deportes Melipilla,CHI,Melipilla,-33.689,-71.215,geonames
+Deportes Copiapó,CHI,Copiapó,-27.367,-70.332,geonames
+Deportes Limache,CHI,Limache,-33.013,-71.261,geonames
+Deportes La Serena,CHI,La Serena,-29.906,-71.25,geonames
+América de Cali,COL,Cali,3.431,-76.52,geonames
+Deportivo Cali,COL,Cali,3.431,-76.52,geonames
+Independiente Medellín,COL,Medellín,6.245,-75.572,geonames
+Atlético Bucaramanga,COL,Bucaramanga,7.125,-73.119,geonames
+Envigado,COL,Envigado,6.176,-75.592,geonames
+Once Caldas,COL,Caldas,6.091,-75.636,geonames
+Deportivo Pasto,COL,Pasto,1.215,-77.278,geonames
+Cúcuta,COL,Cúcuta,7.907,-72.505,geonames
+Cúcuta Deportivo,COL,Cúcuta,7.907,-72.505,geonames
+Deportivo Pereira,COL,Pereira,4.814,-75.695,geonames
+Itagüí Ditaires,COL,Itagüí,6.185,-75.599,geonames
+Rionegro Águilas,COL,Rionegro,6.155,-75.374,geonames
+Toluca,MEX,Toluca,19.288,-99.653,geonames
+Veracruz,MEX,Veracruz,19.181,-96.143,geonames
+Monterrey,MEX,Monterrey,25.684,-100.317,geonames
+Puebla,MEX,Puebla,19.048,-98.207,geonames
+Irapuato,MEX,Irapuato,20.671,-101.356,geonames
+Guadalajara,MEX,Guadalajara,20.677,-103.347,geonames
+Morelia,MEX,Morelia,19.701,-101.184,geonames
+Atlético Morelia,MEX,Morelia,19.701,-101.184,geonames
+Tijuana,MEX,Tijuana,32.503,-117.004,geonames
+Mazatlán,MEX,Mazatlán,23.222,-106.419,geonames
+Miami,USA,Miami,25.774,-80.194,geonames
+Tampa Bay,USA,Tampa,27.948,-82.458,geonames
+Chicago,USA,Chicago,41.85,-87.65,geonames
+Portland,USA,Portland,45.523,-122.676,geonames
+Los Angeles,USA,Los Angeles,34.052,-118.244,geonames
+Rochester,USA,Rochester,43.155,-77.616,geonames
+Dallas,USA,Dallas,32.783,-96.807,geonames
+Boston,USA,Boston,42.358,-71.06,geonames
+Denver,USA,Denver,39.739,-104.985,geonames
+New York Cosmos,USA,York,39.963,-76.728,geonames
+Tampa Bay Mutiny,USA,Tampa,27.948,-82.458,geonames
+Los Angeles Galaxy,USA,Los Angeles,34.052,-118.244,geonames
+Kansas City Wiz,USA,Kansas City,39.1,-94.579,geonames
+Columbus Crew,USA,Columbus,39.961,-82.999,geonames
+San Jose Clash,USA,San Jose,37.339,-121.895,geonames
+Dallas Burn,USA,Dallas,32.783,-96.807,geonames
+Kansas City Wizards,USA,Kansas City,39.1,-94.579,geonames
+Chicago Fire,USA,Chicago,41.85,-87.65,geonames
+Los Angeles Galaxy MetroStars,USA,Los Angeles,34.052,-118.244,geonames
+Miami Fusion,USA,Miami,25.774,-80.194,geonames
+San Jose Earthquakes,USA,San Jose,37.339,-121.895,geonames
+FC Dallas,USA,Dallas,32.783,-96.807,geonames
+Houston Dynamo,USA,Houston,29.763,-95.363,geonames
+New York Red Bulls,USA,York,39.963,-76.728,geonames
+Chicago Fire Toronto FC,USA,Chicago,41.85,-87.65,geonames
+Seattle Sounders FC,USA,Seattle,47.606,-122.332,geonames
+Philadelphia Union,USA,Philadelphia,39.952,-75.164,geonames
+Vancouver Whitecaps FC,USA,Vancouver,45.639,-122.661,geonames
+Sporting Kansas City,USA,Kansas City,39.1,-94.579,geonames
+Columbus Crew SC,USA,Columbus,39.961,-82.999,geonames
+New York City FC,USA,New York City,40.714,-74.006,geonames
+Orlando City SC,USA,Orlando,28.538,-81.379,geonames
+Portland Timbers,USA,Portland,45.523,-122.676,geonames
+Atlanta United FC,USA,Atlanta,33.749,-84.388,geonames
+Los Angeles FC,USA,Los Angeles,34.052,-118.244,geonames
+Chicago Fire FC,USA,Chicago,41.85,-87.65,geonames
+Nashville SC,USA,Nashville,36.166,-86.784,geonames
+Austin FC,USA,Austin,30.267,-97.743,geonames
+FC Cincinnati,USA,Cincinnati,39.127,-84.514,geonames
+Inter Miami CF,USA,Miami,25.774,-80.194,geonames
+San Diego FC,USA,San Diego,32.716,-117.165,geonames
+Yokohama Marinos,JPN,Yokohama,35.433,139.65,geonames
+Kashima Antlers,JPN,Kashima,33.106,130.091,geonames
+Verdy Kawasaki,JPN,Kawasaki,35.521,139.717,geonames
+JEF United Ichihara,JPN,Ichihara,35.517,140.083,geonames
+Gamba Osaka,JPN,Osaka,34.694,135.501,geonames
+Bellmare Hiratsuka,JPN,Hiratsuka,35.328,139.337,geonames
+Sanfrecce Hiroshima,JPN,Hiroshima,34.4,132.45,geonames
+Júbilo Iwata,JPN,Iwata,34.7,137.85,geonames
+Kashiwa Reysol,JPN,Kashiwa,35.862,139.977,geonames
+Yokohama Flügels,JPN,Yokohama,35.433,139.65,geonames
+Nagoya Grampus Eight,JPN,Nagoya,35.181,136.906,geonames
+Vissel Kobe,JPN,Kobe,34.691,135.183,geonames
+Yokohama F. Marinos,JPN,Yokohama,35.433,139.65,geonames
+Cerezo Osaka,JPN,Osaka,34.694,135.501,geonames
+Tokyo Verdy 1969,JPN,Tokyo,35.69,139.692,geonames
+Albirex Niigata,JPN,Niigata,37.923,139.041,geonames
+FC Tokyo,JPN,Tokyo,35.69,139.692,geonames
+Oita Trinita,JPN,Ōita,33.233,131.6,geonames
+Kawasaki Frontale,JPN,Kawasaki,35.521,139.717,geonames
+JEF United Ichihara Chiba,JPN,Ichihara,35.517,140.083,geonames
+Consadole Sapporo,JPN,Sapporo,43.067,141.35,geonames
+Kyoto Sanga,JPN,Kyoto,35.021,135.754,geonames
+Nagoya Grampus,JPN,Nagoya,35.181,136.906,geonames
+Ventforet Kofu,JPN,Kofu,35.667,138.567,geonames
+Vegalta Sendai,JPN,Sendai,38.267,140.867,geonames
+Omiya Ardija,JPN,Ōmiya,36.55,140.417,geonames
+Avispa Fukuoka,JPN,Fukuoka,33.6,130.417,geonames
+Sagan Tosu,JPN,Tosu,33.367,130.517,geonames
+Hokkaido Consadole Sapporo,JPN,Sapporo,43.067,141.35,geonames
+V-Varen Nagasaki,JPN,Nagasaki,32.75,129.883,geonames
+Suwon Samsung Bluewings,KOR,Suwon,37.278,127.032,geonames
+Ulsan Hyundai Horang-i,KOR,Ulsan,35.539,129.312,geonames
+Busan I'Cons,KOR,Busan,35.102,129.03,geonames
+Pohang Steelers,KOR,Pohang,36.029,129.365,geonames
+Daegu FC,KOR,Daegu,35.871,128.601,geonames
+FC Seoul,KOR,Seoul,37.566,126.978,geonames
+Incheon United,KOR,Incheon,37.456,126.705,geonames
+Busan IPark,KOR,Busan,35.102,129.03,geonames
+Daejeon Citizen,KOR,Daejeon,36.35,127.385,geonames
+Ulsan Hyundai,KOR,Ulsan,35.539,129.312,geonames
+Gwangju Sangmu,KOR,Gwangju,35.155,126.916,geonames
+Gwangju Sangmu Pohang Steelers,KOR,Gwangju,35.155,126.916,geonames
+Sangju Sangmu Phoenix Seongnam Ilhwa Chunma,KOR,Sangju,36.415,128.161,geonames
+Sangju Sangmu,KOR,Sangju,36.415,128.161,geonames
+Gwangju FC,KOR,Gwangju,35.155,126.916,geonames
+Suwon FC,KOR,Suwon,37.278,127.032,geonames
+Pohang Steelers Jeonbuk Hyundai Motors,KOR,Pohang,36.029,129.365,geonames
+Gimcheon Sangmu Jeonbuk Hyundai Motors,KOR,Gimcheon,36.122,128.12,geonames
+Daejeon Hana Citizen,KOR,Daejeon,36.35,127.385,geonames
+Gangwon FC Ulsan HD,KOR,Ulsan,35.539,129.312,geonames
+Ulsan HD Gimcheon Sangmu,KOR,Gimcheon,36.122,128.12,geonames
+Suwon FC Jeonbuk Hyundai Motors,KOR,Suwon,37.278,127.032,geonames
+Ulsan HD,KOR,Ulsan,35.539,129.312,geonames
+Gimcheon Sangmu Ulsan HD,KOR,Gimcheon,36.122,128.12,geonames
+Gimcheon Sangmu Gangwon FC,KOR,Gimcheon,36.122,128.12,geonames
+Guangzhou Apollo,CHN,Guangzhou,23.117,113.25,geonames
+Dalian Wanda,CHN,Dalian,38.912,121.602,geonames
+Beijing Guoan,CHN,Beijing,39.907,116.397,geonames
+Shanghai Shenhua,CHN,Shanghai,31.222,121.458,geonames
+Chongqing Longxin,CHN,Chongqing,29.56,106.558,geonames
+Shenyang Haishi,CHN,Shenyang,41.792,123.433,geonames
+Liaoning Fushun,CHN,Fushun,41.887,123.944,geonames
+Dalian Shide,CHN,Dalian,38.912,121.602,geonames
+Shenzhen Ping'an Insurance,CHN,Shenzhen,22.546,114.068,geonames
+Tianjin TEDA,CHN,Tianjin,39.142,117.177,geonames
+Shanghai Zhongyuan Huili,CHN,Shanghai,31.222,121.458,geonames
+Shenzhen Jianlibao,CHN,Shenzhen,22.546,114.068,geonames
+Shenyang Ginde,CHN,Shenyang,41.792,123.433,geonames
+Shanghai International,CHN,Shanghai,31.222,121.458,geonames
+Qingdao Beilaite,CHN,Qingdao,36.065,120.38,geonames
+Inter Shanghai,CHN,Shanghai,31.222,121.458,geonames
+Beijing Hyundai,CHN,Beijing,39.907,116.397,geonames
+Wuhan Huanghelou,CHN,Wuhan,30.583,114.267,geonames
+Xi'an Chanba,CHN,Xi’an,34.258,108.929,geonames
+Xiamen Lanshi,CHN,Xiamen,24.48,118.082,geonames
+Changchun Yatai,CHN,Changchun,43.88,125.323,geonames
+Qingdao Zhongneng,CHN,Qingdao,36.065,120.38,geonames
+Shenzhen Xiangxue,CHN,Shenzhen,22.546,114.068,geonames
+Guangzhou Pharmaceutical,CHN,Guangzhou,23.117,113.25,geonames
+Shanghai Shenhua & Shenzhen Asia Travel,CHN,Shanghai,31.222,121.458,geonames
+Guangzhou GPC,CHN,Guangzhou,23.117,113.25,geonames
+Hangzhou Greentown,CHN,Hangzhou,30.294,120.161,geonames
+Qingdao Jonoon,CHN,Qingdao,36.065,120.38,geonames
+Chongqing Lifan,CHN,Chongqing,29.56,106.558,geonames
+Nanchang Hengyuan,CHN,Nanchang,28.684,115.853,geonames
+Guangzhou Evergrande,CHN,Guangzhou,23.117,113.25,geonames
+Dalian Aerbin,CHN,Dalian,38.912,121.602,geonames
+Guangzhou R&F,CHN,Guangzhou,23.117,113.25,geonames
+Shanghai Shenxin,CHN,Shanghai,31.222,121.458,geonames
+Guangzhou Evergrande Taobao,CHN,Guangzhou,23.117,113.25,geonames
+Shanghai SIPG,CHN,Shanghai,31.222,121.458,geonames
+Shanghai Greenland Shenhua,CHN,Shanghai,31.222,121.458,geonames
+Beijing Sinobo Guoan,CHN,Beijing,39.907,116.397,geonames
+Tianjin Quanjian,CHN,Tianjin,39.142,117.177,geonames
+Shandong Luneng Taishan,CHN,Taishan,22.251,112.78,geonames
+Guizhou Hengfeng Zhicheng,CHN,Zhicheng,30.296,111.505,geonames
+Chongqing Dangdai Lifan,CHN,Chongqing,29.56,106.558,geonames
+Dalian Yifang,CHN,Dalian,38.912,121.602,geonames
+Shanghai SIPG Guangzhou Evergrande Taobao,CHN,Guangzhou,23.117,113.25,geonames
+Shenzhen,CHN,Shenzhen,22.546,114.068,geonames
+Qingdao Huanghai,CHN,Qingdao,36.065,120.38,geonames
+Dalian Pro,CHN,Dalian,38.912,121.602,geonames
+Wuhan Zall,CHN,Wuhan,30.583,114.267,geonames
+Guangzhou,CHN,Guangzhou,23.117,113.25,geonames
+Shandong Taishan,CHN,Taishan,22.251,112.78,geonames
+Henan Songshan Longmen,CHN,Longmen,30.798,107.687,geonames
+Wuhan,CHN,Wuhan,30.583,114.267,geonames
+Guangzhou City,CHN,Guangzhou,23.117,113.25,geonames
+Shanghai Port,CHN,Shanghai,31.222,121.458,geonames
+Cangzhou Mighty Lions,CHN,Cangzhou,38.311,116.853,geonames
+Wuhan Three Towns,CHN,Wuhan,30.583,114.267,geonames
+Chengdu Rongcheng,CHN,Chengdu,30.667,104.067,geonames
+Wuhan Yangtze River,CHN,Wuhan,30.583,114.267,geonames
+Changchun Yatai & Zhejiang,CHN,Changchun,43.88,125.323,geonames
+Tianjin Jinmen Tiger,CHN,Tianjin,39.142,117.177,geonames
+Al-Riyadh,KSA,Riyadh,24.688,46.722,geonames
+Najran,KSA,Najrān,17.493,44.128,geonames
+Abha,KSA,Abha,18.216,42.505,geonames
+Esteghlsl Ahvaz,IRN,Ahvaz,31.319,48.684,geonames
+PAS Tehran,IRN,Tehran,35.694,51.422,geonames
+Est. Ahvaz,IRN,Ahvaz,31.319,48.684,geonames
+Bargh Shiraz,IRN,Shiraz,29.61,52.531,geonames
+Mes Kerman,IRN,Kerman,30.283,57.079,geonames
+Sh. Tabriz,IRN,Tabriz,38.08,46.292,geonames
+Naft Tehran,IRN,Tehran,35.694,51.422,geonames
+Shahrdari Tabriz,IRN,Tabriz,38.08,46.292,geonames
+Shahin Bushehr,IRN,Bushehr,28.969,50.837,geonames
+Aluminium Arak,IRN,Arāk,34.095,49.698,geonames
+Mes Rafsanjan,IRN,Rafsanjān,30.407,55.994,geonames
+Adelaide City,AUS,Adelaide,-34.929,138.599,geonames
+West Adelaide,AUS,Adelaide,-34.929,138.599,geonames
+Brisbane Lions,AUS,Brisbane,-27.468,153.028,geonames
+Marconi Fairfield,AUS,Fairfield,-33.867,150.95,geonames
+Newcastle KB United,AUS,Newcastle,-32.93,151.78,geonames
+Sydney City,AUS,Sydney,-33.868,151.207,geonames
+Canberra City,AUS,Canberra,-35.283,149.128,geonames
+South Melbourne,AUS,Melbourne,-37.814,144.963,geonames
+Sydney Olympic,AUS,Sydney,-33.868,151.207,geonames
+Wollongong City,AUS,Wollongong,-34.424,150.893,geonames
+Melbourne Croatia,AUS,Melbourne,-37.814,144.963,geonames
+Preston Makedonia,AUS,Preston,-37.75,145.017,geonames
+Sydney Croatia,AUS,Sydney,-33.868,151.207,geonames
+Melbourne Victory,AUS,Melbourne,-37.814,144.963,geonames
+Central Coast Mariners (6),AUS,Central Coast,-33.43,151.371,geonames
+Newcastle Jets,AUS,Newcastle,-32.93,151.78,geonames
+Central Coast Mariners,AUS,Central Coast,-33.43,151.371,geonames
+Perth Glory,AUS,Perth,-31.952,115.861,geonames
+Gold Coast United,AUS,Gold Coast,-28.0,153.431,geonames
+Brisbane Roar,AUS,Brisbane,-27.468,153.028,geonames
+Sydney FC,AUS,Sydney,-33.868,151.207,geonames
+Adelaide United,AUS,Adelaide,-34.929,138.599,geonames
+Melbourne Heart,AUS,Melbourne,-37.814,144.963,geonames
+Western Sydney Wanderers,AUS,Sydney,-33.868,151.207,geonames
+Melbourne City,AUS,Melbourne,-37.814,144.963,geonames
+Wellington Phoenix Melbourne City,AUS,Melbourne,-37.814,144.963,geonames
+Tanta,EGY,Tanta,30.788,31.002,geonames
+Aswan,EGY,Aswān,24.091,32.899,geonames
+Al Ittihad Alexandria,EGY,Alexandria,31.202,29.916,geonames
+Kahrabaa Ismailia,EGY,Ismailia,30.604,32.272,geonames
+Bloemfontein Celtic,RSA,Bloemfontein,-29.121,26.214,geonames
+Ajax Cape Town,RSA,Cape Town,-33.926,18.423,geonames
+Benoni Premier United,RSA,Benoni,-26.188,28.321,geonames
+Mpumalanga Black Aces,RSA,Mpumalanga,-29.813,30.636,geonames
+Pretoria University,RSA,Pretoria,-25.745,28.188,geonames
+SuperSport United and Ajax Cape Town,RSA,Cape Town,-33.926,18.423,geonames
+Polokwane City,RSA,Polokwane,-23.904,29.469,geonames
+Polokwane,RSA,Polokwane,-23.904,29.469,geonames
+Cape Town City,RSA,Cape Town,-33.926,18.423,geonames
+Stellenbosch,RSA,Stellenbosch,-33.935,18.867,geonames
+Cape Town Spurs,RSA,Cape Town,-33.926,18.423,geonames
+Durban City,RSA,Durban,-29.858,31.029,geonames
+OC Safi (13),MAR,Safi,32.299,-9.237,geonames
+HUS Agadir (14),MAR,Agadir,30.42,-9.598,geonames
+CR Al Hoceima (35),MAR,Al Hoceïma,35.252,-3.937,geonames
+SCC Mohammédia (22),MAR,Mohammedia,33.686,-7.383,geonames
+Difaa El Jadida,MAR,El Jadida,33.257,-8.509,geonames
+OC Safi,MAR,Safi,32.299,-9.237,geonames
+FUS Rabat,MAR,Rabat,34.013,-6.833,geonames
+MA Tétouan,MAR,Tétouan,35.578,-5.368,geonames
+CR Al-Hoceima,MAR,Al Hoceïma,35.252,-3.937,geonames
+Kenitra AC,MAR,Kenitra,34.261,-6.58,geonames
+RS Berkane,MAR,Berkane,34.92,-2.32,geonames
+HUS Agadir,MAR,Agadir,30.42,-9.598,geonames
+MA Tetouan,MAR,Tétouan,35.578,-5.368,geonames
+Kénitra AC,MAR,Kenitra,34.261,-6.58,geonames
+IZ Khemisset,MAR,Khemisset,33.824,-6.066,geonames
+OC Khouribga,MAR,Khouribga,32.881,-6.906,geonames
+CA Khénifra,MAR,Khenifra,32.935,-5.662,geonames
+FAR Rabat,MAR,Rabat,34.013,-6.833,geonames
+Raja Casablanca,MAR,Casablanca,33.588,-7.611,geonames
+Wydad Casablanca,MAR,Casablanca,33.588,-7.611,geonames
+Chabab Rif Al Hoceima,MAR,Al Hoceïma,35.252,-3.937,geonames
+Hassania Agadir,MAR,Agadir,30.42,-9.598,geonames
+MC Oujda,MAR,Oujda,34.681,-1.909,geonames
+Olympique Khouribga,MAR,Khouribga,32.881,-6.906,geonames
+Moghreb Tétouan,MAR,Tétouan,35.578,-5.368,geonames
+KAC Marrakesh,MAR,Marrakesh,31.634,-8.0,geonames
+RC Oued Zem,MAR,Oued Zem,32.863,-6.574,geonames
+SCC Mohammédia,MAR,Mohammedia,33.686,-7.383,geonames
+Club Sportif de Hammam-Lif,TUN,Hammam-Lif,36.729,10.342,geonames
+Espérance de Tunis,TUN,Tunis,36.819,10.166,geonames
+EGS Gafsa,TUN,Gafsa,34.425,8.784,geonames
+JS Kairouan,TUN,Kairouan,35.678,10.096,geonames
+ES Zarzis,TUN,Zarzis,33.504,11.112,geonames
+CS Hammam-Lif,TUN,Hammam-Lif,36.729,10.342,geonames
+US Monastir,TUN,Monastir,35.778,10.826,geonames
+Olympique Béja,TUN,Béja,36.726,9.182,geonames
+Grombalia Sports,TUN,Grombalia,36.599,10.5,geonames
+Espérance de Zarzis,TUN,Zarzis,33.504,11.112,geonames
+El Gawafel de Gafsa,TUN,Gafsa,34.425,8.784,geonames
+Avenir de Gabès,TUN,Gabès,33.881,10.098,geonames
+Étoile de Métlaoui,TUN,Metlaoui,34.321,8.402,geonames
+KRC Genk,BEL,Genk,50.965,5.501,geonames
+KSC Lokeren (- 2020),BEL,Lokeren,51.104,3.993,geonames
+Oud-Heverlee Leuven,BEL,Heverlee,50.864,4.696,geonames
+RAEC Mons (- 2015),BEL,Mons,50.454,3.952,geonames
+Royal Charleroi Sporting Club,BEL,Charleroi,50.411,4.444,geonames
+SK Beveren,BEL,Beveren,51.212,4.256,geonames
+KVC Westerlo,BEL,Westerlo,51.09,4.915,geonames
+Royal Excel Mouscron (-2022),BEL,Mouscron,50.745,3.206,geonames
+KAS Eupen,BEL,Eupen,50.628,6.036,geonames
+RFC Seraing,BEL,Seraing,50.584,5.501,geonames
+Watford FC,ENG,Watford,51.655,-0.396,geonames
+Getafe CF,ESP,Getafe,40.306,-3.733,geonames
+UD Almería,ESP,Almería,36.838,-2.46,geonames
+SD Eibar,ESP,Eibar,43.185,-2.472,geonames
+CD Leganés,ESP,Leganés,40.327,-3.764,geonames
+Girona FC,ESP,Girona,41.983,2.825,geonames
+SD Huesca,ESP,Huesca,42.136,-0.409,geonames
+Cádiz CF,ESP,Cadiz,36.527,-6.289,geonames
+FC Lorient,FRA,Lorient,47.748,-3.372,geonames
+SC Bastia,FRA,Bastia,42.702,9.451,geonames
+AC Ajaccio,FRA,Ajaccio,41.919,8.738,geonames
+ESTAC Troyes,FRA,Troyes,48.301,4.085,geonames
+Valenciennes FC,FRA,Valenciennes,50.359,3.525,geonames
+SM Caen,FRA,Caen,49.186,-0.359,geonames
+Angers SCO,FRA,Angers,47.472,-0.552,geonames
+GFC Ajaccio,FRA,Ajaccio,41.919,8.738,geonames
+Dijon FCO,FRA,Dijon,47.313,5.014,geonames
+Amiens SC,FRA,Amiens,49.9,2.3,geonames
+Le Havre AC,FRA,Le Havre,49.493,0.108,geonames
+SpVgg Greuther Fürth,GER,Fürth,49.476,10.989,geonames
+SC Paderborn 07,GER,Paderborn,51.719,8.754,geonames
+FC Ingolstadt 04,GER,Ingolstadt,48.765,11.424,geonames
+Holstein Kiel,GER,Kiel,54.321,10.135,geonames
+Panthrakikos Komotini,GRE,Komotiní,41.118,25.406,geonames
+AO Xanthi,GRE,Xánthi,41.135,24.888,geonames
+Panetolikos Agrinio,GRE,Agrínio,38.621,21.408,geonames
+Iraklis Thessaloniki,GRE,Thessaloníki,40.641,22.935,geonames
+PAS Lamia 1964,GRE,Lamía,38.899,22.433,geonames
+Panserraikos Serres,GRE,Sérres,41.085,23.548,geonames
+Siena FC,ITA,Siena,43.318,11.331,geonames
+Delfino Pescara 1936,ITA,Pescara,42.458,14.203,geonames
+US Livorno 1915,ITA,Livorno,43.544,10.326,geonames
+Cesena FC,ITA,Cesena,44.139,12.243,geonames
+Frosinone Calcio,ITA,Frosinone,41.64,13.341,geonames
+AC Carpi,ITA,Carpi,44.782,10.878,geonames
+FC Crotone,ITA,Crotone,39.081,17.128,geonames
+Benevento Calcio,ITA,Benevento,41.131,14.778,geonames
+AC Monza,ITA,Monza,45.58,9.272,geonames
+Como 1907,ITA,Como,45.808,9.083,geonames
+Pisa Sporting Club,ITA,Pisa,43.709,10.404,geonames
+Roda JC Kerkrade,NED,Kerkrade,50.866,6.062,geonames
+NEC Nijmegen,NED,Nijmegen,51.843,5.853,geonames
+Willem II Tilburg,NED,Tilburg,51.556,5.091,geonames
+SC Cambuur Leeuwarden,NED,Leeuwarden,53.203,5.81,geonames
+FC Dordrecht,NED,Dordrecht,51.81,4.674,geonames
+De Graafschap Doetinchem,NED,Doetinchem,51.965,6.289,geonames
+FC Emmen,NED,Emmen,52.779,6.907,geonames
+FC Volendam,NED,Volendam,52.495,5.071,geonames
+GD Estoril Praia,POR,Estoril,38.706,-9.398,geonames
+FC Arouca,POR,Arouca,40.931,-8.245,geonames
+GD Chaves,POR,Chaves,41.74,-7.469,geonames
+FC Rubin Kazan,RUS,Kazan,55.789,49.122,geonames
+Amkar Perm,RUS,Perm,58.01,56.25,geonames
+RFK Akhmat Grozny,RUS,Grozny,43.312,45.689,geonames
+FK Krasnodar,RUS,Krasnodar,45.045,38.982,geonames
+Anzhi Makhachkala ( -2022),RUS,Makhachkala,42.978,47.5,geonames
+Kuban Krasnodar (-2018),RUS,Krasnodar,45.045,38.982,geonames
+Volga Nizhniy Novgorod (- 2016),RUS,Nizhniy Novgorod,56.329,44.002,geonames
+Spartak Vladikavkaz (-2020),RUS,Vladikavkaz,43.041,44.67,geonames
+Mordovia Saransk (-2020),RUS,Saransk,54.185,45.172,geonames
+PFK Krylya Sovetov Samara,RUS,Samara,53.208,50.136,geonames
+Tom Tomsk,RUS,Tomsk,56.5,84.982,geonames
+Torpedo Moscow,RUS,Moscow,55.752,37.618,geonames
+FC Orenburg,RUS,Orenburg,51.767,55.099,geonames
+FC Tosno (-2018),RUS,Tosno,59.54,30.878,geonames
+SKA Khabarovsk,RUS,Khabarovsk,48.462,135.097,geonames
+Enisey Krasnoyarsk,RUS,Krasnoyarsk,56.037,92.931,geonames
+PFK Tambov (-2021),RUS,Tambov,52.736,41.441,geonames
+FK Sochi,RUS,Sochi,43.597,39.725,geonames
+FC Khimki (-2025),RUS,Khimki,55.9,37.428,geonames
+Rotor Volgograd,RUS,Volgograd,48.714,44.498,geonames
+Dinamo Makhachkala,RUS,Makhachkala,42.978,47.5,geonames
+Inverness Caledonian Thistle FC,SCO,Inverness,57.479,-4.224,geonames
+St. Johnstone FC,SCO,Johnstone,55.829,-4.516,geonames
+Hamilton Academical FC,SCO,Hamilton,55.767,-4.033,geonames
+Livingston FC,SCO,Livingston,55.903,-3.523,geonames
+Falkirk FC,SCO,Falkirk,56.002,-3.785,geonames
+Mersin Talimyurdu SK,TUR,Mersin,36.812,34.639,geonames
+Basaksehir FK,TUR,Başakşehir,41.106,28.791,geonames
+Gaziantep FK,TUR,Gaziantep,37.059,37.383,geonames
+Bodrum FK,TUR,Bodrum,37.038,27.429,geonames
+LDU Quito,ECU,Quito,-0.23,-78.525,geonames

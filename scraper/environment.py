@@ -127,10 +127,17 @@ def international(cache: Path, first: int = 1946) -> tuple[pd.DataFrame, pd.Data
         goals = goals.merge(ast, on=["season", "team", "scorer"], how="outer")
         goals["goals"] = goals["goals"].fillna(0).astype(int)
         goals["penalties"] = goals["penalties"].fillna(0).astype(int)
+    # Major final-tournament goals (World Cup, continental championships) split out, so the
+    # pipeline can weight them as big moments rather than as ordinary internationals
+    from .world import tournament_goal_columns
+    tg = tournament_goal_columns(pd.read_csv(cache / "intl_goalscorers.csv"), pd.read_csv(cache / "intl_results.csv"))
+    goals = goals.merge(tg, on=["season", "team", "scorer"], how="left")
+    for c in ("world_cup_goals", "continental_goals"):
+        goals[c] = goals[c].fillna(0).astype(int)
     return env, team_games, goals
 
 
-def build(raw: Path, cache: Path, first: int = 1946) -> None:
+def build(raw: Path, cache: Path, first: int = 1946, leagues_only: bool = False) -> None:
     raw.mkdir(parents=True, exist_ok=True)
     lg = league_environment(cache, first)
     lg.to_csv(raw / "league_environment.csv", index=False)
@@ -142,3 +149,5 @@ def build(raw: Path, cache: Path, first: int = 1946) -> None:
     goals.to_csv(raw / "intl_goals.csv", index=False)
     print(f"  internationals: {int(env.matches.sum())} matches, {len(goals)} scorer-seasons, "
           f"seasons {env.season.min()}-{env.season.max()}")
+    from . import world
+    world.build(raw, pd.read_csv(cache / "intl_results.csv"), pd.read_csv(cache / "intl_goalscorers.csv"), first)

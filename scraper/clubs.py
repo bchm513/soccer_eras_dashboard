@@ -32,7 +32,7 @@ def norm(s) -> str:
 
 
 class ClubResolver:
-    def __init__(self, raw: Path, geocode: bool = False, contact: str | None = None):
+    def __init__(self, raw: Path, geocode: bool = False, contact: str | None = None, use_auto: bool = True):
         self.raw = raw
         self.geocode = geocode
         self.contact = contact
@@ -42,6 +42,17 @@ class ClubResolver:
             entries = [(norm(r["city"]), r["city"], lat, lon, False)]
             entries += [(norm(a), r["city"], lat, lon, True) for a in r["aliases"].split("|") if a]
             self.by_country.setdefault(r["country"], []).extend(entries)
+        # Locations found by `python -m scraper.run locate` (Wikipedia / GeoNames), used after the city list
+        self.auto: dict = {}
+        af = raw / "club_locations_auto.csv"
+        if use_auto and af.exists():
+            for r in csv.DictReader(af.open(encoding="utf-8")):
+                try:
+                    v = (r["city"], float(r["lat"]), float(r["lon"]), r.get("method") or "auto")
+                except (TypeError, ValueError):
+                    continue
+                self.auto[(norm(r["team"]), r.get("country") or "")] = v
+                self.auto.setdefault((norm(r["team"]), ""), v)
         self.manual = {}
         mf = raw / "club_locations_manual.csv"
         if mf.exists():
@@ -64,6 +75,10 @@ class ClubResolver:
             if hits:
                 best = max(hits, key=lambda c: len(c[0]))
                 return best[1], best[2], best[3], "alias" if want_alias else "name"
+        if (t, country) in self.auto:
+            return self.auto[(t, country)]
+        if (t, "") in self.auto:
+            return self.auto[(t, "")]
         if self.geocode:
             g = self._nominatim(team, country)
             if g:

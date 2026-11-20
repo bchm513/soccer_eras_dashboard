@@ -1,0 +1,177 @@
+city,country,lat,lon,aliases
+London,ENG,51.51,-0.13,Arsenal|Chelsea|Tottenham|West Ham|Fulham|Crystal Palace|QPR|Queens Park|Charlton|Millwall|Brentford|Leyton
+Manchester,ENG,53.48,-2.24,
+Liverpool,ENG,53.41,-2.99,Everton
+Birmingham,ENG,52.49,-1.89,Aston Villa|West Bromwich|West Brom
+Leeds,ENG,53.80,-1.55,
+Sheffield,ENG,53.38,-1.47,
+Newcastle,ENG,54.98,-1.61,
+Nottingham,ENG,52.95,-1.15,
+Wolverhampton,ENG,52.59,-2.13,Wolves
+Blackburn,ENG,53.75,-2.48,
+Blackpool,ENG,53.82,-3.05,
+Bolton,ENG,53.58,-2.43,
+Burnley,ENG,53.79,-2.25,
+Derby,ENG,52.92,-1.48,
+Ipswich,ENG,52.06,1.16,
+Leicester,ENG,52.64,-1.13,
+Middlesbrough,ENG,54.57,-1.23,
+Southampton,ENG,50.91,-1.40,
+Stoke,ENG,53.00,-2.18,
+Sunderland,ENG,54.91,-1.38,
+Portsmouth,ENG,50.80,-1.09,
+Preston,ENG,53.76,-2.70,
+Coventry,ENG,52.41,-1.51,
+Norwich,ENG,52.63,1.30,
+Brighton,ENG,50.82,-0.14,
+Bournemouth,ENG,50.72,-1.88,
+Huddersfield,ENG,53.65,-1.78,
+Bristol,ENG,51.45,-2.59,
+Luton,ENG,51.88,-0.42,
+Swansea,ENG,51.62,-3.94,
+Cardiff,ENG,51.48,-3.18,
+Hull,ENG,53.74,-0.33,
+Wigan,ENG,53.55,-2.63,
+Reading,ENG,51.45,-0.97,
+Oxford,ENG,51.75,-1.26,
+Madrid,ESP,40.42,-3.70,
+Barcelona,ESP,41.39,2.17,
+Valencia,ESP,39.47,-0.38,
+Sevilla,ESP,37.39,-5.98,Seville|Betis
+Bilbao,ESP,43.26,-2.94,Athletic
+San Sebastián,ESP,43.32,-1.98,San Sebastian|Real Sociedad
+Vigo,ESP,42.24,-8.72,Celta
+A Coruña,ESP,43.36,-8.41,La Coruña|Coruña|Deportivo
+Zaragoza,ESP,41.65,-0.89,
+Valladolid,ESP,41.65,-4.72,
+Gijón,ESP,43.54,-5.66,Gijon
+Oviedo,ESP,43.36,-5.85,
+Santander,ESP,43.46,-3.80,Racing
+Pamplona,ESP,42.81,-1.64,Osasuna
+Málaga,ESP,36.72,-4.42,Malaga
+Mallorca,ESP,39.57,2.65,Palma
+Las Palmas,ESP,28.12,-15.44,
+Granada,ESP,37.18,-3.60,
+Elche,ESP,38.27,-0.70,
+Vitoria,ESP,42.85,-2.67,Alavés|Alaves
+Villarreal,ESP,39.94,-0.10,
+Tenerife,ESP,28.46,-16.25,
+Murcia,ESP,37.99,-1.13,
+Salamanca,ESP,40.97,-5.66,
+Córdoba,ESP,37.89,-4.78,Cordoba
+Hércules,ESP,38.35,-0.48,Alicante
+Milan,ITA,45.46,9.19,Milano|AC Milan|Inter|Internazionale
+Turin,ITA,45.07,7.69,Torino|Juventus
+Rome,ITA,41.90,12.50,Roma|Lazio
+Naples,ITA,40.85,14.27,Napoli
+Florence,ITA,43.77,11.26,Fiorentina|Firenze
+Genoa,ITA,44.41,8.93,Genova|Sampdoria
+Bologna,ITA,44.49,11.34,
+Bergamo,ITA,45.70,9.67,Atalanta
+Verona,ITA,45.44,10.99,Hellas|Chievo
+Udine,ITA,46.07,13.24,Udinese
+Parma,ITA,44.80,10.33,
+Cagliari,ITA,39.22,9.12,
+Palermo,ITA,38.12,13.36,
+Bari,ITA,41.12,16.87,
+Catania,ITA,37.50,15.09,
+Vicenza,ITA,45.55,11.55,Lanerossi
+Brescia,ITA,45.54,10.22,
+Padua,ITA,45.41,11.88,Padova
+Lecce,ITA,40.35,18.17,
+Ascoli,ITA,42.85,13.58,
+Empoli,ITA,43.72,10.94,
+Sassuolo,ITA,44.54,10.78,
+Venice,ITA,45.44,12.32,Venezia
+Trieste,ITA,45.65,13.78,Triestina
+Mantua,ITA,45.16,10.79,Mantova
+Novara,ITA,45.45,8.62,
+Munich,GER,48.14,11.58,München|Muenchen|Bayern|Münchener|Munchener|1860
+Dortmund,GER,51.51,7.47,Borussia Dortmund
+Mönchengladbach,GER,51.19,6.44,Gladbach|Monchengladbach|M'gladbach|Mgladbach
+Hamburg,GER,53.55,9.99,Hamburger|St. Pauli
+Cologne,GER,50.94,6.96,Köln|Koln|Koeln
+Frankfurt,GER,50.11,8.68,
+Bremen,GER,53.08,8.80,Werder
+Stuttgart,GER,48.78,9.18,Stuttgarter
+Gelsenkirchen,GER,51.51,7.10,Schalke
+Kaiserslautern,GER,49.44,7.77,
+Leverkusen,GER,51.03,6.98,Bayer
+Berlin,GER,52.52,13.40,Hertha|Union Berlin|Berliner
+Düsseldorf,GER,51.23,6.77,Fortuna|Dusseldorf
+Nuremberg,GER,49.45,11.08,Nürnberg|Nurnberg|Nürnberger
+Bochum,GER,51.48,7.22,
+Duisburg,GER,51.43,6.76,
+Hanover,GER,52.38,9.73,Hannover
+Brunswick,GER,52.27,10.52,Braunschweig
+Karlsruhe,GER,49.01,8.40,Karlsruher
+Wolfsburg,GER,52.42,10.79,
+Freiburg,GER,47.99,7.84,
+Leipzig,GER,51.34,12.37,
+Mainz,GER,50.00,8.27,
+Hoffenheim,GER,49.24,8.89,Sinsheim
+Augsburg,GER,48.37,10.90,
+Bielefeld,GER,52.03,8.53,Arminia
+Uerdingen,GER,51.36,6.62,Krefeld
+Amsterdam,NED,52.37,4.90,Ajax
+Rotterdam,NED,51.92,4.48,Feyenoord|Sparta
+Eindhoven,NED,51.44,5.47,PSV
+The Hague,NED,52.07,4.30,Den Haag|ADO
+Alkmaar,NED,52.63,4.75,AZ
+Enschede,NED,52.22,6.90,Twente
+Utrecht,NED,52.09,5.12,
+Arnhem,NED,51.98,5.91,Vitesse
+Groningen,NED,53.22,6.57,
+Heerenveen,NED,52.96,5.92,
+Paris,FRA,48.86,2.35,PSG|Paris SG|Racing Paris|Stade Français
+Marseille,FRA,43.30,5.37,Olympique Marseille
+Lyon,FRA,45.76,4.84,Olympique Lyon
+Saint-Étienne,FRA,45.44,4.39,Saint-Etienne|St. Etienne|St-Etienne
+Bordeaux,FRA,44.84,-0.58,Girondins
+Monaco,FRA,43.74,7.42,
+Nantes,FRA,47.22,-1.55,
+Lille,FRA,50.63,3.06,LOSC
+Reims,FRA,49.26,4.03,
+Nice,FRA,43.70,7.27,
+Rennes,FRA,48.11,-1.68,
+Lens,FRA,50.43,2.83,
+Sochaux,FRA,47.51,6.83,
+Strasbourg,FRA,48.57,7.75,
+Toulouse,FRA,43.60,1.44,
+Montpellier,FRA,43.61,3.88,
+Metz,FRA,49.12,6.18,
+Nancy,FRA,48.69,6.18,
+Nîmes,FRA,43.84,4.36,Nimes
+Auxerre,FRA,47.80,3.57,
+Sedan,FRA,49.70,4.94,
+Lisbon,POR,38.72,-9.14,Lisboa|Benfica|Sporting|Belenenses|Estrela
+Porto,POR,41.16,-8.63,
+Braga,POR,41.55,-8.42,
+Guimarães,POR,41.44,-8.29,Guimaraes|Vitória Guimarães
+Setúbal,POR,38.52,-8.89,Setubal
+Coimbra,POR,40.21,-8.43,Académica|Academica
+Glasgow,SCO,55.86,-4.25,Celtic|Rangers
+Edinburgh,SCO,55.95,-3.19,Hearts|Hibernian
+Aberdeen,SCO,57.15,-2.09,
+Dundee,SCO,56.46,-2.97,
+Kilmarnock,SCO,55.61,-4.50,
+Motherwell,SCO,55.79,-3.99,
+Brussels,BEL,50.85,4.35,Anderlecht|Bruxelles
+Bruges,BEL,51.21,3.22,Brugge|Club Brugge
+Liège,BEL,50.63,5.57,Liege|Standard
+Antwerp,BEL,51.22,4.40,Antwerpen
+Ghent,BEL,51.05,3.72,Gent
+Budapest,HUN,47.50,19.04,Honvéd|Honved|Ferencváros|Ferencvaros|MTK|Újpest|Ujpest|Vasas
+São Paulo,BRA,-23.55,-46.63,Sao Paulo|Corinthians|Palmeiras
+Rio de Janeiro,BRA,-22.91,-43.17,Flamengo|Fluminense|Botafogo|Vasco
+Santos,BRA,-23.96,-46.33,
+Belo Horizonte,BRA,-19.92,-43.94,Atlético Mineiro|Cruzeiro
+Porto Alegre,BRA,-30.03,-51.23,Grêmio|Gremio|Internacional
+Buenos Aires,ARG,-34.60,-58.38,Boca|River Plate|San Lorenzo|Independiente|Racing Club|Huracán|Vélez
+Rosario,ARG,-32.95,-60.65,Newell|Rosario Central
+Ferrara,ITA,44.84,11.62,SPAL
+Bucharest,ROU,44.43,26.10,Steaua|FCSB|Dinamo|Rapid
+Belgrade,YUG,44.79,20.45,Red Star|Crvena|Partizan
+Athens,GRE,37.98,23.73,Panathinaikos|AEK|Olympiacos|Piraeus
+Malmö,SWE,55.60,13.00,Malmo
+Gothenburg,SWE,57.71,11.97,Göteborg|Goteborg|IFK

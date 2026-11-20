@@ -5,9 +5,10 @@
     python -m scraper.run scorers        # Wikipedia top scorers, 1946 on (~10-15 min at 1 page/s; resumable)
     python -m scraper.run transfermarkt  # Transfermarkt open data, 2012 on (one ~100 MB download)
     python -m scraper.run elo            # league strength from ClubElo, one snapshot per season (~2 min)
-    python -m scraper.run europe         # European Cup / Champions League: finals + top scorers (~2 min)
+    python -m scraper.run continental    # Champions League, Libertadores, AFC, CAF, CONCACAF: finals + top scorers
+    python -m scraper.run locate         # coordinates for clubs the city list can't place (Wikipedia + GeoNames)
     python -m scraper.run assemble       # build data/raw/player_seasons.csv
-    python -m scraper.run all            # scorers -> transfermarkt -> elo -> europe -> assemble
+    python -m scraper.run all            # scorers -> transfermarkt -> elo -> continental -> locate -> assemble
     python -m scraper.run dump --title "1975–76 Bundesliga"   # save a page's HTML to share for debugging
 
 Options: --leagues ENG,ESP  --from 1946  --to 2025  --delay 1  --contact you@example.com  --geocode
@@ -22,7 +23,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import clubelo, environment, europe, transfermarkt, wikipedia as wiki
+from . import clubelo, continental, environment, locate, transfermarkt, wikipedia as wiki
 from .assemble import assemble
 from .http import PoliteSession
 
@@ -33,7 +34,7 @@ CACHE = ROOT / "data" / "cache"
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("step", choices=["env", "probe", "scorers", "transfermarkt", "elo", "europe", "assemble", "all", "dump"])
+    ap.add_argument("step", choices=["env", "probe", "scorers", "transfermarkt", "elo", "continental", "europe", "locate", "assemble", "all", "dump"])
     ap.add_argument("--leagues", help="comma-separated codes, e.g. ENG,ESP (default: enabled in leagues.json)")
     ap.add_argument("--from", dest="first", type=int, default=1946)
     ap.add_argument("--to", dest="last", type=int, default=2025)
@@ -41,6 +42,7 @@ def main(argv=None):
     ap.add_argument("--contact", default=os.environ.get("SOCCER_ERAS_CONTACT"),
                     help="email or GitHub/project URL for the User-Agent (Wikimedia asks scripts to include one)")
     ap.add_argument("--title", help="dump: Wikipedia page title, e.g. '1975–76 Bundesliga'")
+    ap.add_argument("--no-wiki", action="store_true", help="locate: skip Wikipedia lookups, GeoNames only")
     ap.add_argument("--geocode", action="store_true", help="look up unknown clubs on OpenStreetMap")
     a = ap.parse_args(argv)
 
@@ -77,16 +79,26 @@ def main(argv=None):
 
     if a.step in ("scorers", "all"):
         sess = session()
-        out_path = RAW / "scorers_wikipedia.csv"
+        out_path, env_path = RAW / "scorers_wikipedia.csv", RAW / "league_environment_wiki.csv"
         df = pd.read_csv(out_path) if out_path.exists() else pd.DataFrame()
+        envdf = pd.read_csv(env_path) if env_path.exists() else pd.DataFrame()
         for lg in leagues:
-            print(f"Wikipedia: {lg['name']} {max(a.first, lg['first'])}-{a.last}...")
-            rows = wiki.scrape_league(sess, lg, a.first, a.last)
-            if rows:
-                df = pd.concat([df, pd.DataFrame(rows)], ignore_index=True)
-                df = df.drop_duplicates(["competition", "season", "player_id", "team"], keep="last")
+            print(f"Wikipedia: {lg['name']} {max(a.first, lg.get('first', a.first))}-{min(a.last, lg.get('last', a.last))}...")
+            rows, env = wiki.scrape_league(sess, lg, a.first, a.last)
+            if rows:   # replace this league's rows for the scraped seasons, keep everything else
+                new = pd.DataFrame(rows)
+                if len(df):
+                    df = df[~((df["competition"] == lg["code"]) & df["season"].isin(new["season"]))]
+                df = pd.concat([df, new], ignore_index=True)
                 df.to_csv(out_path, index=False)      # saved after every league
-        print(f"  -> {out_path}")
+            if env:
+                new = pd.DataFrame(env)
+                if len(envdf):
+                    envdf = envdf[~((envdf["competition"] == lg["code"]) & envdf["season"].isin(new["season"]))]
+                envdf = pd.concat([envdf, new], ignore_index=True)
+                envdf.to_csv(env_path, index=False)
+            print(f"  {lg['code']}: {len(rows)} scorer rows, {len(env)} league tables")
+        print(f"  -> {out_path}\n  -> {env_path}")
 
     if a.step in ("transfermarkt", "all"):
         print("Transfermarkt open data (2012 on)...")
@@ -97,9 +109,14 @@ def main(argv=None):
         clubelo.build(RAW, session(), wiki.load_leagues(only), a.first, a.last)
         print(f"  -> {RAW / 'league_strength.csv'}")
 
-    if a.step in ("europe", "all"):
-        print("European Cup / Champions League (finals + season top scorers)...")
-        europe.build(RAW, session(), a.first, a.last)
+    if a.step in ("continental", "europe", "all"):
+        print("Continental club competitions (finals + season top scorers)...")
+        continental.build(RAW, session(), a.first, a.last, comps=["UCL"] if a.step == "europe" else None)
+
+    if a.step in ("locate", "all"):
+        print("Locating clubs (Wikipedia coordinates, then GeoNames city names)...")
+        iso2 = {lg["code"]: lg.get("iso2", "") for lg in wiki.load_leagues(include_disabled=True)}
+        locate.build(RAW, CACHE, None if a.no_wiki else session(), iso2)
 
     if a.step in ("assemble", "all"):
         print("Assembling player_seasons.csv...")

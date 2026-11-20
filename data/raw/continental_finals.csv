@@ -1,0 +1,315 @@
+season,winner,winner_country,runner_up,runner_up_country,attendance,comp,confed
+1955,Real Madrid,Spain,Reims,France,38239.0,UCL,UEFA
+1956,Real Madrid,Spain,Fiorentina,Italy,124000.0,UCL,UEFA
+1957,Real Madrid,Spain,Milan,Italy,67000.0,UCL,UEFA
+1958,Real Madrid,Spain,Reims,France,72000.0,UCL,UEFA
+1959,Real Madrid,Spain,Eintracht Frankfurt,West Germany,127621.0,UCL,UEFA
+1960,Benfica,Portugal,Barcelona,Spain,26732.0,UCL,UEFA
+1961,Benfica,Portugal,Real Madrid,Spain,61257.0,UCL,UEFA
+1962,Milan,Italy,Benfica,Portugal,45715.0,UCL,UEFA
+1963,Inter Milan,Italy,Real Madrid,Spain,71333.0,UCL,UEFA
+1964,Inter Milan,Italy,Benfica,Portugal,89000.0,UCL,UEFA
+1965,Real Madrid,Spain,Partizan,Yugoslavia,46745.0,UCL,UEFA
+1966,Celtic,Scotland,Inter Milan,Italy,45000.0,UCL,UEFA
+1967,Manchester United,England,Benfica,Portugal,92225.0,UCL,UEFA
+1968,Milan,Italy,Ajax,Netherlands,31782.0,UCL,UEFA
+1969,Feyenoord,Netherlands,Celtic,Scotland,53187.0,UCL,UEFA
+1970,Ajax,Netherlands,Panathinaikos,Greece,83179.0,UCL,UEFA
+1971,Ajax,Netherlands,Inter Milan,Italy,61354.0,UCL,UEFA
+1972,Ajax,Netherlands,Juventus,Italy,89484.0,UCL,UEFA
+1973,Bayern Munich,West Germany,Atlético Madrid,Spain,48722.0,UCL,UEFA
+1973,Bayern Munich,West Germany,Atlético Madrid,Spain,23325.0,UCL,UEFA
+1974,Bayern Munich,West Germany,Leeds United,England,48374.0,UCL,UEFA
+1975,Bayern Munich,West Germany,Saint-Étienne,France,54864.0,UCL,UEFA
+1976,Liverpool,England,Borussia Mönchengladbach,West Germany,57000.0,UCL,UEFA
+1977,Liverpool,England,Club Brugge,Belgium,92500.0,UCL,UEFA
+1978,Nottingham Forest,England,Malmö FF,Sweden,57500.0,UCL,UEFA
+1979,Nottingham Forest,England,Hamburger SV,West Germany,51000.0,UCL,UEFA
+1980,Liverpool,England,Real Madrid,Spain,48360.0,UCL,UEFA
+1981,Aston Villa,England,Bayern Munich,West Germany,46000.0,UCL,UEFA
+1982,Hamburger SV,West Germany,Juventus,Italy,73500.0,UCL,UEFA
+1983,Liverpool,England,Roma,Italy,69693.0,UCL,UEFA
+1984,Juventus,Italy,Liverpool,England,58000.0,UCL,UEFA
+1985,Steaua București,Romania,Barcelona,Spain,70000.0,UCL,UEFA
+1986,Porto,Portugal,Bayern Munich,West Germany,57500.0,UCL,UEFA
+1987,PSV Eindhoven,Netherlands,Benfica,Portugal,68000.0,UCL,UEFA
+1988,Milan,Italy,Steaua București,Romania,97000.0,UCL,UEFA
+1989,Milan,Italy,Benfica,Portugal,57558.0,UCL,UEFA
+1990,Red Star Belgrade,Yugoslavia,Marseille,France,56000.0,UCL,UEFA
+1991,Barcelona,Spain,Sampdoria,Italy,70827.0,UCL,UEFA
+1992,Marseille,France,Milan,Italy,64400.0,UCL,UEFA
+1993,Milan,Italy,Barcelona,Spain,70000.0,UCL,UEFA
+1994,Ajax,Netherlands,Milan,Italy,49730.0,UCL,UEFA
+1995,Juventus,Italy,Ajax,Netherlands,70000.0,UCL,UEFA
+1996,Borussia Dortmund,Germany,Juventus,Italy,59000.0,UCL,UEFA
+1997,Real Madrid,Spain,Juventus,Italy,48500.0,UCL,UEFA
+1998,Manchester United,England,Bayern Munich,Germany,90245.0,UCL,UEFA
+1999,Real Madrid,Spain,Valencia,Spain,80000.0,UCL,UEFA
+2000,Bayern Munich,Germany,Valencia,Spain,79000.0,UCL,UEFA
+2001,Real Madrid,Spain,Bayer Leverkusen,Germany,50499.0,UCL,UEFA
+2002,Milan,Italy,Juventus,Italy,62315.0,UCL,UEFA
+2003,Porto,Portugal,Monaco,France,53053.0,UCL,UEFA
+2004,Liverpool,England,Milan,Italy,69000.0,UCL,UEFA
+2005,Barcelona,Spain,Arsenal,England,79610.0,UCL,UEFA
+2006,Milan,Italy,Liverpool,England,63000.0,UCL,UEFA
+2007,Manchester United,England,Chelsea,England,67310.0,UCL,UEFA
+2008,Barcelona,Spain,Manchester United,England,62467.0,UCL,UEFA
+2009,Inter Milan,Italy,Bayern Munich,Germany,73490.0,UCL,UEFA
+2010,Barcelona,Spain,Manchester United,England,87695.0,UCL,UEFA
+2011,Chelsea,England,Bayern Munich,Germany,62500.0,UCL,UEFA
+2012,Bayern Munich,Germany,Borussia Dortmund,Germany,86298.0,UCL,UEFA
+2013,Real Madrid,Spain,Atlético Madrid,Spain,60976.0,UCL,UEFA
+2014,Barcelona,Spain,Juventus,Italy,70442.0,UCL,UEFA
+2015,Real Madrid,Spain,Atlético Madrid,Spain,71942.0,UCL,UEFA
+2016,Real Madrid,Spain,Juventus,Italy,65842.0,UCL,UEFA
+2017,Real Madrid,Spain,Liverpool,England,61561.0,UCL,UEFA
+2018,Liverpool,England,Tottenham Hotspur,England,63272.0,UCL,UEFA
+2019,Bayern Munich,Germany,Paris Saint-Germain,France,0.0,UCL,UEFA
+2020,Chelsea,England,Manchester City,England,14110.0,UCL,UEFA
+2021,Real Madrid,Spain,Liverpool,England,75000.0,UCL,UEFA
+2022,Manchester City,England,Inter Milan,Italy,71412.0,UCL,UEFA
+2023,Real Madrid,Spain,Borussia Dortmund,Germany,86212.0,UCL,UEFA
+2024,Paris Saint-Germain,France,Inter Milan,Italy,64327.0,UCL,UEFA
+2025,Paris Saint-Germain,France,Arsenal,England,61035.0,UCL,UEFA
+1960,Peñarol,Uruguay,Olimpia,Paraguay,44690.0,LIB,CONMEBOL
+1960,Peñarol,Uruguay,Olimpia,Paraguay,35000.0,LIB,CONMEBOL
+1961,Peñarol,Uruguay,Palmeiras,Brazil,64376.0,LIB,CONMEBOL
+1961,Peñarol,Uruguay,Palmeiras,Brazil,50000.0,LIB,CONMEBOL
+1962,Santos,Brazil,Peñarol,Uruguay,48105.0,LIB,CONMEBOL
+1962,Santos,Brazil,Peñarol,Uruguay,18000.0,LIB,CONMEBOL
+1962,Santos,Brazil,Peñarol,Uruguay,60000.0,LIB,CONMEBOL
+1963,Santos,Brazil,Boca Juniors,Argentina,100000.0,LIB,CONMEBOL
+1963,Santos,Brazil,Boca Juniors,Argentina,50000.0,LIB,CONMEBOL
+1964,Independiente,Argentina,Nacional,Uruguay,60000.0,LIB,CONMEBOL
+1964,Independiente,Argentina,Nacional,Uruguay,80000.0,LIB,CONMEBOL
+1965,Independiente,Argentina,Peñarol,Uruguay,45000.0,LIB,CONMEBOL
+1965,Independiente,Argentina,Peñarol,Uruguay,45000.0,LIB,CONMEBOL
+1965,Independiente,Argentina,Peñarol,Uruguay,40000.0,LIB,CONMEBOL
+1966,Peñarol,Uruguay,River Plate,Argentina,46041.0,LIB,CONMEBOL
+1966,Peñarol,Uruguay,River Plate,Argentina,100000.0,LIB,CONMEBOL
+1966,Peñarol,Uruguay,River Plate,Argentina,40240.0,LIB,CONMEBOL
+1967,Racing,Argentina,Nacional,Uruguay,99148.0,LIB,CONMEBOL
+1967,Racing,Argentina,Nacional,Uruguay,60000.0,LIB,CONMEBOL
+1967,Racing,Argentina,Nacional,Uruguay,50000.0,LIB,CONMEBOL
+1968,Estudiantes,Argentina,Palmeiras,Brazil,35000.0,LIB,CONMEBOL
+1968,Estudiantes,Argentina,Palmeiras,Brazil,40000.0,LIB,CONMEBOL
+1968,Estudiantes,Argentina,Palmeiras,Brazil,55000.0,LIB,CONMEBOL
+1969,Estudiantes,Argentina,Nacional,Uruguay,65000.0,LIB,CONMEBOL
+1969,Estudiantes,Argentina,Nacional,Uruguay,55000.0,LIB,CONMEBOL
+1970,Estudiantes,Argentina,Peñarol,Uruguay,40000.0,LIB,CONMEBOL
+1970,Estudiantes,Argentina,Peñarol,Uruguay,60000.0,LIB,CONMEBOL
+1971,Nacional,Uruguay,Estudiantes,Argentina,30000.0,LIB,CONMEBOL
+1971,Nacional,Uruguay,Estudiantes,Argentina,70000.0,LIB,CONMEBOL
+1971,Nacional,Uruguay,Estudiantes,Argentina,,LIB,CONMEBOL
+1972,Independiente,Argentina,Universitario,Peru,45000.0,LIB,CONMEBOL
+1972,Independiente,Argentina,Universitario,Peru,55000.0,LIB,CONMEBOL
+1973,Independiente,Argentina,Colo-Colo,Chile,40000.0,LIB,CONMEBOL
+1973,Independiente,Argentina,Colo-Colo,Chile,80000.0,LIB,CONMEBOL
+1973,Independiente,Argentina,Colo-Colo,Chile,,LIB,CONMEBOL
+1974,Independiente,Argentina,São Paulo,Brazil,50000.0,LIB,CONMEBOL
+1974,Independiente,Argentina,São Paulo,Brazil,55000.0,LIB,CONMEBOL
+1974,Independiente,Argentina,São Paulo,Brazil,60000.0,LIB,CONMEBOL
+1975,Independiente,Argentina,Unión Española,Chile,43200.0,LIB,CONMEBOL
+1975,Independiente,Argentina,Unión Española,Chile,60000.0,LIB,CONMEBOL
+1975,Independiente,Argentina,Unión Española,Chile,,LIB,CONMEBOL
+1976,Cruzeiro,Brazil,River Plate,Argentina,58720.0,LIB,CONMEBOL
+1976,Cruzeiro,Brazil,River Plate,Argentina,90000.0,LIB,CONMEBOL
+1976,Cruzeiro,Brazil,River Plate,Argentina,40000.0,LIB,CONMEBOL
+1977,Boca Juniors,Argentina,Cruzeiro,Brazil,60000.0,LIB,CONMEBOL
+1977,Boca Juniors,Argentina,Cruzeiro,Brazil,80000.0,LIB,CONMEBOL
+1977,Boca Juniors,Argentina,Cruzeiro,Brazil,60000.0,LIB,CONMEBOL
+1978,Boca Juniors,Argentina,Deportivo Cali,Colombia,50000.0,LIB,CONMEBOL
+1978,Boca Juniors,Argentina,Deportivo Cali,Colombia,80000.0,LIB,CONMEBOL
+1979,Olimpia,Paraguay,Boca Juniors,Argentina,50000.0,LIB,CONMEBOL
+1979,Olimpia,Paraguay,Boca Juniors,Argentina,65000.0,LIB,CONMEBOL
+1980,Nacional,Uruguay,Internacional,Brazil,70000.0,LIB,CONMEBOL
+1980,Nacional,Uruguay,Internacional,Brazil,65000.0,LIB,CONMEBOL
+1981,Flamengo,Brazil,Cobreloa,Chile,93985.0,LIB,CONMEBOL
+1981,Flamengo,Brazil,Cobreloa,Chile,61721.0,LIB,CONMEBOL
+1981,Flamengo,Brazil,Cobreloa,Chile,30200.0,LIB,CONMEBOL
+1982,Peñarol,Uruguay,Cobreloa,Chile,55248.0,LIB,CONMEBOL
+1982,Peñarol,Uruguay,Cobreloa,Chile,70400.0,LIB,CONMEBOL
+1983,Grêmio,Brazil,Peñarol,Uruguay,70000.0,LIB,CONMEBOL
+1983,Grêmio,Brazil,Peñarol,Uruguay,80000.0,LIB,CONMEBOL
+1984,Independiente,Argentina,Grêmio,Brazil,,LIB,CONMEBOL
+1984,Independiente,Argentina,Grêmio,Brazil,,LIB,CONMEBOL
+1985,Argentinos Juniors,Argentina,América de Cali,Colombia,,LIB,CONMEBOL
+1985,Argentinos Juniors,Argentina,América de Cali,Colombia,35350.0,LIB,CONMEBOL
+1985,Argentinos Juniors,Argentina,América de Cali,Colombia,,LIB,CONMEBOL
+1986,River Plate,Argentina,América de Cali,Colombia,50000.0,LIB,CONMEBOL
+1986,River Plate,Argentina,América de Cali,Colombia,74300.0,LIB,CONMEBOL
+1987,Peñarol,Uruguay,América de Cali,Colombia,65000.0,LIB,CONMEBOL
+1987,Peñarol,Uruguay,América de Cali,Colombia,60000.0,LIB,CONMEBOL
+1987,Peñarol,Uruguay,América de Cali,Colombia,25000.0,LIB,CONMEBOL
+1988,Nacional,Uruguay,Newell's Old Boys,Argentina,45000.0,LIB,CONMEBOL
+1988,Nacional,Uruguay,Newell's Old Boys,Argentina,75000.0,LIB,CONMEBOL
+1989,Atlético Nacional,Colombia,Olimpia,Paraguay,,LIB,CONMEBOL
+1989,Atlético Nacional,Colombia,Olimpia,Paraguay,,LIB,CONMEBOL
+1990,Olimpia,Paraguay,Barcelona,Ecuador,,LIB,CONMEBOL
+1990,Olimpia,Paraguay,Barcelona,Ecuador,,LIB,CONMEBOL
+1991,Colo-Colo,Chile,Olimpia,Paraguay,48000.0,LIB,CONMEBOL
+1991,Colo-Colo,Chile,Olimpia,Paraguay,66517.0,LIB,CONMEBOL
+1992,São Paulo,Brazil,Newell's Old Boys,Argentina,35000.0,LIB,CONMEBOL
+1992,São Paulo,Brazil,Newell's Old Boys,Argentina,105185.0,LIB,CONMEBOL
+1993,São Paulo,Brazil,Universidad Católica,Chile,99000.0,LIB,CONMEBOL
+1993,São Paulo,Brazil,Universidad Católica,Chile,50000.0,LIB,CONMEBOL
+1994,Vélez Sársfield,Argentina,São Paulo,Brazil,35000.0,LIB,CONMEBOL
+1994,Vélez Sársfield,Argentina,São Paulo,Brazil,90000.0,LIB,CONMEBOL
+1995,Grêmio,Brazil,Atlético Nacional,Colombia,,LIB,CONMEBOL
+1995,Grêmio,Brazil,Atlético Nacional,Colombia,,LIB,CONMEBOL
+1996,River Plate,Argentina,América de Cali,Colombia,,LIB,CONMEBOL
+1996,River Plate,Argentina,América de Cali,Colombia,,LIB,CONMEBOL
+1997,Cruzeiro,Brazil,Sporting Cristal,Peru,45000.0,LIB,CONMEBOL
+1997,Cruzeiro,Brazil,Sporting Cristal,Peru,95472.0,LIB,CONMEBOL
+1998,Vasco da Gama,Brazil,Barcelona,Ecuador,35000.0,LIB,CONMEBOL
+1998,Vasco da Gama,Brazil,Barcelona,Ecuador,72000.0,LIB,CONMEBOL
+1999,Palmeiras,Brazil,Deportivo Cali,Colombia,46000.0,LIB,CONMEBOL
+1999,Palmeiras,Brazil,Deportivo Cali,Colombia,32000.0,LIB,CONMEBOL
+2000,Boca Juniors,Argentina,Palmeiras,Brazil,50580.0,LIB,CONMEBOL
+2000,Boca Juniors,Argentina,Palmeiras,Brazil,75000.0,LIB,CONMEBOL
+2001,Boca Juniors,Argentina,Cruz Azul,Mexico,115000.0,LIB,CONMEBOL
+2001,Boca Juniors,Argentina,Cruz Azul,Mexico,60000.0,LIB,CONMEBOL
+2002,Olimpia,Paraguay,São Caetano,Brazil,40000.0,LIB,CONMEBOL
+2002,Olimpia,Paraguay,São Caetano,Brazil,55000.0,LIB,CONMEBOL
+2003,Boca Juniors,Argentina,Santos,Brazil,57000.0,LIB,CONMEBOL
+2003,Boca Juniors,Argentina,Santos,Brazil,75000.0,LIB,CONMEBOL
+2004,Once Caldas,Colombia,Boca Juniors,Argentina,57000.0,LIB,CONMEBOL
+2004,Once Caldas,Colombia,Boca Juniors,Argentina,,LIB,CONMEBOL
+2005,São Paulo,Brazil,Atlético Paranaense,Brazil,35000.0,LIB,CONMEBOL
+2005,São Paulo,Brazil,Atlético Paranaense,Brazil,80000.0,LIB,CONMEBOL
+2006,Internacional,Brazil,São Paulo,Brazil,71745.0,LIB,CONMEBOL
+2006,Internacional,Brazil,São Paulo,Brazil,55000.0,LIB,CONMEBOL
+2007,Boca Juniors,Argentina,Grêmio,Brazil,39993.0,LIB,CONMEBOL
+2007,Boca Juniors,Argentina,Grêmio,Brazil,55000.0,LIB,CONMEBOL
+2008,LDU Quito,Ecuador,Fluminense,Brazil,45000.0,LIB,CONMEBOL
+2008,LDU Quito,Ecuador,Fluminense,Brazil,86027.0,LIB,CONMEBOL
+2009,Estudiantes,Argentina,Cruzeiro,Brazil,52000.0,LIB,CONMEBOL
+2009,Estudiantes,Argentina,Cruzeiro,Brazil,70000.0,LIB,CONMEBOL
+2010,Internacional,Brazil,Guadalajara,Mexico,49500.0,LIB,CONMEBOL
+2010,Internacional,Brazil,Guadalajara,Mexico,56000.0,LIB,CONMEBOL
+2011,Santos,Brazil,Peñarol,Uruguay,65000.0,LIB,CONMEBOL
+2011,Santos,Brazil,Peñarol,Uruguay,40200.0,LIB,CONMEBOL
+2012,Corinthians,Brazil,Boca Juniors,Argentina,51901.0,LIB,CONMEBOL
+2012,Corinthians,Brazil,Boca Juniors,Argentina,37959.0,LIB,CONMEBOL
+2013,Atlético Mineiro,Brazil,Olimpia,Paraguay,35000.0,LIB,CONMEBOL
+2013,Atlético Mineiro,Brazil,Olimpia,Paraguay,56557.0,LIB,CONMEBOL
+2014,San Lorenzo,Argentina,Nacional,Paraguay,35000.0,LIB,CONMEBOL
+2014,San Lorenzo,Argentina,Nacional,Paraguay,42000.0,LIB,CONMEBOL
+2015,River Plate,Argentina,Tigres UANL,Mexico,42000.0,LIB,CONMEBOL
+2015,River Plate,Argentina,Tigres UANL,Mexico,70000.0,LIB,CONMEBOL
+2016,Atlético Nacional,Colombia,Independiente del Valle,Ecuador,38500.0,LIB,CONMEBOL
+2016,Atlético Nacional,Colombia,Independiente del Valle,Ecuador,45000.0,LIB,CONMEBOL
+2017,Grêmio,Brazil,Lanús,Argentina,55188.0,LIB,CONMEBOL
+2017,Grêmio,Brazil,Lanús,Argentina,45000.0,LIB,CONMEBOL
+2018,River Plate,Argentina,Boca Juniors,Argentina,49000.0,LIB,CONMEBOL
+2018,River Plate,Argentina,Boca Juniors,Argentina,62282.0,LIB,CONMEBOL
+2019,Flamengo,Brazil,River Plate,Argentina,64000.0,LIB,CONMEBOL
+2020,Palmeiras,Brazil,Santos,Brazil,5000.0,LIB,CONMEBOL
+2021,Palmeiras,Brazil,Flamengo,Brazil,55023.0,LIB,CONMEBOL
+2022,Flamengo,Brazil,Athletico Paranaense,Brazil,42517.0,LIB,CONMEBOL
+2023,Fluminense,Brazil,Boca Juniors,Argentina,69232.0,LIB,CONMEBOL
+2024,Botafogo,Brazil,Atlético Mineiro,Brazil,72000.0,LIB,CONMEBOL
+2025,Flamengo,Brazil,Palmeiras,Brazil,70048.0,LIB,CONMEBOL
+1962,Mexico,,Comunicaciones,,,CCL,CONCACAF
+1962,Mexico,,Comunicaciones,,,CCL,CONCACAF
+1963,Haiti,,Guadalajara,,,CCL,CONCACAF
+1964,Not awarded,,Not awarded,,,CCL,CONCACAF
+1965,Not awarded,,Not awarded,,,CCL,CONCACAF
+1967,El Salvador,,Jong Colombia,,,CCL,CONCACAF
+1967,El Salvador,,Jong Colombia,,,CCL,CONCACAF
+1967,El Salvador,,Jong Colombia,,,CCL,CONCACAF
+1968,Mexico,,,,,CCL,CONCACAF
+1969,Mexico,,Comunicaciones,,,CCL,CONCACAF
+1969,Mexico,,Comunicaciones,,,CCL,CONCACAF
+1970,Mexico,,,,,CCL,CONCACAF
+1971,Mexico,,Alajuelense,,,CCL,CONCACAF
+1972,Honduras,,Robinhood,,,CCL,CONCACAF
+1972,Honduras,,Robinhood,,,CCL,CONCACAF
+1973,Suriname,,,,,CCL,CONCACAF
+1974,Guatemala,,Transvaal,,,CCL,CONCACAF
+1974,Guatemala,,Transvaal,,,CCL,CONCACAF
+1975,Mexico,,Transvaal,,,CCL,CONCACAF
+1975,Mexico,,Transvaal,,,CCL,CONCACAF
+1976,El Salvador,,Robinhood,,,CCL,CONCACAF
+1976,El Salvador,,Robinhood,,,CCL,CONCACAF
+1977,Mexico,,Robinhood,,,CCL,CONCACAF
+1977,Mexico,,Robinhood,,,CCL,CONCACAF
+1978,Mexico,,,,,CCL,CONCACAF
+1978,Guatemala,,,,,CCL,CONCACAF
+1978,Trinidad and Tobago,,,,,CCL,CONCACAF
+1979,El Salvador,,Jong Colombia,,,CCL,CONCACAF
+1979,El Salvador,,Jong Colombia,,,CCL,CONCACAF
+1980,Mexico,,UNAH,,,CCL,CONCACAF
+1981,Suriname,,Atlético Marte,,,CCL,CONCACAF
+1981,Suriname,,Atlético Marte,,,CCL,CONCACAF
+1982,Mexico,,Robinhood,,,CCL,CONCACAF
+1982,Mexico,,Robinhood,,,CCL,CONCACAF
+1983,Mexico,,Robinhood,,,CCL,CONCACAF
+1983,Mexico,,Robinhood,,,CCL,CONCACAF
+1984,Haiti,,,,,CCL,CONCACAF
+1985,Trinidad and Tobago,,Olimpia,,,CCL,CONCACAF
+1985,Trinidad and Tobago,,Olimpia,,,CCL,CONCACAF
+1986,Costa Rica,,Transvaal,,,CCL,CONCACAF
+1986,Costa Rica,,Transvaal,,,CCL,CONCACAF
+1987,Mexico,,Defence Force,,,CCL,CONCACAF
+1987,Mexico,,Defence Force,,,CCL,CONCACAF
+1988,Honduras,,Defence Force,,,CCL,CONCACAF
+1988,Honduras,,Defence Force,,,CCL,CONCACAF
+1989,Mexico,,Pinar del Río,,,CCL,CONCACAF
+1989,Mexico,,Pinar del Río,,,CCL,CONCACAF
+1990,Mexico,,Pinar del Río,,,CCL,CONCACAF
+1990,Mexico,,Pinar del Río,,,CCL,CONCACAF
+1991,Mexico,,Police,,,CCL,CONCACAF
+1991,Mexico,,Police,,,CCL,CONCACAF
+1992,Mexico,,Alajuelense,,,CCL,CONCACAF
+1993,Costa Rica,,León,,,CCL,CONCACAF
+1994,Costa Rica,,Atlante,,,CCL,CONCACAF
+1995,Costa Rica,,Municipal,,,CCL,CONCACAF
+1996,Mexico,,Necaxa,,,CCL,CONCACAF
+1997,Mexico,,LA Galaxy,,,CCL,CONCACAF
+1998,United States,,Toluca,,,CCL,CONCACAF
+1999,Mexico,,Alajuelense,,,CCL,CONCACAF
+2000,United States,,Olimpia,,,CCL,CONCACAF
+2002,Mexico,,Monarcas Morelia,,,CCL,CONCACAF
+2003,Mexico,,Monarcas Morelia,,,CCL,CONCACAF
+2003,Mexico,,Monarcas Morelia,,,CCL,CONCACAF
+2004,Costa Rica,,Saprissa,,,CCL,CONCACAF
+2004,Costa Rica,,Saprissa,,,CCL,CONCACAF
+2005,Costa Rica,,Pumas UNAM,,,CCL,CONCACAF
+2005,Costa Rica,,Pumas UNAM,,,CCL,CONCACAF
+2006,Mexico,,Toluca,,,CCL,CONCACAF
+2006,Mexico,,Toluca,,,CCL,CONCACAF
+2007,Mexico,,Guadalajara,,,CCL,CONCACAF
+2007,Mexico,,Guadalajara,,,CCL,CONCACAF
+2008,Mexico,,Saprissa,,,CCL,CONCACAF
+2008,Mexico,,Saprissa,,,CCL,CONCACAF
+2008,Mexico,,Cruz Azul,,,CCL,CONCACAF
+2008,Mexico,,Cruz Azul,,,CCL,CONCACAF
+2009,Mexico,,Cruz Azul,,,CCL,CONCACAF
+2009,Mexico,,Cruz Azul,,,CCL,CONCACAF
+2010,Mexico,,Real Salt Lake,,,CCL,CONCACAF
+2010,Mexico,,Real Salt Lake,,,CCL,CONCACAF
+2011,Mexico,,Santos Laguna,,,CCL,CONCACAF
+2011,Mexico,,Santos Laguna,,,CCL,CONCACAF
+2012,Mexico,,Santos Laguna,,,CCL,CONCACAF
+2012,Mexico,,Santos Laguna,,,CCL,CONCACAF
+2013,Mexico,,Toluca,,,CCL,CONCACAF
+2013,Mexico,,Toluca,,,CCL,CONCACAF
+2014,Mexico,,Montreal Impact,,,CCL,CONCACAF
+2014,Mexico,,Montreal Impact,,,CCL,CONCACAF
+2015,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2015,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2016,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2016,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2018,Mexico,,Toronto FC,,,CCL,CONCACAF
+2018,Mexico,,Toronto FC,,,CCL,CONCACAF
+2019,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2019,Mexico,,Tigres UANL,,,CCL,CONCACAF
+2020,Mexico,,Los Angeles FC,,,CCL,CONCACAF
+2021,Mexico,,América,,,CCL,CONCACAF
+2022,United States,,Pumas UNAM,,,CCL,CONCACAF
+2022,United States,,Pumas UNAM,,,CCL,CONCACAF
+2023,Mexico,,Los Angeles FC,,,CCL,CONCACAF
+2023,Mexico,,Los Angeles FC,,,CCL,CONCACAF
+2024,Mexico,,Columbus Crew,,,CCL,CONCACAF
+2025,Mexico,,Vancouver Whitecaps FC,,,CCL,CONCACAF
