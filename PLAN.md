@@ -117,23 +117,19 @@ Controls: play/pause, scrubber, speed, and the metric toggle (raw vs era-adjuste
 
 ```
 soccer-eras/
-  PLAN.md                  this file
-  README.md                how to run
-  pipeline/
-    sample_data.py         generates the SAMPLE dataset (fictional players)
-    eras.py                era adjustment, career peaks, overlapping-peak eras, metric comparison
-    hotspots.py            density hubs, club weights, tournament spikes
-    tournaments.py         World Cup / Euro hosts and dates (real)
-    build.py               runs everything, writes dashboard/data/eras.json
+  core/        shared: paths, competitions registry (all weights), database, geography
+  scraper/     collects public data; every step imports its output into data/football.db
+  pipeline/    analysis: reads only the database, writes dashboard/data/eras.json
+  dashboard/   D3 site, one module per panel (js/)
   data/
-    football.db            the project database (every scraped and manual table)
-    raw/                   scraped files (see schema in README)
-    manual/                hand-filled scorers, club locations, moments, impact series
-  dashboard/
-    index.html, app.js, style.css
-    vendor/                D3, topojson-client, world map (offline)
-    data/eras.json         pipeline output
+    football.db   built by the scraper (not shared; anyone can rebuild it with `scraper.run all`)
+    raw/, cache/  scraper output and page cache (not shared)
+    manual/       hand-made fixes, gap fills and moments (shared; always win over scraped data)
+  archive/     retired code
+  tests/
 ```
+
+The flow is one-way: public sources → scraper → database → pipeline → dashboard. Nothing is supplied by hand except `data/manual/`, so anyone can reproduce the project from a fresh copy.
 
 ---
 
@@ -154,12 +150,16 @@ soccer-eras/
 | 10 | Postable: PNG export and video clip recording of the map, deep links | ✅ |
 | 11 | Project database (data/football.db): scrape once, fill gaps and add moments by hand in data/manual/, manual data wins | ✅ |
 | 12 | Moments: tournament and continental finals as map diamonds and description entries; manual moments file | ✅ first pass |
+| 12c | Validation against published figures (`validate` step, reference_goals.csv); era windows and hand-over test fixed | ✅ |
+| 12b | Refactor: shared core package, one competitions registry, scraper as the only writer of the database, dashboard split into modules, legacy code archived | ✅ |
 | 13 | From dashboard to a representation of football: player, club and moment pages built from the database; story-led walkthroughs of major years | To do |
 | 14 | Match-level weighting for individual big games | To do |
 | 15 | Knockout-round weighting at tournaments (needs stage data) | To do |
 | 16 | Host as a public website | To do |
 
 Real run with the new weights (Nov 2026): 34 stars; eras 1948–52, 1956–58, 1960–65, 1968–71, 1982–90, 1992–99, 2001–11, 2012–25.
+
+Era fix (Nov 2026): peak windows kept inside each career and at most 5 seasons either side of the peak (a still-rising career had fitted a 2015–2035 window), and the hand-over test weighted by how close each star is to his peak. Eras now: 1948–52, 1958–64, 1969–71, 1983–91, 1993–99, 2001–08, 2009–18 (Messi–Ronaldo), 2019–25 (Mbappé, Kane, Lewandowski, Salah). Goals + assists finds the same 2018/19 break independently.
 
 First real run (8 European leagues, World Cup and continental championship goals): eras 1948–52, 1956–65, 1968–71, 1983–90, 1991–99, 2001–06, 2007–11, 2012–25.
 

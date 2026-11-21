@@ -5,13 +5,14 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import AgglomerativeClustering
 
+from core.competitions import MAP_CAP
+
 EARTH_KM = 6371.0
 HUB_DIAMETER_KM = 250    # every city in a hub is within this distance of every other
 ROLLING_SEASONS = 3      # club baseline smoothing
 HUB_MIN_Z = {"real": 0.0, "sample": 1.0}   # map pool: club seasons at/above this z also feed hubs
-TITLE_BONUS = {"winner": 1.0, "runner_up": 0.4}   # European final: x the season's biggest hub weight
-TOURNAMENT_CAP = {"World Cup": 1.5, "Euro": 1.1, "Copa América": 1.0, "AFCON": 0.7, "Asian Cup": 0.7,
-                  "Gold Cup": 0.6, "Confederations Cup": 0.5}   # x the largest club hub that month
+TITLE_BONUS = {"winner": 1.0, "runner_up": 0.4}   # continental final: x the season's biggest hub weight
+TOURNAMENT_CAP = MAP_CAP   # x the largest club hub that month; set per tournament in core/competitions.py
 FADE = [0.55, 0.25, 0.08]  # months after a tournament ends
 LEAD_IN = 0.3            # month before it starts
 

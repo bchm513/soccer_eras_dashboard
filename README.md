@@ -1,100 +1,87 @@
 # Eras of the Game
 
-Defines soccer eras by **overlapping player peaks** (1946 → today) and shows them in an interactive D3 dashboard: a map of the game's shifting hubs, a panel of career peaks, and a description of each moment. See `PLAN.md` for the full method and roadmap.
+Defines soccer eras by **overlapping player peaks** (1946 → today) and shows where the game's heart was at each moment: a map of shifting hubs, the career peaks of the stars who shaped each era, the moments people remember, and how the game grew. See `PLAN.md` for the method and roadmap.
 
-> **The dashboard runs on SAMPLE data until you collect real data.** Sample players are fictional ("Player A1") with simulated numbers. Cities and World Cup / Euro hosts and dates are real. See **Getting real data** below.
+Everything is built by the scraper from public sources. Nothing needs to be supplied by hand, so anyone with this folder can rebuild the whole project.
 
-## Run it
+## Quick start
 
 ```bash
 pip install -r requirements.txt
-python pipeline/build.py          # uses data/raw/player_seasons.csv if present, else sample data
-cd dashboard && python -m http.server 8000
-# open http://localhost:8000
+python pipeline/build.py                 # no data yet -> builds the SAMPLE dashboard (fictional players)
+python serve.py                          # opens http://localhost:8000 in your default browser
 ```
 
-The dashboard needs to be served (not opened as a file) because it loads JSON. D3, TopoJSON and the world map are bundled in `dashboard/vendor/`, so it works offline.
+If you have scraped data in `data/raw/` but no database yet, `build.py` stops and tells you to run `python -m scraper.run assemble` first; it only builds the sample when there's no scraped data at all (or with `--sample`).
 
-## Controls
+The dashboard has to be served (not opened as a file). D3, TopoJSON and the world map are bundled in `dashboard/vendor/`, so it works offline.
 
-- **Play / pause**: button or Space. **Step**: ← / →. **Scrub**: the timeline slider.
-- **Click a hub** on the map to pause and see who was playing there.
-- **Click a curve** in the peaks panel to jump to that player's peak.
-- **Era measure**: switch between goals (era-adjusted), goals (raw) and goals + assists to see where the eras agree.
-- **Regions** (World, Europe, S. America, N. America, Asia, Africa, Oceania): zoom, and switch the peaks and era table to that region's own stars when it has enough data. Scroll to zoom, drag to pan.
-- **PNG / Record**: download the map as an image, or record it as a video clip while it plays (stop with the same button).
-- **Era table**: click a row to jump to that era.
+## Building the real data
 
-## Getting real data
-
-Run everything from the `soccer-eras` folder. Every page is cached in `data/cache/`, so any step can be stopped and re-run; it picks up where it left off.
-
-```powershell
-pip install -r requirements.txt
-$env:SOCCER_ERAS_CONTACT = "you@example.com"   # or a GitHub URL (bash: export SOCCER_ERAS_CONTACT=...)
-python -m scraper.run probe          # ~2 min: checks page names, league tables and leader lists for 34 leagues
-python -m scraper.run scorers        # ~30-45 min: top scorers + league tables, 1946 on, every league
-python -m scraper.run transfermarkt  # full league + Champions League data, 2012 on (uses the cached download)
-python -m scraper.run elo            # optional: ClubElo league strength for Europe (skip if the site is down)
-python -m scraper.run continental    # ~5 min: Champions League, Europa League, Libertadores, AFC, CAF, CONCACAF finals + scorers
-python -m scraper.run locate         # coordinates for clubs outside the built-in city list
-python -m scraper.run assemble       # builds data/raw/player_seasons.csv and league strength
-python pipeline/build.py             # rebuilds the dashboard data
-```
-
-Re-running `scorers` skips every league-season already collected (add `--refresh` to fetch them again), so a second run takes minutes, not hours.
-
-## The database: scrape once, then work from it
-
-Everything collected lives in **`data/football.db`** (one SQLite file). Open it in [DB Browser for SQLite](https://sqlitebrowser.org), Datasette or pandas to explore.
-
-| tables | what |
-|---|---|
-| `scorers_wikipedia`, `scorers_transfermarkt`, `intl_goals`, `national_elo`, ... | one per scraped file in `data/raw/` |
-| `manual_*` | one per file in `data/manual/`: your own additions. **Manual data always wins.** |
-| `player_seasons`, `players`, `clubs`, `moments` | built by `assemble`: every player-season, career totals, clubs with locations, major moments |
-
-After the first scrape you never need the scraper again. The routine is:
-
-```powershell
-python -m scraper.run gaps       # lists seasons with < 3 known scorers, adds rows to fill in
-#  ... edit data/manual/*.csv in Excel or any editor ...
-python -m scraper.run assemble   # syncs changed files into the database and rebuilds
+```bash
+export SOCCER_ERAS_CONTACT="you@example.com"   # PowerShell: $env:SOCCER_ERAS_CONTACT = "..."
+python -m scraper.run all       # every step in order; a few hours the first time (1 page/second)
 python pipeline/build.py
-python -m scraper.run db         # shows every table and its size
 ```
 
-Files in `data/manual/`:
+The contact is put in the request header because Wikimedia asks scripts to identify themselves. It isn't sent anywhere else.
+
+`all` runs these steps, which can also be run one at a time:
+
+| step | what it collects | time |
+|---|---|---|
+| `env` | league and international scoring rates, tournament goals, hosts and finals, growth of the game, national-team Elo (GitHub datasets) | ~1 min |
+| `scorers` | top scorers and league tables from Wikipedia season pages, 34 leagues, 1946 on | hours the first time |
+| `transfermarkt` | full league, Champions League and Europa League scoring, 2012 on (one ~100 MB download) | minutes |
+| `elo` | optional: ClubElo league strength for Europe (skipped if the site is down) | ~2 min |
+| `continental` | continental club cups: finals and top scorers | ~5 min |
+| `locate` | map coordinates for clubs (Wikipedia, then GeoNames) | ~20 min |
+| `assemble` | the analysis tables: player-seasons, players, clubs, finals, moments, league strength | ~1 min |
+
+Every downloaded page is cached in `data/cache/`, so any step can be stopped and restarted. `scorers` skips seasons it already has (add `--refresh` to fetch them again). Narrow any step with `--leagues BRA,ARG --from 1970 --to 1990`. Check a single page with `python -m scraper.run dump --title "1975–76 Bundesliga"`.
+
+## The database
+
+**The scraper is the only thing that writes to `data/football.db`.** Each step saves its files in `data/raw/` and imports them into the database as soon as it finishes. `assemble` then builds the analysis tables, and the pipeline reads only the database. To see what's there and what's missing:
+
+```bash
+python -m scraper.run db
+```
+
+This lists every table, its row count and the step that made it, then gives the commands for anything still missing. Open the file in [DB Browser for SQLite](https://sqlitebrowser.org), Datasette or pandas to explore it.
+
+The database, `data/raw/` and `data/cache/` are rebuilt by the scraper and aren't shared (see `.gitignore`). `data/manual/` is shared.
+
+### Your additions: `data/manual/`
+
+Hand-made fixes live in `data/manual/`, are imported as `manual_*` tables, and **always win over scraped data**. They're meant to be shared, so one person's fixes help everyone.
 
 | file | columns | use |
 |---|---|---|
-| `scorers_manual.csv` | competition, season, rank, player, team, goals, nationality, note | missing seasons. `gaps` pre-fills 5 rows per gap season with what's already known; fill player, team, goals and leave spare rows blank. These rows replace all other sources for that league-season, so keep the known ones. |
-| `gaps.csv` | | written by `gaps`: every thin league-season. Leagues with no data at all are listed but get no rows; add them with `gaps --leagues BRA`. |
-| `club_locations_manual.csv` | team, city, lat, lon | clubs with no map dot. Copy rows from `data/raw/unresolved_clubs.csv` (sorted by goals, so the top rows matter most). |
-| `moments_manual.csv` | season, date, title, detail, teams, players, lat, lon, weight | your own major moments (a famous match, a transfer, a disaster). They show as diamonds on the map and in the description panel. |
-| `impact_manual.csv` | season, metric, value | TV audiences or anything else; appears in the growth panel and era table. |
+| `scorers_manual.csv` | competition, season, rank, player, team, goals, nationality, note | seasons the scraper couldn't find. `python -m scraper.run gaps` adds 5 rows per thin season, pre-filled with what's known; fill player, team and goals and leave spare rows blank. These rows replace all other sources for that league-season, so keep the known ones. |
+| `gaps.csv` | | written by `gaps`: every league-season with fewer than 3 scorers. Leagues with no data at all are listed but get no rows; add them with `gaps --leagues BRA`. |
+| `club_locations_manual.csv` | team, city, lat, lon | clubs with no map dot. Copy rows from `data/raw/unresolved_clubs.csv`, which is sorted by goals. |
+| `moments_manual.csv` | season, date, title, detail, teams, players, lat, lon, weight | your own major moments (a famous match, a transfer, a disaster); diamonds on the map and entries in the description panel. |
+| `impact_manual.csv` | season, metric, value | TV audiences or other impact series; shown in the growth panel and era table. |
 
-### Why some clubs have no location
+After editing: `python -m scraper.run assemble`, then `python pipeline/build.py`.
 
-`locate` places a club from its Wikipedia article's coordinates (or its stadium's), else from a city name inside the club name (GeoNames). It misses when a scorer table doesn't link the club (leader lists and Transfermarkt don't), when the name holds no city (Arsenal, Juventus, Ajax) and the article guess fails, or when the article has no coordinates. Unplaced clubs still count fully toward goals and eras; they only lack a map dot. Clubs are looked up most goals first, and both `locate` and `assemble` report coverage **by goals**, which is what matters for the map (the club count is dominated by small clubs with one listed scorer).
+### Checking the goal figures
 
-`env` (league + international scoring rates, tournament goals, tournament hosts, growth of the game, national-team strength) has already been run and its files ship in `data/raw/`. Re-run it only to refresh. Narrow any step with `--leagues BRA,ARG --from 1970 --to 1990`. Check a single page with `python -m scraper.run dump --title "1975-76 Bundesliga"`.
+Add figures you look up (Wikipedia, RSSSF, league sites) to `data/manual/reference_goals.csv`, then run `python -m scraper.run validate`:
 
-### Sources
+```
+player,competition,season,goals,source
+Lionel Messi,ESP,2011,50,Wikipedia            <- one season (2011 = 2011–12): should match exactly
+Lionel Messi,ESP,,474,Guinness World Records  <- blank season: a career total in that league
+```
 
-| What | Source | Access |
-|---|---|---|
-| League scoring rate and games per team | [engsoccerdata](https://github.com/jalapic/engsoccerdata) (ENG, ESP, ITA, FRA 1946+, NED 1956+, GER 1963+, others 1994+); every other league-season from the league table on its Wikipedia page | download / article pages |
-| Club top scorers, 1946–2011, 34 leagues on six continents | Wikipedia season pages; "List of ... top scorers" pages fill seasons with no table (England before 1960, early Portugal) | article pages, 1/s |
-| Club goals, assists, minutes, 2012–2025 | [Transfermarkt open dataset](https://github.com/dcaribou/transfermarkt-datasets) | download |
-| Internationals: goals, tournaments, hosts, growth, national Elo | [martj42/international_results](https://github.com/martj42/international_results) | download |
-| Continental club competitions | Wikipedia season pages and finals lists; Transfermarkt for the Champions League and Europa League from 2012 | article pages / download |
-| League strength | [ClubElo](http://clubelo.com) for Europe; elsewhere national-team Elo with a talent-exodus correction | API / computed |
-| Club locations | built-in city list, then club/stadium coordinates on Wikipedia, then [GeoNames](https://www.geonames.org) city names (CC BY 4.0) | local / article pages / download |
+Career totals before 2012 come out lower than the published figure, because the scraper only has each season's top scorers. The report lists the seasons it has, the gaps, and how many goals the missing seasons must hold. A database total *higher* than the reference is worth a look (a name clash or a duplicate). Results also go to `data/raw/validation.csv`.
 
-### How the pieces fit
+## How it works
 
-- **Big moments count extra.** Each player's main club season gets his tournament and cup goals, weighted in league goals:
+- **Era-adjusted goals.** Each club season is compared with the top 3 scorers of nearby seasons (±5) in leagues of its time, adjusted for the league's scoring rate and strength. A player's own seasons are left out of his comparison group.
+- **Big moments count extra**, as league goals per goal. All weights are set in `core/competitions.py`:
 
   | competition | weight |
   |---|---|
@@ -102,102 +89,93 @@ Files in `data/manual/`:
   | Euro, Copa América, AFCON, Asian Cup, Gold Cup | ×3 |
   | Champions League, Europa League / UEFA Cup | ×2 |
   | Libertadores, AFC and CAF Champions League, CONCACAF Champions Cup, Confederations Cup, Oceania Nations Cup | ×1 |
- Tournament goals are judged against the international scoring rate, so a World Cup goal counts the same whatever league the scorer plays in; club goals are judged against the league's rate and strength. Tournament goals leave the international row, so nothing counts twice.
-- **Eras end at hand-overs.** A long run of overlapping peaks splits where the stars peaking in the four seasons before share little with those peaking in the four after.
-- **League strength, worldwide.** ClubElo where available. Elsewhere the country's national-team Elo is mapped onto the club scale (fitted on European leagues when ClubElo is present), minus up to 150 Elo when the national team's goals come from players abroad. `data/raw/league_strength_world.csv` shows every number.
-- **Continental titles** add weight to the winner's and runner-up's hubs, scaled by their league's strength.
-- **Regions.** Each confederation with enough data gets its own stars and eras, measured against its own leagues. The dashboard's region buttons switch to them.
-- **Growth of the game.** Countries appear on the map when they play their first international; hatched means playing but no league data here, solid means league data. The growth panel tracks nations, matches and leagues.
-- **Impact.** The era table compares length, stars, leagues, nations active, tournaments and final attendance. To add TV audiences or anything else, create `data/raw/impact_manual.csv` with columns `season,metric,value`; it appears in the growth panel and the era table.
+
+  Tournament goals are judged against the international scoring rate, so a World Cup goal counts the same whatever league the scorer plays in. They move off the player's international row onto his main club season, so nothing counts twice.
+- **Stars and eras.** A star has at least 3 seasons well above the top scorers of his time. His peak window comes from a curve fitted to his career, kept inside the seasons he actually played and at most 5 seasons either side of the peak. An era is a run of seasons with at least 2 stars at their peak. Eras split where strength dips into a valley, or where one group of stars hands over to the next. The hand-over test weighs each star by how close to his peak he is, so a fading star doesn't tie his era to the next one.
+- **League strength, worldwide.** ClubElo where available. Elsewhere the national team's Elo, mapped onto the club scale, minus up to 150 Elo when the national team's scorers play abroad.
+- **The map.** Hubs are clusters of cities where stars played, sized by their output (3-season rolling). Continental titles add weight to the finalists' hubs. Tournaments appear as capped, fading circles at the host. Countries fade in when they play their first international.
+- **Moments.** Every tournament final and continental club final, plus your own, as diamonds on the map and entries in the description panel.
+- **Regions.** Each confederation with enough data gets its own stars and eras. The region buttons switch to them.
 
 ### Known limitations
 
 - **Depth varies by era and league.** Older pages list about 3 scorers, some only the league leader. Every league-season is compared against its top 3.
 - **No appearances before 2012.** Output is per *team* match, so injury-hit seasons are under-counted.
-- **National-team strength is a proxy** for leagues without ClubElo. The exodus correction relies on linking international scorers to club rows, and before 2012 only top scorers are linked, so retention leans high then.
-- **Knockout goals aren't separated** from group-stage goals at tournaments (the results data doesn't mark the stage).
-- **Wikipedia page names and layouts vary.** `probe` shows what was found; fix or add page-name patterns in `scraper/leagues.json` (leagues) and `scraper/continental.py` (cups). Non-European pages are the least tested.
+- **National-team strength is a proxy** for leagues without ClubElo.
+- **Knockout goals aren't separated** from group-stage goals at tournaments.
+- **Wikipedia page names vary.** `probe` shows what was found; fix page-name patterns in `scraper/leagues.json` (leagues) and `scraper/continental.py` (cups).
 - **Name linking is conservative**: players with the same name aren't merged, and different spellings across sources stay split.
 - **TV audiences aren't openly available**, hence the manual impact file.
-- **Match-level weighting** (individual big games) is still to do; the map works at month level.
-- **Moments are automatic for tournament finals and continental cup finals** only; everything else comes from `moments_manual.csv`.
-- **worldfootball.net blocks scripts** (HTTP 403) and isn't used.
-
-## Real data format
-
-`data/raw/player_seasons.csv`, one row per player × season × competition:
-
-| column | meaning |
-|---|---|
-| player_id | stable id |
-| player | display name |
-| season | starting year (1987 = 1987–88) |
-| competition | league code (e.g. `ESP`, `ENG`) or `INT` for internationals |
-| comp_type | `club` or `international` |
-| club_city, lat, lon | club location (blank for international rows) |
-| apps, goals | appearances (blank for scraped data) and goals |
-| team_games, env_gpm | games per team and league goals per team match (environment mode) |
-| assists | blank where not recorded |
-| is_star_seed | optional, ignored by the pipeline |
-
-Two modes, picked automatically. **Full-league data** (with appearances): baselines come from all rows in a competition-season, so include regular players too. **Top-scorer data** (no appearances, with `env_gpm`): output is divided by the league-season scoring rate and compared across all seasons.
 
 ## Layout
 
 ```
-scraper/
-  run.py           command line: env | db | gaps | probe | scorers | transfermarkt | elo | continental | locate | assemble | all
-  db.py            the SQLite database (data/football.db) and manual files (data/manual/)
-  gaps.py          finds thin league-seasons, prepares rows to fill in
-  environment.py   league + international scoring rates from GitHub datasets
-  wikipedia.py     season pages (scorers, league tables) and leader lists; leagues.json = world registry
-  world.py         tournament goals, tournament hosts, growth, national Elo (from international results)
-  continental.py   continental club cups: finals and top scorers
-  strength.py      league strength for every league and season
-  locate.py        club coordinates (Wikipedia, GeoNames)
-  geo.py           country names, codes and coordinates
-  transfermarkt.py Transfermarkt open-data loader (2012 on)
-  clubelo.py       league strength from ClubElo snapshots
-  europe.py        old name for continental.py, kept for older commands
-  worldfootball.py old scraper, unused (site blocks scripts)
-  http.py          polite client: robots.txt, rate limit, retries, disk cache
-  clubs.py         club -> city resolver; cities.csv gazetteer
-  assemble.py      joins everything into data/raw/player_seasons.csv
-tests/             parser and resolver tests (python tests/test_scraper.py)
-pipeline/
-  build.py         runs everything -> dashboard/data/eras.json
-  eras.py          era adjustment, career peak fits, overlapping-peak eras, metric agreement
-  hotspots.py      density hubs (DBSCAN), rolling club weights, capped tournament spikes
-  tournaments.py   real World Cup / Euro hosts and dates
-  sample_data.py   synthetic dataset generator
+core/                shared by the scraper and the pipeline
+  paths.py           where everything lives
+  competitions.py    every competition: names, weights, map sizes (edit weights here)
+  db.py              the database: import, load, status
+  geo.py             country names, codes, coordinates
+  common.py          name normalising, seasons
+scraper/             collecting data and building the database
+  run.py             the command line: one function per step
+  environment.py     scoring rates and international data (GitHub datasets)
+  world.py           tournament goals and hosts, growth, national Elo
+  wikipedia.py       season pages, league tables, leader lists; leagues.json = league registry
+  transfermarkt.py   Transfermarkt open data (2012 on)
+  continental.py     continental club cups: finals and top scorers
+  clubelo.py         ClubElo league strength
+  locate.py          club coordinates (Wikipedia, GeoNames)
+  clubs.py           club -> city resolver; cities.csv gazetteer
+  assemble.py        builds the analysis tables, using:
+    linking.py         club rows from every source, one id per player, cup goals
+    internationals.py  international rows; tournament goals to club rows
+    strength.py        league strength for every league and season
+    moments.py         tournament finals, club finals, your moments
+  gaps.py            thin league-seasons -> rows to fill in
+  validate.py        compares league goals with figures you look up
+  http.py            polite client: robots.txt, rate limit, retries, page cache
+pipeline/            analysis: database -> dashboard/data/eras.json
+  build.py           runs everything
+  eras.py            era adjustment, career peaks, overlapping-peak eras, metric agreement
+  hotspots.py        hubs, club weights, tournament circles
+  tournaments.py     World Cup and Euro hosts and dates
+  sample_data.py     synthetic dataset for the sample dashboard
 dashboard/
-  index.html, app.js, style.css, vendor/, data/eras.json
+  index.html, style.css, vendor/, data/eras.json
+  js/main.js         loads the data, shared state, the clock
+  js/map.js, peaks.js, panel.js, growth.js, table.js, export.js, time.js, tip.js
+serve.py             serves the dashboard and opens it in your browser
+tests/               python -m pytest tests
+archive/             retired code, kept for reference (see archive/README.md)
 ```
 
 ## Tuning knobs
 
 | where | setting | default |
 |---|---|---|
-| eras.py | `FLAG_Z` star season threshold | 2.0 |
-| eras.py | `MIN_FLAGGED` flagged seasons to be a star | 3 |
-| eras.py | `PEAK_FRACTION` peak window cut-off | 0.7 |
-| eras.py | `MIN_OVERLAP` stars overlapping for an era | 2 |
-| eras.py | `SPLIT_RATIO` valley depth that splits eras | 0.7 |
-| eras.py | `SHRINK_GAMES` small-sample shrinkage (real data) | 6 |
-| eras.py | `REF_TOP` reference group per league-season (real data) | 3 |
-| eras.py | `FLAG_Z_ENV` star season threshold (real data) | 0.75 |
-| eras.py | `ERA_WINDOW` compare with top scorers within ± this many seasons (real data) | 5 |
-| eras.py | `INTL_WEIGHT` international games vs club games (real data) | 0.2 |
-| eras.py | `LEAGUE_ELO_WEIGHT` league-strength penalty (0 = off, 1 = full Elo odds) | 0.5 |
-| eras.py | `CUP_WEIGHTS` league goals per club cup goal | UCL 2, UEL 2, others 1 |
-| eras.py | `WORLD_CUP_WEIGHT` league goals per World Cup goal | 4.0 |
-| eras.py | `TOURNAMENT_WEIGHT` league goals per continental championship goal | 3.0 |
-| eras.py | `OTHER_TOURNAMENT_WEIGHT` Confederations Cup, Oceania Nations Cup | 1.0 |
-| eras.py | `TURNOVER_MAX` / `TURNOVER_SPAN` / `TURNOVER_MIN_LEN` era hand-over split | 0.3 / 4 / 12 |
+| core/competitions.py | every competition's weight, map size and moment order | see the table above |
+| pipeline/eras.py | `FLAG_Z_ENV` star season threshold | 0.75 |
+| pipeline/eras.py | `MIN_FLAGGED` flagged seasons to be a star | 3 |
+| pipeline/eras.py | `PEAK_FRACTION` peak window cut-off | 0.7 |
+| pipeline/eras.py | `MIN_OVERLAP` stars overlapping for an era | 2 |
+| pipeline/eras.py | `SPLIT_RATIO` valley depth that splits eras | 0.7 |
+| pipeline/eras.py | `MAX_PEAK_HALF` a peak window reaches at most this many seasons either side of the peak (and never past the career) | 5 |
+| pipeline/eras.py | `TURNOVER_MAX` / `TURNOVER_SPAN` / `TURNOVER_MIN_LEN` era hand-over split (overlap weighted by how near each star is to his peak) | 0.3 / 4 / 12 |
+| pipeline/eras.py | `REF_TOP` / `ERA_WINDOW` comparison group | top 3, ±5 seasons |
+| pipeline/eras.py | `INTL_WEIGHT` international games vs club games | 0.2 |
+| pipeline/eras.py | `LEAGUE_ELO_WEIGHT` league-strength penalty (0 = off, 1 = full Elo odds) | 0.5 |
+| pipeline/eras.py | `SHRINK_GAMES` small-sample shrinkage | 6 |
 | scraper/strength.py | `EXODUS_ELO` strength lost when all national-team scorers play abroad | 150 |
 | pipeline/build.py | `MIN_REGION_ROWS` club rows a confederation needs for its own stars | 150 |
-| hotspots.py | `TITLE_BONUS` continental final bonus (x the season's biggest hub, then x league strength) | winner 1.0, runner-up 0.4 |
-| hotspots.py | `HUB_DIAMETER_KM` max distance between any two cities in a hub | 250 |
-| hotspots.py | `ROLLING_SEASONS` club smoothing | 3 |
-| hotspots.py | `TOURNAMENT_CAP` size vs biggest club hub | WC 1.5×, Euro 1.1×, Copa América 1.0×, others 0.5–0.7× |
-| hotspots.py | `FADE` post-tournament fade by month | .55, .25, .08 |
+| pipeline/hotspots.py | `TITLE_BONUS` continental final bonus (× biggest hub × league strength) | winner 1.0, runner-up 0.4 |
+| pipeline/hotspots.py | `HUB_DIAMETER_KM` max distance between cities in a hub | 250 |
+| pipeline/hotspots.py | `ROLLING_SEASONS` / `FADE` club smoothing, tournament fade | 3 / .55, .25, .08 |
+
+## Controls
+
+- **Play / pause**: button or Space. **Step**: ← / →. **Scrub**: the timeline slider.
+- **Click a hub** to pause and see who was playing there. **Click a curve** to jump to that player's peak.
+- **Era measure**: goals (era-adjusted), goals (raw), goals + assists.
+- **Regions**: zoom, and switch the peaks and era table to that region's own stars. Scroll to zoom, drag to pan.
+- **PNG / Record**: download the map as an image, or record a video clip while it plays.
+- **Deep links**: `?t=2016-05&view=UEFA&metric=goals_raw&hub=hub7`.

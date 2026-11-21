@@ -13,7 +13,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from .environment import _download, season_of
+from core.common import season_of
+from .environment import _download
 
 BASE = "https://pub-e682421888d945d684bcae8890b0ec20.r2.dev/data/{}.csv.gz"
 NEEDED = {

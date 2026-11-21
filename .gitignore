@@ -1,6 +1,12 @@
+# Rebuilt by the scraper; never edited by hand
+data/football.db
+data/raw/*
+!data/raw/.gitkeep
 data/cache/
-__pycache__/
-*.pyc
-.pytest_cache/
+data/sample/
+dashboard/data/eras.json
 debug/
-*.csv
+__pycache__/
+.pytest_cache/
+
+# Committed and shared: data/manual/ (everyone's hand-made fixes, gaps and moments)

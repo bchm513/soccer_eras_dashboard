@@ -19,8 +19,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from . import geo
-from .clubs import norm
+from core import db, geo
 
 EXODUS_ELO = 150        # Elo lost by a league whose national-team scorers all play abroad
 RETENTION_WINDOW = 3    # seasons either side for the retention average
@@ -74,13 +73,14 @@ def build(raw: Path, club: pd.DataFrame, ig: pd.DataFrame, leagues: list[dict], 
     """Strength per (code, season) for every league in the registry plus extra country codes."""
     codes = sorted({lg["code"] for lg in leagues} | set(extra_codes))
     first, last = 1946, int(max(club["season"].max(), 2025))
-    ne_path = raw / "national_elo.csv"
-    if not ne_path.exists():
-        log("  league strength: national_elo.csv missing (run `python -m scraper.run env`); skipping")
+    ne = db.load("national_elo", raw)
+    if ne is None:
+        log("  league strength: national_elo missing (run `python -m scraper.run env`); skipping")
         return pd.DataFrame()
-    nat = national_for(codes, pd.read_csv(ne_path), first, last)
-    ce_path = raw / "league_strength.csv"
-    ce = pd.read_csv(ce_path).rename(columns={"competition": "code", "elo_mean": "clubelo"}) if ce_path.exists() else pd.DataFrame(columns=["code", "season", "clubelo"])
+    nat = national_for(codes, ne, first, last)
+    ce = db.load("league_strength", raw)          # ClubElo, from the optional `elo` step
+    ce = (ce.rename(columns={"competition": "code", "elo_mean": "clubelo"}) if ce is not None
+          else pd.DataFrame(columns=["code", "season", "clubelo"]))
     df = nat.merge(ce[["code", "season", "clubelo"]], on=["code", "season"], how="outer")
 
     both = df.dropna(subset=["national_elo", "clubelo"])
@@ -101,8 +101,9 @@ def build(raw: Path, club: pd.DataFrame, ig: pd.DataFrame, leagues: list[dict], 
     df["elo"] = df["clubelo"].where(df["clubelo"].notna(), mapped).round(1)
     df["source"] = np.where(df["clubelo"].notna(), "clubelo", "national")
     df = df.dropna(subset=["elo"]).sort_values(["season", "code"])
-    df[["code", "season", "elo", "source", "national_elo", "clubelo", "retention"]].to_csv(
-        raw / "league_strength_world.csv", index=False)
+    out = df[["code", "season", "elo", "source", "national_elo", "clubelo", "retention"]]
+    out.to_csv(raw / "league_strength_world.csv", index=False)
+    db.write("league_strength_world", out, raw)
     log(f"  league strength: {df['code'].nunique()} countries, {how}; "
         f"exodus correction {EXODUS_ELO} Elo x (1 - retention)")
     return df

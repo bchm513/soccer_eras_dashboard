@@ -13,8 +13,10 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import db
-from .assemble import _is_player
+from core.paths import manual_dir
+
+from core import db
+from core.common import is_player
 
 ROWS_PER_SEASON = 5
 MIN_SCORERS = 3
@@ -26,8 +28,8 @@ def build(raw: Path, leagues: list[dict], first: int, last: int, log=print, only
     db.refresh(raw, log=lambda s: None)
     frames = [f for f in (db.load(n, raw) for n in ("scorers_wikipedia", "scorers_transfermarkt")) if f is not None]
     have = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(columns=["competition", "season", "player", "team", "goals"])
-    have = have[have["player"].map(_is_player)]
-    manual_p = db.manual_dir(raw) / "scorers_manual.csv"
+    have = have[have["player"].map(is_player)]
+    manual_p = manual_dir(raw) / "scorers_manual.csv"
     manual = pd.read_csv(manual_p) if manual_p.exists() else pd.DataFrame(columns=db.MANUAL_TEMPLATES["scorers_manual.csv"].strip().split(","))
     in_manual = set(zip(manual["competition"], manual["season"].astype("Int64")))
     from .wikipedia import active
@@ -39,7 +41,7 @@ def build(raw: Path, leagues: list[dict], first: int, last: int, log=print, only
             if not active(lg, s):
                 continue
             rows = have[(have["competition"] == lg["code"]) & (have["season"] == s)].sort_values("goals", ascending=False)
-            filled = manual[(manual["competition"] == lg["code"]) & (manual["season"] == s) & manual["player"].map(_is_player)]
+            filled = manual[(manual["competition"] == lg["code"]) & (manual["season"] == s) & manual["player"].map(is_player)]
             n = max(rows["player"].nunique(), len(filled))
             if n >= MIN_SCORERS:
                 continue
@@ -56,7 +58,7 @@ def build(raw: Path, leagues: list[dict], first: int, last: int, log=print, only
                                  "goals": int(r.goals) if r else "", "nationality": "",
                                  "note": "already known" if r else ""})
     g = pd.DataFrame(gaps)
-    out_dir = db.manual_dir(raw)
+    out_dir = manual_dir(raw)
     out_dir.mkdir(parents=True, exist_ok=True)
     g.to_csv(out_dir / "gaps.csv", index=False)
     if new_rows:

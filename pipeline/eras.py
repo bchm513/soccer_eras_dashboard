@@ -12,6 +12,8 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import curve_fit
 
+from core.competitions import CLUB_CUPS, TIERS, cup_column
+
 MIN_APPS = 10          # rows below this don't define the league baseline
 FLAG_Z = 2.0           # a player-season is "flagged" at or above this
 MIN_FLAGGED = 3        # flagged seasons needed to count as a star
@@ -19,7 +21,8 @@ PEAK_FRACTION = 0.7    # peak window: curve >= 70% of its height
 MIN_OVERLAP = 2        # stars overlapping to call it an era
 MAX_GAP = 2            # merge era runs separated by <= this many seasons
 MIN_LENGTH = 2         # shorter overlaps are spikes, not eras
-TURNOVER_MAX = 0.3     # split a long run where the stars peaking before/after overlap this little (Jaccard)
+MAX_PEAK_HALF = 5      # a peak window reaches at most this many seasons either side of the peak
+TURNOVER_MAX = 0.3     # split a long run where the stars peaking before/after overlap this little (weighted Jaccard)
 TURNOVER_SPAN = 4      # seasons compared on each side of a candidate boundary
 TURNOVER_MIN_LEN = 12  # only runs at least this long are checked for a hand-over
 SPLIT_RATIO = 0.7      # split a run where strength dips below 70% of the peaks either side
@@ -34,14 +37,7 @@ FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above t
 ERA_WINDOW = 5         # environment mode: compare with top scorers within +/- this many seasons
 INTL_WEIGHT = 0.2      # environment mode: international games count this much vs club games
 LEAGUE_ELO_WEIGHT = 0.5   # how hard league strength bites: 0 = off; 1 = full Elo odds
-# Big moments: each goal counts as this many league goals, added on top of the player's league goals
-WORLD_CUP_WEIGHT = 4.0         # World Cup finals
-TOURNAMENT_WEIGHT = 3.0        # continental championships: Euro, Copa América, AFCON, Asian Cup, Gold Cup
-OTHER_TOURNAMENT_WEIGHT = 1.0  # Confederations Cup, Oceania Nations Cup
-CUP_WEIGHTS = {"UCL": 2.0, "UEL": 2.0,                         # Champions League, Europa League
-               "LIB": 1.0, "ACL": 1.0, "CAF": 1.0, "CCL": 1.0}  # other continental club cups
-CUP_WEIGHT = 2.0               # older data files with a single cup_goals column
-UCL_WEIGHT = CUP_WEIGHT
+# Big-moment weights (World Cup x4, Champions League x2, ...) live in core/competitions.py
 LEAGUE_ELO_REF_TOP = 4    # strength is measured against the mean of that season's 4 strongest leagues
 
 
@@ -134,13 +130,8 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
     df["w"] = apps.fillna(pd.to_numeric(df.get("team_games"), errors="coerce")) if env_mode else apps
     num = lambda c: pd.to_numeric(df[c], errors="coerce").fillna(0) if c in df else pd.Series(0.0, index=df.index)
     goals = df["goals"].astype(float)
-    per_cup = [c for c in CUP_WEIGHTS if f"cup_goals_{c}" in df]
-    if per_cup:
-        cup_bonus = sum(CUP_WEIGHTS[c] * num(f"cup_goals_{c}") for c in per_cup)
-    else:
-        cup_bonus = CUP_WEIGHT * (num("cup_goals") + num("ucl_goals"))
-    big_tour = (WORLD_CUP_WEIGHT * num("world_cup_goals") + TOURNAMENT_WEIGHT * num("tournament_goals")
-                + OTHER_TOURNAMENT_WEIGHT * num("other_tournament_goals")) if env_mode else 0.0
+    cup_bonus = sum(c.weight * num(cup_column(c.code)) for c in CLUB_CUPS.values())
+    big_tour = sum(t["weight"] * num(t["column"]) for t in TIERS.values()) if env_mode else 0.0
     club_goals = goals + (cup_bonus if env_mode else 0.0)
     df["g_rate"] = (club_goals + big_tour) / df["w"].clip(lower=1)
     has_ast = pd.to_numeric(df["assists"], errors="coerce")
@@ -240,7 +231,13 @@ def find_stars(ps: pd.DataFrame, metric: str, require_club: bool = False, flag_z
         g = g.sort_values("season")
         if club_ids is not None:
             g = g[g["league"].notna()]          # career curve from club seasons
-        fit = fit_peak(g["season"].to_numpy(float), g[metric].to_numpy(float))
+        years = g["season"].to_numpy(float)
+        fit = fit_peak(years, g[metric].to_numpy(float))
+        # A flat or still-rising career fits a very wide curve (one ran 2015-2035); a peak can't
+        # outlast the career, and no one stays at his peak for more than about a decade.
+        lo, hi = fit["window"]
+        fit["window"] = [max(lo, fit["peak"] - MAX_PEAK_HALF, years.min() - 0.5),
+                         min(hi, fit["peak"] + MAX_PEAK_HALF, years.max() + 0.5)]
         fit.update({"player": g["player"].iloc[0],
                     "points": np.column_stack([g["season"], g[metric]])})
         stars[pid] = fit
@@ -272,7 +269,7 @@ def detect_eras(stars: dict, years: range) -> tuple[list, list]:
     for r in runs:
         span = [by_year[y] for y in range(r["start"], r["end"] + 1)]
         for piece in _split_at_valleys(span):
-            pieces.extend(_split_at_turnover(piece))
+            pieces.extend(_split_at_turnover(piece, stars))
 
     eras = []
     for rows in pieces:
@@ -288,27 +285,40 @@ def detect_eras(stars: dict, years: range) -> tuple[list, list]:
     return eras, series
 
 
-def _split_at_turnover(rows: list) -> list:
+def _split_at_turnover(rows: list, stars: dict) -> list:
     """Cut a long run where one group of stars hands over to the next.
 
-    For each candidate boundary, compare the stars peaking in the TURNOVER_SPAN seasons before
-    with those in the TURNOVER_SPAN seasons after; split at the lowest overlap if it is at most
-    TURNOVER_MAX, then check both halves again."""
+    For each candidate boundary, compare the stars in the TURNOVER_SPAN seasons before with
+    those in the TURNOVER_SPAN seasons after, each weighted by how close to his peak he is there
+    (his curve height, summed over those seasons). A star fading on one side and rising on the
+    other then counts for little on the side where he's past it, so Messi and Ronaldo in 2019
+    don't tie their era to Mbappé's. Split at the lowest overlap if it is at most TURNOVER_MAX,
+    then check both halves again."""
     if len(rows) < TURNOVER_MIN_LEN:
         return [rows]
+
+    def weights(part):
+        w: dict = {}
+        for r in part:
+            for p in r["players"]:
+                c = stars[p]["curve"]
+                w[p] = w.get(p, 0.0) + max(float(np.interp(r["year"], c[:, 0], c[:, 1])), 0.0)
+        return w
+
     best, best_j = None, 2.0
     k = TURNOVER_SPAN
     for i in range(k, len(rows) - k + 1):
-        before = set().union(*(set(r["players"]) for r in rows[i - k:i]))
-        after = set().union(*(set(r["players"]) for r in rows[i:i + k]))
-        if not before or not after:
+        a, b = weights(rows[i - k:i]), weights(rows[i:i + k])
+        keys = set(a) | set(b)
+        total = sum(max(a.get(p, 0), b.get(p, 0)) for p in keys)
+        if not keys or total <= 0:
             continue
-        j = len(before & after) / len(before | after)
+        j = sum(min(a.get(p, 0), b.get(p, 0)) for p in keys) / total
         if j < best_j:
             best, best_j = i, j
     if best is None or best_j > TURNOVER_MAX:
         return [rows]
-    return _split_at_turnover(rows[:best]) + _split_at_turnover(rows[best:])
+    return _split_at_turnover(rows[:best], stars) + _split_at_turnover(rows[best:], stars)
 
 
 def _split_at_valleys(rows: list) -> list:

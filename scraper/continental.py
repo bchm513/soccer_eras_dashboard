@@ -22,31 +22,34 @@ from pathlib import Path
 import pandas as pd
 from bs4 import BeautifulSoup
 
+from core.competitions import CLUB_CUPS
 from .http import FetchFailed, PoliteSession, RobotsDisallowed
 from . import wikipedia as wiki
 
 COMPS = [
-    {"code": "UCL", "confed": "UEFA", "name": "European Cup / Champions League", "first": 1955, "format": "split",
+    {"code": "UCL", "first": 1955, "format": "split",
      "wiki": ["{s} European Cup", "{s} UEFA Champions League"],
      "finals": ["List of European Cup and UEFA Champions League finals"]},
-    {"code": "UEL", "confed": "UEFA", "name": "UEFA Cup / Europa League", "first": 1971, "format": "split",
+    {"code": "UEL", "first": 1971, "format": "split",
      "wiki": ["{s} UEFA Cup", "{s} UEFA Europa League"],
      "finals": ["List of UEFA Cup and Europa League finals", "List of UEFA Europa League finals"]},
-    {"code": "LIB", "confed": "CONMEBOL", "name": "Copa Libertadores", "first": 1960, "format": "calendar",
+    {"code": "LIB", "first": 1960, "format": "calendar",
      "wiki": ["{s} Copa Libertadores"], "finals": ["List of Copa Libertadores finals"]},
-    {"code": "ACL", "confed": "AFC", "name": "AFC Champions League", "first": 1985, "format": "split",
+    {"code": "ACL", "first": 1985, "format": "split",
      "formats": [[2004, "calendar"], [2023, "split"]],
      "wiki": ["{s} Asian Club Championship", "{s} AFC Champions League", "{s} AFC Champions League Elite"],
      "finals": ["List of AFC Champions League finals", "List of Asian Club Championship and AFC Champions League finals"]},
-    {"code": "CAF", "confed": "CAF", "name": "CAF Champions League", "first": 1964, "format": "calendar",
+    {"code": "CAF", "first": 1964, "format": "calendar",
      "formats": [[2019, "split"]],
      "wiki": ["{s} African Cup of Champions Clubs", "{s} CAF Champions League"],
      "finals": ["List of CAF Champions League finals", "List of African Cup of Champions Clubs and CAF Champions League finals"]},
-    {"code": "CCL", "confed": "CONCACAF", "name": "CONCACAF Champions Cup", "first": 1962, "format": "calendar",
+    {"code": "CCL", "first": 1962, "format": "calendar",
      "formats": [[2008, "split"], [2018, "calendar"]],
      "wiki": ["{s} CONCACAF Champions' Cup", "{s} CONCACAF Champions League", "{s} CONCACAF Champions Cup"],
      "finals": ["List of CONCACAF Champions Cup finals", "List of CONCACAF Champions' Cup and Champions League finals"]},
 ]
+for _c in COMPS:                       # names, confederations and weights live in core/competitions.py
+    _c.update(name=CLUB_CUPS[_c["code"]].name, confed=CLUB_CUPS[_c["code"]].confed)
 COMP_BY_CODE = {c["code"]: c for c in COMPS}
 
 
@@ -75,7 +78,6 @@ def parse_finals(html: str, comp: dict | None = None) -> list[dict]:
         i_wc = i_w - 1 if i_w > 0 and header[i_w - 1].startswith(("country", "nation")) else None
         i_rc = i_r + 1 if i_r + 1 < len(header) and header[i_r + 1].startswith(("country", "nation")) else None
         i_att = next((i for i, h in enumerate(header) if h.startswith("attend")), None)
-        fmt = (lambda y: wiki.season_format(comp, y)) if comp else (lambda y: "split")
         out = []
         for r in grid[1:]:
             if len(r) <= max(i_s, i_w, i_r):

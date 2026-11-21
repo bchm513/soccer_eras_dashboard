@@ -5,32 +5,10 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scraper.worldfootball import parse_goalgetter, goalgetter_url, _dedupe  # noqa: E402
 from scraper.clubs import ClubResolver  # noqa: E402
 from scraper import wikipedia as wiki  # noqa: E402
 
 FIX = Path(__file__).parent / "fixtures"
-
-
-def test_parse_goalgetter():
-    rows = parse_goalgetter((FIX / "goalgetter_esp_1955.html").read_text(encoding="utf-8"))
-    assert [r["player"] for r in rows] == ["Alfredo Di Stéfano", "Mauro", "Escudero", "Arteche"]
-    first = rows[0]
-    assert first["player_id"] == "alfredo-di-stefano"
-    assert first["team"] == "Real Madrid" and first["team_id"] == "real-madrid"
-    assert first["nationality"] == "Argentina"
-    assert (first["goals"], first["penalties"]) == (24, 0)
-    assert rows[1]["rank"] == 1            # tied rank inherited
-    assert rows[3]["player_id"] == "pe41509"  # newer /person/ links
-    assert rows[3]["team_id"] == "te123"
-    assert (rows[3]["goals"], rows[3]["penalties"]) == (15, 3)
-
-
-def test_urls_and_dedupe():
-    assert goalgetter_url("esp-primera-division", 1955, "split").endswith("/goalgetter/esp-primera-division-1955-1956/")
-    assert goalgetter_url("bra-serie-a", 1990, "calendar").endswith("/goalgetter/bra-serie-a-1990/")
-    assert _dedupe("Real Madrid Real Madrid") == "Real Madrid"
-    assert _dedupe("Atlético Madrid") == "Atlético Madrid"
 
 
 def test_wiki_seriea_rowspan_ties():
@@ -101,16 +79,17 @@ def test_league_factor():
     assert abs(f[4] - 10 ** (E.LEAGUE_ELO_WEIGHT * -100 / 400)) < 1e-9
 
 
-def test_europe_finals():
-    from scraper import europe
-    rows = europe.parse_finals((FIX / "wiki_ucl_finals.html").read_text(encoding="utf-8"))
+def test_ucl_finals():
+    from scraper import continental as C
+    from core.geo import country_codes
+    rows = C.parse_finals((FIX / "wiki_ucl_finals.html").read_text(encoding="utf-8"), C.COMP_BY_CODE["UCL"])
     assert [(r["season"], r["winner"], r["runner_up"]) for r in rows] == [
         (1955, "Real Madrid", "Reims"), (1957, "Real Madrid", "Milan"),
         (1985, "Steaua București", "Barcelona"), (2016, "Real Madrid", "Juventus")]
     assert rows[0]["winner_country"] == "Spain" and rows[0]["runner_up_country"] == "France"
     r = ClubResolver(FIX)
-    assert r.resolve("Steaua București", europe.COUNTRY_CODE["romania"])[0] == "Bucharest"
-    assert r.resolve("Reims", europe.COUNTRY_CODE["france"])[0] == "Reims"
+    assert r.resolve("Steaua București", country_codes("Romania")[0])[0] == "Bucharest"
+    assert r.resolve("Reims", country_codes("France")[0])[0] == "Reims"
 
 
 def test_wiki_standings():
@@ -159,19 +138,20 @@ def test_geonames_and_auto_locations(tmp_path):
 
 
 def test_club_resolver(tmp_path):
-    r = ClubResolver(tmp_path)
+    raw = tmp_path / "raw"
+    raw.mkdir()
+    r = ClubResolver(raw)
     assert r.resolve("Juventus", "ITA")[0] == "Turin"
     assert r.resolve("Sporting Braga", "POR")[0] == "Braga"     # city name beats alias
     assert r.resolve("Hamburger SV", "GER")[0] == "Hamburg"
     assert r.resolve("Nowhere Rovers", "ENG")[3] == "unresolved"
-    (tmp_path / "club_locations_manual.csv").write_text("team,city,lat,lon\nNowhere Rovers,Nowhere,50.0,0.0\n")
-    assert ClubResolver(tmp_path).resolve("Nowhere Rovers", "ENG")[0] == "Nowhere"
+    (tmp_path / "manual").mkdir()
+    (tmp_path / "manual" / "club_locations_manual.csv").write_text("team,city,lat,lon\nNowhere Rovers,Nowhere,50.0,0.0\n")
+    assert ClubResolver(raw).resolve("Nowhere Rovers", "ENG")[0] == "Nowhere"
 
 
 if __name__ == "__main__":
     import tempfile
-    test_parse_goalgetter()
-    test_urls_and_dedupe()
     test_wiki_seriea_rowspan_ties()
     test_wiki_eng_equals_ties()
     test_wiki_titles()
@@ -179,7 +159,7 @@ if __name__ == "__main__":
     test_wiki_infobox_fallback()
     test_clubelo_snapshot()
     test_league_factor()
-    test_europe_finals()
+    test_ucl_finals()
     test_wiki_standings()
     test_wiki_leaders_list()
     test_season_formats()

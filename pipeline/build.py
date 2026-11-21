@@ -1,14 +1,10 @@
 """Run the full pipeline and write dashboard/data/eras.json.
 
-Uses data/raw/player_seasons.csv when it exists; otherwise generates the SAMPLE dataset.
+Reads the project database (data/football.db, built by `python -m scraper.run assemble`);
+with no real data yet it generates the SAMPLE dataset instead.
     python pipeline/build.py            # auto
     python pipeline/build.py --sample   # force sample data
-Optional inputs next to player_seasons.csv (made by the scraper steps):
-    continental_finals.csv     every continental club final (title bonus on the map)
-    league_strength_world.csv  league strength per country and season (scales titles)
-    tournament_editions.csv    Copa América, AFCON, Asian Cup, Gold Cup... hosts
-    growth.csv, country_first.csv   growth of the game
-    impact_manual.csv          your own impact series: season, metric, value (e.g. TV audiences)
+    python pipeline/build.py --input other/raw/player_seasons.csv --output other/eras.json
 """
 from __future__ import annotations
 
@@ -21,21 +17,15 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).parent))
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(Path(__file__).parent), str(ROOT)]
 import eras as E          # noqa: E402
 import hotspots as H      # noqa: E402
 from sample_data import generate  # noqa: E402
 from tournaments import TOURNAMENTS  # noqa: E402
+from core import competitions, db, geo, paths  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-from scraper import geo   # noqa: E402
-
-RAW = ROOT / "data" / "raw" / "player_seasons.csv"
-SAMPLE = ROOT / "data" / "sample" / "player_seasons.csv"
-OUT = ROOT / "dashboard" / "data" / "eras.json"
 PRIMARY = "goals_adj"
-COMP_TITLE_WEIGHT = {"UCL": 1.0, "LIB": 1.0, "ACL": 1.0, "CAF": 1.0, "CCL": 1.0}  # before strength scaling
 MIN_REGION_ROWS = 150      # club rows a confederation needs before it gets its own stars and eras
 CONFED_NAMES = {"UEFA": "Europe", "CONMEBOL": "South America", "CONCACAF": "North & Central America",
                 "AFC": "Asia & Australia", "CAF": "Africa", "OFC": "Oceania"}
@@ -63,14 +53,22 @@ def r2(a):
 warnings.filterwarnings("ignore", message="Covariance of the parameters could not be estimated")
 
 
-# ---------------------------------------------------------------- inputs next to the data file
+# ---------------------------------------------------------------- inputs from the database
 
-def strength_factors(raw_dir: Path, league_codes: set) -> pd.DataFrame | None:
+def load_player_seasons(raw: Path) -> pd.DataFrame:
+    df = db.load("player_seasons", raw)
+    if df is None:
+        raise SystemExit("No player_seasons table. Run `python -m scraper.run assemble` first.")
+    if "tournament_goals" in df and "continental_goals" not in df:
+        raise SystemExit("player_seasons was built by an older version. Run `python -m scraper.run assemble` again.")
+    return df
+
+
+def strength_factors(raw: Path, league_codes: set) -> pd.DataFrame | None:
     """Factor per (code, season) vs that season's 4 strongest leagues, as for player output."""
-    p = raw_dir / "league_strength_world.csv"
-    if not p.exists():
+    s = db.load("league_strength_world", raw)
+    if s is None:
         return None
-    s = pd.read_csv(p)
     ref = (s[s["code"].isin(league_codes)].groupby("season")["elo"]
            .apply(lambda x: x.nlargest(E.LEAGUE_ELO_REF_TOP).mean()))
     gap = (s["elo"] - s["season"].map(ref)).clip(upper=0)
@@ -78,59 +76,46 @@ def strength_factors(raw_dir: Path, league_codes: set) -> pd.DataFrame | None:
     return s[["code", "season", "factor"]]
 
 
-def load_finals(raw_dir: Path, factors: pd.DataFrame | None) -> pd.DataFrame | None:
-    """Continental finalists with cities and a title weight scaled by their league's strength."""
-    p = raw_dir / "continental_finals.csv"
-    if p.exists():
-        f = pd.read_csv(p)
-    elif (raw_dir / "europe_finals.csv").exists():
-        f = pd.read_csv(raw_dir / "europe_finals.csv").assign(comp="UCL", confed="UEFA", attendance=np.nan)
-    else:
+def load_finals(raw: Path, factors: pd.DataFrame | None) -> pd.DataFrame | None:
+    """Continental finalists (located by `assemble`) with a title weight scaled by league strength."""
+    f = db.load("finals", raw)
+    if f is None or f.empty:
         return None
-    from scraper.clubs import ClubResolver
-    res = ClubResolver(raw_dir)
+    f = f.dropna(subset=["city", "lat", "lon"]).copy()
     fac = {} if factors is None else {(c, s): v for c, s, v in factors.itertuples(index=False)}
     med = {} if factors is None else factors.groupby("season")["factor"].median().to_dict()
-    rows = []
-    for r in f.itertuples():
-        for kind, team, country in (("winner", r.winner, r.winner_country), ("runner_up", r.runner_up, r.runner_up_country)):
-            code = geo.country_codes(country)[0]
-            city, lat, lon, _ = res.resolve(str(team), code)
-            if not city:
-                continue
-            factor = fac.get((code, int(r.season)), med.get(int(r.season), 1.0))
-            rows.append({"season": int(r.season), "comp": r.comp, "kind": kind, "team": team, "city": city,
-                         "lat": lat, "lon": lon, "code": code,
-                         "weight": H.TITLE_BONUS.get(kind, 0) * COMP_TITLE_WEIGHT.get(r.comp, 1.0) * factor,
-                         "attendance": getattr(r, "attendance", np.nan)})
-    return pd.DataFrame(rows) if rows else None
+    f["season"] = f["season"].astype(int)
+    f["factor"] = [fac.get((c, s), med.get(s, 1.0)) for c, s in zip(f["code"], f["season"])]
+    cup_w = {c.code: c.title_weight for c in competitions.CLUB_CUPS.values()}
+    f["weight"] = f["side"].map(H.TITLE_BONUS).fillna(0) * f["comp"].map(cup_w).fillna(1.0) * f["factor"]
+    return f.rename(columns={"side": "kind"})
 
 
-def all_tournaments(raw_dir: Path | None) -> list:
+def all_tournaments(raw: Path | None) -> list:
     out = list(TOURNAMENTS)
-    p = raw_dir / "tournament_editions.csv" if raw_dir else None
-    if p is not None and p.exists():
-        for r in pd.read_csv(p).itertuples():
+    te = db.load("tournament_editions", raw) if raw else None
+    if te is not None:
+        for r in te.itertuples():
             out.append((r.type, int(r.year), r.host, r.city, float(r.lat), float(r.lon), r.start, r.end))
     return out
 
 
-def growth_data(raw_dir: Path, df: pd.DataFrame) -> dict:
+def growth_data(raw: Path, df: pd.DataFrame) -> dict:
     out = {"series": [], "countries": {}, "leagueCoverage": {}, "impact": {}}
     club = df[df["comp_type"] == "club"]
     leagues_per = club.groupby("season")["competition"].nunique().to_dict()
-    p = raw_dir / "growth.csv"
-    if p.exists():
+    g = db.load("growth", raw)
+    if g is not None:
         last_club = int(club["season"].max()) if len(club) else 9999
-        for r in pd.read_csv(p).itertuples():
+        for r in g.itertuples():
             if int(r.season) > last_club:          # the current season is only partly played
                 continue
             out["series"].append({"season": int(r.season), "nations": int(r.nations_active),
                                   "nationsTotal": int(r.nations_total), "matches": int(r.matches),
                                   "leagues": int(leagues_per.get(int(r.season), 0))})
-    p = raw_dir / "country_first.csv"
-    if p.exists():
-        out["countries"] = {r.country: int(r.first_season) for r in pd.read_csv(p).itertuples()}
+    cf = db.load("country_first", raw)
+    if cf is not None:
+        out["countries"] = {r.country: int(r.first_season) for r in cf.itertuples()}
     cov: dict = {}
     for (code, season), _ in club.groupby(["competition", "season"]):
         team = geo.team_for(code, int(season))
@@ -139,21 +124,21 @@ def growth_data(raw_dir: Path, df: pd.DataFrame) -> dict:
             lo, hi = cov.get(name, (int(season), int(season)))
             cov[name] = (min(lo, int(season)), max(hi, int(season)))
     out["leagueCoverage"] = {k: list(v) for k, v in cov.items()}
-    p = raw_dir / "impact_manual.csv"
-    if p.exists():
-        imp = pd.read_csv(p)
-        out["impact"] = {m: [[int(s), float(v)] for s, v in g[["season", "value"]].itertuples(index=False)]
-                         for m, g in imp.groupby("metric")}
+    imp = db.load("manual_impact_manual", raw)
+    if imp is not None and len(imp):
+        imp = imp.dropna(subset=["season", "metric", "value"])
+        out["impact"] = {m: [[int(s), float(v)] for s, v in grp[["season", "value"]].itertuples(index=False)]
+                         for m, grp in imp.groupby("metric")}
     return out
 
 
-def moments_data(raw_dir: Path) -> dict:
+def moments_data(raw: Path) -> dict:
     """Big moments by season (tournament finals, continental club finals, your own entries)."""
-    p = raw_dir / "moments.csv"
-    if not p.exists():
+    m = db.load("moments", raw)
+    if m is None or m.empty:
         return {}
-    m = pd.read_csv(p)
     out: dict = {}
+    m["weight"] = pd.to_numeric(m["weight"], errors="coerce").fillna(1)
     for r in m.sort_values("weight", ascending=False).itertuples():
         lat, lon = pd.to_numeric(r.lat, errors="coerce"), pd.to_numeric(r.lon, errors="coerce")
         out.setdefault(str(int(r.season)), []).append({
@@ -230,14 +215,26 @@ def regional(df: pd.DataFrame) -> dict:
 
 # ---------------------------------------------------------------- main
 
-def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -> dict:
-    is_sample = src is None and (force_sample or not RAW.exists())
-    src = src or (SAMPLE if is_sample else RAW)
+def main(force_sample: bool = False, src: Path | None = None, out: Path = paths.DASHBOARD_DATA) -> dict:
+    raw_dir = src.parent if src else paths.RAW
+    is_sample = src is None and (force_sample or db.load("player_seasons", raw_dir) is None)
+    scraped = [f.name for f in raw_dir.glob("*.csv")] if raw_dir.exists() else []
+    if is_sample and not force_sample and scraped:
+        # Scraped files exist but haven't been built into the database: never hide that behind sample data
+        raise SystemExit(
+            f"Found {len(scraped)} scraped files in data/raw/, but the database has no player_seasons table yet.\n"
+            "Load them and build it with:\n\n"
+            "    python -m scraper.run assemble\n"
+            "    python pipeline/build.py\n\n"
+            "(Use --sample to build the sample dashboard anyway.)")
     if is_sample:
-        generate(SAMPLE)
-    df = pd.read_csv(src, low_memory=False)
+        generate(paths.SAMPLE)
+        src = paths.SAMPLE
+        df = pd.read_csv(src, low_memory=False)
+    else:
+        src = src or raw_dir / "player_seasons.csv"
+        df = load_player_seasons(raw_dir)
     first, last = int(df["season"].min()), int(df["season"].max())
-    raw_dir = src.parent
 
     ps = E.player_season_scores(df)
     metrics = [m for m in E.METRICS if ps[m].notna().any()]
@@ -295,17 +292,17 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
 
     data = {
         "meta": {
-            "sample": is_sample, "source": str(src.relative_to(ROOT)) if src.is_relative_to(ROOT) else str(src),
+            "sample": is_sample, "source": "data/football.db" if not is_sample else str(src.relative_to(ROOT)),
             "built": date.today().isoformat(),
             "primaryMetric": PRIMARY, "flagZ": flag_z, "minFlagged": E.MIN_FLAGGED,
             "peakFraction": E.PEAK_FRACTION, "minOverlap": E.MIN_OVERLAP,
             "firstSeason": first, "lastSeason": last, "start": start, "frames": n,
-            "coverage": coverage, "confedNames": CONFED_NAMES,
+            "coverage": coverage, "confedNames": CONFED_NAMES, "competitions": competitions.for_dashboard(),
             "note": ("SAMPLE DATA: fictional players with simulated numbers. Cities and tournament "
                      "hosts/dates are real.") if is_sample else
                     ("Club goals: league top scorers (Wikipedia; Transfermarkt open data from 2012), weighted by "
-                     "team games. Big moments: continental cup, World Cup and continental championship goals "
-                     "weighted up. Internationals: competitive matches with scorer records (martj42). League "
+                     "team games. Big moments weighted up: World Cup x4, continental championships x3, Champions "
+                     "League and Europa League x2, other cups and tournaments x1. Internationals: competitive matches with scorer records (martj42). League "
                      "scoring rates: engsoccerdata and Wikipedia league tables. League strength: ClubElo where "
                      "available, else national-team Elo with a talent-exodus correction."),
         },
@@ -313,7 +310,6 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
         "clubWeights": {k: v.tolist() for k, v in club.items()},
         "hubPlayers": hub_detail,
         "champions": champions,
-        "europe": {s: c["UCL"] for s, c in champions.items() if "UCL" in c},   # older dashboards
         "tournaments": tours,
         "stars": star_out,
         "altStars": alt,
@@ -335,7 +331,7 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
 if __name__ == "__main__":
     args = sys.argv[1:]
     src = Path(args[args.index("--input") + 1]).resolve() if "--input" in args else None
-    out = Path(args[args.index("--output") + 1]).resolve() if "--output" in args else OUT
+    out = Path(args[args.index("--output") + 1]).resolve() if "--output" in args else paths.DASHBOARD_DATA
     d = main(force_sample="--sample" in args, src=src, out=out)
     print(f"{'SAMPLE' if d['meta']['sample'] else 'REAL'} data | stars: {len(d['stars'])} | hubs: {len(d['hubs'])} "
           f"| frames: {d['meta']['frames']} | tournaments: {len(d['tournaments'])}")
@@ -354,3 +350,5 @@ if __name__ == "__main__":
         g = d["growth"]["series"]
         print(f"  growth: {g[0]['nations']} nations playing in {g[0]['season']} -> {g[-2]['nations']} in {g[-2]['season']}")
     print(f"  -> {out}")
+    if out == paths.DASHBOARD_DATA:
+        print("Next: python serve.py   (opens http://localhost:8000 in your browser)")

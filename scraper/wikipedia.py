@@ -18,14 +18,15 @@ from urllib.parse import quote, unquote
 import numpy as np
 from bs4 import BeautifulSoup, Tag
 
+import pandas as pd
+
+from core.common import NOT_A_PLAYER
 from .http import Blocked, FetchFailed, PoliteSession, RobotsDisallowed
 
 BASE = "https://en.wikipedia.org/wiki/"
 CONFIG = Path(__file__).with_name("leagues.json")
 SCORER_HEADING = re.compile(r"scor|capocannoniere|pichichi|torj|goalgetter|golden boot", re.I)
 INT_RE = re.compile(r"\d+")
-# Summary rows that some pages put in scorer tables ("Total:", "22 players", "Own goals")
-NOT_A_PLAYER = re.compile(r"^\d+\s+players?$|:\s*$|^(?:total|games|average|own goals?|others?)\b", re.I)
 
 
 def load_leagues(only=None, include_disabled=False) -> list[dict]:
@@ -476,6 +477,38 @@ def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=prin
             log(f"  {lg['code']}: {added} leader rows from '{title}' for seasons without a scorer table")
             break
     return out, env
+
+
+def _merge(old: pd.DataFrame, new_rows: list[dict], code: str) -> pd.DataFrame:
+    """Replace one league's rows for the seasons just scraped; keep everything else."""
+    new = pd.DataFrame(new_rows)
+    if len(old):
+        old = old[~((old["competition"] == code) & old["season"].isin(new["season"]))]
+    return pd.concat([old, new], ignore_index=True)
+
+
+def collect(raw: Path, sess: PoliteSession, leagues: list[dict], first: int, last: int,
+            refresh: bool = False, log=print) -> None:
+    """The `scorers` step: every league's season pages -> scorers_wikipedia.csv (top scorers) and
+    league_environment_wiki.csv (league tables). Saved after each league, so it can be stopped
+    and restarted; seasons already collected are skipped unless refresh=True."""
+    out_path, env_path = raw / "scorers_wikipedia.csv", raw / "league_environment_wiki.csv"
+    df = pd.read_csv(out_path) if out_path.exists() else pd.DataFrame()
+    envdf = pd.read_csv(env_path) if env_path.exists() else pd.DataFrame()
+    for lg in leagues:
+        log(f"Wikipedia: {lg['name']} {max(first, lg.get('first', first))}-{min(last, lg.get('last', last))}...")
+        have = set() if refresh or not len(df) else set(df.loc[df["competition"] == lg["code"], "season"].astype(int))
+        if have:
+            log(f"  {len(have)} seasons already collected; skipping them (add --refresh to re-fetch)")
+        rows, env = scrape_league(sess, lg, first, last, log=log, skip=have)
+        if rows:
+            df = _merge(df, rows, lg["code"])
+            df.to_csv(out_path, index=False)
+        if env:
+            envdf = _merge(envdf, env, lg["code"])
+            envdf.to_csv(env_path, index=False)
+        log(f"  {lg['code']}: {len(rows)} scorer rows, {len(env)} league tables")
+    log(f"  -> {out_path}\n  -> {env_path}")
 
 
 def probe(sess: PoliteSession, leagues: list[dict], log=print) -> bool:

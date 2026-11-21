@@ -20,8 +20,10 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from . import geo, wikipedia as wiki
-from .clubs import ClubResolver, norm
+from core import db, geo
+from core.common import norm
+from . import wikipedia as wiki
+from .clubs import ClubResolver
 from .http import FetchFailed, PoliteSession, RobotsDisallowed
 
 GEONAMES_URL = "https://download.geonames.org/export/dump/cities15000.zip"
@@ -133,7 +135,6 @@ def wiki_coords(sess: PoliteSession, title: str) -> tuple[float, float] | None:
 # ---------------------------------------------------------------- step
 
 def clubs_to_locate(raw: Path) -> pd.DataFrame:
-    from . import db
     frames = []
     for name in ("scorers_wikipedia", "scorers_transfermarkt", "manual_scorers_manual"):
         d = db.load(name, raw)
@@ -166,6 +167,7 @@ def title_guesses(team: str) -> list[str]:
 
 def build(raw: Path, cache: Path, sess: PoliteSession | None, iso2_of: dict, log=print,
           guess_titles: bool = True) -> pd.DataFrame:
+    db.refresh(raw, log=lambda s: None)
     clubs = clubs_to_locate(raw)
     res = ClubResolver(raw, use_auto=False)
     out_path = raw / "club_locations_auto.csv"

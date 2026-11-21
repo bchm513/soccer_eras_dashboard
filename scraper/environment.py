@@ -15,12 +15,14 @@ season that runs August -> July, so a June 1958 World Cup belongs to season 1957
 """
 from __future__ import annotations
 
-import io
 import time
 from pathlib import Path
 
 import pandas as pd
 import requests
+
+from core.common import season_of
+from core.competitions import TIER_COLUMNS
 
 ESD = "https://raw.githubusercontent.com/jalapic/engsoccerdata/master/data/{}.rda"
 INTL = "https://raw.githubusercontent.com/martj42/international_results/master/{}.csv"
@@ -56,18 +58,11 @@ def _download(url: str, dest: Path, tries: int = 4) -> Path:
                     f"\nCouldn't download {url}\n({type(e).__name__}: the connection was dropped or refused)\n\n"
                     "This is a network problem, not a data problem. Common causes: a VPN, a firewall,\n"
                     "or antivirus that inspects web traffic. Try opening the link in a browser, or\n"
-                    "switch networks.\n\n"
-                    "You can skip this step: data/raw/ already contains the environment files.\n"
-                    "Continue with:  python -m scraper.run probe")
+                    "switch networks, then run the step again (finished downloads are kept).")
             wait = 3 * attempt
             print(f"  connection problem ({type(e).__name__}); retrying in {wait}s...")
             time.sleep(wait)
     return dest
-
-
-def season_of(dates: pd.Series) -> pd.Series:
-    d = pd.to_datetime(dates, errors="coerce")
-    return (d.dt.year - (d.dt.month < 8).astype(int)).astype("Int64")
 
 
 def league_environment(cache: Path, first: int = 1946) -> pd.DataFrame:
@@ -133,12 +128,12 @@ def international(cache: Path, first: int = 1946) -> tuple[pd.DataFrame, pd.Data
     from .world import tournament_goal_columns
     tg = tournament_goal_columns(pd.read_csv(cache / "intl_goalscorers.csv"), pd.read_csv(cache / "intl_results.csv"))
     goals = goals.merge(tg, on=["season", "team", "scorer"], how="left")
-    for c in ("world_cup_goals", "continental_goals", "other_tournament_goals"):
+    for c in TIER_COLUMNS:
         goals[c] = goals[c].fillna(0).astype(int)
     return env, team_games, goals
 
 
-def build(raw: Path, cache: Path, first: int = 1946, leagues_only: bool = False) -> None:
+def build(raw: Path, cache: Path, first: int = 1946) -> None:
     raw.mkdir(parents=True, exist_ok=True)
     lg = league_environment(cache, first)
     lg.to_csv(raw / "league_environment.csv", index=False)
