@@ -16,7 +16,7 @@
   const VIEWS = {
     world: [[-125, -45], [60, 68], [140, 30]],
     UEFA: [[-11, 35], [45, 62]], CONMEBOL: [[-82, -56], [-34, 12]], CONCACAF: [[-125, 7], [-60, 50]],
-    AFC: [[35, -40], [155, 50]], CAF: [[-18, -35], [52, 37]], OFC: [[110, -48], [180, 0]],
+    AFC: [[45, -10], [150, 55]], CAF: [[-18, -35], [52, 37]], OFC: [[110, -48], [180, 0]],
   };
   const VIEW_NAMES = Object.assign({ world: "World" }, M.confedNames || {});
 
@@ -86,6 +86,8 @@
   const hubG = zoomLayer.append("g");
   const tourG = zoomLayer.append("g");
   const leadRing = zoomLayer.append("circle").attr("class", "lead-ring").attr("r", 0);
+  const momentG = zoomLayer.append("g");
+  const MOMENTS = data.moments || {};
   const labelG = zoomLayer.append("g");
   const mapDate = mapSvg.append("text").attr("class", "map-date").attr("x", 18).attr("y", 46);
   const mapSub = mapSvg.append("text").attr("class", "map-sub").attr("x", 20).attr("y", 66);
@@ -183,6 +185,16 @@
       .attr("x", d => xy(d)[0]).attr("y", d => xy(d)[1] - rad(d.w) - 4 / k)
       .attr("text-anchor", "middle").style("font-size", `${11 / k}px`).style("stroke-width", `${3 / k}px`)
       .text(d => d.name);
+
+    // This season's big moments, as small diamonds (hover for the story)
+    const mo = (MOMENTS[String(seasonOf(f))] || []).filter(m => m.lat != null && m.lon != null);
+    momentG.selectAll("path").data(mo, m => m.title).join("path")
+      .attr("class", m => "moment " + m.kind)
+      .attr("transform", m => { const [px, py] = xy(m); return `translate(${px},${py}) scale(${1 / Math.sqrt(k)})`; })
+      .attr("d", d3.symbol(d3.symbolDiamond, 60)())
+      .on("mousemove", (e, m) => showTip(e, `<b>${m.title}</b><br>${m.detail}`))
+      .on("mouseleave", hideTip)
+      .on("click", () => setPlaying(false));
 
     const dt = dateOf(f);
     mapDate.text(`${MONTHS[dt.month - 1]} ${dt.year}`);
@@ -388,6 +400,13 @@
           `<div><b>🏆 ${c.winner[0]}</b> <span class="d-note">${CUPS[comp] || comp}${c.runner_up ? ` · beat ${c.runner_up[0]}` : ""}</span></div>`).join("")}</div>`;
     }
 
+    const moments = MOMENTS[String(season)] || [];
+    if (moments.length) {
+      html += `<div class="d-block"><div class="d-label">Moments of ${seasonLabel(season)}</div>
+        ${moments.slice(0, 6).map(m => `<div class="d-moment"><b>${m.title}</b><div class="d-note">${m.detail}</div></div>`).join("")}
+        ${moments.length > 6 ? `<div class="d-note">+ ${moments.length - 6} more</div>` : ""}</div>`;
+    }
+
     if (tours.length) {
       html += `<div class="d-block"><div class="d-label">Tournament under way</div>
         ${tours.map(t => `<div class="d-tour">${t.t.type} ${t.t.year} · ${t.t.host}</div>`).join("")}</div>`;
@@ -433,7 +452,8 @@
       .lead-ring{fill:none;stroke:${v("--lead")};stroke-width:2px}
       .hub-label{fill:${v("--ink")};paint-order:stroke;stroke:${v("--sea")};font-weight:600;font-family:system-ui,sans-serif}
       .tour-label{fill:${v("--tour")}}.map-date{font-family:Georgia,serif;font-size:34px;fill:${v("--ink")}}
-      .map-sub{font-size:13px;fill:${v("--muted")};font-family:system-ui,sans-serif}`;
+      .map-sub{font-size:13px;fill:${v("--muted")};font-family:system-ui,sans-serif}
+      .moment{fill:${v("--tour")};stroke:${v("--panel")};stroke-width:1px}.moment.club_final{fill:${v("--lead")}}`;
   }
   function mapImage(scale = 2) {
     const node = document.getElementById("map").cloneNode(true);

@@ -209,3 +209,9 @@ select {
   .grid { grid-template-areas: "map" "desc" "peaks" "growth" "eras"; }
   .spark { grid-template-columns: 120px 1fr 54px; }
 }
+
+/* Moments */
+.moment { fill: var(--tour); stroke: var(--panel); stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; }
+.moment.club_final { fill: var(--lead); }
+.moment.manual { fill: var(--ink); }
+.d-moment { margin: 4px 0 8px; }
