@@ -126,7 +126,9 @@ soccer-eras/
     tournaments.py         World Cup / Euro hosts and dates (real)
     build.py               runs everything, writes dashboard/data/eras.json
   data/
-    raw/                   real source data goes here (see schema in README)
+    football.db            the project database (every scraped and manual table)
+    raw/                   scraped files (see schema in README)
+    manual/                hand-filled scorers, club locations, moments, impact series
   dashboard/
     index.html, app.js, style.css
     vendor/                D3, topojson-client, world map (offline)
@@ -144,15 +146,20 @@ soccer-eras/
 | 2 | Era adjustment against each player's own time, top-3 reference group, club form required for stars | ✅ |
 | 3 | Multi-metric agreement (raw vs era-adjusted vs goals + assists from 2012) | ✅ |
 | 4 | League strength: ClubElo (Europe) + national-team Elo with talent-exodus correction (world) | ✅ built; ClubElo optional |
-| 5 | Big moments: continental cup goals ×2, World Cup ×3, continental championships ×2; continental titles on the map scaled by strength | ✅ |
+| 5 | Big moments: World Cup ×4, continental championships ×3, Champions League / Europa League ×2, other club cups and minor tournaments ×1; continental titles on the map scaled by strength | ✅ |
 | 6 | Eras split at hand-overs between groups of stars | ✅ |
 | 7 | World expansion: 34 leagues on six continents, five continental cups, 156 tournaments, regional stars and eras | ✅ built; page names for non-European leagues need a `probe` run |
 | 8 | Growth of the game: countries fade in at first international, no-data shading, growth panel | ✅ |
 | 9 | Impact: era comparison table (length, stars, leagues, nations active, tournaments, final crowds) + manual series hook for TV audiences | ✅ (TV data must be added by hand) |
 | 10 | Postable: PNG export and video clip recording of the map, deep links | ✅ |
-| 11 | Match-level weighting for individual big games | To do |
-| 12 | Knockout-round weighting at tournaments (needs stage data) | To do |
-| 13 | Host as a public website | To do |
+| 11 | Project database (data/football.db): scrape once, fill gaps and add moments by hand in data/manual/, manual data wins | ✅ |
+| 12 | Moments: tournament and continental finals as map diamonds and description entries; manual moments file | ✅ first pass |
+| 13 | From dashboard to a representation of football: player, club and moment pages built from the database; story-led walkthroughs of major years | To do |
+| 14 | Match-level weighting for individual big games | To do |
+| 15 | Knockout-round weighting at tournaments (needs stage data) | To do |
+| 16 | Host as a public website | To do |
+
+Real run with the new weights (Nov 2026): 34 stars; eras 1948–52, 1956–58, 1960–65, 1968–71, 1982–90, 1992–99, 2001–11, 2012–25.
 
 First real run (8 European leagues, World Cup and continental championship goals): eras 1948–52, 1956–65, 1968–71, 1983–90, 1991–99, 2001–06, 2007–11, 2012–25.
 

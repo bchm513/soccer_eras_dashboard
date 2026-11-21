@@ -54,10 +54,13 @@ class ClubResolver:
                 self.auto[(norm(r["team"]), r.get("country") or "")] = v
                 self.auto.setdefault((norm(r["team"]), ""), v)
         self.manual = {}
-        mf = raw / "club_locations_manual.csv"
-        if mf.exists():
-            for r in csv.DictReader(mf.open(encoding="utf-8")):
-                self.manual[norm(r["team"])] = (r["city"], float(r["lat"]), float(r["lon"]), "manual")
+        for mf in (raw / "club_locations_manual.csv", raw.parent / "manual" / "club_locations_manual.csv"):
+            if mf.exists():
+                for r in csv.DictReader(mf.open(encoding="utf-8")):
+                    try:
+                        self.manual[norm(r["team"])] = (r["city"], float(r["lat"]), float(r["lon"]), "manual")
+                    except (TypeError, ValueError, KeyError):
+                        continue
         self.geo_cache_path = raw.parent / "cache" / "geocode.json"
         self.geo_cache = json.loads(self.geo_cache_path.read_text(encoding="utf-8")) if self.geo_cache_path.exists() else {}
         self.unresolved: set[tuple[str, str]] = set()

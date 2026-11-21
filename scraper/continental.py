@@ -1,6 +1,7 @@
 """Continental club competitions in every confederation: finals and season top scorers.
 
     UCL  European Cup / UEFA Champions League (UEFA)        1955-
+    UEL  UEFA Cup / Europa League (UEFA)                     1971-
     LIB  Copa Libertadores (CONMEBOL)                       1960-
     ACL  Asian Club Championship / AFC Champions League      1985-
     CAF  African Cup of Champions Clubs / CAF Champions League 1964-
@@ -28,6 +29,9 @@ COMPS = [
     {"code": "UCL", "confed": "UEFA", "name": "European Cup / Champions League", "first": 1955, "format": "split",
      "wiki": ["{s} European Cup", "{s} UEFA Champions League"],
      "finals": ["List of European Cup and UEFA Champions League finals"]},
+    {"code": "UEL", "confed": "UEFA", "name": "UEFA Cup / Europa League", "first": 1971, "format": "split",
+     "wiki": ["{s} UEFA Cup", "{s} UEFA Europa League"],
+     "finals": ["List of UEFA Cup and Europa League finals", "List of UEFA Europa League finals"]},
     {"code": "LIB", "confed": "CONMEBOL", "name": "Copa Libertadores", "first": 1960, "format": "calendar",
      "wiki": ["{s} Copa Libertadores"], "finals": ["List of Copa Libertadores finals"]},
     {"code": "ACL", "confed": "AFC", "name": "AFC Champions League", "first": 1985, "format": "split",

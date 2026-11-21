@@ -133,29 +133,39 @@ def wiki_coords(sess: PoliteSession, title: str) -> tuple[float, float] | None:
 # ---------------------------------------------------------------- step
 
 def clubs_to_locate(raw: Path) -> pd.DataFrame:
+    from . import db
     frames = []
-    for f in ("scorers_wikipedia.csv", "scorers_transfermarkt.csv"):
-        p = raw / f
-        if p.exists():
-            d = pd.read_csv(p, low_memory=False)
+    for name in ("scorers_wikipedia", "scorers_transfermarkt", "manual_scorers_manual"):
+        d = db.load(name, raw)
+        if d is not None and len(d):
             if "team_title" not in d:
                 d["team_title"] = ""
-            frames.append(d[["team", "competition", "team_title"]].rename(columns={"competition": "code"}))
-    p = raw / "continental_finals.csv"
-    if p.exists():
-        f = pd.read_csv(p)
+            d["goals"] = pd.to_numeric(d["goals"], errors="coerce").fillna(0)
+            frames.append(d[["team", "competition", "team_title", "goals"]].rename(columns={"competition": "code"}))
+    f = db.load("continental_finals", raw)
+    if f is not None and len(f):
         for side in ("winner", "runner_up"):
             frames.append(pd.DataFrame({"team": f[side], "code": f[f"{side}_country"].map(lambda c: geo.country_codes(c)[0]),
-                                        "team_title": ""}))
+                                        "team_title": "", "goals": 50}))     # finalists matter for the map
     if not frames:
         return pd.DataFrame(columns=["team", "code", "team_title"])
     c = pd.concat(frames, ignore_index=True)
     c = c[c["team"].map(lambda v: isinstance(v, str) and v.strip() != "")]
     c["team_title"] = c["team_title"].fillna("").astype(str)
-    return c.sort_values("team_title", ascending=False).drop_duplicates(["team", "code"])
+    goals = c.groupby(["team", "code"])["goals"].sum()
+    c = c.sort_values("team_title", ascending=False).drop_duplicates(["team", "code"]).set_index(["team", "code"])
+    c["goals"] = goals
+    return c.reset_index().sort_values("goals", ascending=False)      # most goals first
 
 
-def build(raw: Path, cache: Path, sess: PoliteSession | None, iso2_of: dict, log=print) -> pd.DataFrame:
+def title_guesses(team: str) -> list[str]:
+    """Article titles to try when the scorer table didn't link the club."""
+    t = team.strip()
+    return [t, f"{t} F.C.", f"{t} FC"] if t else []
+
+
+def build(raw: Path, cache: Path, sess: PoliteSession | None, iso2_of: dict, log=print,
+          guess_titles: bool = True) -> pd.DataFrame:
     clubs = clubs_to_locate(raw)
     res = ClubResolver(raw, use_auto=False)
     out_path = raw / "club_locations_auto.csv"
@@ -173,9 +183,15 @@ def build(raw: Path, cache: Path, sess: PoliteSession | None, iso2_of: dict, log
     for k, r in enumerate(todo, 1):
         iso2 = iso2_of.get(r.code) or geo.iso2_for_code(r.code)
         found = None
-        if sess is not None and r.team_title:
-            c = wiki_coords(sess, r.team_title)
-            wiki_fails = 0 if c else wiki_fails + 1
+        titles = [r.team_title] if r.team_title else (title_guesses(r.team) if guess_titles else [])
+        c = None
+        for title in titles if sess is not None else []:
+            c = wiki_coords(sess, title)
+            if c:
+                break
+        if sess is not None and titles:
+            if r.team_title:                      # guessed titles miss often; only linked ones count
+                wiki_fails = 0 if c else wiki_fails + 1
             if wiki_fails >= 15:
                 log("  Wikipedia isn't giving coordinates (15 misses in a row); continuing with GeoNames only")
                 sess = None
@@ -193,7 +209,12 @@ def build(raw: Path, cache: Path, sess: PoliteSession | None, iso2_of: dict, log
             log(f"  ... {k}/{len(todo)}")
             _save(done, rows, out_path)
     df = _save(done, rows, out_path)
+    total = clubs["goals"].sum() or 1
+    left = {(r.team, r.code) for r in todo} - {(x["team"], x["country"]) for x in rows}
+    missing_goals = clubs.set_index(["team", "code"]).loc[list(left), "goals"].sum() if left else 0
     log(f"  located {len(rows)} of {len(todo)} -> {out_path}")
+    log(f"  clubs holding {1 - missing_goals / total:.0%} of all scorer goals now have a location; "
+        f"the rest are listed by goals in data/raw/unresolved_clubs.csv after `assemble`")
     return df
 
 

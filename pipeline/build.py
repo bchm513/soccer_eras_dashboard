@@ -147,6 +147,22 @@ def growth_data(raw_dir: Path, df: pd.DataFrame) -> dict:
     return out
 
 
+def moments_data(raw_dir: Path) -> dict:
+    """Big moments by season (tournament finals, continental club finals, your own entries)."""
+    p = raw_dir / "moments.csv"
+    if not p.exists():
+        return {}
+    m = pd.read_csv(p)
+    out: dict = {}
+    for r in m.sort_values("weight", ascending=False).itertuples():
+        lat, lon = pd.to_numeric(r.lat, errors="coerce"), pd.to_numeric(r.lon, errors="coerce")
+        out.setdefault(str(int(r.season)), []).append({
+            "title": r.title, "detail": r.detail if isinstance(r.detail, str) else "", "kind": r.kind,
+            "lat": None if pd.isna(lat) else float(lat), "lon": None if pd.isna(lon) else float(lon),
+            "players": r.players if isinstance(r.players, str) else ""})
+    return out
+
+
 def era_table(eras: list, stars: dict, league_at_peak: dict, growth: dict, finals, tours: list) -> list:
     nations = {g["season"]: g["nations"] for g in growth.get("series", [])}
     rows = []
@@ -308,6 +324,7 @@ def main(force_sample: bool = False, src: Path | None = None, out: Path = OUT) -
                                  {m: c for m, c in coverage.items() if eras_by[m]}),
         "regions": regions,
         "growth": growth,
+        "moments": moments_data(raw_dir) if env_mode else {},
         "eraTable": era_table(eras_by[PRIMARY], stars, league_at_peak, growth, finals, tours),
     }
     out.parent.mkdir(parents=True, exist_ok=True)

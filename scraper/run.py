@@ -7,7 +7,9 @@
     python -m scraper.run elo            # league strength from ClubElo, one snapshot per season (~2 min)
     python -m scraper.run continental    # Champions League, Libertadores, AFC, CAF, CONCACAF: finals + top scorers
     python -m scraper.run locate         # coordinates for clubs the city list can't place (Wikipedia + GeoNames)
-    python -m scraper.run assemble       # build data/raw/player_seasons.csv
+    python -m scraper.run assemble       # sync data/football.db, then build data/raw/player_seasons.csv
+    python -m scraper.run db             # sync the database and list its tables
+    python -m scraper.run gaps           # seasons with < 3 known scorers -> data/manual/gaps.csv + fill-in rows
     python -m scraper.run all            # scorers -> transfermarkt -> elo -> continental -> locate -> assemble
     python -m scraper.run dump --title "1975–76 Bundesliga"   # save a page's HTML to share for debugging
 
@@ -23,7 +25,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import clubelo, continental, environment, locate, transfermarkt, wikipedia as wiki
+from . import clubelo, continental, db, environment, gaps, locate, transfermarkt, wikipedia as wiki
 from .assemble import assemble
 from .http import PoliteSession
 
@@ -34,7 +36,7 @@ CACHE = ROOT / "data" / "cache"
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("step", choices=["env", "probe", "scorers", "transfermarkt", "elo", "continental", "europe", "locate", "assemble", "all", "dump"])
+    ap.add_argument("step", choices=["env", "db", "gaps", "probe", "scorers", "transfermarkt", "elo", "continental", "europe", "locate", "assemble", "all", "dump"])
     ap.add_argument("--leagues", help="comma-separated codes, e.g. ENG,ESP (default: enabled in leagues.json)")
     ap.add_argument("--from", dest="first", type=int, default=1946)
     ap.add_argument("--to", dest="last", type=int, default=2025)
@@ -42,7 +44,9 @@ def main(argv=None):
     ap.add_argument("--contact", default=os.environ.get("SOCCER_ERAS_CONTACT"),
                     help="email or GitHub/project URL for the User-Agent (Wikimedia asks scripts to include one)")
     ap.add_argument("--title", help="dump: Wikipedia page title, e.g. '1975–76 Bundesliga'")
+    ap.add_argument("--refresh", action="store_true", help="scorers: re-fetch seasons already collected")
     ap.add_argument("--no-wiki", action="store_true", help="locate: skip Wikipedia lookups, GeoNames only")
+    ap.add_argument("--no-guess", action="store_true", help="locate: don't try club names as article titles")
     ap.add_argument("--geocode", action="store_true", help="look up unknown clubs on OpenStreetMap")
     a = ap.parse_args(argv)
 
@@ -74,6 +78,14 @@ def main(argv=None):
         rows = wiki.parse_scorers(html)
         print(f"Saved {out}  ({len(rows)} scorers parsed{', via ' + rows[0]['method'] if rows else ''})")
 
+    if a.step == "db":
+        db.refresh(RAW)
+        db.summary(db.db_path(RAW))
+
+    if a.step == "gaps":
+        gaps.build(RAW, wiki.load_leagues(), a.first, a.last,
+                   only=[c.strip() for c in a.leagues.split(",")] if a.leagues else None)
+
     if a.step == "probe":
         wiki.probe(session(), wiki.load_leagues(only, include_disabled=True))
 
@@ -84,7 +96,10 @@ def main(argv=None):
         envdf = pd.read_csv(env_path) if env_path.exists() else pd.DataFrame()
         for lg in leagues:
             print(f"Wikipedia: {lg['name']} {max(a.first, lg.get('first', a.first))}-{min(a.last, lg.get('last', a.last))}...")
-            rows, env = wiki.scrape_league(sess, lg, a.first, a.last)
+            have = set() if a.refresh or not len(df) else set(df.loc[df["competition"] == lg["code"], "season"].astype(int))
+            if have:
+                print(f"  {len(have)} seasons already collected; skipping them (add --refresh to re-fetch)")
+            rows, env = wiki.scrape_league(sess, lg, a.first, a.last, skip=have)
             if rows:   # replace this league's rows for the scraped seasons, keep everything else
                 new = pd.DataFrame(rows)
                 if len(df):
@@ -116,7 +131,7 @@ def main(argv=None):
     if a.step in ("locate", "all"):
         print("Locating clubs (Wikipedia coordinates, then GeoNames city names)...")
         iso2 = {lg["code"]: lg.get("iso2", "") for lg in wiki.load_leagues(include_disabled=True)}
-        locate.build(RAW, CACHE, None if a.no_wiki else session(), iso2)
+        locate.build(RAW, CACHE, None if a.no_wiki else session(), iso2, guess_titles=not a.no_guess)
 
     if a.step in ("assemble", "all"):
         print("Assembling player_seasons.csv...")

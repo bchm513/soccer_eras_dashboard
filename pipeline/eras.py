@@ -34,10 +34,14 @@ FLAG_Z_ENV = 0.75      # environment mode: star seasons sit this many sd above t
 ERA_WINDOW = 5         # environment mode: compare with top scorers within +/- this many seasons
 INTL_WEIGHT = 0.2      # environment mode: international games count this much vs club games
 LEAGUE_ELO_WEIGHT = 0.5   # how hard league strength bites: 0 = off; 1 = full Elo odds
-CUP_WEIGHT = 2.0       # each continental club cup goal (Champions League, Libertadores...) = this many league goals
-UCL_WEIGHT = CUP_WEIGHT   # older name
-WORLD_CUP_WEIGHT = 3.0    # each World Cup finals goal = this many league goals
-TOURNAMENT_WEIGHT = 2.0   # each continental championship goal (Euro, Copa América, AFCON...) = this many
+# Big moments: each goal counts as this many league goals, added on top of the player's league goals
+WORLD_CUP_WEIGHT = 4.0         # World Cup finals
+TOURNAMENT_WEIGHT = 3.0        # continental championships: Euro, Copa América, AFCON, Asian Cup, Gold Cup
+OTHER_TOURNAMENT_WEIGHT = 1.0  # Confederations Cup, Oceania Nations Cup
+CUP_WEIGHTS = {"UCL": 2.0, "UEL": 2.0,                         # Champions League, Europa League
+               "LIB": 1.0, "ACL": 1.0, "CAF": 1.0, "CCL": 1.0}  # other continental club cups
+CUP_WEIGHT = 2.0               # older data files with a single cup_goals column
+UCL_WEIGHT = CUP_WEIGHT
 LEAGUE_ELO_REF_TOP = 4    # strength is measured against the mean of that season's 4 strongest leagues
 
 
@@ -130,9 +134,14 @@ def player_season_scores(df: pd.DataFrame) -> pd.DataFrame:
     df["w"] = apps.fillna(pd.to_numeric(df.get("team_games"), errors="coerce")) if env_mode else apps
     num = lambda c: pd.to_numeric(df[c], errors="coerce").fillna(0) if c in df else pd.Series(0.0, index=df.index)
     goals = df["goals"].astype(float)
-    cup, wc, tour = num("cup_goals") + num("ucl_goals"), num("world_cup_goals"), num("tournament_goals")
-    big_tour = WORLD_CUP_WEIGHT * wc + TOURNAMENT_WEIGHT * tour if env_mode else 0.0
-    club_goals = goals + (CUP_WEIGHT * cup if env_mode else 0.0)
+    per_cup = [c for c in CUP_WEIGHTS if f"cup_goals_{c}" in df]
+    if per_cup:
+        cup_bonus = sum(CUP_WEIGHTS[c] * num(f"cup_goals_{c}") for c in per_cup)
+    else:
+        cup_bonus = CUP_WEIGHT * (num("cup_goals") + num("ucl_goals"))
+    big_tour = (WORLD_CUP_WEIGHT * num("world_cup_goals") + TOURNAMENT_WEIGHT * num("tournament_goals")
+                + OTHER_TOURNAMENT_WEIGHT * num("other_tournament_goals")) if env_mode else 0.0
+    club_goals = goals + (cup_bonus if env_mode else 0.0)
     df["g_rate"] = (club_goals + big_tour) / df["w"].clip(lower=1)
     has_ast = pd.to_numeric(df["assists"], errors="coerce")
     df["ga_rate"] = (club_goals + big_tour + has_ast) / df["w"].clip(lower=1)

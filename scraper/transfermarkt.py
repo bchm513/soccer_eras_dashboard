@@ -40,10 +40,11 @@ def build(raw: Path, cache: Path, leagues: list[dict], min_goals: int = 1) -> pd
     out.to_csv(raw / "scorers_transfermarkt.csv", index=False)
     print(f"  Transfermarkt leagues: {len(out)} player-seasons with goals, "
           + ", ".join(f"{c} {s.season.min()}-{s.season.max()}" for c, s in out.groupby("competition")))
-    ucl = _aggregate(app_all, {"CL": "UCL"}, cache, min_goals)
-    if len(ucl):
-        ucl.to_csv(raw / "scorers_ucl_transfermarkt.csv", index=False)
-        print(f"  Transfermarkt Champions League: {len(ucl)} player-seasons, {ucl.season.min()}-{ucl.season.max()}")
+    cups = _aggregate(app_all, {"CL": "UCL", "EL": "UEL"}, cache, min_goals)
+    if len(cups):
+        cups.to_csv(raw / "scorers_cups_transfermarkt.csv", index=False)
+        print(f"  Transfermarkt Champions League + Europa League: {len(cups)} player-seasons, "
+              f"{cups.season.min()}-{cups.season.max()}")
     return out
 
 

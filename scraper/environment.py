@@ -24,6 +24,7 @@ import requests
 
 ESD = "https://raw.githubusercontent.com/jalapic/engsoccerdata/master/data/{}.rda"
 INTL = "https://raw.githubusercontent.com/martj42/international_results/master/{}.csv"
+OPTIONAL_INTL = ["shootouts"]   # penalty shootouts: who won drawn finals
 
 # engsoccerdata country file -> our competition code
 ESD_LEAGUES = {"england": "ENG", "spain": "ESP", "italy": "ITA", "germany": "GER",
@@ -132,7 +133,7 @@ def international(cache: Path, first: int = 1946) -> tuple[pd.DataFrame, pd.Data
     from .world import tournament_goal_columns
     tg = tournament_goal_columns(pd.read_csv(cache / "intl_goalscorers.csv"), pd.read_csv(cache / "intl_results.csv"))
     goals = goals.merge(tg, on=["season", "team", "scorer"], how="left")
-    for c in ("world_cup_goals", "continental_goals"):
+    for c in ("world_cup_goals", "continental_goals", "other_tournament_goals"):
         goals[c] = goals[c].fillna(0).astype(int)
     return env, team_games, goals
 
@@ -149,5 +150,10 @@ def build(raw: Path, cache: Path, first: int = 1946, leagues_only: bool = False)
     goals.to_csv(raw / "intl_goals.csv", index=False)
     print(f"  internationals: {int(env.matches.sum())} matches, {len(goals)} scorer-seasons, "
           f"seasons {env.season.min()}-{env.season.max()}")
+    for name in OPTIONAL_INTL:
+        try:
+            _download(INTL.format(name), cache / f"intl_{name}.csv")
+        except (requests.RequestException, SystemExit):
+            print(f"  ({name} not downloaded; tournament moments skip drawn finals)")
     from . import world
     world.build(raw, pd.read_csv(cache / "intl_results.csv"), pd.read_csv(cache / "intl_goalscorers.csv"), first)

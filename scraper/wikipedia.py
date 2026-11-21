@@ -418,12 +418,14 @@ def parse_leaders(html: str) -> list[dict]:
 
 # ---------- scraping ----------
 
-def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=print) -> tuple[list[dict], list[dict]]:
-    """Season pages for top scorers and the league table; leader-list page fills empty seasons."""
+def scrape_league(sess: PoliteSession, lg: dict, first: int, last: int, log=print,
+                  skip: set | None = None) -> tuple[list[dict], list[dict]]:
+    """Season pages for top scorers and the league table; leader-list page fills empty seasons.
+    Seasons in `skip` (already collected) aren't fetched again."""
     out, env, templates = [], [], list(lg["wiki"])
-    covered = set()
+    covered = set(skip or ())
     for season in range(max(first, lg.get("first", first)), min(last, lg.get("last", last)) + 1):
-        if not active(lg, season):
+        if not active(lg, season) or season in covered:
             continue
         label = season_label(season, season_format(lg, season))
         rows, url, html_ok = None, None, None
